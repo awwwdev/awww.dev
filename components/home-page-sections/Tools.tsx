@@ -27,7 +27,7 @@ export default function Tools() {
       <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue3" blur="200px" />
 
       <div className="mx-auto max-w-page  ">
-        <h2 className="H1">Toolkit</h2> 
+        <h2 className="H1">Tools</h2> 
         <div className=" toolkit__grid">
           {/* <h3 className="H3">For Development</h3> */}
           <ul className="display-contents">

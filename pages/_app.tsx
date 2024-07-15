@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }: AppProps<{ initialSession: Session; deh
           </main>
           <Footer />
         </div>
-        {<SideMenu {...{ isSideMenuOpen, setIsSideMenuOpen }} />}
+        {/* {<SideMenu {...{ isSideMenuOpen, setIsSideMenuOpen }} />} */}
       </div>
       <Toaster position="bottom-right" />
     </>

@@ -83,8 +83,8 @@ function PublicWebsiteNav() {
           </Link>
         </li>
         <li>
-          <Link href="#toolkit" className="hover:text-black">
-            Toolkit
+          <Link href="#tools" className="hover:text-black">
+            Tools
           </Link>
         </li>
         <li>
@@ -103,50 +103,7 @@ function PublicWebsiteNav() {
   );
 }
 
-function AccountButtons() {
-  const userMeQ = useGetUserMe();
-  return (
-    <div className="flex items-center ">
-      <div className="flex gap-2 items-center ">
-        {!userMeQ?.data && (
-          <LinkButton variation="text" href="/login" width='content'  className="!fw-400 ">
-            {/* <Icon name="bf-i-ph-sign-in mie-1"/> */}
-            <En>Login</En>
-            <Fa>ورود</Fa>
-          </LinkButton>
-        )}
-        {!userMeQ?.data && (
-          <LinkButton variation="ghost" href="/signup" width='content' className=" !fw-400 ">
-            {/* <Icon name="bf-i-ph-sign-in mie-1"/> */}
-            {/* <Icon name="bf-i-ph-sign-in mie-1"/> */}
-            <En>Sign Up</En>
-            <Fa>عضویت</Fa>
-          </LinkButton>
-        )}
-      </div>
-      {!!userMeQ?.data && <AccountDropdownMenu userData={userMeQ.data} />}
-    </div>
-  );
-}
 
-function MobileAccountButtons() {
-  const userMeQ = useGetUserMe();
-  return (
-    <div>
-      <div className="flex gap-4 items-center">
-        {!userMeQ?.data && (
-          <LinkButton variation="ghost" href="/signup" className="text-xs sm:text-base !fw-400 hover:text-black">
-            {/* <Icon name="bf-i-ph-sign-in mie-1"/> */}
-            {/* <Icon name="bf-i-ph-sign-in mie-1"/> */}
-            <En>Login</En>
-            <Fa> ورود</Fa>
-          </LinkButton>
-        )}
-      </div>
-      {/* {!!userMeQ?.data && <AccountDropdownMenu userData={userMeQ.data} />} */}
-    </div>
-  );
-}
 
 function HamburgerButton({ setIsSideMenuOpen }) {
   return (

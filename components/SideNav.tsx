@@ -28,15 +28,10 @@ export default function SideMenu({ isSideMenuOpen, setIsSideMenuOpen }) {
   return (
     <>
       <MobileSideMenuOverlay {...{ isSideMenuOpen, setIsSideMenuOpen }} />
-      <div
-        className={` aside w-sidebar bg-gray2 z-30 h-full  ${
-          isSideMenuOpen && "drawer-open"
-        }`}
-      >
-        <SideNav
-          className={` text-sm   shd-titned-3  h-full`}
-          setIsSideMenuOpen={setIsSideMenuOpen}
-        />
+      <div className={` aside w-sidebar bg-gray2 z-30 h-full  ${isSideMenuOpen && "drawer-open"}`}>
+        <MobileOnly>
+          <SideNav className={` text-sm   shd-titned-3  h-full `} setIsSideMenuOpen={setIsSideMenuOpen} />
+        </MobileOnly>
       </div>
     </>
   );
@@ -58,7 +53,6 @@ const MobileSideMenuOverlay = ({ isSideMenuOpen, setIsSideMenuOpen }) => {
 };
 
 function SideNav({ className, setIsSideMenuOpen }) {
-
   const [isCollapsed, _setIsCollapsed] = useState(false);
 
   const setIsCollapsed = (v) => {
@@ -66,21 +60,15 @@ function SideNav({ className, setIsSideMenuOpen }) {
     _setIsCollapsed(v);
   };
 
-  const { handleLocaleChange } = useLocaleSwitcher();
   return (
     <NavContext.Provider value={{ isCollapsed, setIsCollapsed }}>
       <nav aria-label="primary" className={className} style={{ display: "grid", gridTemplateRows: "auto 1fr" }}>
-        <DesktopOnly>
-          <div className="flex items-center h-16bg-black11A px-4 sticky top-0 z-10">
-            <Logo  isCollapsed={isCollapsed} />
-          </div>
-        </DesktopOnly>
         <MobileOnly>
           <div className="flex">
             <Button
               variation="text"
-              width='content'
-              className='!rd-full'
+              width="content"
+              className="!rd-full"
               iconButton
               onClick={() => {
                 setIsSideMenuOpen(false);
@@ -91,38 +79,14 @@ function SideNav({ className, setIsSideMenuOpen }) {
           </div>
         </MobileOnly>
         <div className="p-4 flex flex-col gap-6 sm:gap-3  ">
-  
           <PublicWebsiteNav />
-          <div className="mt-auto"></div>
-          <div className="flex flex-col gap-6 sm:gap-3 mt-auto">
-            <div className=" b-b-1 b-gray5"></div>
-            <div className="h-1"></div>
-         
-            <NavLink
-              href="/report-bug"
-              className="data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 ) bf-i-ph-bug"
-            >
-              Report Bug
-            </NavLink>
-            <div className="grid gap-6 sm:gap-3">
-              {/* <LoginInButton user={userMeQ.data} isCollapsed={isCollapsed} /> */}
-              <MobileOnly>
-                <button className="w-fit" onClick={() => handleLocaleChange()}>
-                  <Icon name="bf-i-ph-globe mie-2" />
-                  <Fa>English</Fa>
-                  <En>فارسی</En>
-                </button>
-              </MobileOnly>
-            </div>
-            <CollapseToggle isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
-          </div>
         </div>
       </nav>
     </NavContext.Provider>
   );
 }
 
-function Logo({  isCollapsed }) {
+function Logo({ isCollapsed }) {
   return (
     <Link href="/" className="fw-300 leading-0 ">
       {isCollapsed ? (
@@ -171,38 +135,32 @@ function PublicWebsiteNav() {
         href={``}
         className=" text-xs data-[in-path=true]:c-accent11 before:m-0 flex gap-2 ac c-sand11  after:content-none after:flex-1 after:h-1px after:bg-gray6  "
       >
-        Darsoon Website
+        Home
       </NavLink>
       <NavLink
-        href="/tutors"
+        href="#works"
         className="bf-i-ph-chalkboard-simple data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
-        Classes
+        Works
       </NavLink>
       <NavLink
-        href="/process"
+        href="#tools"
         className="bf-i-ph-traffic-sign  data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
-        How it Works
+        Tools
       </NavLink>
       <NavLink
-        href="/faq"
+        href="#blog"
         className="bf-i-ph-question data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
-      >
-        FAQ{" "}
-      </NavLink>
-   
-      <NavLink
-        href="/blog"
-        className="bf-i-ph-newspaper data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Blog
       </NavLink>
+
       <NavLink
-        href="/contact"
-        className="bf-i-ph-phone data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
+        href="#blog"
+        className="bf-i-ph-newspaper data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
-        Contact Us
+        Contact
       </NavLink>
     </>
   );
