@@ -22,11 +22,11 @@ export default function ContactMe() {
 
   return (
     <section className="relative">
-      <BluredCircle radius={100} top="20%" left="95%" bg="bg-brand-light-amber" blur="200px" />
-      <BluredCircle radius={200} top="60%" left="5%" bg="bg-brand-light-blue" blur="200px" />
+      <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber2" blur="200px" />
+      <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue3" blur="200px" />
 
       <div className="mx-auto max-w-70rem  ">
-      <div className='max-w-page mx-auto sm:px-8 px-4 b-t-1 pt-12'>
+      <div className='max-w-page mx-auto  b-t-1 pt-12'>
   <h2 className='H1'>Let&apos;s get in touch</h2>
 
   <div className="h-12"></div>

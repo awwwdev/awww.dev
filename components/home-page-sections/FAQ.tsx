@@ -21,8 +21,8 @@ export default function FAQ() {
   const { locale } = useRouter();
   return (
     <section className="relative ">
-      <BluredCircle radius={100} top="20%" left="95%" bg="bg-brand-light-amber" blur="200px" />
-      <BluredCircle radius={200} top="60%" left="5%" bg="bg-brand-light-blue" blur="200px" />
+      <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
+      <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue3" blur="200px" />
       <div className="mx-auto max-w-70rem">
         <h2 className="H2 c-title">
           <En>FAQ</En>

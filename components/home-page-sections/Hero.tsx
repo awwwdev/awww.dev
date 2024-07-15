@@ -35,20 +35,32 @@ function DesktopHero() {
 
   return (
     <section className="relative ">
-      <BluredCircle radius={100} top="20%" left="95%" bg="bg-brand-light-amber" blur="200px" />
-      <BluredCircle radius={200} top="60%" left="5%" bg="bg-brand-light-blue" blur="200px" />
+      <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
+      <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue2" blur="200px" />
 
       <div className="flex flex-row gap-8 items-center justify-center  w-full max-w-70rem mx-auto  ">
-     
         <DesktopHeroImage />
         <div className="flex flex-col justify-center ">
-<p className='font-display fs-4xl fw-600} line-height-0.8'>Hello! <br /> Im' Hamid.</p>    
-
+          <p className="font-display fs-4xl fw-600 line-height-0.8">
+            Hello! <br /> Im' Hamid.
+          </p>
         </div>
+      </div>
+      <div className='max-w-70rem mx-auto'>
+        <GridSection />
       </div>
     </section>
   );
 }
+
+
+function GridSection(){
+
+return (
+  <div >
+    <p className='font-display'> I design and develope websites</p>
+  </div>
+)};
 
 function MobileHero() {
   const { locale } = useRouter();
@@ -56,15 +68,17 @@ function MobileHero() {
 
   return (
     <section className="relative ">
-      <BluredCircle radius={100} top="20%" left="95%" bg="bg-brand-light-amber" blur="200px" />
-      <BluredCircle radius={200} top="60%" left="5%" bg="bg-brand-light-blue" blur="200px" />
+      <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
+      <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue2" blur="200px" />
 
       <div className="flex flex-col  gap-8 items-center w-full max-w-70rem mx-auto  ">
         <div className="flex flex-col justify-center ">
           <h1 className="H2 text-prm10 fw-800 text-center line-height-0.75 ">
-            <En>Learn with
+            <En>
+              Learn with
               <br />
-               Top-Notch Tutors Online</En>
+              Top-Notch Tutors Online
+            </En>
             <Fa>با بهترین مدرسان آنلاین یاد بگیرید</Fa>
           </h1>
           <Space size="h-2" />
@@ -83,7 +97,6 @@ function MobileHero() {
           </div>
         </div>
       </div>
-
     </section>
   );
 }
@@ -115,8 +128,7 @@ function DesktopHeroImage() {
       <div className="relative  flex justify-center items-center   ">
         {/* <Circle /> */}
         <Image
-        src="/profile-picture.png"
-
+          src="/profile-picture.png"
           width={200}
           height={200}
           className={`object-cover w-50 h-50 rd-full bg-sand3 `}
@@ -139,7 +151,6 @@ function FeatureCard({ color, title, icon, className = "" }) {
         <p className="font-bold  ">{title}</p>
         {/* <p>{description}</p> */}
       </div>
-      
     </li>
   );
 }

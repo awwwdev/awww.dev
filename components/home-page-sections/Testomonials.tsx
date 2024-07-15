@@ -27,8 +27,8 @@ export default function Testomonials() {
     <section className="   ">
       <div className="p-4">
         <div className="mx-auto max-w-70rem ">
-          <BluredCircle radius={200} top="100%" left="0%" bg="bg-brand-light-blue" blur="200px" />
-          <BluredCircle radius={100} top="0%" left="5%" bg="bg-brand-light-amber" blur="200px" />
+          <BluredCircle radius={200} top="100%" left="0%" bg="bg-blue3" blur="200px" />
+          <BluredCircle radius={100} top="0%" left="5%" bg="bg-amber2" blur="200px" />
           <En>
             <h2 className="H2 c-title ">What people say</h2>
           </En>

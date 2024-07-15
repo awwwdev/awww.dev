@@ -23,13 +23,13 @@ export default function AboutMe() {
 
   return (
     <section className="relative">
-      <BluredCircle radius={100} top="20%" left="95%" bg="bg-brand-light-amber" blur="200px" />
-      <BluredCircle radius={200} top="60%" left="5%" bg="bg-brand-light-blue" blur="200px" />
+      <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
+      <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue3" blur="200px" />
 
       <div className="mx-auto max-w-70rem  ">
         <div className="flex gap-1 items-baseline mb-20">
           <h2 className="H1">About Me</h2>
-          <Emoji name="dino" />
+          {/* <Emoji name="dino" /> */}
         </div>
         <div className="space-y-4 c-gray11">
           <p>

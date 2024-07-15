@@ -224,6 +224,9 @@ dependencies:
   tailwind-merge:
     specifier: ^2.2.1
     version: 2.2.1
+  unocss-preset-radix:
+    specifier: ^2.5.5
+    version: 2.5.5
   zod:
     specifier: ^3.20.2
     version: 3.20.2
@@ -2483,6 +2486,10 @@ packages:
 
   /@radix-ui/colors@0.1.8:
     resolution: {integrity: sha512-jwRMXYwC0hUo0mv6wGpuw254Pd9p/R6Td5xsRpOmaWkUHlooNWqVcadgyzlRumMq3xfOTXwJReU0Jv+EIy4Jbw==}
+    dev: false
+
+  /@radix-ui/colors@3.0.0-rc.4:
+    resolution: {integrity: sha512-dUG9WQCdjKPiiqbQsahUGmOuC+9kCltckQtej7hkVIQp56xirLaMsNrOs9xMYXnIbNqK/vZCmoEk+q1Nda+2AA==}
     dev: false
 
   /@radix-ui/number@1.0.1:
@@ -4796,6 +4803,10 @@ packages:
 
   /@unocss/core@0.47.6:
     resolution: {integrity: sha512-Pjg/NdpuTwZk2Ns3bzI/3XVPuXU+AQ78Sw+9QJyMgA56dArd3TlpNDN6UTOD9XAK6mxdPUu7rNSKpNTLpBW2og==}
+    dev: false
+
+  /@unocss/core@0.55.7:
+    resolution: {integrity: sha512-c+bWe844Xjlwc1EPwHj0+n3LpntJG7ELPbEOOxNIG+CQdcEX0l1G0rkM8+nKstJ9WJmgpf1HdJQLVMF62HXvhw==}
     dev: false
 
   /@unocss/core@0.58.5:
@@ -9642,6 +9653,13 @@ packages:
     dependencies:
       '@unocss/core': 0.45.30
     dev: true
+
+  /unocss-preset-radix@2.5.5:
+    resolution: {integrity: sha512-lSnnKbfY37rC58Seosblr0j1V0Rcz3NCB501rHkdMm2iCH3oFBQkYn19O9VHO27vj1a2ZcHr0eZYYmJYbtHB/g==}
+    dependencies:
+      '@radix-ui/colors': 3.0.0-rc.4
+      '@unocss/core': 0.55.7
+    dev: false
 
   /unocss-preset-theme@0.2.0:
     resolution: {integrity: sha512-hiJIhCs+11T6d+3QB9isrunym3jAvO1W5LOyjfexwKsrUo27b5M9TW8XEyo8cGokX3LL0RzV0hD0b+Rm69S2bA==}

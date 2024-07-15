@@ -90,9 +90,7 @@ function MyApp({ Component, pageProps }: AppProps<{ initialSession: Session; deh
               <RouteProtector>
                 <InvoiceSubmissionProtector>
                   <div
-                    className={`${
-                      !isInDashboard && "bg-[#FCF9F7]"
-                    } side-menu-container isolate h-full  overflow-x-hidden  mx-auto max-w-screen  `}
+                    className={`side-menu-container isolate h-full  overflow-x-hidden  mx-auto max-w-screen  `}
                   >
                     <div className="main grid h-full max-w-screen isolate" style={{ gridTemplateRows: "auto 1fr auto" }}>
                       <Header setIsSideMenuOpen={setIsSideMenuOpen} isInDashboard={isInDashboard} />

@@ -60,8 +60,8 @@ export default function Stats() {
 
   return (
     <section className="relative">
-      <BluredCircle radius={200} top="0%" left="0%" bg="bg-brand-light-pink" blur="200px" />
-      <BluredCircle radius={100} top="90%" left="95%" bg="bg-brand-light-amber" blur="200px" />
+      <BluredCircle radius={200} top="0%" left="0%" bg="bg-pink3" blur="200px" />
+      <BluredCircle radius={100} top="90%" left="95%" bg="bg-amber2" blur="200px" />
       <div className="max-w-70rem mx-auto ">
         {/* {renderNoData(topicQ) ?? renderNoData(teacherQ) ?? renderNoData(studentQ) ?? renderNoData(sessionQ) ?? ( */}
         <div className="">

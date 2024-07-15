@@ -4,7 +4,7 @@ export default class MyDocument extends Document {
   render() {
     const isRtl = this.props.locale === "fa";
     return (
-      <Html lang={this.props.locale} dir={isRtl ? "rtl" : "ltr"} className="light">
+      <Html lang={this.props.locale} dir={isRtl ? "rtl" : "ltr"} className="dark-theme">
         <Head>
           <meta charSet="utf-8" />
           {/* <meta name="theme-color" content="#000000" /> */}
@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           ></link>
         </Head>
-        <body className={`${isRtl ? 'rtl' : ''} light bg-snad1 c-melow !block`}>
+        <body className={`dark-theme bg-sand1 c-sand12 `}>
           <Main />
           <NextScript />
         </body>

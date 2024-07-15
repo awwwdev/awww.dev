@@ -156,9 +156,9 @@ export default function Categoreis() {
 
   return (
     <section className="relative">
-      <BluredCircle radius={200} top="50%" left="95%" bg="bg-brand-light-pink" blur="200px" />
-      <BluredCircle radius={100} top="10%" left="5%" bg="bg-brand-light-amber" blur="200px" />
-      <BluredCircle radius={200} top="80%" left="25%" bg="bg-brand-light-green" blur="100px" />
+      <BluredCircle radius={200} top="50%" left="95%" bg="bg-pink3" blur="200px" />
+      <BluredCircle radius={100} top="10%" left="5%" bg="bg-amber3" blur="200px" />
+      <BluredCircle radius={200} top="80%" left="25%" bg="bg-green3" blur="100px" />
 
       <div className="max-w-70rem mx-auto">
         <h2 className="H2 c-title">{t("home:classes")}</h2>

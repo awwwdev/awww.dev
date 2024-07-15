@@ -6,6 +6,9 @@ export const rules: Rule[] = [
   ["text-larger", { "font-size": 'var(--larger-font-size)' }],
   ["text-smaller", { "font-size": "var(--smaller-font-size)" }],
   [/^line-height-(.*)$/, ([, x]) => ({ "line-height": `calc(${x} * var(--line-height))` })],
+  // project specific
+  [/^var-(.*):(.*)$/, ([, varName, value]) => ({ [`--${varName}`]: `${value}` })],
+  [/^content-(.*)$/, ([, cnt]) => ({ content: `"${cnt}"` })],
 
   // font size utility classes without affecting line height
   ["fs-2xs", { "font-size": "0.625rem" }], // 10px
@@ -49,7 +52,6 @@ export const rules: Rule[] = [
   ["shd-tinted-4", { "box-shadow": "var(--shadow-tinted-4)" }],
   ["shd-tinted-5", { "box-shadow": "var(--shadow-tinted-5)" }],
 
-  [/^content-(.*)$/, ([, cnt]) => ({ content: `"${cnt}"` })],
   [
     /^grid-min-col-(.*)$/,
     ([, minColWidth]) => ({ "grid-template-columns": `repeat(auto-fill, minmax(min(${minColWidth}, 100%), 1fr))` }),

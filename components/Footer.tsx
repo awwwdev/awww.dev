@@ -9,11 +9,8 @@ const Footer = () => {
   return (
     <>
       <div className="h-20"></div>
-      <footer className="px-4 c-gray9 ">
-        <div className="b-t-1 max-w-70rem mx-auto "></div>
-        <div className="h-16"></div>
-        
-        <div className="h-16"></div>
+      <footer className="px-4  ">
+        <div className=" max-w-70rem mx-auto "></div>
         <div className="max-w-70rem mx-auto">
           <div className="flex flex-wrap gap-4 b-t-1 pt-4">
           <FooterColumn>

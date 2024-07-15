@@ -91,6 +91,7 @@
     "slick-carousel": "^1.8.1",
     "square": "^37.1.0",
     "tailwind-merge": "^2.2.1",
+    "unocss-preset-radix": "^2.5.5",
     "zod": "^3.20.2"
   },
   "devDependencies": {
