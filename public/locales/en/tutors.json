@@ -1,0 +1,29 @@
+{
+  "age": "Age Group",
+  "duration": "Duration",
+  "min": "Min",
+  "price": "Price",
+  "unit": "CAD",
+  "booking": "Reserve and Payment",
+  "introductory": "Free Intro Session",
+  "about": "About Me",
+  "method": "Teaching Method",
+  "experience": "Experience",
+  "intro": {
+    "title": "Free Introductory Session",
+    "tutor": "Tutor",
+    "subject": "Subject",
+    "requestMessageLabel": "Request Message",
+    "student": "Student(s)",
+    "submit": "Submit",
+    "successMessage": "Your request is successfully submitted."
+  },
+  "book": {
+    "title": "Booking and Payment",
+    "tutor": "Tutor",
+    "subject": "Subject",
+    "numberOfSessions": "Number of Sessions",
+    "cost": "Total Cost",
+    "successMessage": "Your package is successfully purchased."
+  }
+}

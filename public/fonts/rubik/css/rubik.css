@@ -1,0 +1,66 @@
+/* @font-face {
+  font-display: swap;
+  font-display: swap;
+  font-family: azarmehr;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/woff2/Rubik-Black.woff2");
+} */
+
+@font-face {
+  font-display: swap;
+  font-family: rubik;
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/woff2/Rubik-ExtraBold.woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: rubik;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/woff2/Rubik-Bold.woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: rubik;
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/woff2/Rubik-SemiBold.woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: rubik;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/woff2/Rubik-Medium.woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: rubik;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/woff2/Rubik-Regular.woff2");
+}
+/* @font-face {
+  font-display: swap;
+  font-family: azarmehr;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/woff2/Rubik-Light.woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: azarmehr;
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/woff2/Rubik-UltraLight.woff2");
+} */
+/* @font-face {
+  font-display: swap;
+  font-family: azarmehr;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/woff2/Rubik-Regular.woff2");
+} */

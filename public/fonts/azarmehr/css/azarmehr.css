@@ -1,0 +1,50 @@
+@font-face {
+  font-display: swap;
+  font-display: swap;
+  font-family: azarmehr;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/woff2/AzarMehr-DS2-Black.woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: azarmehr;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/woff2/AzarMehr-DS2-Bold.woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: azarmehr;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/woff2/AzarMehr-DS2-Medium.woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: azarmehr;
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/woff2/AzarMehr-DS2-SemiBold.woff2");
+}
+/* @font-face {
+  font-display: swap;
+  font-family: azarmehr;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/woff2/AzarMehr-DS2-Light.woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: azarmehr;
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/woff2/AzarMehr-DS2-UltraLight.woff2");
+} */
+@font-face {
+  font-display: swap;
+  font-family: azarmehr;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/woff2/AzarMehr-DS2-Regular.woff2");
+}

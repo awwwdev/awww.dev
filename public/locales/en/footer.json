@@ -1,0 +1,20 @@
+{
+  "contact": {
+    "title": "Contact Darsoon",
+    "contact": "Contact Us"
+  },
+  "with": {
+    "title": "With Darsoon",
+    "faq": "FAQ",
+    "teacher": "Become a Tutor",
+    "terms": "Terms of Use",
+    "policy": "Privacy Policy"
+  },
+  "about": {
+    "title": "About Darsoon",
+    "description": "Darsoon was launched by a few families residing in Toronto, Canada. After a very successful experience of having several online private classes during the pandemic, we decided to create this website so that others can also take advantage of this opportunity."
+  },
+  "social": {
+    "title": "Social Media"
+  }
+}

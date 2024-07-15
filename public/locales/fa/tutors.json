@@ -1,0 +1,29 @@
+{
+  "age": "گروه سنی",
+  "duration": "مدت‌زمان هر جلسه",
+  "min": "دقیقه",
+  "price": "قیمت",
+  "unit": "دلار کانادا",
+  "booking": "خرید",
+  "introductory": "درخواست جلسهٔ معرفی رایگان",
+  "about": "دربارهٔ من",
+  "method": "شیوهٔ تدریس",
+  "experience": "تجربه",
+  "intro": {
+    "title": "جلسهٔ معرفی رایگان",
+    "tutor": "معلم",
+    "subject": "موضوع",
+    "requestMessageLabel": "متن درخواست",
+    "student": "دانش‌آموز(ها)",
+    "submit": "ثبت درخواست",
+    "successMessage": "درخواست شما با موفقیت ثبت شد."
+  },
+  "book": {
+    "title": "خرید",
+    "tutor": "معلم",
+    "subject": "موضوع",
+    "numberOfSessions": "تعداد جلسات",
+    "cost": "قیمت کل",
+    "successMessage": "خرید شما با موفقیت انجام شد."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "classes": "Classes",
+  "slogan": "Learn with Top-Notch Tutors Online",
+  "cta": "Find the Best Tutor",
+  "tiles": {
+    "explore": "Explore"
+  },
+  "why": {
+    "title": "Why Darsoon?",
+    "first": {
+      "title": "Easy access",
+      "description": "Choose a class from anywhere in the world and at any time"
+    },
+    "second": {
+      "title": "Affordable price",
+      "description": "Fits every budget, starting from $10"
+    },
+    "third": {
+      "title": "The best tutors",
+      "description": "Experienced and certified tutors by Darsoon"
+    }
+  },
+  "statistics": {
+    "title": "Statistics",
+    "sessions": "Sessions",
+    "students": "Students",
+    "teachers": "Teachers",
+    "topics": "Topics"
+  },
+  "how": {
+    "title": "How Darsoon works",
+    "description": "Wherever you are in the world, you can easily learn whatever you like with a private tutor at a reasonable cost. Here are the steps:",
+    "one": "Choose the class and tutor of your choice and complete the free introductory meeting application form.",
+    "two": "The tutor will contact you to arrange a free introductory meeting.",
+    "three": "If you wish to continue, make the necessary payment to book a single session or packages of 5, 12 or 20 on the tutor's personal page.",
+    "four": "Coordinate subsequent sessions directly with your tutor."
+  }
+}
