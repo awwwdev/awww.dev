@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import Link from "next/link";
 const Page: NextPage = () => {
   return (
-    <div className='max-w-70rem mx-auto space-y-8'>
+    <div className='max-w-page mx-auto space-y-8'>
       <h1 className="H1">
         Terms and Condition
       </h1>

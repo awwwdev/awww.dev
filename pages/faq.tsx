@@ -15,7 +15,7 @@ export async function getServerSideProps({ locale }) {
 const Page: NextPage = () => {
   const { t } = useTranslation();
   return (
-    <div className="mx-auto max-w-70rem ">
+    <div className="mx-auto max-w-page ">
       <h1 className="H1  mb-4">{t("faq:title")}</h1>
       <Space size='h-12' />
       <FAQItem number={1} question={t("faq:q1")}>

@@ -49,7 +49,7 @@ const Page: NextPage = () => {
   }, [workshopQ.data, workshopQ.isFetching, page, queryClient, supabase]);
 
   return (
-    <div className="mx-auto max-w-70rem">
+    <div className="mx-auto max-w-page">
       <h1 className="H1 text-center mb-4">Choose the Workshop You Want</h1>
       <Pagination currentPage={page} totalPages={totalPages} onPageChange={setPage} />
       <div className="h-4"></div>
@@ -61,7 +61,7 @@ const Page: NextPage = () => {
               <li key={w.id}>
                 <Link
                   href={`/workshops/${w.id}`}
-                  className="border block border-gray-300 p-4 rounded-lg bg-gray-50 hover:bg-prm2 hover:border-prm8"
+                  className="border block border-gray-300 p-4 rounded-lg bg-gray-50 hover:bg-accent2 hover:border-accent8"
                 >
                   <div className=" w-full rounded-lg">
                     <h3 className="font-medium text-lg">{w.workshopInfo[0]?.name}</h3>
@@ -99,7 +99,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         <React.Fragment key={page}>
           <button
             className={`px-2 py-1 border rounded-lg ${
-              currentPage === page - 1 ? "bg-prm9 text-white border-prm10" : "border-gray-300"
+              currentPage === page - 1 ? "bg-accent9 text-white border-accent10" : "border-gray-300"
             }`}
             onClick={() => onPageChange(page - 1)}
           >

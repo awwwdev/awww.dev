@@ -44,7 +44,7 @@ const Inbox = () => {
       <h1 className="H1">Inbox</h1>
       <div className="flex justify-between items-center">
         <h2 className="text-xl font-medium">Messages</h2>
-        <Link href="/teacher-dashboard/inbox/archived" className="btn-ghost-prm">
+        <Link href="/teacher-dashboard/inbox/archived" className="btn-ghost-accent">
           Read messages
         </Link>
       </div>
@@ -61,7 +61,7 @@ const Inbox = () => {
               <p dir="rtl" className="text-right text-sm">
                 <span dangerouslySetInnerHTML={{ __html: mail.emailBody }}></span>
               </p>
-              <button className="btn-prm" onClick={() => handleArchive(mail.id)}>
+              <button className="btn-accent" onClick={() => handleArchive(mail.id)}>
                 Mark as Read
               </button>
             </div>

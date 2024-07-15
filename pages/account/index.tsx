@@ -52,13 +52,13 @@ const Page: NextPage = () => {
           <div className="bg-white shadow-md rounded-lg p-6">
             <h2 className="text-xl font-semibold mb-4">Account Actions</h2>
             <div className="flex justify-between space-x-4">
-              <Link href="/account/edit-profile" className="btn-ghost-prm flex-1 text-center">
+              <Link href="/account/edit-profile" className="btn-ghost-accent flex-1 text-center">
                 Edit profile
               </Link>
-              <Link href="/account/students" className="btn-ghost-prm flex-1 text-center">
+              <Link href="/account/students" className="btn-ghost-accent flex-1 text-center">
                 View students
               </Link>
-              <Link href="/account/change-password" className="btn-ghost-prm flex-1 text-center">
+              <Link href="/account/change-password" className="btn-ghost-accent flex-1 text-center">
                 Change Password
               </Link>
             </div>
@@ -76,7 +76,7 @@ const Page: NextPage = () => {
               height={100}
               className="mt-4 rounded-lg"
             />
-            <Link href="/account/change-profile-picture" className="ml-4 btn-prm">
+            <Link href="/account/change-profile-picture" className="ml-4 btn-accent">
               Edit Profile Picture
             </Link>
           </div>

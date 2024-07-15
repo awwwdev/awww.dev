@@ -10,8 +10,8 @@ const Footer = () => {
     <>
       <div className="h-20"></div>
       <footer className="px-4  ">
-        <div className=" max-w-70rem mx-auto "></div>
-        <div className="max-w-70rem mx-auto">
+        <div className=" max-w-page mx-auto "></div>
+        <div className="max-w-page mx-auto">
           <div className="flex flex-wrap gap-4 b-t-1 pt-4">
           <FooterColumn>
               <h2 className="font-bold mb-2">

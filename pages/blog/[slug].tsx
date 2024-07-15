@@ -147,13 +147,13 @@ const Post = ({ initialPost }: { initialPost: PostType }) => {
         </p>
       </div>
       <Space size="h-4 " />
-      <div className="max-w-70rem mx-auto">
+      <div className="max-w-page mx-auto">
         <NextImage
           src={initialPost.featuredImage ?? ""}
           alt={`${locale === "fa" ? initialPost.titleFa : initialPost.title}`}
           width={200}
           height={200}
-          className={`rd-4  block bg-sand4 w-full max-w-70rem mx-auto  object-cover italic  text-center flex items-center justify-center c-sand10 shd-tinted-3`}
+          className={`rd-4  block bg-sand4 w-full max-w-page mx-auto  object-cover italic  text-center flex items-center justify-center c-sand10 shd-tinted-3`}
         />
       </div>
       <Space size="h-12" />

@@ -42,7 +42,7 @@ const Page: NextPage = () => {
                   {student.user.firstname} {student.user.lastname}
                 </p>
               </div>
-              <Link href={`/account/students/${student.id}`} className='btn-ghost-prm'>
+              <Link href={`/account/students/${student.id}`} className='btn-ghost-accent'>
                 Edit
               </Link>
             </div>

@@ -82,7 +82,7 @@ export default function ReviewsSection({ reviewQ, prevCourseQ }) {
                 Rating:
                 <sup className="c-red11"> *</sup>
               </legend>
-              <div className="mt-2 flex gap-1 c-prm-9 text-3xl">
+              <div className="mt-2 flex gap-1 c-accent-9 text-3xl">
                 <label
                   className={`before:opacity-100 ${
                     Number(form.watch("studentRating")) >= 1 ? "bf-i-ph-star-fill" : "bf-i-ph-star"
@@ -179,7 +179,7 @@ export default function ReviewsSection({ reviewQ, prevCourseQ }) {
 
 function Review({ stars, reviewText, reviewerName }) {
   return (
-    <div className="p-4 rd-3 bg-sandA-2 ">
+    <div className="p-4 rd-3 bg-sand2A ">
       <div className="flex items-center gap-2 ">
         <span className='fw-300 c-sand11'>{reviewerName}</span>
         <div className="fs-2xs">

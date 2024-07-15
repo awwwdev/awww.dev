@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 const Page: NextPage = () => {
   return (
-    <div className='mx-auto max-w-70rem space-y-8'>
+    <div className='mx-auto max-w-page space-y-8'>
       <h1 className="H1">
         Privacy Policy
       </h1>
@@ -54,7 +54,7 @@ const Page: NextPage = () => {
       </p>
       <p>
         If you have any questions or concerns about our Privacy Policy, please contact us at{" "}
-        <a href="mailto:info@darsoon.com" className="text-prm10">
+        <a href="mailto:info@darsoon.com" className="text-accent10">
           info@darsoon.com
         </a>
         .

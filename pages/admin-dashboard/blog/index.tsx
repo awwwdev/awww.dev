@@ -57,13 +57,13 @@ const Blog = () => {
     <div className="p-6 min-h-screen">
       <h1 className="text-3xl font-bold mb-4">Blog</h1>
       <div className="rd-xl b-1 b-gray-6 bg-gray1 p-4 flex justify-end">
-        <Link href="/admin-dashboard/blog/add" className="btn-prm bf-i-ph-plus">
+        <Link href="/admin-dashboard/blog/add" className="btn-accent bf-i-ph-plus">
           Add a new blog post
         </Link>
       </div>
       <div className="flex space-x-4 mt-4">
         <button
-          className={`${activeTab === "all" ? "btn-prm" : "btn"}`}
+          className={`${activeTab === "all" ? "btn-accent" : "btn"}`}
           onClick={() => {
             setActiveTab("all");
             setData(postQ.data);
@@ -72,7 +72,7 @@ const Blog = () => {
           All
         </button>
         <button
-          className={`${activeTab === "en" ? "btn-prm" : "btn"}`}
+          className={`${activeTab === "en" ? "btn-accent" : "btn"}`}
           onClick={() => {
             setActiveTab("en");
             setData(postQ.data.filter((post) => post.contentFa === null));
@@ -81,7 +81,7 @@ const Blog = () => {
           English
         </button>
         <button
-          className={`${activeTab === "fa" ? "btn-prm" : "btn"}`}
+          className={`${activeTab === "fa" ? "btn-accent" : "btn"}`}
           onClick={() => {
             setActiveTab("fa");
             setData(postQ.data.filter((post) => post.content === null));
@@ -99,7 +99,7 @@ const Blog = () => {
             {post.title && <h2 className="text-2xl font-bold mb-2">Title: {post.title}</h2>}
             {post.titleFa && <h2 className="text-2xl font-bold mb-2">عنوان: {post.titleFa}</h2>}
             <div className="mt-4">
-              <Link href={`/admin-dashboard/blog/edit/${post.id}`} className="mie-4 text-prm-9 hover:text-prm-10">
+              <Link href={`/admin-dashboard/blog/edit/${post.id}`} className="mie-4 text-accent-9 hover:text-accent-10">
                 Edit
               </Link>
               <button onClick={() => deleteMutation.mutate(post.id)} className="text-red-500 hover:text-red-700">

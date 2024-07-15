@@ -62,7 +62,7 @@ export default function Stats() {
     <section className="relative">
       <BluredCircle radius={200} top="0%" left="0%" bg="bg-pink3" blur="200px" />
       <BluredCircle radius={100} top="90%" left="95%" bg="bg-amber2" blur="200px" />
-      <div className="max-w-70rem mx-auto ">
+      <div className="max-w-page mx-auto ">
         {/* {renderNoData(topicQ) ?? renderNoData(teacherQ) ?? renderNoData(studentQ) ?? renderNoData(sessionQ) ?? ( */}
         <div className="">
           <h2 className="sr-only H2 c-title">{t("home:statistics.title")}</h2>

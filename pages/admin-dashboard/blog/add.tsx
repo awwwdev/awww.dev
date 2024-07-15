@@ -118,7 +118,7 @@ function CreatePostForm() {
             <div
               key={index}
               className={`w-36 h-36 relative m-1 cursor-pointer ${
-                selectedImageIndex === index ? "border-2 border-prm-10" : ""
+                selectedImageIndex === index ? "border-2 border-accent-10" : ""
               }`}
               onClick={() => {
                 const imageName = image.substring(image.lastIndexOf("/") + 1);
@@ -155,13 +155,13 @@ function CreatePostForm() {
               setSelectedImageIndex(null);
             }
           }}
-          className="btn-prm"
+          className="btn-accent"
         >
           Select Image
         </button>
       </Modal>
       <button
-        className={`px-4 py-2 rounded-md text-white ${activeTab === "en" ? "bg-prm9" : "bg-gray-500"}`}
+        className={`px-4 py-2 rounded-md text-white ${activeTab === "en" ? "bg-accent9" : "bg-gray-500"}`}
         onClick={(e) => {
           e.preventDefault();
           setActiveTab("en");
@@ -170,7 +170,7 @@ function CreatePostForm() {
         En
       </button>
       <button
-        className={`px-4 py-2 rounded-md text-white mis-2 ${activeTab === "fa" ? "bg-prm9" : "bg-gray-500"}`}
+        className={`px-4 py-2 rounded-md text-white mis-2 ${activeTab === "fa" ? "bg-accent9" : "bg-gray-500"}`}
         onClick={(e) => {
           e.preventDefault();
           setActiveTab("fa");
@@ -230,7 +230,7 @@ function CreatePostForm() {
           direction="ltr"
         />
       </div>
-      <button type="submit" className="btn-prm">
+      <button type="submit" className="btn-accent">
         Create Post
       </button>
     </form>

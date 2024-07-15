@@ -169,7 +169,7 @@ export default function ProfilePage() {
     { title: profileQ.data?.topic?.name ?? "Topic", href: `/profile/${profileId}` },
   ];
   return (
-    <div className="max-w-70rem mx-auto ">
+    <div className="max-w-page mx-auto ">
       <Breadcrumb steps={breadcrumbSteps} />
       <div className="h-4"></div>
       {renderNoData(profileQ) ?? (
@@ -315,7 +315,7 @@ function ClassInformationCard({ profileQ, userMeQ, studentQ, reviewQ, courseQ, p
                 <Modal
                   trigger={
                     <Button
-                      variation="solid-prm"
+                      variation="solid-accent"
                       disabled={!profileQ.data.isActive}
                       className="text-lg flex-1 grow py-4 flex items-center justify-center"
                     >

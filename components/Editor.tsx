@@ -90,7 +90,7 @@ const Editor: React.FC<EditorProps> = ({ content, onContentChange, onEditorReady
   }, [isImageModalOpen, supabase.storage]);
 
   function getButtonClass(format: string) {
-    return `${editor?.isActive(format) ? "text-prm-10" : ""}`;
+    return `${editor?.isActive(format) ? "text-accent-10" : ""}`;
   }
 
   function getIconClass(format: string, activeClass: string, inactiveClass: string) {
@@ -168,7 +168,7 @@ const Editor: React.FC<EditorProps> = ({ content, onContentChange, onEditorReady
             e.preventDefault();
             editor.chain().focus().toggleHeading({ level: 1 }).run();
           }}
-          className={`${editor?.isActive("heading", { level: 1 }) ? "text-prm-10" : ""}`}
+          className={`${editor?.isActive("heading", { level: 1 }) ? "text-accent-10" : ""}`}
         >
           <Icon
             name={`${
@@ -181,7 +181,7 @@ const Editor: React.FC<EditorProps> = ({ content, onContentChange, onEditorReady
             e.preventDefault();
             editor.chain().focus().toggleHeading({ level: 2 }).run();
           }}
-          className={`${editor?.isActive("heading", { level: 2 }) ? "text-prm-10" : ""}`}
+          className={`${editor?.isActive("heading", { level: 2 }) ? "text-accent-10" : ""}`}
         >
           <Icon
             name={`${
@@ -194,7 +194,7 @@ const Editor: React.FC<EditorProps> = ({ content, onContentChange, onEditorReady
             e.preventDefault();
             editor.chain().focus().toggleHeading({ level: 3 }).run();
           }}
-          className={`${editor?.isActive("heading", { level: 3 }) ? "text-prm-10" : ""}`}
+          className={`${editor?.isActive("heading", { level: 3 }) ? "text-accent-10" : ""}`}
         >
           <Icon
             name={`${
@@ -207,7 +207,7 @@ const Editor: React.FC<EditorProps> = ({ content, onContentChange, onEditorReady
             e.preventDefault();
             editor.chain().focus().toggleHeading({ level: 4 }).run();
           }}
-          className={`${editor?.isActive("heading", { level: 4 }) ? "text-prm-10" : ""}`}
+          className={`${editor?.isActive("heading", { level: 4 }) ? "text-accent-10" : ""}`}
         >
           <Icon
             name={`${
@@ -220,7 +220,7 @@ const Editor: React.FC<EditorProps> = ({ content, onContentChange, onEditorReady
             e.preventDefault();
             editor.chain().focus().toggleHeading({ level: 5 }).run();
           }}
-          className={`${editor?.isActive("heading", { level: 5 }) ? "text-prm-10" : ""}`}
+          className={`${editor?.isActive("heading", { level: 5 }) ? "text-accent-10" : ""}`}
         >
           <Icon
             name={`${
@@ -233,7 +233,7 @@ const Editor: React.FC<EditorProps> = ({ content, onContentChange, onEditorReady
             e.preventDefault();
             editor.chain().focus().toggleHeading({ level: 6 }).run();
           }}
-          className={`${editor?.isActive("heading", { level: 6 }) ? "text-prm-10" : ""}`}
+          className={`${editor?.isActive("heading", { level: 6 }) ? "text-accent-10" : ""}`}
         >
           <Icon
             name={`${
@@ -338,7 +338,7 @@ const Editor: React.FC<EditorProps> = ({ content, onContentChange, onEditorReady
                 setUrl("");
               }
             }}
-            className="btn-prm"
+            className="btn-accent"
           >
             Add Link
           </button>
@@ -362,7 +362,7 @@ const Editor: React.FC<EditorProps> = ({ content, onContentChange, onEditorReady
               <div
                 key={index}
                 className={`w-36 h-36 relative m-1 cursor-pointer ${
-                  selectedImageIndex === index ? "border-2 border-prm-10" : ""
+                  selectedImageIndex === index ? "border-2 border-accent-10" : ""
                 }`}
                 onClick={() => {
                   const imageName = image.substring(image.lastIndexOf("/") + 1);
@@ -404,7 +404,7 @@ const Editor: React.FC<EditorProps> = ({ content, onContentChange, onEditorReady
                 setSelectedImageIndex(null);
               }
             }}
-            className="btn-prm"
+            className="btn-accent"
           >
             Select Image
           </button>
@@ -446,7 +446,7 @@ const Editor: React.FC<EditorProps> = ({ content, onContentChange, onEditorReady
                 setYoutubeUrl("");
               }
             }}
-            className="btn-prm"
+            className="btn-accent"
           >
             Insert Video
           </button>

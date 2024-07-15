@@ -49,7 +49,7 @@ const AdminDash = () => {
   return (
     <div>
       <div className="rd-xl b-1 b-gray-6 bg-gray1 p-4 flex justify-end gap-6 ac">
-        <Link href="/admin-dashboard/master-data/session/add" className="btn-prm bf-i-ph-plus inline-block">
+        <Link href="/admin-dashboard/master-data/session/add" className="btn-accent bf-i-ph-plus inline-block">
           Add a new record
         </Link>
       </div>

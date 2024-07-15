@@ -4,7 +4,7 @@ import { NextPage } from "next";
 const Page: NextPage = () => {
   return (
     <div>
-      <div className="max-w-70rem mx-auto">
+      <div className="max-w-page mx-auto">
         <h1 className='H1'>My Process</h1>
         <Space size='h-4' />
 

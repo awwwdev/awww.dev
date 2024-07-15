@@ -305,7 +305,7 @@ const Page: NextPage = () => {
 
   
   return (
-    <div className="mx-auto max-w-70rem">
+    <div className="mx-auto max-w-page">
       <h1 className="H1 sr-only">
         <Fa>
           {theCategory?.nameFa ?? "همه کلاس‌ها"} {theSubCategory && ` - ${theSubCategory.nameFa}`}

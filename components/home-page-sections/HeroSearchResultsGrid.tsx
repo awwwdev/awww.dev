@@ -317,7 +317,7 @@ function Status({ status }) {
   return (
     <p
       className={`px-2 py-0.5 rd-2 w-fit flex items-baseline gap-1 
-      ${status === "new" && "c-prm3 primary-gradient"}
+      ${status === "new" && "c-accent3 primary-gradient"}
       ${status === "busy" && "c-red3 bg-tomato9"}
       `}
     >

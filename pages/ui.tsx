@@ -6,7 +6,7 @@ import { NextPage } from "next";
 import { useId } from "react";
 const Page: NextPage = () => {
   return (
-    <div className="mx-auto max-w-70rem space-y-20">
+    <div className="mx-auto max-w-page space-y-20">
       <Section title={"test"}>
         <p>Test stuff here</p>      
       </Section>
@@ -86,30 +86,30 @@ function ButtonsSection() {
   return (
     <Section title="Buttons">
       <div className="flex gap-3 text-base flex-wrap b-b-1 b-sand4 py-6">
-        <Button isLoading variation="text-prm">Button </Button>
-        <Button isLoading variation="soft-prm">Button Ghost</Button>
+        <Button isLoading variation="text-accent">Button </Button>
+        <Button isLoading variation="soft-accent">Button Ghost</Button>
         <Button isLoading variation="soft">Button Ghost</Button>
         <Button isLoading variation="ghost">Button Ghost</Button>
-        <Button isLoading variation="ghost-prm">Button Ghost</Button>
+        <Button isLoading variation="ghost-accent">Button Ghost</Button>
         <Button isLoading variation="text">Button Text</Button>
         <Button isLoading variation="solid">Button Solid</Button>
         <Button isLoading variation="solid">Button Solid</Button>
-        <Button isLoading variation="solid-prm">Button Solid Primary</Button>
-        <Button isLoading variation="solid-prm" className="">
+        <Button isLoading variation="solid-accent">Button Solid Primary</Button>
+        <Button isLoading variation="solid-accent" className="">
           Button
         </Button>
       </div>
       <div className="flex gap-3 text-base flex-wrap b-b-1 b-sand4 py-6">
-        <Button variation="text-prm">Button </Button>
-        <Button variation="soft-prm">Button Ghost</Button>
+        <Button variation="text-accent">Button </Button>
+        <Button variation="soft-accent">Button Ghost</Button>
         <Button variation="soft">Button Ghost</Button>
         <Button variation="ghost">Button Ghost</Button>
-        <Button variation="ghost-prm">Button Ghost</Button>
+        <Button variation="ghost-accent">Button Ghost</Button>
         <Button variation="text">Button Text</Button>
         <Button variation="solid">Button Solid</Button>
         <Button variation="solid">Button Solid</Button>
-        <Button variation="solid-prm">Button Solid Primary</Button>
-        <Button variation="solid-prm" className="">
+        <Button variation="solid-accent">Button Solid Primary</Button>
+        <Button variation="solid-accent" className="">
           Button
         </Button>
       </div>
@@ -139,10 +139,10 @@ function ButtonsSection() {
       </div>
       <h2 className="H4">Disabled Buttons</h2>
       <div className="flex gap-3 text-base flex-wrap b-b-1 b-sand4 py-6">
-        <Button disabled variation="text-prm">
+        <Button disabled variation="text-accent">
           Button Ghost
         </Button>
-        <Button disabled variation="soft-prm">
+        <Button disabled variation="soft-accent">
           Button Ghost
         </Button>
         <Button disabled variation="soft">
@@ -151,7 +151,7 @@ function ButtonsSection() {
         <Button disabled variation="ghost">
           Button Ghost
         </Button>
-        <Button disabled variation="ghost-prm">
+        <Button disabled variation="ghost-accent">
           Button Ghost
         </Button>
         <Button disabled variation="text">
@@ -163,10 +163,10 @@ function ButtonsSection() {
         <Button disabled variation="solid">
           Button Solid
         </Button>
-        <Button disabled variation="solid-prm">
+        <Button disabled variation="solid-accent">
           Button Solid Primary
         </Button>
-        <Button disabled variation="solid-prm" className="text-lg">
+        <Button disabled variation="solid-accent" className="text-lg">
           Button
         </Button>
       </div>

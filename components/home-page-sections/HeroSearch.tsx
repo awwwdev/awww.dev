@@ -49,7 +49,7 @@ export default function HeroSearch() {
         <Space size="h-4" />
         {isResultsOpen && (
           <div
-            className={`absolute top-16 left-0  sm:max-w-70rem bg-white/80 b-1 b-white glass-effect rd-6 px-2  shd-tinted-3  z-100 
+            className={`absolute top-16 left-0  sm:max-w-page bg-white/80 b-1 b-white glass-effect rd-6 px-2  shd-tinted-3  z-100 
         lt-sm:left-50% lt-sm:-translate-x-50%  
         `}
             style={{
@@ -72,7 +72,7 @@ function Overlay({ isResultsOpen, setIsResultsOpen }) {
       onClick={() => {
         if (isResultsOpen) setIsResultsOpen(false);
       }}
-      className={`fixed w-200vw h-200vh z-10 inset-0 bg-sandA-3 backdrop-blur-5 -translate-x-50% -translate-y-50% transform-250ms select-none 
+      className={`fixed w-200vw h-200vh z-10 inset-0 bg-sand3A backdrop-blur-5 -translate-x-50% -translate-y-50% transform-250ms select-none 
         ${isResultsOpen ? "opacity-100" : "opacity-0 pointer-events-none"}
         `}
       style={{
@@ -120,7 +120,7 @@ function SearchBox({ value, setValue, onKeyDown }) {
 //         <Popover.Portal>
 //           <>
 //             <Popover.Content
-//               className={`rd-6 px-2 w-100vw  max-w-70rem h-80 bg-white shd-tinted-5 relative
+//               className={`rd-6 px-2 w-100vw  max-w-page h-80 bg-white shd-tinted-5 relative
 //           will-change-[transform,opacity]
 //           data-[state=open]:data-[side=top]:animate-slideDownAndFade
 //           data-[state=open]:data-[side=right]:animate-slideLeftAndFade

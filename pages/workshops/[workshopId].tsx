@@ -95,7 +95,7 @@ export default function ProfilePage() {
   }); */
 
   return (
-    <div className="max-w-70rem mx-auto ">
+    <div className="max-w-page mx-auto ">
       {renderNoData(workshopQ) ?? (
         <div className=" grid gap-8 with-sidebar w-full max-w-full    ">
           <HeaderSection workshopQ={workshopQ} />
@@ -197,8 +197,8 @@ function ClassInformationCard({ workshopQ, userMeQ, studentQ, reviewQ, courseQ, 
           <Modal
             trigger={
               <Button
-                variation="solid-prm"
-                /* disabled={!profileQ.data.isActive} */ className="btn-ghost-prm text-lg flex-1"
+                variation="solid-accent"
+                /* disabled={!profileQ.data.isActive} */ className="btn-ghost-accent text-lg flex-1"
               >
                 <Icon name="bf-i-ph-chalkboard-teacher before:opacity-100 mie-2"/>
                 Enroll

@@ -22,7 +22,7 @@ export default function Features() {
 
   return (
     <section className=" ">
-      <div className="max-w-70rem mx-auto">
+      <div className="max-w-page mx-auto">
         <h2 className="sr-only H2 c-title  ">{t("home:why.title")}</h2>
         <ul className="grid grid-cols-1 sm:grid-cols-3  sm:gap-4 gap-6">
           <FeatureCard

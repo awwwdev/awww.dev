@@ -13,7 +13,7 @@ export default function Switch({
         {...props}
         className={`w-2.625em p-0.125em bg-base6 rounded-full flex items-center  cursor-default b-none
        overflow-clip
-        data-[state=checked]:bg-prm10 `}
+        data-[state=checked]:bg-accent10 `}
         // style={{ "-webkit-tap-highlight-color": "rgba(0, 0, 0, 0)" }}
       >
         <RadixSwitch.Thumb

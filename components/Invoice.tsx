@@ -131,14 +131,14 @@ const Invoice = () => {
         )}
       </div>
       <div className="flex gap-4 mb-10 mx-10 mt-4">
-        <button onClick={clearSignature} className="btn-ghost-prm">
+        <button onClick={clearSignature} className="btn-ghost-accent">
           Clear
         </button>
-        <button onClick={saveSignature} className="btn-prm">
+        <button onClick={saveSignature} className="btn-accent">
           Save
         </button>
       </div>
-      <button onClick={saveAsPDF} disabled={isSignatureEmpty} className="mb-10 mx-10 btn-prm">
+      <button onClick={saveAsPDF} disabled={isSignatureEmpty} className="mb-10 mx-10 btn-accent">
         Send invoice
       </button>
     </>

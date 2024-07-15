@@ -10,7 +10,7 @@ const classes = {
      b-1 b-sand7 hover:b-sand8
      bg-base3 
      grid grid-auto-flow-col
-     focus-within:outline-transparent focus-within:b-prm9 focus-within:hover:b-prm9 `,
+     focus-within:outline-transparent focus-within:b-accent9 focus-within:hover:b-accent9 `,
     disabled: "aria-[disabled]:cursor-not-allowed  aria-[disabled]:c-sand10",
   },
   prefixBox: "",

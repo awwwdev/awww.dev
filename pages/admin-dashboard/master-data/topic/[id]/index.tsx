@@ -54,7 +54,7 @@ const Page: NextPage = () => {
         <br />
         <Link
           href={router.pathname.substring(0, router.pathname.lastIndexOf("/"))}
-          className="btn-prm bf-i-ph-arrow-u-up-left"
+          className="btn-accent bf-i-ph-arrow-u-up-left"
         >
           {" "}
           Go Back{" "}
@@ -68,7 +68,7 @@ const Page: NextPage = () => {
         <p className="">You just deleted this record permanently.</p>
         <Link
           href={router.pathname.substring(0, router.pathname.lastIndexOf("/"))}
-          className="btn-prm bf-i-ph-arrow-u-up-left"
+          className="btn-accent bf-i-ph-arrow-u-up-left"
         >
           {" "}
           Go Back{" "}

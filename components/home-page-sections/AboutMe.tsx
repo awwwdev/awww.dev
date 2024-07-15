@@ -26,11 +26,8 @@ export default function AboutMe() {
       <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
       <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue3" blur="200px" />
 
-      <div className="mx-auto max-w-70rem  ">
-        <div className="flex gap-1 items-baseline mb-20">
+      <div className="mx-auto max-w-page  ">
           <h2 className="H1">About Me</h2>
-          {/* <Emoji name="dino" /> */}
-        </div>
         <div className="space-y-4 c-gray11">
           <p>
             I help businesses to discover their visual language, create wireframes, make high fidelity UI prototypes and

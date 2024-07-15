@@ -34,7 +34,7 @@ export async function getServerSideProps(context) {
 const Blog = ({ posts }: { posts: DPost[] }) => {
   return (
     <div>
-      <div className="max-w-70rem mx-auto">
+      <div className="max-w-page mx-auto">
         <h1 className="H1">
           <En>Blog</En>
           <Fa>بلاگ</Fa>

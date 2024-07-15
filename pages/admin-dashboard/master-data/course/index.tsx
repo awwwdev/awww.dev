@@ -89,7 +89,7 @@ const AdminDash = () => {
       header: "Disable Records",
       cell: (info) => {
         return info.getValue ? (
-          <button onClick={() => handleDisableCourse(info)} className="btn-prm bf-i-ph-trash min-w-full">
+          <button onClick={() => handleDisableCourse(info)} className="btn-accent bf-i-ph-trash min-w-full">
             Disable
           </button>
         ) : null;
@@ -101,7 +101,7 @@ const AdminDash = () => {
   return (
     <div>
       <div className="rd-xl b-1 b-gray-6 bg-gray1 p-4 flex justify-end">
-        <Link href="/admin-dashboard/master-data/course/add" className="btn-prm bf-i-ph-plus">
+        <Link href="/admin-dashboard/master-data/course/add" className="btn-accent bf-i-ph-plus">
           Add a new record
         </Link>
       </div>

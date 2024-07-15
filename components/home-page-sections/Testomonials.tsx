@@ -26,7 +26,7 @@ export default function Testomonials() {
   return (
     <section className="   ">
       <div className="p-4">
-        <div className="mx-auto max-w-70rem ">
+        <div className="mx-auto max-w-page ">
           <BluredCircle radius={200} top="100%" left="0%" bg="bg-blue3" blur="200px" />
           <BluredCircle radius={100} top="0%" left="5%" bg="bg-amber2" blur="200px" />
           <En>
@@ -51,7 +51,7 @@ export default function Testomonials() {
           </div>
         </div>
         <div className='display-none md:block'>
-          <div className="mx-auto max-w-70rem">
+          <div className="mx-auto max-w-page">
             <ul
               className="gap-4 pb-4 w-full flex "
               style={{ gridTemplateColumns: "2fr 3fr" }}
@@ -82,7 +82,7 @@ export default function Testomonials() {
       </div>
 
       <div className="p-4">
-        <div className="mx-auto max-w-70rem ">{/* Other Contents */}</div>
+        <div className="mx-auto max-w-page ">{/* Other Contents */}</div>
       </div>
     </section>
   );

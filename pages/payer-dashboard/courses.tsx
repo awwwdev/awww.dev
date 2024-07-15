@@ -88,7 +88,7 @@ const PayerDash = () => {
       header: "Renew",
       cell: (info) => {
         return info.getValue ? (
-          <Link  href={`/tutors/${info.getValue()}`} className="btn-prm">
+          <Link  href={`/tutors/${info.getValue()}`} className="btn-accent">
             Renew
           </Link>
         ) : null;
@@ -104,7 +104,7 @@ const PayerDash = () => {
     <>
       <h1 className="H1"> Courses</h1>
       <div>
-        <button onClick={handleToggleActiveOnly} className="text-prm10">
+        <button onClick={handleToggleActiveOnly} className="text-accent10">
           {showActiveOnly ? "Show all courses" : "Show active courses only"}
         </button>
       </div>

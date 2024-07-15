@@ -43,7 +43,7 @@ export const Form = ({ form, children, hasSubmitButton = true, submitText = "sub
       {hasSubmitButton && (
         <>
           <ErrMsg name="root.submit" />
-          <button type="submit" className="btn-prm !mt-8 !mb-8" disabled={form.formState.isSubmitting}>
+          <button type="submit" className="btn-accent !mt-8 !mb-8" disabled={form.formState.isSubmitting}>
             {form.formState.isSubmitting ? <LoadingSpinner /> : submitText}
           </button>
         </>
@@ -120,13 +120,13 @@ const ErrMsgEl = ({ errors, name }: { errors: any; name: string }) => (
 );
 
 type ButtonProps = {
-  variation?: "ghost" | "ghost-prm" | "solid" | "solid-prm" | "text" | "text-prm" | "soft" | "soft-prm";
+  variation?: "ghost" | "ghost-accent" | "solid" | "solid-accent" | "text" | "text-accent" | "soft" | "soft-accent";
   iconButton?: boolean;
   noPreStyle?: boolean;
   width?: "parent" | "content" | "default";
 } & React.ComponentPropsWithoutRef<"button">;
 
-Form.SubmitButton = function ({ children, variation = "solid-prm", className = "", width = "content" }: ButtonProps) {
+Form.SubmitButton = function ({ children, variation = "solid-accent", className = "", width = "content" }: ButtonProps) {
   const { register, formState } = useFormContext();
 
   return (

@@ -146,7 +146,7 @@ const TableBody = ({ table, isTableLayoutAuto }) => {
     <tbody className="text-s">
       {table.getRowModel().rows.map((row) => {
         return (
-          <tr key={row.id} className="odd:bg-prm2">
+          <tr key={row.id} className="odd:bg-accent2">
             {row.getVisibleCells().map((cell) => {
               const formatterFn = cell.column.columnDef.meta?.formatterFn;
               return (

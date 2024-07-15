@@ -50,7 +50,7 @@ const AdminDash = () => {
   return (
     <div>
       <div className="rd-xl b-1 b-gray-6 bg-gray1 p-4 flex justify-end">
-        <Link href="/admin-dashboard/master-data/expertise/add" className="btn-prm bf-i-ph-plus">
+        <Link href="/admin-dashboard/master-data/expertise/add" className="btn-accent bf-i-ph-plus">
           Add a new record
         </Link>
       </div>

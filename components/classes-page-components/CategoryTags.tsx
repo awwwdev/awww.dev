@@ -92,7 +92,7 @@ function TagAlt2({ label, href, icon }) {
   return (
     <LinkButton
       href={href}
-      variation={isActive ? "solid-prm" : "text"}
+      variation={isActive ? "solid-accent" : "text"}
       className={`${icon} ${isActive ? "before:opacity-100" : "bg-sand3 hover:bg-sand4"} 
       flex items-center !rd-full 
       `}

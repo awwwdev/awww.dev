@@ -29,7 +29,7 @@ export default function Process() {
       <BluredCircle radius={200} top="100%" left="95%" bg="bg-blue4" blur="200px" />
       <BluredCircle radius={100} top="0%" left="5%" bg="bg-amber3" blur="200px" />
 
-      <div className="max-w-70rem mx-auto">
+      <div className="max-w-page mx-auto">
         <h2 className="H2 c-title  pb-4">My Design Process</h2>
         <p className="c-melow max-w-50ch">{t("home:how.description")}</p>
         <div className="h-8 md:h-20  "></div>

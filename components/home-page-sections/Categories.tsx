@@ -160,7 +160,7 @@ export default function Categoreis() {
       <BluredCircle radius={100} top="10%" left="5%" bg="bg-amber3" blur="200px" />
       <BluredCircle radius={200} top="80%" left="25%" bg="bg-green3" blur="100px" />
 
-      <div className="max-w-70rem mx-auto">
+      <div className="max-w-page mx-auto">
         <h2 className="H2 c-title">{t("home:classes")}</h2>
         <Space size="h-4" />
         <ul

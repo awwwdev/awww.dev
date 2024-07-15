@@ -1,5 +1,6 @@
 import type { Rule, Shortcut } from "unocss";
 export const rules: Rule[] = [
+  ["max-w-page", { "max-width": 'var(--max-w-page)' }],
   ["font-display", { "font-family": 'var(--font-display)' }],
   ["font-content", { "font-family": 'var(--font-content)' }],
   ["font-mono", { "font-family": 'var(--font-mono)' }],
@@ -87,20 +88,20 @@ export const shortcuts: Shortcut[] = [
       "b rd-lg text-center  px-4 py-2 hover:b-orange7 hover:c-orange11 data-[in-path]:b-orange7 data-[in-path]:c-orange11",
     "tab-radix": "b b-orange6 c-orange11 rd-2xl hover:b-orange7 hover:c-orange12  data-[state=active]:bg-orange3",
     "btn-disabled": "!c-gray9 !bg-gray5 !b-gray5",
-    "btn-prm":
+    "btn-accent":
       "b-1   fw-500 px-4 py-1 rd-lg b-orange10 bg-orange10 c-white  hover:bg-orange9 hover:b-orange9 focus:bg-orange9 focus:b-orange9 active:bg-orange11 active:b-orange9 disabled:btn-disabled",
     "btn-danger":
       "b-1 fw-500 px-4 py-1 rd-lg b-red10 bg-red10 c-white  hover:bg-red9 hover:b-red9 focus:bg-red9 focus:b-red9 active:bg-red11 active:b-red9 disabled:btn-disabled",
     "btn-text":
       "b-1  fw-500 px-4 py-1 rd-lg b-transparent bg-transparent c-gray12  hover:bg-gray2 hover:b-gray2 focus:bg-gray2 focus:b-gray2 active:bg-gray3 active:b-gray3 disabled:btn-disabled",
-    "btn-text-prm":
+    "btn-text-accent":
       "b-1  fw-500 px-4 py-1 rd-lg b-transparent bg-transparent c-orange11  hover:bg-orange2 hover:b-orange2 focus:bg-orange2 focus:b-orange2 active:bg-orange3 active:b-orange3 disabled:btn-disabled",
     btn: "b-1   fw-500 px-4 py-1 rd-lg b-gray10 bg-gray10 c-white  hover:bg-gray9 hover:b-gray9 focus:bg-gray9 focus:b-gray9 active:bg-gray11 active:b-gray9 disabled:btn-disabled",
-    "btn-ghost-prm":
-      " b-1   fw-500 px-4 py-1 rd-lg b-prm7 c-prm11 active:b-prm11 active:bg-prm1 hover:b-prm9 hover:bg-prm1 focus:b-prm9 focus:bg-prm1 disabled:btn-disabled",
+    "btn-ghost-accent":
+      " b-1   fw-500 px-4 py-1 rd-lg b-accent7 c-accent11 active:b-accent11 active:bg-accent1 hover:b-accent9 hover:bg-accent1 focus:b-accent9 focus:bg-accent1 disabled:btn-disabled",
     "btn-ghost":
       " b-1 fw-500 px-4 py-1 rd-lg b-gray7 c-sand11 active:b-gray11 active:bg-gray1 hover:b-gray9 hover:bg-gray1 focus:b-gray9 focus:bg-gray1 disabled:btn-disabled",
-    // "btn-link-prm":
+    // "btn-link-accent":
     //   " b-1 b-transparent   fw-500 px-4 py-1 rd-lg  c-orange11 active:(b-orange3 bg-orange3) hover:(b-orange2  bg-orange2) focus:(b-orange2 bg-orange2) disabled:(btn-disabled)",
     // "btn-link":
     //   " b-1 b-transparent   fw-500 px-4 py-1 rd-lg  c-sand11 active:(b-gray3 bg-gray3) hover:(b-gray2  bg-gray2) focus:(b-gray2 bg-gray2) disabled:(btn-disabled)",

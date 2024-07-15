@@ -104,7 +104,7 @@ const TeacherDash = () => {
         Select<span className="fw-200"> course</span>
       </h1>
       <div>
-        <button onClick={() => setShowHiddenCourses(!showHiddenCourses)} className="text-prm10">
+        <button onClick={() => setShowHiddenCourses(!showHiddenCourses)} className="text-accent10">
           {showHiddenCourses ? "Show Active Courses Only" : "Show All Courses"}
         </button>
       </div>

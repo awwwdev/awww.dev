@@ -47,7 +47,7 @@ function SubTag({ label, href, icon, isActiveInSubpath = true }) {
   return (
     <LinkButton
       href={href}
-      variation={isActive ? "solid-prm" : "text"}
+      variation={isActive ? "solid-accent" : "text"}
       className={`${icon} ${isActive ? "before:opacity-100" : "bg-sand3  hover:bg-sand4 "} 
         !rd-full 
       flex items-center 

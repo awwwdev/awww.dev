@@ -34,9 +34,9 @@ export default function Blog() {
       {/* <BluredCircle radius={100} top="20%" left="95%" bg="bg-brand-light-amber" blur="200px" /> */}
       {/* <BluredCircle radius={200} top="60%" left="5%" bg="bg-brand-light-blue" blur="200px" /> */}
 
-      <div className="mx-auto max-w-70rem ">
+      <div className="mx-auto max-w-page ">
         <div className="flex justify-between gap-4">
-          <h2 className="H2 c-title">
+          <h2 className="H1">
             <En>Blog</En>
             <Fa>بلاگ</Fa>
           </h2>
@@ -79,7 +79,7 @@ export default function Blog() {
             </ul>
           </ScrollArea.Viewport>
           <ScrollArea.Scrollbar
-            className="max-w-70rem mx-auto  flex select-none touch-none lt-sm:mx-4 p-0.5 rd-full  bg-sand4 transition-colors duration-[500ms] ease-out hover:bg-blackA5 data-[orientation=vertical]:w-3 data-[orientation=horizontal]:flex-col data-[orientation=horizontal]:h-3"
+            className="max-w-page mx-auto  flex select-none touch-none lt-sm:mx-4 p-0.5 rd-full  bg-sand4 transition-colors duration-[500ms] ease-out hover:bg-blackA5 data-[orientation=vertical]:w-3 data-[orientation=horizontal]:flex-col data-[orientation=horizontal]:h-3"
             orientation="horizontal"
           >
             <ScrollArea.Thumb className="flex-1 bg-sand9 rd-full relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:w-full before:h-full before:min-w-11 before:min-h-11" />
@@ -87,7 +87,7 @@ export default function Blog() {
         </ScrollArea.Root>
         <Space size="h-4" />
       </div>
-      <div className="flex justify-end mx-auto max-w-70rem">
+      <div className="flex justify-end mx-auto max-w-page">
         {" "}
         <Link href="/blog">
           <En>

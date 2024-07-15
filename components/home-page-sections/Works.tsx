@@ -25,9 +25,14 @@ export default function Works() {
       <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
       <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue3" blur="200px" />
 
-      <div className="mx-auto max-w-70rem  ">
-        <h2 className='font-display fw-700 fs-4xl'>Works</h2>
-
+      <div className="mx-auto max-w-page  ">
+        <h2 className='H1'>Works</h2>
+<ul>
+  <li>Darsoon</li>
+  <li>Sleeker</li>
+  <li>Jack's House</li>
+  <li>Momenta</li>
+</ul>
       </div>
     </section>
   );

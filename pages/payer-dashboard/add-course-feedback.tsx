@@ -110,7 +110,7 @@ const Page = () => {
                   Rating:
                   <sup className="c-red11"> *</sup>
                 </legend>
-                <div className="mt-2 flex gap-1 c-prm-9 text-3xl">
+                <div className="mt-2 flex gap-1 c-accent-9 text-3xl">
                   <label
                     className={`before:opacity-100 ${
                       Number(form.watch("studentRating")) >= 1 ? "bf-i-ph-star-fill" : "bf-i-ph-star"
@@ -195,7 +195,7 @@ const SuccessScreen = ({ feedback, course }) => {
         <p className="text-note p-4 rd-xl b-1 b-gray5 bg-gray2">{feedback.studentFeedback}</p>
       </div>
       <button
-        className="btn-prm bf-i-ph-arrow-u-up-left"
+        className="btn-accent bf-i-ph-arrow-u-up-left"
         onClick={() => {
           window.location.reload();
         }}

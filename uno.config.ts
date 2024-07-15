@@ -17,6 +17,7 @@ export default defineConfig({
   theme: {
     color: {
       subdued: "var(--rx-slate11)",
+  
     }
   },
   transformers: [transformerVariantGroup()],

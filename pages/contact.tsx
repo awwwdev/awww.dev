@@ -57,7 +57,7 @@ const ContactForm: React.FC = () => {
       <h1 className="H1">Contact Us</h1>
       <Space size="h-8" />
       <p>
-        <span className="text-prm10 font-bold ">Phone (WhatsApp):</span>
+        <span className="text-accent10 font-bold ">Phone (WhatsApp):</span>
         <div className=" flex items-center h-3em">
           {isPhoneShown && (
             <a href="tel:+18773703277" className="">
@@ -74,7 +74,7 @@ const ContactForm: React.FC = () => {
       <Space size="h-4" />
 
       <p className="">
-        <span className="text-prm10 font-bold ">Email:</span>
+        <span className="text-accent10 font-bold ">Email:</span>
         <div className=" flex items-center h-3em">
           {isEmailShown && (
             <a href="mailto:info@darsoon.com" className="">
@@ -89,7 +89,7 @@ const ContactForm: React.FC = () => {
         </div>
       </p>
 
-      <p className="text-prm10 font-bold mt-4">Mailing Address:</p>
+      <p className="text-accent10 font-bold mt-4">Mailing Address:</p>
       <p className="">Darsoon Inc., 47 Brunel Street, Maple, Ontario, L6A 0R3, Canada</p>
       <div className="h-12"></div>
       <h2 className="H2">Message Us</h2>
@@ -117,7 +117,7 @@ const ContactForm: React.FC = () => {
           value={message}
           setValue={setMessage}
         />
-        <Button type="submit" variation="solid-prm">
+        <Button type="submit" variation="solid-accent">
           Send
         </Button>
 

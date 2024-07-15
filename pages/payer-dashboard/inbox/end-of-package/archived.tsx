@@ -47,7 +47,7 @@ const Archived = () => {
     <>
       <div className="flex justify-between items-center">
         <h1 className="H1">Read messages</h1>
-        <Link href="/payer-dashboard/inbox/end-of-package" className="btn-ghost-prm">
+        <Link href="/payer-dashboard/inbox/end-of-package" className="btn-ghost-accent">
           <p className="bf-i-ph-arrow-left">Back to inbox</p>
         </Link>
       </div>
@@ -64,7 +64,7 @@ const Archived = () => {
               <div className="text-sm">
                 <div dangerouslySetInnerHTML={{ __html: mail.emailBody }}></div>
               </div>
-              <button className="btn-prm" onClick={() => handleArchive(mail.id)}>
+              <button className="btn-accent" onClick={() => handleArchive(mail.id)}>
                 Mark as Unread
               </button>
             </div>

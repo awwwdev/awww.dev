@@ -52,7 +52,7 @@ const PayerDash = () => {
         You can limit the rows of the table through the search option at the top of each column
       </p>
       <div>
-        <button onClick={toggleShowActiveOnly} className="text-prm10">
+        <button onClick={toggleShowActiveOnly} className="text-accent10">
           {showActiveOnly ? "Show All Packages" : "Show Active Packages Only"}
         </button>
       </div>

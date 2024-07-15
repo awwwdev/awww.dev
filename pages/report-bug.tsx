@@ -91,7 +91,7 @@ const ContactForm: React.FC = () => {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           ></TextArea>
-          <Button variation="solid-prm" type="submit" width="parent">
+          <Button variation="solid-accent" type="submit" width="parent">
             Send
           </Button>
         </form>

@@ -32,7 +32,7 @@ function MobileHeader({ setIsSideMenuOpen, isInDashboard }) {
     <header
       className={`${!isInDashboard && router.asPath !== '/' && "bg-[#FCF9F7]/70"}   sm:hidden  px-4  sticky top-0 z-10 h-16 flex items-center `}
     >
-      <div className={` w-full max-w-70rem mx-auto grid `} style={{ gridTemplateColumns: "1fr auto 1fr" }}>
+      <div className={` w-full max-w-page mx-auto grid `} style={{ gridTemplateColumns: "1fr auto 1fr" }}>
         <div className="flex ">
           <HamburgerButton setIsSideMenuOpen={setIsSideMenuOpen} />
         </div>
@@ -56,7 +56,7 @@ function MobileHeader({ setIsSideMenuOpen, isInDashboard }) {
 function DesktopHeader({ isInDashboard }) {
   return (
     <header className={`  sm:flex hidden  px-4   sticky top-0 z-10 h-16 items-center c-melow `}>
-      <div className={`w-full max-w-70rem mx-auto flex justify-between items-center gap-0.5 `}>
+      <div className={`w-full max-w-page mx-auto flex justify-between items-center gap-0.5 `}>
         {!isInDashboard && <PublicWebsiteNav />}
         {/* <Search /> */}
         {/* <LocaleSwitcher /> */}

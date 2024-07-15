@@ -38,7 +38,7 @@ function DesktopHero() {
       <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
       <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue2" blur="200px" />
 
-      <div className="flex flex-row gap-8 items-center justify-center  w-full max-w-70rem mx-auto  ">
+      <div className="flex flex-row gap-8 items-center justify-center  w-full max-w-page mx-auto  ">
         <DesktopHeroImage />
         <div className="flex flex-col justify-center ">
           <p className="font-display fs-4xl fw-600 line-height-0.8">
@@ -46,7 +46,7 @@ function DesktopHero() {
           </p>
         </div>
       </div>
-      <div className='max-w-70rem mx-auto'>
+      <div className='max-w-page mx-auto'>
         <GridSection />
       </div>
     </section>
@@ -71,9 +71,9 @@ function MobileHero() {
       <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
       <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue2" blur="200px" />
 
-      <div className="flex flex-col  gap-8 items-center w-full max-w-70rem mx-auto  ">
+      <div className="flex flex-col  gap-8 items-center w-full max-w-page mx-auto  ">
         <div className="flex flex-col justify-center ">
-          <h1 className="H2 text-prm10 fw-800 text-center line-height-0.75 ">
+          <h1 className="H2 text-accent10 fw-800 text-center line-height-0.75 ">
             <En>
               Learn with
               <br />
@@ -177,7 +177,7 @@ className="sm:display-none   rounded-xl  shd-tinted-4 "
 function Circle() {
   return (
     <div className="  rd-full h-full w-full px-5 sm:px-20 md:px-20 absolute">
-      <div className="bg-orangeA-4 w-full h-full rd-full"></div>
+      <div className="bg-orange4A w-full h-full rd-full"></div>
     </div>
   );
 }

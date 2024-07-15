@@ -46,7 +46,7 @@ export default function SideMenu({ isSideMenuOpen, setIsSideMenuOpen, isInDashbo
 const MobileSideMenuOverlay = ({ isSideMenuOpen, setIsSideMenuOpen }) => {
   return (
     <div
-      className={` drawer-overlay sm:display-none fixed z-20 inset-0 bg-blackA-2 
+      className={` drawer-overlay sm:display-none fixed z-20 inset-0 bg-black2A 
              transition-opacity duration-600 ease-in-out backdrop-blur-4
              ${isSideMenuOpen ? "opacity-100 select-none" : "pointer-events-none opacity-0 "}`}
       title="Close Menu"
@@ -74,7 +74,7 @@ function SideNav({ className, isInDashboard, setIsSideMenuOpen }) {
     <NavContext.Provider value={{ isCollapsed, setIsCollapsed }}>
       <nav aria-label="primary" className={className} style={{ display: "grid", gridTemplateRows: "auto 1fr" }}>
         <DesktopOnly>
-          <div className="flex items-center h-16bg-blackA-11 px-4 sticky top-0 z-10">
+          <div className="flex items-center h-16bg-black11A px-4 sticky top-0 z-10">
             <Logo isInDashboard={isInDashboard} isCollapsed={isCollapsed} />
           </div>
         </DesktopOnly>
@@ -105,14 +105,14 @@ function SideNav({ className, isInDashboard, setIsSideMenuOpen }) {
             {userMeQ.data && (
               <NavLink
                 href="/account"
-                className="data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 ) bf-i-ph-user-circle"
+                className="data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 ) bf-i-ph-user-circle"
               >
                 {userMeQ.data.firstname}
               </NavLink>
             )}
             <NavLink
               href="/report-bug"
-              className="data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 ) bf-i-ph-bug"
+              className="data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 ) bf-i-ph-bug"
             >
               Report Bug
             </NavLink>
@@ -181,38 +181,38 @@ function PublicWebsiteNav() {
       <div className="h-2"></div>
       <NavLink
         href={``}
-        className=" text-xs data-[in-path=true]:c-prm11 before:m-0 flex gap-2 ac c-sand11  after:content-none after:flex-1 after:h-1px after:bg-gray6  "
+        className=" text-xs data-[in-path=true]:c-accent11 before:m-0 flex gap-2 ac c-sand11  after:content-none after:flex-1 after:h-1px after:bg-gray6  "
       >
         Darsoon Website
       </NavLink>
       <NavLink
         href="/tutors"
-        className="bf-i-ph-chalkboard-simple data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-chalkboard-simple data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Classes
       </NavLink>
       <NavLink
         href="/process"
-        className="bf-i-ph-traffic-sign  data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-traffic-sign  data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         How it Works
       </NavLink>
       <NavLink
         href="/faq"
-        className="bf-i-ph-question data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-question data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         FAQ{" "}
       </NavLink>
    
       <NavLink
         href="/blog"
-        className="bf-i-ph-newspaper data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-newspaper data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Blog
       </NavLink>
       <NavLink
         href="/contact"
-        className="bf-i-ph-phone data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-phone data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
         target="_blank"
       >
         Contact Us
@@ -250,14 +250,14 @@ const AdminNav = () => {
     <>
       <NavLink
         href={`/admin-dashboard`}
-        className=" text-xs data-[in-path=true]:c-prm11 before:m-0 flex gap-2 ac c-sand11  after:content-none after:flex-1 after:h-1px after:bg-gray6  "
+        className=" text-xs data-[in-path=true]:c-accent11 before:m-0 flex gap-2 ac c-sand11  after:content-none after:flex-1 after:h-1px after:bg-gray6  "
       >
         Admin Dashboard
       </NavLink>
       {hasUserManagementAccess && (
         <NavLink
           href="/admin-dashboard/users"
-          className="bf-i-ph-users-three data-[in-path=true]:(c-prm11 ) data-[in-sub-path=true]:(c-prm11 )"
+          className="bf-i-ph-users-three data-[in-path=true]:(c-accent11 ) data-[in-sub-path=true]:(c-accent11 )"
         >
           User Management
         </NavLink>
@@ -265,7 +265,7 @@ const AdminNav = () => {
       {hasMasterDataAccess && (
         <NavLink
           href="/admin-dashboard/master-data"
-          className="bf-i-ph-database data-[in-path=true]:(c-prm11 ) data-[in-sub-path=true]:(c-prm11 )"
+          className="bf-i-ph-database data-[in-path=true]:(c-accent11 ) data-[in-sub-path=true]:(c-accent11 )"
         >
           Master Data
         </NavLink>
@@ -273,7 +273,7 @@ const AdminNav = () => {
       {hasReportsAccess && (
         <NavLink
           href="/admin-dashboard/reports"
-          className="bf-i-ph-file-text data-[in-path=true]:(c-prm11 ) data-[in-sub-path=true]:(c-prm11 )"
+          className="bf-i-ph-file-text data-[in-path=true]:(c-accent11 ) data-[in-sub-path=true]:(c-accent11 )"
         >
           Reports
         </NavLink>
@@ -281,7 +281,7 @@ const AdminNav = () => {
       {hasVisitLogsAccess && (
         <NavLink
           href="/admin-dashboard/dashboard-visit-log"
-          className="bf-i-ph-scroll data-[in-path=true]:(c-prm11 ) data-[in-sub-path=true]:(c-prm11 )"
+          className="bf-i-ph-scroll data-[in-path=true]:(c-accent11 ) data-[in-sub-path=true]:(c-accent11 )"
         >
           Visit Logs
         </NavLink>
@@ -289,7 +289,7 @@ const AdminNav = () => {
       {hasBlogManagementAccess && (
         <NavLink
           href="/admin-dashboard/blog"
-          className="bf-i-ph-note-pencil data-[in-path=true]:(c-prm11 ) data-[in-sub-path=true]:(c-prm11 )"
+          className="bf-i-ph-note-pencil data-[in-path=true]:(c-accent11 ) data-[in-sub-path=true]:(c-accent11 )"
         >
           Blog Management
         </NavLink>
@@ -297,7 +297,7 @@ const AdminNav = () => {
       {hasAccessManagementAccess && (
         <NavLink
           href="/admin-dashboard/access-management"
-          className="bf-i-ph-person-simple data-[in-path=true]:(c-prm11 ) data-[in-sub-path=true]:(c-prm11 )"
+          className="bf-i-ph-person-simple data-[in-path=true]:(c-accent11 ) data-[in-sub-path=true]:(c-accent11 )"
         >
           Access Management
         </NavLink>
@@ -314,55 +314,55 @@ const PayerNav = () => {
     <>
       {/*       <NavLink
         href="/payer-dashboard/students"
-        className="bf-i-ph-student data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-student data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Students
       </NavLink>
       <NavLink
         href="/payer-dashboard/courses"
-        className="bf-i-ph-book-bookmark data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-book-bookmark data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Courses
       </NavLink> */}
       <NavLink
         href="/payer-dashboard/courses"
-        className="bf-i-ph-chalkboard data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-chalkboard data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Courses
       </NavLink>
       <NavLink
         href="/payer-dashboard/workshops"
-        className="bf-i-ph-chalkboard-simple data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-chalkboard-simple data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Workshops
       </NavLink>
       <NavLink
         href="/payer-dashboard/sessions"
-        className="bf-i-ph-chalkboard-teacher data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-chalkboard-teacher data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Sessions
       </NavLink>
       <NavLink
         href="/payer-dashboard/packages"
-        className="bf-i-ph-package data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-package data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Packages
       </NavLink>
       <NavLink
         href="/payer-dashboard/payments"
-        className="bf-i-ph-wallet data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-wallet data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Payments
       </NavLink>
       <NavLink
         href="/payer-dashboard/add-course-feedback"
-        className="bf-i-ph-star data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-star data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Add Course Feedback
       </NavLink>
       <NavLink
         href="/payer-dashboard/inbox"
-        className="bf-i-ph-tray data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-tray data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Inbox{" "}
         {introMeetingMailQ.isSuccess &&
@@ -385,25 +385,25 @@ const TeacherNav = () => {
       <div className="b-t-1 b-gray5 pt-4"></div>
       <NavLink
         href="/teacher-dashboard/class-requests"
-        className="bf-i-ph-student data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-student data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Class Requests
       </NavLink>
       <NavLink
         href="/teacher-dashboard/add-session"
-        className="bf-i-ph-student data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-student data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Add Session
       </NavLink>
       <NavLink
         href="/teacher-dashboard/payments"
-        className="bf-i-ph-receipt data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-receipt data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Payments
       </NavLink>
       <NavLink
         href="/teacher-dashboard/inbox"
-        className="bf-i-ph-tray data-[in-path=true]:(c-prm11 underline) data-[in-sub-path=true]:(c-prm11 underline)"
+        className="bf-i-ph-tray data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
       >
         Inbox{" "}
         {newIntroMeetingMailQ.isSuccess &&

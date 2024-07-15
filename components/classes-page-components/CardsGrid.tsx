@@ -395,7 +395,7 @@ function Status({ status, availability }) {
         trigger={
           <p
             className={` px-2 py-0.5 rd-2 w-fit flex items-center gap-1 
-        ${status.toLowerCase() === "new" && "c-prm3 primary-gradient"}
+        ${status.toLowerCase() === "new" && "c-accent3 primary-gradient"}
         ${status.toLowerCase() === "busy" && "c-tomato3 bg-tomato11"}
         ${status.toLowerCase() === "semibusy" && "c-sand12 bg-amber9"}
         `}

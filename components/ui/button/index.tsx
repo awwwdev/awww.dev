@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 import Icon from "../Icon";
 
 export type ButtonProps = {
-  variation: "ghost" | "ghost-prm" | "solid" | "solid-prm" | "text" | "text-prm" | "soft" | "soft-prm";
+  variation: "ghost" | "ghost-accent" | "solid" | "solid-accent" | "text" | "text-accent" | "soft" | "soft-accent";
   isLoading?: boolean;
   iconButton?: boolean;
   noPreStyle?: boolean;
@@ -17,56 +17,56 @@ const parts = {
   borderColor: {
     transparent: "b-transparent",
     gray: "b-sand5 hover:b-sand6 active:b-sand6",
-    accent: "b-prmA-4 hover:b-prm5 active:b-prm5",
+    accent: "b-orange4A hover:b-accent5 active:b-accent5",
   },
   bg: {
     transparent: {
-      gray: "hover:bg-sand4 active:bg-sandA-4",
-      accent: "hover:bg-prm4 active:bg-prmA-4",
+      gray: "hover:bg-sand4 active:bg-san4A",
+      accent: "hover:bg-accent4 active:bg-accent4A",
     },
     soft: {
-      gray: "bg-sand4 hover:bg-sandA-4 active:bg-sandA-5",
-      accent: "bg-prm4 hover:bg-prmA-4 active:bg-prmA-5",
+      gray: "bg-sand4 hover:bg-sand4A active:bg-sand5A",
+      accent: "bg-accent4 hover:bg-accent4A active:bg-accent5A",
     },
     solid: {
-      gray: "bg-blackA-12 hover:bg-blackA-12/80  active:bg-blackA-12/70",
-      accent: "bg-prm9 hover:bg-prm10 active:bg-prm11",
+      gray: "bg-black12A hover:bg-black12A/80  active:bg-black12A/70",
+      accent: "bg-accent9 hover:bg-accent10 active:bg-accent11",
     },
   },
   textColor: {
     gray: "",
-    accent: "c-prm11",
+    accent: "c-accent11",
     white: "c-white",
   },
 };
 
 export const classes = {
   base: `rd-0.5em b-1 fw-500 cursor-pointer appearance-none underline-none text-center whitespace-nowrap leading-1em
-  focus-visible:outline-prm11
-  focus:outline-prm9
+  focus-visible:outline-accent11
+  focus:outline-accent9
   focus:outline-offset-3
   focus:outline-1.5
   `,
   text: `${parts.textColor.gray} ${parts.borderColor.transparent} ${parts.bg.transparent.gray}`,
-  "text-prm": `${parts.textColor.accent} ${parts.borderColor.transparent} ${parts.bg.transparent.accent}`,
+  "text-accent": `${parts.textColor.accent} ${parts.borderColor.transparent} ${parts.bg.transparent.accent}`,
   ghost: ` ${parts.textColor.gray} ${parts.borderColor.gray} ${parts.bg.transparent.gray}`,
-  "ghost-prm": `${parts.textColor.accent} ${parts.borderColor.accent} ${parts.bg.transparent.accent}`,
+  "ghost-accent": `${parts.textColor.accent} ${parts.borderColor.accent} ${parts.bg.transparent.accent}`,
   soft: `${parts.textColor.gray} ${parts.borderColor.transparent} ${parts.bg.soft.gray}  `,
-  "soft-prm": `${parts.textColor.accent} ${parts.borderColor.transparent} ${parts.bg.soft.accent}`,
+  "soft-accent": `${parts.textColor.accent} ${parts.borderColor.transparent} ${parts.bg.soft.accent}`,
   solid: `${parts.textColor.white} ${parts.borderColor.transparent} ${parts.bg.solid.gray}`,
-  "solid-prm": `${parts.textColor.white} ${parts.borderColor.transparent} ${parts.bg.solid.accent}`,
+  "solid-accent": `${parts.textColor.white} ${parts.borderColor.transparent} ${parts.bg.solid.accent}`,
 };
 
 export const disabledClasses = {
   base: `aria-[disabled]:cursor-not-allowed  aria-[disabled]:c-sand10  `,
   text: `  aria-[disabled]:c-sand10 aria-[disabled]:b-transparent`,
-  "text-prm": ` aria-[disabled]:c-sand10 aria-[disabled]:b-transparent`,
+  "text-accent": ` aria-[disabled]:c-sand10 aria-[disabled]:b-transparent`,
   soft: ` aria-[disabled]:c-sand10 aria-[disabled]:bg-sand4 aria-[disabled]:b-transparent`,
-  "soft-prm": ` aria-[disabled]:c-sand10 aria-[disabled]:bg-sand4 aria-[disabled]:b-transparent`,
+  "soft-accent": ` aria-[disabled]:c-sand10 aria-[disabled]:bg-sand4 aria-[disabled]:b-transparent`,
   ghost: ` aria-[disabled]:c-sand10 aria-[disabled]:b-sand4`,
-  "ghost-prm": ` aria-[disabled]:c-sand10 aria-[disabled]:b-sand4`,
+  "ghost-accent": ` aria-[disabled]:c-sand10 aria-[disabled]:b-sand4`,
   solid: "aria-[disabled]:bg-sand8 aria-[disabled]:c-sand2 aria-[disabled]:b-transparent",
-  "solid-prm": "aria-[disabled]:bg-sand8 aria-[disabled]:c-sand2 aria-[disabled]:b-transparent",
+  "solid-accent": "aria-[disabled]:bg-sand8 aria-[disabled]:c-sand2 aria-[disabled]:b-transparent",
 };
 
 const Button = forwardRef<Ref, AllProps>(function Button(
