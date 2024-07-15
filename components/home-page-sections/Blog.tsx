@@ -15,19 +15,6 @@ import { En, Fa } from "../ui/multilang";
 import Space from "../ui/Space";
 
 export default function Blog() {
-  const { t } = useTranslation();
-  const supabase = useSupabaseClient();
-  const { locale } = useRouter();
-
-  const blogQ = useQuery<DPost[]>({
-    queryKey: ["blogQ-1"],
-    queryFn: async () => {
-      // const { data, error } = await supabase.from("topic").select(`category`);
-      const { data, error } = await supabase.from("post").select(`*`);
-      if (error) throw error;
-      return data;
-    },
-  });
 
   return (
     <section className="relative">
@@ -51,12 +38,10 @@ export default function Blog() {
             marginLeft: "-1rem",
             marginRight: "-1rem",
           }}
-          dir={locale === "en" ? "ltr" : "rtl"}
         >
           <ScrollArea.Viewport className="w-full h-full rd-2 ">
             <ul className=" flex gap-6 pb-8 ">
               <ScrollPadding />
-              {blogQ.isLoading && (
                 <>
                   <BlogCardSkeleton />
                   <BlogCardSkeleton />
@@ -67,14 +52,7 @@ export default function Blog() {
                   <BlogCardSkeleton />
                   <BlogCardSkeleton />
                 </>
-              )}
-              {blogQ.data && (
-                <>
-                  {blogQ.data.map((blogPost, index) => {
-                    return <BlogCard blogPost={blogPost} key={`blog-card-${index}`} />;
-                  })}
-                </>
-              )}
+         
               <ScrollPadding />
             </ul>
           </ScrollArea.Viewport>

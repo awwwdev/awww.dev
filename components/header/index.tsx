@@ -14,23 +14,23 @@ import Icon from "@/components/ui/Icon";
 import Button from "../ui/button";
 import { useRouter } from 'next/router';
 
-const Header = ({ setIsSideMenuOpen, isInDashboard }) => {
+const Header = ({ setIsSideMenuOpen,  }) => {
   return (
     <div className="">
-      <MobileHeader setIsSideMenuOpen={setIsSideMenuOpen} isInDashboard={isInDashboard} />
-      <DesktopHeader isInDashboard={isInDashboard} />
+      <MobileHeader setIsSideMenuOpen={setIsSideMenuOpen}  />
+      <DesktopHeader  />
     </div>
   );
 };
 
 export default Header;
 
-function MobileHeader({ setIsSideMenuOpen, isInDashboard }) {
+function MobileHeader({ setIsSideMenuOpen,  }) {
 
   const router = useRouter()
   return (
     <header
-      className={`${!isInDashboard && router.asPath !== '/' && "bg-[#FCF9F7]/70"}   sm:hidden  px-4  sticky top-0 z-10 h-16 flex items-center `}
+      className={`   sm:hidden  px-4  sticky top-0 z-10 h-16 flex items-center `}
     >
       <div className={` w-full max-w-page mx-auto grid `} style={{ gridTemplateColumns: "1fr auto 1fr" }}>
         <div className="flex ">
@@ -46,18 +46,18 @@ function MobileHeader({ setIsSideMenuOpen, isInDashboard }) {
         </Link>
         <div className="flex justify-end items-center">
           {/* <LocaleSwitcher /> */}
-          <MobileAccountButtons />
+          {/* <MobileAccountButtons /> */}
         </div>
       </div>
     </header>
   );
 }
 
-function DesktopHeader({ isInDashboard }) {
+function DesktopHeader({  }) {
   return (
     <header className={`  sm:flex hidden  px-4   sticky top-0 z-10 h-16 items-center c-melow `}>
       <div className={`w-full max-w-page mx-auto flex justify-between items-center gap-0.5 `}>
-        {!isInDashboard && <PublicWebsiteNav />}
+       <PublicWebsiteNav />
         {/* <Search /> */}
         {/* <LocaleSwitcher /> */}
         {/* <AccountButtons /> */}
@@ -143,7 +143,7 @@ function MobileAccountButtons() {
           </LinkButton>
         )}
       </div>
-      {!!userMeQ?.data && <AccountDropdownMenu userData={userMeQ.data} />}
+      {/* {!!userMeQ?.data && <AccountDropdownMenu userData={userMeQ.data} />} */}
     </div>
   );
 }

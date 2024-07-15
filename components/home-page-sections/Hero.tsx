@@ -28,10 +28,6 @@ export default function Hero() {
 }
 
 function DesktopHero() {
-  const { t } = useTranslation();
-  const supabase = useSupabaseClient();
-  const banner = supabase.storage.from("base").getPublicUrl(`banner.webp`);
-  const { locale } = useRouter();
 
   return (
     <section className="relative ">
