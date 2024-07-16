@@ -78,8 +78,10 @@ const Button = forwardRef<Ref, AllProps>(function Button(
       relative isolate
       ${classes.base} ${!disabled && classes[variation]}
       ${rounded ? 'rd-full' : 'rd-0.5em'}
-       ${iconButton ? "h-2.75em w-2.75em" : "h-2.75em px-1em"}
-       ${width === "parent" ? "w-full" : width === "content" ? "" : "min-w-6em"} 
+       ${iconButton ? "h-2.75em w-2.75em " : "h-2.75em px-1em"}
+       ${width === "parent" ? "w-full" : ""} 
+       ${width === "content" ? "w-full" : ""} 
+       ${width === "default" && !iconButton ? "min-w-6em" : ""} 
        ${disabled ? `${disabledClasses.base} ${disabledClasses[variation]}` : ""}`;
 
   return (
@@ -97,7 +99,7 @@ const Button = forwardRef<Ref, AllProps>(function Button(
       }}
       {...props}
     >
-      <span className={` w-full h-full ${isLoading ? "invisible" : ""}`}>{children}</span>
+      <span className={`contents ${isLoading ? "invisible" : ""}`}>{children}</span>
       {isLoading && (
         <Icon name='bf-i-svg-spinners:ring-resize' subdued={false}  className="   z-10  absolute top-50% left-50% -translate-x-50% -translate-y-50%" />
       )}

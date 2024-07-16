@@ -1,22 +1,9 @@
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
-import LinkButton from "@/components/ui/button/LinkButton";
-import { En, Fa } from "@/components/ui/multilang";
-import StarRating from "@/components/ui/StarRating";
 import BluredCircle from "./BluredCircle";
-import DesktopOnly from "../ui/DesktopOnly";
-import MobileOnly from "../ui/MobileOnly";
-import Space from "../ui/Space";
 import Icon from "@/components/ui/Icon";
 import Image from "next/image";
-import { InputDebaounced } from "../Table/Filter";
-import { useState } from "react";
-import HeroSearch from "./HeroSearch";
-import Toggle from "../ui/Toggle";
 import Input from "../ui/Input";
 import Checkbox from "../ui/Checkbox";
-import Button from "../ui/button/Button";
+import Button from "../ui/button";
 import Switch from '../ui/Switch';
 
 export default function Hero() {
@@ -103,14 +90,14 @@ function MusicPlayerPlate() {
   return (
     <Plate>
       <div>
-        <div className="flex gap-2">
-          <Button variation="text">
+        <div className=" flex gap-3 items-center" >
+          <Button variation="soft" iconButton rounded className='fs-sm'>
             <Icon name="bf-i-ph-skip-back" />
           </Button>
-          <Button variation="text" iconButton>
+          <Button variation="solid" iconButton rounded className='fs-xl'>
             <Icon name="bf-i-ph-play" />
           </Button>
-          <Button variation="text" iconButton>
+          <Button variation="soft" iconButton rounded className='fs-sm'>
             <Icon name="bf-i-ph-skip-forward" />
           </Button>
         </div>
