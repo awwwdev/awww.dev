@@ -25,15 +25,15 @@ ToggleGroup.displayName = 'ToggleGroup';
 function Item({
   children,
   className,
-  noPreStyle = false,
+  preStyled = true,
   ...props
-}: { noPreStyle?: boolean } & Children & RadixTypes.ToggleGroupItemProps) {
+}: { preStyled?: boolean } & Children & RadixTypes.ToggleGroupItemProps) {
   return (
     <RadixToggleGroup.Item
       // className={`px-2 py-1  b-1  b-accent6 c-mauve11 bg-accent2 rd-2
       // hover:bg-accent3  hover:b-accent7
       // data-[state=on]:bg-accent6 data-[state=on]:c-accent12  ${className}`}
-      className={`${!noPreStyle &&
+      className={`${preStyled &&
         `px-0.5em pt-0.125em pb-0.175em  b-1  b-base5 c-mauve11 bg-base1 rd-1.2 select-none
       data-[state=inactive]:hover:bg-base3  data-[state=inactive]:hover:b-base6
       data-[state=off]:hover:bg-base3  data-[state=off]:hover:b-base6

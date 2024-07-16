@@ -30,7 +30,7 @@ export default function SideMenu({ isSideMenuOpen, setIsSideMenuOpen }) {
       <MobileSideMenuOverlay {...{ isSideMenuOpen, setIsSideMenuOpen }} />
       <div className={` aside w-sidebar bg-gray2 z-30 h-full  ${isSideMenuOpen && "drawer-open"}`}>
         <MobileOnly>
-          <SideNav className={` text-sm   shd-titned-3  h-full `} setIsSideMenuOpen={setIsSideMenuOpen} />
+          <SideNav className={`text-sm  shd-titned-3  h-full `} setIsSideMenuOpen={setIsSideMenuOpen} />
         </MobileOnly>
       </div>
     </>

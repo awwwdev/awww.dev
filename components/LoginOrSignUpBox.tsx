@@ -27,7 +27,7 @@ export default function LoginOrSignUpBox() {
             <SignUpBox />
             <p className="mt-8 text-sm c-sand11 text-center">Already a user?{` `}
 
-              <Button variation='text' noPreStyle onClick={() => setTabValue('login')}> Login here</Button>
+              <Button variation='text' preStyled={false} onClick={() => setTabValue('login')}> Login here</Button>
             </p>
           </Tabs.Content>
           <Tabs.Content value="login">
@@ -36,7 +36,7 @@ export default function LoginOrSignUpBox() {
               Forgot Password? <Link href="/request-reset-password">Reset it here.</Link>
             </p>
             <p className="mt-8 text-xs c-sand11 text-center">No Account?
-              <Button variation='text' noPreStyle  onClick={() => setTabValue('signup')}> Sign Up here.</Button>
+              <Button variation='text' preStyled  onClick={() => setTabValue('signup')}> Sign Up here.</Button>
             </p>
           </Tabs.Content>
         </Tabs>

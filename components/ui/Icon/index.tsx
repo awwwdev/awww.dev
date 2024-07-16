@@ -1,7 +1,7 @@
 export default function Icon({
   name,
   className,
-  subdued = true,
+  subdued = false,
 }: {
   name: String;
   className?: string;

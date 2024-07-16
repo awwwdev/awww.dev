@@ -7,7 +7,7 @@ export type ButtonProps = {
   variation: "ghost" | "ghost-accent" | "solid" | "solid-accent" | "text" | "text-accent" | "soft" | "soft-accent";
   isLoading?: boolean;
   iconButton?: boolean;
-  noPreStyle?: boolean;
+  preStyled?: boolean;
   width?: "parent" | "content" | "default";
 };
 type Ref = HTMLButtonElement;
@@ -70,7 +70,7 @@ export const disabledClasses = {
 };
 
 const Button = forwardRef<Ref, AllProps>(function Button(
-  { noPreStyle, className, variation, children, isLoading, iconButton, disabled, width = "default", ...props },
+  { preStyled = true, className, variation, children, isLoading, iconButton, disabled, width = "default", ...props },
   ref
 ) {
   const cls = `
@@ -83,7 +83,7 @@ const Button = forwardRef<Ref, AllProps>(function Button(
   return (
     <button
       ref={ref}
-      className={`${!noPreStyle && cls} ${className}`}
+      className={`${ preStyled && cls} ${className}`}
       aria-disabled={disabled}
       aria-busy={isLoading}
       onClick={(e) => {

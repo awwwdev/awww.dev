@@ -122,7 +122,7 @@ const ErrMsgEl = ({ errors, name }: { errors: any; name: string }) => (
 type ButtonProps = {
   variation?: "ghost" | "ghost-accent" | "solid" | "solid-accent" | "text" | "text-accent" | "soft" | "soft-accent";
   iconButton?: boolean;
-  noPreStyle?: boolean;
+  preStyled?: boolean;
   width?: "parent" | "content" | "default";
 } & React.ComponentPropsWithoutRef<"button">;
 

@@ -6,7 +6,7 @@ type Ref = HTMLAnchorElement;
 type AllProps = React.ComponentPropsWithoutRef<"a"> & ButtonProps & { href: string };
 
 const LinkButton = forwardRef<Ref, AllProps>(function (
-  { className, noPreStyle, variation, href, children, width = "default", iconButton, ...props },
+  { className, preStyled, variation, href, children, width = "default", iconButton, ...props },
   ref
 ) {
   const cls = `inline-flex items-center justify-center  ${classes.base} ${classes[variation]}
@@ -16,7 +16,7 @@ const LinkButton = forwardRef<Ref, AllProps>(function (
   `;
 
   return (
-    <Link ref={ref} href={href} className={`${!noPreStyle && cls} ${className}`} {...props}>
+    <Link ref={ref} href={href} className={`${preStyled && cls} ${className}`} {...props}>
       {children}
     </Link>
   );

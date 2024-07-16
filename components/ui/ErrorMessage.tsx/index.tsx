@@ -6,14 +6,14 @@ const classes = {
 
 type ErrorMessageProps = {
   id: string;
-  noPreStyle?: boolean;
+  preStyled?: boolean;
   children?: React.ReactNode;
 };
 
-export default function ErrorMessage({ children, noPreStyle = false , id }: ErrorMessageProps) {
+export default function ErrorMessage({ children, preStyled = true , id }: ErrorMessageProps) {
   if (!children) return <></>;
   return (
-    <p id={id} className={` ${!noPreStyle && classes.messageText}`}>
+    <p id={id} className={` ${preStyled && classes.messageText}`}>
       <Icon name="bf-i-ph-warning-hectagon" subdued={false} />
       <span>{children}</span>
     </p>

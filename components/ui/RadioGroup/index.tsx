@@ -32,7 +32,7 @@ export default function RadioGroup({
     <RadioGroupContext.Provider value={{ value, setValue, name }}>
       <fieldset>
         <Legend
-          noPreStyle
+          preStyled
           className="text-sm c-base11 mt-0.5em font-display "
         >
           {legend}
@@ -53,13 +53,13 @@ function RadioItem({
   children,
   value,
   className,
-  noPreStyle = false,
+  preStyled = true,
   style,
   label,
   ...props
 }: {
   label: React.ReactNode;
-  noPreStyle?: boolean;
+  preStyled?: boolean;
   value: string;
   className?: string;
 } & HTMLProps<"input">) {
@@ -70,7 +70,7 @@ function RadioItem({
   return (
     <label
       data-state={controledValue === value ? "active" : "inactive"}
-      className={`${!noPreStyle &&
+      className={`${preStyled &&
         `px-0.5em pt-0.125em pb-0.175em  b-1  b-base5 c-mauve11 bg-base1 rd-1.2 select-none
         grid
         data-[state=inactive]:hover:b-base6 data-[state=inactive]:hover:bg-base2

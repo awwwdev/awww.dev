@@ -13,22 +13,20 @@ import Image from "next/image";
 import { InputDebaounced } from "../Table/Filter";
 import { useState } from "react";
 import HeroSearch from "./HeroSearch";
+import Toggle from "../ui/Toggle";
+import Input from "../ui/Input";
+import Checkbox from "../ui/Checkbox";
+import Button from '../ui/button';
 
 export default function Hero() {
   return (
     <div>
-      <MobileOnly>
-        <MobileHero />
-      </MobileOnly>
-      <DesktopOnly>
-        <DesktopHero />
-      </DesktopOnly>
+      <DesktopHero />
     </div>
   );
 }
 
 function DesktopHero() {
-
   return (
     <section className="relative ">
       <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
@@ -42,83 +40,123 @@ function DesktopHero() {
           </p>
         </div>
       </div>
-      <div className='max-w-page mx-auto'>
+      <div className="max-w-page mx-auto">
         <GridSection />
       </div>
     </section>
   );
 }
 
-
-function GridSection(){
-
-return (
-  <div >
-    <p className='font-display'> I design and develope websites</p>
-  </div>
-)};
-
-function MobileHero() {
-  const { locale } = useRouter();
-  const { t } = useTranslation();
-
+function GridSection() {
   return (
-    <section className="relative ">
-      <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
-      <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue2" blur="200px" />
+    <div className="grid gap-3">
+      <p className="font-display"> I design and develope websites</p>
+      {/* <Plate>
+  <Toggle />
+</Plate> */}
+      <Plate>
+        <Input placeholder="Search..." suffix="X" />
+      </Plate>
+      <Plate>
+        <Checkbox label="Checkbox" />
+      </Plate>
 
-      <div className="flex flex-col  gap-8 items-center w-full max-w-page mx-auto  ">
-        <div className="flex flex-col justify-center ">
-          <h1 className="H2 text-accent10 fw-800 text-center line-height-0.75 ">
-            <En>
-              Learn with
-              <br />
-              Top-Notch Tutors Online
-            </En>
-            <Fa>با بهترین مدرسان آنلاین یاد بگیرید</Fa>
-          </h1>
-          <Space size="h-2" />
-          <Fa></Fa>
-          <En>
-            <p className="c-sand11 leading-5 text-center">
-              Empower Your Family&apos;s Learning.
-              <br />
-              Explore Subjects with Professional Online Tutors.
-            </p>
-          </En>
-          <div className="h-4"></div>
-          <MobileHeroImage />
-          <div className="-mt-20">
-            <HeroSearch />
-          </div>
+      <Plate>
+        <div className="flex gap-3">
+          <FontSample size="xs" className="fs-xs" />
+          <FontSample size="sm" className="fs-sm" />
+          <FontSample size="md" className="fs-md" />
+          <FontSample size="lg" className="fs-lg" />
+          <FontSample size="xl" className="fs-xl" />
+          <FontSample size="2xl" className="fs-2xl" />
         </div>
-      </div>
-    </section>
-  );
-}
-
-function MobileHeroImage() {
-  const { locale } = useRouter();
-  const { t } = useTranslation();
-
-  return (
-    <div className="relative  flex justify-center items-center   ">
-      <Image
-        src="/profile-picture.png"
-        width={200}
-        height={200}
-        className={`w-60 w-60  scale-110 ${locale === "fa" && "scale-x--100"} `}
-        alt=""
-        priority
-      ></Image>
+  </Plate>
+  <Plate>
+    <Button variation='ghost'
+      prefix={<Icon name='bf-i-ph-bookmark' />}
+    >
+      Button
+    </Button>
+  </Plate>
+  <CodePlate />
+  <MusicPlayerPlate />
+  <ColorPalettePlate />
     </div>
   );
 }
 
-function DesktopHeroImage() {
-  const { locale } = useRouter();
-  const { t } = useTranslation();
+function ColorPalettePlate(){
 
+return (
+  <div >
+
+  </div>
+)};
+
+function MusicPlayerPlate(){
+
+  return (
+    <Plate>
+    <div>
+      <div className='flex gap-2'>
+        <Button variation='text' >
+          <Icon name='bf-i-ph-skip-back' />
+
+        </Button>
+        <Button variation='text' iconButton >
+          <Icon name='bf-i-ph-play' />
+        </Button>
+        <Button variation='text' iconButton>
+          <Icon name='bf-i-ph-skip-forward' />
+        </Button>
+
+      </div>
+      <div>
+        {/* <Slider /> */}
+      </div>
+    </div>
+  </Plate>
+  
+  )};
+  
+
+function CodePlate(){
+
+return (
+  <Plate>
+  <div className=''>
+    <div className='bg-base5 -mx-4 -mt-4 rd-t-4 mb-4  h-8'></div>
+      <code>
+    <pre>
+      &lt;div&gt;
+      <br />
+        ...
+      <br />
+      &lt;/div&gt;
+      
+    </pre>
+      </code>
+  </div>
+</Plate>
+
+)};
+
+function FontSample({ className, size }) {
+  return (
+    <div className="">
+      <div className="flex flex-col gap-1 items-center">
+        <div className={`font-display ${className} h-10 flex items-end`}>Aa</div>
+        <div className='text-xs c-base11'>{size}</div>
+      </div>
+    </div>
+  );
+}
+
+function Plate({ children }) {
+  return <div className="p-4 rd-4 shadow-lg bg-sand3 w-fit">{children}</div>;
+}
+
+function DesktopHeroImage() {
   return (
     <div className={` flex  items-center  `}>
       <div className="relative  flex justify-center items-center   ">
@@ -132,48 +170,6 @@ function DesktopHeroImage() {
           priority
         ></Image>
       </div>
-    </div>
-  );
-}
-function FeatureCard({ color, title, icon, className = "" }) {
-  const { t } = useTranslation();
-
-  return (
-    <li
-      className={`  shd-tinted-3  p-2 rd-3 text-xs line-height-0.8 flex   md:flex-row gap-3 items-center  ${className} bg-white/80 glass-effect`}
-    >
-      <FeatureIcon color={color} icon={icon} />
-      <div className="flex-1 c-melow flex items-center">
-        <p className="font-bold  ">{title}</p>
-        {/* <p>{description}</p> */}
-      </div>
-    </li>
-  );
-}
-
-function FeatureIcon({ color, icon }) {
-  return (
-    <div className={`w-7 md:w-10 h-7 md:h-10 rd-full ${color} flex justify-center items-center shd-tinted-3`}>
-      {/* <Icon name="bf-i-ph-list" /> */}
-      <Icon name={icon} className="text-lg c-brand-dark-blue" subdued={false} />
-    </div>
-  );
-}
-
-{
-  /* <Image
-src={banner.data.publicUrl}
-alt="banner"
-width={1280}
-height={622}
-className="sm:display-none   rounded-xl  shd-tinted-4 "
-/> */
-}
-
-function Circle() {
-  return (
-    <div className="  rd-full h-full w-full px-5 sm:px-20 md:px-20 absolute">
-      <div className="bg-orange4A w-full h-full rd-full"></div>
     </div>
   );
 }
