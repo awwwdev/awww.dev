@@ -16,7 +16,8 @@ import HeroSearch from "./HeroSearch";
 import Toggle from "../ui/Toggle";
 import Input from "../ui/Input";
 import Checkbox from "../ui/Checkbox";
-import Button from '../ui/button';
+import Button from "../ui/button/Button";
+import Switch from '../ui/Switch';
 
 export default function Hero() {
   return (
@@ -70,83 +71,80 @@ function GridSection() {
           <FontSample size="xl" className="fs-xl" />
           <FontSample size="2xl" className="fs-2xl" />
         </div>
-  </Plate>
-  <Plate>
-    <Button variation='ghost'
-      prefix={<Icon name='bf-i-ph-bookmark' />}
-    >
-      Button
-    </Button>
-  </Plate>
-  <CodePlate />
-  <MusicPlayerPlate />
-  <ColorPalettePlate />
+      </Plate>
+      <Plate>
+        <Button variation="ghost" prefix={<Icon name="bf-i-ph-bookmark" />}>
+          Button
+        </Button>
+      </Plate>
+      <CodePlate />
+      <MusicPlayerPlate />
+      <ColorPalettePlate />
+      <TogglePlate />
     </div>
   );
 }
 
-function ColorPalettePlate(){
-
-return (
-  <div >
-
-  </div>
-)};
-
-function MusicPlayerPlate(){
-
+function TogglePlate() {
   return (
     <Plate>
-    <div>
-      <div className='flex gap-2'>
-        <Button variation='text' >
-          <Icon name='bf-i-ph-skip-back' />
-
-        </Button>
-        <Button variation='text' iconButton >
-          <Icon name='bf-i-ph-play' />
-        </Button>
-        <Button variation='text' iconButton>
-          <Icon name='bf-i-ph-skip-forward' />
-        </Button>
-
+      <div className='grid gap-1.5'>
+      <Switch />
       </div>
+    </Plate>
+  );
+}
+
+function ColorPalettePlate() {
+  return <div></div>;
+}
+
+function MusicPlayerPlate() {
+  return (
+    <Plate>
       <div>
-        {/* <Slider /> */}
+        <div className="flex gap-2">
+          <Button variation="text">
+            <Icon name="bf-i-ph-skip-back" />
+          </Button>
+          <Button variation="text" iconButton>
+            <Icon name="bf-i-ph-play" />
+          </Button>
+          <Button variation="text" iconButton>
+            <Icon name="bf-i-ph-skip-forward" />
+          </Button>
+        </div>
+        <div>{/* <Slider /> */}</div>
       </div>
-    </div>
-  </Plate>
-  
-  )};
-  
+    </Plate>
+  );
+}
 
-function CodePlate(){
-
-return (
-  <Plate>
-  <div className=''>
-    <div className='bg-base5 -mx-4 -mt-4 rd-t-4 mb-4  h-8'></div>
-      <code>
-    <pre>
-      &lt;div&gt;
-      <br />
-        ...
-      <br />
-      &lt;/div&gt;
-      
-    </pre>
-      </code>
-  </div>
-</Plate>
-
-)};
+function CodePlate() {
+  return (
+    <Plate>
+      <div className="">
+        <div className="bg-base5 -mx-4 -mt-4 rd-t-4 mb-4  h-8"></div>
+        <code>
+          <pre>
+            &lt;div&gt;
+            <br />
+            ...
+            <br />
+            &lt;/div&gt;
+          </pre>
+        </code>
+      </div>
+    </Plate>
+  );
+}
 
 function FontSample({ className, size }) {
   return (
     <div className="">
       <div className="flex flex-col gap-1 items-center">
         <div className={`font-display ${className} h-10 flex items-end`}>Aa</div>
-        <div className='text-xs c-base11'>{size}</div>
+        <div className="text-xs c-base11">{size}</div>
       </div>
     </div>
   );
