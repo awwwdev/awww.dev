@@ -8,7 +8,7 @@ export type Children = { children: React.ReactNode };
 export type StateSetter<T> = React.Dispatch<React.SetStateAction<T>>;
 export type HTMLProps<T extends ElementType> = React.ComponentPropsWithoutRef<T>
 // frequently used props type  in uikit ----------------------------------------------- 
-export type CLS = { className?: string | null, noPreStyle?: boolean; };
+export type CLS = { className?: string | null, preStyled?: boolean; };
 
 // Type for data from database ----------------------------------------------- 
 export type DUser = Database["public"]["Tables"]["user"]["Row"];
