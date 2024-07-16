@@ -52,7 +52,7 @@ export default function Tools() {
             src="/tool-logos/pwa.svg"
             alt="Progressive Web Applications"
           /> */}
-            <Li className=" bg-orange4" src="/tool-logos/html.svg" size="w-9/10" alt="HTML" />
+            <Li className=" bg-accent4" src="/tool-logos/html.svg" size="w-9/10" alt="HTML" />
             <Li
               className="col-span-2  bg-gray5 dark "
               src="/tool-logos/radix-ui.svg"

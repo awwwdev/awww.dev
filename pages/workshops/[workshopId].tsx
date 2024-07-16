@@ -208,10 +208,10 @@ function ClassInformationCard({ workshopQ, userMeQ, studentQ, reviewQ, courseQ, 
             {(!isLoggedIn || !userMeQ.data?.isPayer) && (
               <>
                 <div className="flex justify-between pb-4">
-                  <button onClick={handleLoginClick} className={`px-4 ${!isNewUser && "text-orange-500 font-bold"}`}>
+                  <button onClick={handleLoginClick} className={`px-4 ${!isNewUser && "text-accent-500 font-bold"}`}>
                     Login
                   </button>
-                  <button onClick={handleSignUpClick} className={`px-4 ${isNewUser && "text-orange-500 font-bold"}`}>
+                  <button onClick={handleSignUpClick} className={`px-4 ${isNewUser && "text-accent-500 font-bold"}`}>
                     Sign Up
                   </button>
                 </div>

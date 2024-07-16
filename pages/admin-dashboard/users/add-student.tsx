@@ -34,13 +34,13 @@ export default function Page() {
             <Tabs.List className="flex justify-stretch  gap-4  rd-xl fw-700 ">
               <Tabs.Trigger
                 value="current-user"
-                className="flex-1 l  p-4 rd-xl  c-gray10 bg-gray3 hover:bg-gray4 data-[state=active]:c-orange11 data-[state=active]:!bg-orange4  "
+                className="flex-1 l  p-4 rd-xl  c-gray10 bg-gray3 hover:bg-gray4 data-[state=active]:c-accent11 data-[state=active]:!bg-accent4  "
               >
                 From a Existing Non-Student User
               </Tabs.Trigger>
               <Tabs.Trigger
                 value="create-user"
-                className="flex-1   p-4 rd-xl  c-gray10 bg-gray3  hover:bg-gray4 data-[state=active]:c-orange11 data-[state=active]:!bg-orange4"
+                className="flex-1   p-4 rd-xl  c-gray10 bg-gray3  hover:bg-gray4 data-[state=active]:c-accent11 data-[state=active]:!bg-accent4"
               >
                 Create a New User
               </Tabs.Trigger>

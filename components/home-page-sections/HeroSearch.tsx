@@ -84,7 +84,7 @@ function Overlay({ isResultsOpen, setIsResultsOpen }) {
 
 function SearchBox({ value, setValue, onKeyDown }) {
   return (
-    <div className=" px-4 py-2 rd-full shd-tinted-3  b-1 b-sand5 bg-sand1  w-full fw-400 min-w-40 max-w-140  flex-1 text-base flex items-center gap-2 focus-within:outline-brand-orange focus-within:outline-1px focus-within:outline-solid">
+    <div className=" px-4 py-2 rd-full shd-tinted-3  b-1 b-sand5 bg-sand1  w-full fw-400 min-w-40 max-w-140  flex-1 text-base flex items-center gap-2 focus-within:outline-brand-accent focus-within:outline-1px focus-within:outline-solid">
       <Icon name="bf-i-ph-magnifying-glass" className=" pt-1" />
       <label className="flex gap-2 items-center grow">
         <span className="sr-only">Search</span>

@@ -104,7 +104,7 @@ const categories = [
     bg: "bg-brand-blue",
     image: categoryImageSport,
     imageSrc: "/static/category-images/sport.jpg",
-    gradientTo: "to-brand-orange",
+    gradientTo: "to-brand-accent",
     icon: "bf-i-ph-football",
   },
 
@@ -267,7 +267,7 @@ function CategoryCard({ category }) {
           style={{ gridArea: "1/1/-1/1" }}
           priority
         />
-        <GradientOverlay gradient={`bg-gradient-to-b from-brand-orange/5  to-brand-orange/90  `} />
+        <GradientOverlay gradient={`bg-gradient-to-b from-brand-accent/5  to-brand-accent/90  `} />
         <div className="flex justify-between items-end p-4 " style={{ gridArea: "2/1/-1/-1" }}>
           <h3 className="font-display c-melow text-xl sm:text-2xl tracking-tight c-white capitalize">
             <div>

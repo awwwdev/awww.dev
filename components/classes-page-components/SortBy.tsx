@@ -38,7 +38,7 @@ export default function SortBy({ onSortChange, filters }) {
       >
         <Select.Trigger
           className={`inline-flex  items-baseline  rd-2 px-2 py-2.5 leading-none  gap-4 b-1 b-sand5   hover:bg-sand3  data-[placeholder]:c-sand11 outline-transparent sm:min-w-45 min-w-9  lt-sm:justify-center
-            focus-within:outline-brand-orange focus-within:outline-1px focus-within:outline-solid
+            focus-within:outline-brand-accent focus-within:outline-1px focus-within:outline-solid
             `}
           aria-label="Sort"
         >

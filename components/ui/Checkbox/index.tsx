@@ -30,7 +30,7 @@ export default function Checkbox({
       <label htmlFor={id} className="flex gap-2 items-center ">
         <div
           className={`w-1.5em h-1.5em b-1 b-base4 flex justify-center items-center p-1 rd-1.5 bg-white
-            focus-within:outline-brand-orange focus-within:outline-1px focus-within:outline-solid
+            focus-within:outline-brand-accent focus-within:outline-1px focus-within:outline-solid
             ${checked && "bg-accent9"}
             `}
         >

@@ -69,7 +69,7 @@ const Page: NextPage = () => {
             <Lnk
               key={i}
               href={`/admin-dashboard/reports/payment-to-teacher/${teacherId}/${m.yearMonth.replaceAll(" ", "-")}`}
-              className="x-2 px-1 text-2xs data-[in-sub-path]:bg-orange4"
+              className="x-2 px-1 text-2xs data-[in-sub-path]:bg-accent4"
             >
               {m.yearMonth}
             </Lnk>

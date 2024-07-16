@@ -19,7 +19,7 @@ export default function FAQItem({ question, children, number }) {
       <summary className=" flex items-center font-medium text-lg gap-2 shd-tinted-5 rd-4"
   
       >
-        {/* <div role="none" className=" w-24 h-24 text-2xl font-display flex justify-center items-center rounded-lg bg-brand-light-amber text-orange-10">
+        {/* <div role="none" className=" w-24 h-24 text-2xl font-display flex justify-center items-center rounded-lg bg-brand-light-amber text-accent-10">
           {locale === "fa"
             ? persianJs(number).englishNumber().toString()
             : number}

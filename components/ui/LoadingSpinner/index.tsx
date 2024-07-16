@@ -12,7 +12,7 @@ export default function LoadingSpinner({ className, wrapped = false, color = 'or
       <span
         className={`bf-i-svg-spinners:3-dots-bounce  before:opacity-80
         !mie-0 inline-flex justify-center items-center
-        ${color === "orange" ? "c-brand-orange" : ""}
+        ${color === "orange" ? "c-brand-accent" : ""}
         ${className} `}
       ></span>
       {` `}

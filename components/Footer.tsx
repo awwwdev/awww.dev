@@ -19,57 +19,57 @@ const Footer = () => {
                 <Fa>وبسایت</Fa>
               </h2>
 
-              <Link target="_blank" href="/classes" className="mb-2 c-sand11  text-sm  c-orange11">
+              <Link target="_blank" href="/classes" className="mb-2 c-sand11  text-sm  c-accent11">
                 Classes
               </Link>
-              <Link target="_blank" href="/workshops" className="mb-2 c-sand11  text-sm c-orange11">
+              <Link target="_blank" href="/workshops" className="mb-2 c-sand11  text-sm c-accent11">
                 Workshops
               </Link>
-              <Link target="_blank" href="/blog" className="mb-2 c-sand11  text-sm c-orange11">
+              <Link target="_blank" href="/blog" className="mb-2 c-sand11  text-sm c-accent11">
                 Blog
               </Link>
             </FooterColumn>
             <FooterColumn>
               <h2 className="font-bold mb-2">{t("footer:contact.title")}</h2>
-              <Link target="_blank" href="/tutor-application" className="mb-2 c-sand11  c-orange11">
+              <Link target="_blank" href="/tutor-application" className="mb-2 c-sand11  c-accent11">
                 {t("footer:with.teacher")}
               </Link>
-              <Link target="_blank" href="https://wa.me/18773703277" className="mb-2 c-sand11  c-orange11">
+              <Link target="_blank" href="https://wa.me/18773703277" className="mb-2 c-sand11  c-accent11">
                 <En>Support</En>
                 <Fa>پشتیبانی</Fa>
               </Link>
 
-              <Link target="_blank" href="/contact" className="mb-2 c-sand11  c-orange11">
+              <Link target="_blank" href="/contact" className="mb-2 c-sand11  c-accent11">
                 {t("footer:contact.contact")}
               </Link>
             </FooterColumn>
             <FooterColumn>
               <h2 className="font-bold mb-2">{t("footer:with.title")}</h2>
-              <Link target="_blank" href="/faq" className="mb-2 c-sand11  c-orange11">
+              <Link target="_blank" href="/faq" className="mb-2 c-sand11  c-accent11">
                 {t("footer:with.faq")}
               </Link>
 
-              <Link target="_blank" href="/terms-of-use" className="mb-2 c-sand11  c-orange11">
+              <Link target="_blank" href="/terms-of-use" className="mb-2 c-sand11  c-accent11">
                 {t("footer:with.terms")}
               </Link>
-              <Link target="_blank" href="/privacy-policy" className="mb-2 c-sand11  c-orange11">
+              <Link target="_blank" href="/privacy-policy" className="mb-2 c-sand11  c-accent11">
                 {t("footer:with.policy")}
               </Link>
             </FooterColumn>
             <FooterColumn>
               <h2 className="font-bold mb-2">{t("footer:social.title")}</h2>
               <div className="flex  flex-col gap-1  ">
-                <Link target="_blank" href="https://instagram.com/darsoononline" className=" c-orange11">
+                <Link target="_blank" href="https://instagram.com/darsoononline" className=" c-accent11">
                   <Icon name="bf-i-ph-instagram-logo  before:opacity-100 " />
-                  <span className="text-sm mx-2 c-sand11 c-orange11">Instagram</span>
+                  <span className="text-sm mx-2 c-sand11 c-accent11">Instagram</span>
                 </Link>
-                <Link target="_blank" href="https://facebook.com/darsoononline" className="c-orange11">
+                <Link target="_blank" href="https://facebook.com/darsoononline" className="c-accent11">
                   <Icon name="bf-i-ph-facebook-logo  before:opacity-100 " />
-                  <span className="text-sm mx-2 c-sand11 c-orange11">Facebook</span>
+                  <span className="text-sm mx-2 c-sand11 c-accent11">Facebook</span>
                 </Link>
-                <Link target="_blank" href="https://twitter.com/darsoononline" className="c-orange11">
+                <Link target="_blank" href="https://twitter.com/darsoononline" className="c-accent11">
                   <Icon name="bf-i-ph-x-logo  before:opacity-100 " />
-                  <span className="text-sm mx-2 c-sand11 c-orange11">X (Twitter)</span>
+                  <span className="text-sm mx-2 c-sand11 c-accent11">X (Twitter)</span>
                 </Link>
               </div>
             </FooterColumn>

@@ -72,8 +72,8 @@ export default function Stats() {
             style={{ gridTemplateColumns: "repeat(4 , auto)", gridTemplateRows: "auto auto", gridAutoFlow: "dense" }}
           >
             <div className="flex justify-center gap-8 items-center w-full">
-              {/* <div className="grow h-10 bg-orange4"></div> */}
-              {/* <div className="grow h-10 bg-orange4"></div> */}
+              {/* <div className="grow h-10 bg-accent4"></div> */}
+              {/* <div className="grow h-10 bg-accent4"></div> */}
             </div>
             <Space size="h-18" />
 
@@ -211,11 +211,11 @@ function RatingStat() {
         <Fa>۴.۹ </Fa>
        </DesktopOnly>
         {` `}
-          <Icon name="bf-i-ph-star-fill" className="c-brand-orange !before:scale-90 mis-1" subdued={false} />
-          <Icon name="bf-i-ph-star-fill" className="c-brand-orange !before:scale-90" subdued={false} />
-          <Icon name="bf-i-ph-star-fill" className="c-brand-orange !before:scale-90" subdued={false} />
-          <Icon name="bf-i-ph-star-fill" className="c-brand-orange !before:scale-90" subdued={false} />
-          <Icon name="bf-i-ph-star-fill" className="c-brand-orange !before:scale-90" subdued={false} />
+          <Icon name="bf-i-ph-star-fill" className="c-brand-accent !before:scale-90 mis-1" subdued={false} />
+          <Icon name="bf-i-ph-star-fill" className="c-brand-accent !before:scale-90" subdued={false} />
+          <Icon name="bf-i-ph-star-fill" className="c-brand-accent !before:scale-90" subdued={false} />
+          <Icon name="bf-i-ph-star-fill" className="c-brand-accent !before:scale-90" subdued={false} />
+          <Icon name="bf-i-ph-star-fill" className="c-brand-accent !before:scale-90" subdued={false} />
         </span>
       }
       label={

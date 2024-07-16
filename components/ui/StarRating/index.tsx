@@ -5,7 +5,7 @@ export default function StarRating({ number = 0, className }: { number: number; 
 
   const rate = Math.round(number * 2) / 2;
     return (
-      <div className={`flex gap-1 items-center c-brand-orange ${className} `}>
+      <div className={`flex gap-1 items-center c-brand-accent ${className} `}>
         <StarIcons number={rate} />
       </div>
     );

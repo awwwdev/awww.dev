@@ -75,9 +75,9 @@ function Tag({ label, href, icon, activeIcon = "", activeInSubPath = true, label
       <Icon
         subdued={!isActive}
         name={isActive ? activeIcon : icon}
-        className={`text-xl sm:text-2xl md:text-3xl  ${isActive && "c-brand-orange"}`}
+        className={`text-xl sm:text-2xl md:text-3xl  ${isActive && "c-accent11"}`}
       />
-      <span className={` ${isActive ? "c-orange11" : "c-sand11"} text-xs  sm:text-sm md:text-base `}>
+      <span className={` ${isActive ? "c-accent11" : "c-sand11"} text-xs  sm:text-sm md:text-base `}>
         {router.locale === "en" ? label : labelFa}
       </span>
     </Link>

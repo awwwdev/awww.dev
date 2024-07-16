@@ -113,10 +113,10 @@ const TableHead = ({ table, isTableLayoutAuto }) => {
                       onClick={header.column.getToggleSortingHandler()}
                     >
                       {header.column.getIsSorted() === "asc" && (
-                        <Icon name="i-ph-sort-ascending" className="c-orange11 inline-block w-1em" />
+                        <Icon name="i-ph-sort-ascending" className="c-accent11 inline-block w-1em" />
                       )}
                       {header.column.getIsSorted() === "desc" && (
-                        <Icon name="i-ph-sort-descending" className="c-orange11 inline-block w-1em" />
+                        <Icon name="i-ph-sort-descending" className="c-accent11 inline-block w-1em" />
                       )}
                       {header.column.getIsSorted() === false && (
                         <Icon name="i-ph-sort-ascending" className="c-gray10 inline-block w-1em" />
