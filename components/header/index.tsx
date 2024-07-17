@@ -36,7 +36,7 @@ function MobileHeader({ setIsSideMenuOpen,  }) {
         <div className="flex ">
           <HamburgerButton setIsSideMenuOpen={setIsSideMenuOpen} />
         </div>
-        <Link href="/" className=" fw-900 c-accent10 text-xs sm:text-base flex justify-center items-center">
+        <Link href="/" className="fs-sm fw-300 c-base11 tracking-wider font-display flex justify-center items-center">
           awwww.dev
         </Link>
         <div className="flex justify-end items-center">

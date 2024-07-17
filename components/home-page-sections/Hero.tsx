@@ -100,10 +100,10 @@ function PointerSVG() {
 
 function DevelopeWord() {
   return (
-    <span className="bg-base3 pt3 pb-2">
+    <span className="bg-base2A pt3 pb-2">
       <span className="tracking-tight  ">
         <span className="font-mono ">develop</span>
-        <span className="bg-indigo3A  pt-3 pb-2 relative">
+        <span className="bg-indigo2A  pt-3 pb-2 relative">
           <span className="font-mono c-indigo12">e</span>
           <span className="absolute bottom-0 left-0 right-0 h-0.16em cursor-pulse c-indigo12"></span>
         </span>
@@ -119,7 +119,7 @@ function AndWord() {
 function WebApplicationsWord() {
   return (
     <span className="relative">
-      <span className='bg-gradient-to-br from-base12 to-indigo12 bg-clip-text c-transparent'>
+      <span className=''>
         web{` `}
         <DesktopOnly>applications.</DesktopOnly>
         <MobileOnly>apps.</MobileOnly>
