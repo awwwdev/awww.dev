@@ -24,7 +24,7 @@ export default function Tools() {
   return (
     <section className="relative">
       <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber2" blur="200px" />
-      <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue3" blur="200px" />
+      <BluredCircle radius={200} top="60%" left="15%" bg="bg-plum2" blur="200px" />
 
       <div className="mx-auto max-w-page  ">
         <h2 className="H1">Tools</h2> 

@@ -11,7 +11,7 @@ type LabelProps = {
   required?: boolean;
 };
 
-export default function Label({ children, name , required,  preStyle = true }: LabelProps) {
+export default function Label({ children, name , required,  preStyled = true }: LabelProps) {
   if (!children) return <></>;
   return (
     <label htmlFor={name}>

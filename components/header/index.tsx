@@ -37,12 +37,7 @@ function MobileHeader({ setIsSideMenuOpen,  }) {
           <HamburgerButton setIsSideMenuOpen={setIsSideMenuOpen} />
         </div>
         <Link href="/" className=" fw-900 c-accent10 text-xs sm:text-base flex justify-center items-center">
-          <Fa>
-            <Image src={darsoonFarsiLogo} alt="Darsoon" className="max-w-20" />
-          </Fa>
-          <En>
-            <Image src={darsoonLogo} alt="Darsoon" className="max-w-20" />
-          </En>
+          awwww.dev
         </Link>
         <div className="flex justify-end items-center">
           {/* <LocaleSwitcher /> */}
@@ -73,7 +68,7 @@ function PublicWebsiteNav() {
     <nav className="w-full font-display">
       <ul className="flex items-center gap-4  text-xs sm:text-base w-full ">
         <li className="flex items-center">
-          <Link href="/" className=" fw-900 c-accent10 text-xs sm:text-base flex justify-center  items-center  fw-300">
+          <Link href="/" className=" fw-900  text-xs sm:text-base flex justify-center  items-center  fw-300">
         awww.dev
           </Link>
         </li>

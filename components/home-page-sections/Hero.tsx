@@ -4,7 +4,10 @@ import Image from "next/image";
 import Input from "../ui/Input";
 import Checkbox from "../ui/Checkbox";
 import Button from "../ui/button";
-import Switch from '../ui/Switch';
+import Switch from "../ui/Switch";
+import Space from "../ui/Space";
+import DesktopOnly from "../ui/DesktopOnly";
+import MobileOnly from '../ui/MobileOnly';
 
 export default function Hero() {
   return (
@@ -20,14 +23,6 @@ function DesktopHero() {
       <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
       <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue2" blur="200px" />
 
-      <div className="flex flex-row gap-8 items-center justify-center  w-full max-w-page mx-auto  ">
-        <DesktopHeroImage />
-        <div className="flex flex-col justify-center ">
-          <p className="font-display fs-4xl fw-600 line-height-0.8">
-            Hello! <br /> Im' Hamid.
-          </p>
-        </div>
-      </div>
       <div className="max-w-page mx-auto">
         <GridSection />
       </div>
@@ -37,67 +32,149 @@ function DesktopHero() {
 
 function GridSection() {
   return (
-    <div className="grid gap-3">
-      <p className="font-display"> I design and develope websites</p>
-      {/* <Plate>
-  <Toggle />
-</Plate> */}
-      <Plate>
-        <Input placeholder="Search..." suffix="X" />
-      </Plate>
-      <Plate>
-        <Checkbox label="Checkbox" />
-      </Plate>
-
-      <Plate>
-        <div className="flex gap-3">
-          <FontSample size="xs" className="fs-xs" />
-          <FontSample size="sm" className="fs-sm" />
-          <FontSample size="md" className="fs-md" />
-          <FontSample size="lg" className="fs-lg" />
-          <FontSample size="xl" className="fs-xl" />
-          <FontSample size="2xl" className="fs-2xl" />
+    <div>
+      <Space size="h-6 sm:h-20" />
+      <div className="flex justify-center">
+        <div className="flex flex-row gap-3 sm:gap-8 items-center w-fit     ">
+          <Image
+            src="/profile-picture.png"
+            width={200}
+            height={200}
+            className={`object-cover w-15 h-15 rd-full bg-sand3 `}
+            alt=""
+            priority
+          ></Image>
+          <p className="font-display fs-xl sm:fs-2xl tracking-wide  line-height-0.8">Hello. I&apos;m Hamid.</p>
         </div>
-      </Plate>
-      <Plate>
-        <Button variation="ghost" prefix={<Icon name="bf-i-ph-bookmark" />}>
-          Button
-        </Button>
-      </Plate>
-      <CodePlate />
-      <MusicPlayerPlate />
-      <ColorPalettePlate />
-      <TogglePlate />
+      </div>
+      <Space size="h-6 sm:h-20" />
+      <HeroSentence />
+      <Space size="h-10 sm:h-30" />
     </div>
+  );
+}
+
+function HeroSentence() {
+  return (
+    <p className="font-display fs-4xl sm:fs-6xl text-center">
+      <div>
+        <IWord />
+        {` `}
+        <DesignWord />
+        {` `}
+        <AndWord />
+        {` `}
+        <DevelopeWord />
+      </div>
+
+      <WebApplicationsWord />
+    </p>
+  );
+}
+
+function IWord() {
+  return <span className="c-base11 blur-1 ">I</span>;
+}
+
+function DesignWord() {
+  return (
+    <span className=" relative bg-gradient-to-r from-transparent to-indigo3  pt3 pb-2  ">
+      <span className="dashed-border-box p-3 pb-2">design</span>
+      <span className="absolute right-0 bottom-0  leading-1 translate-x-50% translate-y-50% w-0.5em h-0.5em c-indigo12A ">
+        <PointerSVG />
+      </span>
+    </span>
+  );
+}
+
+function PointerSVG() {
+  return (
+    <svg className=" " viewBox="0 0 715 727" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M480.109 419.221L541.97 390.586C658.516 336.636 716.79 309.662 714.93 268.172C713.07 226.682 652.617 205.03 531.71 161.726L198.792 42.4868C94.354 5.08088 42.1349 -13.6221 14.4457 13.5169C-13.2435 40.6558 4.40758 93.2398 39.7098 198.408L39.7099 198.408L154.548 540.52C195.612 662.853 216.144 724.019 257.68 726.637C299.215 729.255 327.265 671.151 383.365 554.943L420.635 477.738L420.635 477.737C430.17 457.986 434.937 448.111 442.596 440.576C450.254 433.041 460.205 428.434 480.109 419.221Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+function DevelopeWord() {
+  return (
+    <span className="bg-base3 pt3 pb-2">
+      <span className="tracking-tight  ">
+        <span className="font-mono ">develop</span>
+        <span className="bg-indigo3A  pt-3 pb-2 relative">
+          <span className="font-mono c-indigo12">e</span>
+          <span className="absolute bottom-0 left-0 right-0 h-0.16em cursor-pulse c-indigo12"></span>
+        </span>
+      </span>
+    </span>
+  );
+}
+
+function AndWord() {
+  return <span className="blur-1 c-base11">and</span>;
+}
+
+function WebApplicationsWord() {
+  return (
+    <span className="relative">
+      <span className='bg-gradient-to-br from-base12 to-indigo12 bg-clip-text c-transparent'>
+        web{` `}
+        <DesktopOnly>applications.</DesktopOnly>
+        <MobileOnly>apps.</MobileOnly>
+      </span>
+      <span className="absolute -right-0.1em top-0  leading-1 translate-x-20%  -translate-y-50% ">
+        <Icon name="bf-i-ph-sparkle-fill" className="c-indigo12A fs-lg sm:fs-3xl  blur-2" />
+      </span>
+    </span>
   );
 }
 
 function TogglePlate() {
   return (
     <Plate>
-      <div className='grid gap-1.5'>
-      <Switch />
+      <div className="grid gap-1.5">
+        <Switch />
       </div>
     </Plate>
   );
 }
 
 function ColorPalettePlate() {
-  return <div></div>;
+  return (
+    <Plate>
+      <div className="flex gap-1.5">
+        <ColorNode className="bg-blue1" />
+        <ColorNode className="bg-blue2" />
+        <ColorNode className="bg-blue3" />
+        <ColorNode className="bg-blue4" />
+        <ColorNode className="bg-blue5" />
+        <ColorNode className="bg-blue6" />
+        <ColorNode className="bg-blue7" />
+        <ColorNode className="bg-blue8" />
+        <ColorNode className="bg-blue9" />
+      </div>
+    </Plate>
+  );
+}
+
+function ColorNode({ className }) {
+  return <div className={`${className} w-5 h-5 rd-full `}></div>;
 }
 
 function MusicPlayerPlate() {
   return (
     <Plate>
       <div>
-        <div className=" flex gap-3 items-center" >
-          <Button variation="soft" iconButton rounded className='fs-sm'>
+        <div className=" flex gap-3 items-center">
+          <Button variation="soft" iconButton rounded className="fs-sm">
             <Icon name="bf-i-ph-skip-back" />
           </Button>
-          <Button variation="solid" iconButton rounded className='fs-xl'>
+          <Button variation="solid" iconButton rounded className="fs-xl">
             <Icon name="bf-i-ph-play" />
           </Button>
-          <Button variation="soft" iconButton rounded className='fs-sm'>
+          <Button variation="soft" iconButton rounded className="fs-sm">
             <Icon name="bf-i-ph-skip-forward" />
           </Button>
         </div>
@@ -111,7 +188,7 @@ function CodePlate() {
   return (
     <Plate>
       <div className="">
-        <div className="bg-base5 -mx-4 -mt-4 rd-t-4 mb-4  h-8"></div>
+        <div className="bg-base5 -mx-4 -mt-4 rd-t-4 mb-4  h-8 min-w-50"></div>
         <code>
           <pre>
             &lt;div&gt;
@@ -144,17 +221,7 @@ function Plate({ children }) {
 function DesktopHeroImage() {
   return (
     <div className={` flex  items-center  `}>
-      <div className="relative  flex justify-center items-center   ">
-        {/* <Circle /> */}
-        <Image
-          src="/profile-picture.png"
-          width={200}
-          height={200}
-          className={`object-cover w-50 h-50 rd-full bg-sand3 `}
-          alt=""
-          priority
-        ></Image>
-      </div>
+      <div className="relative  flex justify-center items-center   ">{/* <Circle /> */}</div>
     </div>
   );
 }

@@ -30,7 +30,7 @@ const Page: NextPage = () => {
         <Hero />
         {/* <Features /> */}
         {/* <Stats /> */}
-        <Space size="h-20" />
+        <Space size="h-6 sm:h-20" />
         {/* <Categoreis /> */}
         <Works />
 

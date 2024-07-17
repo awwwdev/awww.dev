@@ -10,6 +10,8 @@ export type ButtonProps = {
   preStyled?: boolean;
   rounded?: boolean;
   width?: "parent" | "content" | "default";
+  prefix?: React.ReactNode;
+  suffix?: React.ReactNode;
 };
 type Ref = HTMLButtonElement;
 type AllProps = React.ComponentPropsWithoutRef<"button"> & ButtonProps;
@@ -17,8 +19,8 @@ type AllProps = React.ComponentPropsWithoutRef<"button"> & ButtonProps;
 const parts = {
   borderColor: {
     transparent: "b-transparent",
-    gray: "b-sand6 hover:b-sand7 active:b-sand7",
-    accent: "b-accent6 hover:b-accent7 active:b-accent7",
+    gray: "b-sand7 hover:b-sand8 active:b-sand8",
+    accent: "b-accent7 hover:b-accent8 active:b-accent8",
   },
   bg: {
     transparent: {
@@ -30,7 +32,7 @@ const parts = {
       accent: "bg-accent4 hover:bg-accent4A active:bg-accent5A",
     },
     solid: {
-      gray: "bg-black12A hover:bg-black12A/80  active:bg-black12A/70",
+      gray: "bg-black12A hover:bg-black12A/60  active:bg-black12A/30 ",
       accent: "bg-accent9 hover:bg-accent10 active:bg-accent11",
     },
   },
@@ -71,7 +73,7 @@ export const disabledClasses = {
 };
 
 const Button = forwardRef<Ref, AllProps>(function Button(
-  { preStyled = true, className, variation, children, isLoading, iconButton, disabled, width = "default", rounded = false, ...props },
+  { preStyled = true, className, variation, children, isLoading, iconButton, disabled, width = "default", rounded = false, prefix , suffix , ...props },
   ref
 ) {
   const cls = `
@@ -99,7 +101,11 @@ const Button = forwardRef<Ref, AllProps>(function Button(
       }}
       {...props}
     >
-      <span className={`contents ${isLoading ? "invisible" : ""}`}>{children}</span>
+      <span className={`contents ${isLoading ? "invisible" : ""}`}>
+        {prefix}
+        {children}
+        {suffix}
+        </span>
       {isLoading && (
         <Icon name='bf-i-svg-spinners:ring-resize' subdued={false}  className="   z-10  absolute top-50% left-50% -translate-x-50% -translate-y-50%" />
       )}
