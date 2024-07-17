@@ -384,25 +384,22 @@ a {
     transparent calc(100% - var(--jh-fade-x-margin))
   );
 }
-
-.fade-y {
-  --jh-fade-x-margin: 2%;
-  --jh-fade-x-padding: 25%;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent var(--jh-fade-x-margin),
-    black var(--jh-fade-x-padding),
-    black calc(100% - var(--jh-fade-x-padding)),
-    transparent calc(100% - var(--jh-fade-x-margin))
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent var(--jh-fade-x-margin),
-    black var(--jh-fade-x-padding),
-    black calc(100% - var(--jh-fade-x-padding)),
-    transparent calc(100% - var(--jh-fade-x-margin))
-  );
+:root {
+  --fade-to-opacity: 0
 }
+.fade-to-b {
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, rgba(0 0 0 / var(--fade-to-opacity)) 75%);
+  mask-image: linear-gradient(to bottom, black 0%,  rgba(0 0 0 / var(--fade-to-opacity)) 75%);
+  transition: --fade-to-opacity 1s ease;
+}
+
+@property --fade-to-opacity {
+  syntax: '<number>'; /* <- defined as type number for the transition to work */
+  initial-value: 0;
+  inherits: false;
+}
+
+
 
 @media (min-width: 1300px) {
   .blog-section-fade-x {
@@ -509,7 +506,6 @@ a {
 .cursor-pulse {
   --cursor-color: currentColor;
   animation: cursorPulse 1s infinite linear;
-
 }
 
 @keyframes cursorPulse {
