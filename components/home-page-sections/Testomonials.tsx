@@ -29,12 +29,12 @@ export default function Testomonials() {
         <div className="mx-auto max-w-page ">
           <BluredCircle radius={200} top="100%" left="0%" bg="bg-blue3" blur="200px" />
           <BluredCircle radius={100} top="0%" left="5%" bg="bg-amber2" blur="200px" />
-          <En>
+          
             <h2 className="H2 c-title ">What people say</h2>
-          </En>
-          <Fa>
+          
+          
             <h2 className="H2 c-title "> نظر کاربران</h2>
-          </Fa>
+          
           <Space size="h-12" />
         </div>
       </div>
@@ -102,17 +102,17 @@ function TestomonialCard({ children, name, gridRow, gridColumn, bg, color, subje
         <p className="fw-500 text-xl tracking-tight font-display c-melow leading-5">{name}</p>
         <div className="text-xs c-subdued leading-3.5 c-sand11">
           <p>
-            <En>from</En>
-            <Fa>از</Fa>
+            from
+            از
             {` `}
             {from}
           </p>
           <p>
-            <Fa>کلاس</Fa>
+            کلاس
             {` `}
             {subject}
             {` `}
-            <En>class</En>
+            class
           </p>
         </div>
       </div>
@@ -193,7 +193,7 @@ function Testomonial1() {
       subject={locale === "en" ? "Chess Class" : "شطرنج"}
       className="lt-sm:pis-4  "
     >
-      <En>
+      
         {/* <div className="sm:text-lg grid ">
           He is a great violin teacher, professional, and passionate about his work.
           <br />
@@ -203,18 +203,18 @@ function Testomonial1() {
         <div className='text-base sm:text-lg'>
         We are very happy with the Chess classes. He not only teaches my son Chess but also encourages him and gives him confidence. I think his approach to teaching is effective and valuable. He is always happy to communicate about my {`son’s`} progress and what he needs to do to improve. He is flexible with timing and is always very understanding. He sends us a reminder a day before each class which is great for adjusting time and plans. We really appreciate his efforts. Thank you!
         </div>
-      </En>
-      {/* <Fa>
+      
+      {/* 
         پسر من که ده ساله هست و هیچ علاقه ای به زبان فارسی نشان نمیداد بعد از مدت کوتاهی که از کلاسهاش گذشت از من فارسی
         کلمات را میپرسه و شروع به ساختن جمله های کوتاه فارسی کرده است.
-      </Fa> */}
-      <Fa>
+       */}
+      
       ایشون بسیار معلم باهوش، با حوصله، متعهد به کار و باسواد در شطرنج هستن. رابطه بسیار دوستانه و‌ در عین حال حرفه ای با پسر ۱۳ ساله من سر جلسه ها داشتن و همین باعث علاقمندی بیشتر پسرم به شطرنج شده. با جملات تشویقی و‌انگیزشی سر کلاس، باعث‌ میشدن‌ که کلاس یکنواخت نباشه و اصلا پسرم گذر زمان رو متوجه نمیشد. بعد از هر جلسه تمرین میفرستادن و‌ همیشه به من فیدبک میدادن. با تشکر از ایشون و‌ براشون آرزوی موفقیت دارم .
-      </Fa>
-      {/* <Fa>
+      
+      {/* 
 یاسمن: از هر لحظه کلاس لذت بردم . روش تدریس بسیار عالی و با صبر و حوصله و علاقه که باعث شد دوباره پیانو زدن
 را شروع کنم و همیشه مشتاق جلسه بعدی باشم.
-</Fa> */}
+ */}
     </TestomonialCard>
   );
 }
@@ -232,18 +232,18 @@ function Testomonial2() {
       from={locale === "en" ? "United States" : "تورنتو"}
       subject={locale === "en" ? "Piano" : "ریاضی"}
     >
-      <En>
+      
         <div className="">
           She is wonderful. She is so flexible and easy to work with. Her fluency in both Farsi and English makes it
           really easy for the kids to understand her. In general, she is a 5-star teacher.
         </div>
         
-      </En>
-      <Fa>
+      
+      
         ايشون بسيار معلم با سواد و با حوصله اى هستند و روى درک و يادگيرى مطلب بسيار كوشا، ارتباط بسيار خوبى برقرار مى
         كنند و براى بچه هایی كه تفاوت زبان و فرهنگى دارن يادگيرى رو آسون مى كنن، مرسى از درسون كه اين امكان رو براى ما
         پيش آورده.
-      </Fa>
+      
     </TestomonialCard>
   );
 }
@@ -261,14 +261,14 @@ function Testomonial3() {
       from={locale === "en" ? "Canada" : "تورنتو"}
       subject={locale === "en" ? "Fitness" : "برنامه‌نویسی"}
     >
-      <En>
+      
         She is a great fitness instructor who has helped us with rehabilitation and strengthening. Over the many months
         we see clear improvement in our fitness and looking forward to continuing our sessions.
-      </En>
-      <Fa>
+      
+      
         من دوره رو برای خودم خریدم. یکی از بزرگترین مزایا برای من راحتی هماهنگ کردن دوره با برنامه‌ کار و خانواده ام
         بود. مزیت دوم هماهنگ کردن ‌‌سرعت کلاس با میزان درک من از هر قسمتی بود.
-      </Fa>
+      
     </TestomonialCard>
   );
 }
@@ -286,14 +286,14 @@ function Testomonial4() {
       from={locale === "en" ? "Australia" : "تورنتو"}
       subject={locale === "en" ? "Programming" : "فرانسه"}
     >
-      <En>
+      
         His teaching method is awesome and very clear. He&apos;s made programming so easy to understand. I recommend him
         to anyone struggling with Python.
-      </En>
-      <Fa>
+      
+      
         دختر شش ساله من روزهایی که کلاس فرانسه داره با ذوق از خواب بیدار میشه و بعد از کلاس هم کلی انرژی داره .در مدت ۵
         جلسه خیلی مطلب یاد گرفته و دوست داره کارتونهای فرانسه ببینه.
-      </Fa>
+      
     </TestomonialCard>
   );
 }
@@ -312,14 +312,14 @@ function Testomonial5() {
       subject={locale === "en" ? "Math" : "پیانو"}
       className="lt-sm:pie-4"
     >
-      <En>
+      
         He is really good at making connections with the kids. He is also very dedicated to his work and I like that he
         sends some homework so my daughter always has something to practice
-      </En>
-      <Fa>
+      
+      
         ایشون خیلی سریع تونستن با پسر من ارتباط برقرار کنند و رو آهنگی که دوست داشت موارد درسیشون را یاد بدن. کلاسها
         خیلی منظم و با برنامه هست همیشه. پسر من فعلا بدون اینکه من بگم دوست داره تمرین پیانو بکنه !
-      </Fa>
+      
     </TestomonialCard>
   );
 }

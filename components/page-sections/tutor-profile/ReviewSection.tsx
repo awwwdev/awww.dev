@@ -62,8 +62,8 @@ export default function ReviewsSection({ reviewQ, prevCourseQ }) {
       <Space size="h-8" />
       <div className="flex gap-2 justify-between max-w-50rem mx-auto">
         <h2 className="H3 !fw-700 c-sand11">
-          <En>Reviews</En>
-          <Fa>ارزیابی‌ها</Fa>
+          Reviews
+          ارزیابی‌ها
         </h2>
         {prevCourseQ.data && prevCourseQ.data.length > 0 && (
           <Button variation="ghost" className="bf-i-ph-pencil">

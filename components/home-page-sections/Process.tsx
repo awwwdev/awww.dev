@@ -1,24 +1,10 @@
-import { renderNoData } from "@/components/RenderQ";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import { useQuery } from "@tanstack/react-query";
-import { NextPage } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import persianJs from "persianjs";
-import LinkButton from "@/components/ui/button/LinkButton";
-import { En, Fa } from "@/components/ui/multilang";
-import FAQItem from "@/components/ui/FAQItem";
-import StarRating from "@/components/ui/StarRating";
-import Avatar from "@/components/ui/Avatar";
-import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import BluredCircle from "./BluredCircle";
 import Space from "../ui/Space";
 import Icon from "@/components/ui/Icon";
-import DesktopOnly from "../ui/DesktopOnly";
-import MobileOnly from "../ui/MobileOnly";
 
 export default function Process() {
   const { t } = useTranslation();
@@ -58,19 +44,19 @@ export default function Process() {
         </ol>
         <Space size="h-12" />
         <div className="text-end">
-          <En>
+          
             <Link href="/process">
               Check our visual step-by-step guide
               <Icon name="bf-i-ph-arrow-right mis-2" />
             </Link>
-          </En>
+          
 
-          <Fa>
+          
             <Link href="/process">
               راهنمای دیداری مراحل 
               <Icon name="bf-i-ph-arrow-left mis-2" />
             </Link>
-          </Fa>
+          
         </div>
       </div>
     </section>

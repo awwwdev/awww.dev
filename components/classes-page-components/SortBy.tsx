@@ -66,19 +66,19 @@ export default function SortBy({ onSortChange, filters }) {
             <Select.Viewport className="p-2 min-w-45">
               <SelectItem value="random">
                 <Icon name="bf-i-ph-shuffle " className="mie-2" />
-                <Fa>بختوار</Fa>
-                <En>Random</En>
+                بختوار
+                Random
               </SelectItem>
               <SelectItem value="lowest-price">
                 <Icon name="bf-i-ph-sort-ascending " className="mie-2" />
 
-                <Fa>کمترین قیمت</Fa>
-                <En>Lowest Prce</En>
+                کمترین قیمت
+                Lowest Prce
               </SelectItem>
               <SelectItem value="highest-price">
                 <Icon name="bf-i-ph-sort-descending " className="mie-2" />
-                <Fa>بیشترین قیمت</Fa>
-                <En>Highest Price</En>
+                بیشترین قیمت
+                Highest Price
               </SelectItem>
             </Select.Viewport>
           </Select.Content>

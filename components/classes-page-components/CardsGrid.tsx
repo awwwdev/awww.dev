@@ -355,17 +355,17 @@ function ClassCardForTableHook({
         </div>
         <div className="h-3"></div>
         <div className="flex justify-between items-center">
-          <Fa>
+          
             <h3 className="c-sand11 text-xl fw-900">{topicNameFa}</h3>
-          </Fa>
-          <En>
+          
+          
             <h3 className="c-sand11 fs-xl sm:fs-2xl fw-600">{topicName}</h3>
-          </En>
+          
         </div>
         <div className="text-sm line-height-1.05">
           <p className="c-sand11 ">
-            <Fa>{teacherFullNameFa}</Fa>
-            <En>{teacherFullName}</En>
+            {teacherFullNameFa}
+            {teacherFullName}
           </p>
           <p className="c-sand11 "></p>
           <div className="flex justify-between items-baseline  ">
@@ -414,8 +414,8 @@ function Status({ status, availability }) {
         <div>
           <p className="flex gap-2">
             <Icon name="bf-i-ph-warning" />
-            <Fa>{availability}</Fa>
-            <En> {availability}</En>
+            {availability}
+             {availability}
           </p>
         </div>
       </ToolTip>
@@ -450,14 +450,14 @@ function EnglishFluency({ englishFluency }) {
                   ${englishFluency?.toLowerCase() === "fluent" ? "c-plum11" : ""}
                   `}
         >
-          <Fa>
+          
             مهارت انگلیسی: {` `}
             {englishFluency}
-          </Fa>
-          <En>
+          
+          
             English Fluency: {` `}
             {englishFluency}
-          </En>
+          
         </p>
       </div>
     </ToolTip>

@@ -59,12 +59,12 @@ const BreadcrumbSeparator = ({ children, className, ...props }: React.ComponentP
   <li role="presentation" aria-hidden="true" className={`[&>svg]:size-3.5 ${className}`} {...props}>
     {children ?? (
       <>
-        <Fa>
+        
           <Icon name="bf-i-ph-caret-left" />
-        </Fa>
-        <En>
+        
+        
           <Icon name="bf-i-ph-caret-right" />
-        </En>
+        
       </>
     )}
   </li>

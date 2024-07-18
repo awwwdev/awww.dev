@@ -1,13 +1,11 @@
 import BluredCircle from "./BluredCircle";
 import Icon from "@/components/ui/Icon";
 import Image from "next/image";
-import Input from "../ui/Input";
-import Checkbox from "../ui/Checkbox";
 import Button from "../ui/button";
 import Switch from "../ui/Switch";
 import Space from "../ui/Space";
 import DesktopOnly from "../ui/DesktopOnly";
-import MobileOnly from '../ui/MobileOnly';
+import MobileOnly from "../ui/MobileOnly";
 
 export default function Hero() {
   return (
@@ -24,40 +22,34 @@ function DesktopHero() {
       <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue2" blur="200px" />
 
       <div className="max-w-page mx-auto">
-        <GridSection />
-      </div>
-    </section>
-  );
-}
-
-function GridSection() {
-  return (
-    <div>
-      <Space size="h-6 sm:h-20" />
-      <div className="flex justify-center">
-        <div className="flex flex-row gap-3 sm:gap-8 items-center w-fit     ">
-          <Image
-            src="/profile-picture.png"
-            width={200}
-            height={200}
-            className={`object-cover w-15 h-15 rd-full bg-sand3 `}
-            alt=""
-            priority
-          ></Image>
-          <p className="font-display fs-xl sm:fs-2xl tracking-wide  line-height-0.8">Hello. I&apos;m Hamid.</p>
+        <div>
+          <Space size="h-6 sm:h-20" />
+          <div className="flex justify-center">
+            <div className="flex flex-row gap-3 sm:gap-8 items-center w-fit     ">
+              <Image
+                src="/profile-picture.png"
+                width={200}
+                height={200}
+                className={`object-cover w-15 h-15 rd-full bg-sand3 `}
+                alt=""
+                priority
+              ></Image>
+              <p className="font-display fs-xl sm:fs-2xl tracking-wide  line-height-0.8">Hello. I&apos;m Hamid.</p>
+            </div>
+          </div>
+          <Space size="h-6 sm:h-20" />
+          <HeroSentence />
+          <Space size="h-10 sm:h-30" />
         </div>
       </div>
-      <Space size="h-6 sm:h-20" />
-      <HeroSentence />
-      <Space size="h-10 sm:h-30" />
-    </div>
+    </section>
   );
 }
 
 function HeroSentence() {
   return (
     <p className="font-display fs-4xl sm:fs-6xl text-center">
-      <span className='block'>
+      <span className="block">
         <IWord />
         {` `}
         <DesignWord />
@@ -66,7 +58,6 @@ function HeroSentence() {
         {` `}
         <DevelopeWord />
       </span>
-
       <WebApplicationsWord />
     </p>
   );
@@ -119,7 +110,7 @@ function AndWord() {
 function WebApplicationsWord() {
   return (
     <span className="relative">
-      <span className=''>
+      <span className="">
         web{` `}
         <DesktopOnly>applications.</DesktopOnly>
         <MobileOnly>apps.</MobileOnly>
@@ -131,97 +122,90 @@ function WebApplicationsWord() {
   );
 }
 
-function TogglePlate() {
-  return (
-    <Plate>
-      <div className="grid gap-1.5">
-        <Switch />
-      </div>
-    </Plate>
-  );
-}
+// function TogglePlate() {
+//   return (
+//     <Plate>
+//       <div className="grid gap-1.5">
+//         <Switch />
+//       </div>
+//     </Plate>
+//   );
+// }
 
-function ColorPalettePlate() {
-  return (
-    <Plate>
-      <div className="flex gap-1.5">
-        <ColorNode className="bg-blue1" />
-        <ColorNode className="bg-blue2" />
-        <ColorNode className="bg-blue3" />
-        <ColorNode className="bg-blue4" />
-        <ColorNode className="bg-blue5" />
-        <ColorNode className="bg-blue6" />
-        <ColorNode className="bg-blue7" />
-        <ColorNode className="bg-blue8" />
-        <ColorNode className="bg-blue9" />
-      </div>
-    </Plate>
-  );
-}
+// function ColorPalettePlate() {
+//   return (
+//     <Plate>
+//       <div className="flex gap-1.5">
+//         <ColorNode className="bg-blue1" />
+//         <ColorNode className="bg-blue2" />
+//         <ColorNode className="bg-blue3" />
+//         <ColorNode className="bg-blue4" />
+//         <ColorNode className="bg-blue5" />
+//         <ColorNode className="bg-blue6" />
+//         <ColorNode className="bg-blue7" />
+//         <ColorNode className="bg-blue8" />
+//         <ColorNode className="bg-blue9" />
+//       </div>
+//     </Plate>
+//   );
+// }
 
-function ColorNode({ className }) {
-  return <div className={`${className} w-5 h-5 rd-full `}></div>;
-}
+// function ColorNode({ className }) {
+//   return <div className={`${className} w-5 h-5 rd-full `}></div>;
+// }
 
-function MusicPlayerPlate() {
-  return (
-    <Plate>
-      <div>
-        <div className=" flex gap-3 items-center">
-          <Button variation="soft" iconButton rounded className="fs-sm">
-            <Icon name="bf-i-ph-skip-back" />
-          </Button>
-          <Button variation="solid" iconButton rounded className="fs-xl">
-            <Icon name="bf-i-ph-play" />
-          </Button>
-          <Button variation="soft" iconButton rounded className="fs-sm">
-            <Icon name="bf-i-ph-skip-forward" />
-          </Button>
-        </div>
-        <div>{/* <Slider /> */}</div>
-      </div>
-    </Plate>
-  );
-}
+// function MusicPlayerPlate() {
+//   return (
+//     <Plate>
+//       <div>
+//         <div className=" flex gap-3 items-center">
+//           <Button variation="soft" iconButton rounded className="fs-sm">
+//             <Icon name="bf-i-ph-skip-back" />
+//           </Button>
+//           <Button variation="solid" iconButton rounded className="fs-xl">
+//             <Icon name="bf-i-ph-play" />
+//           </Button>
+//           <Button variation="soft" iconButton rounded className="fs-sm">
+//             <Icon name="bf-i-ph-skip-forward" />
+//           </Button>
+//         </div>
+//         <div>{/* <Slider /> */}</div>
+//       </div>
+//     </Plate>
+//   );
+// }
 
-function CodePlate() {
-  return (
-    <Plate>
-      <div className="">
-        <div className="bg-base5 -mx-4 -mt-4 rd-t-4 mb-4  h-8 min-w-50"></div>
-        <code>
-          <pre>
-            &lt;div&gt;
-            <br />
-            ...
-            <br />
-            &lt;/div&gt;
-          </pre>
-        </code>
-      </div>
-    </Plate>
-  );
-}
+// function CodePlate() {
+//   return (
+//     <Plate>
+//       <div className="">
+//         <div className="bg-base5 -mx-4 -mt-4 rd-t-4 mb-4  h-8 min-w-50"></div>
+//         <code>
+//           <pre>
+//             &lt;div&gt;
+//             <br />
+//             ...
+//             <br />
+//             &lt;/div&gt;
+//           </pre>
+//         </code>
+//       </div>
+//     </Plate>
+//   );
+// }
 
-function FontSample({ className, size }) {
-  return (
-    <div className="">
-      <div className="flex flex-col gap-1 items-center">
-        <div className={`font-display ${className} h-10 flex items-end`}>Aa</div>
-        <div className="text-xs c-base11">{size}</div>
-      </div>
-    </div>
-  );
-}
+// function FontSample({ className, size }) {
+//   return (
+//     <div className="">
+//       <div className="flex flex-col gap-1 items-center">
+//         <div className={`font-display ${className} h-10 flex items-end`}>Aa</div>
+//         <div className="text-xs c-base11">{size}</div>
+//       </div>
+//     </div>
+//   );
+// }
 
-function Plate({ children }) {
-  return <div className="p-4 rd-4 shadow-lg bg-sand3 w-fit">{children}</div>;
-}
+// function Plate({ children }) {
+//   return <div className="p-4 rd-4 shadow-lg bg-sand3 w-fit">{children}</div>;
+// }
 
-function DesktopHeroImage() {
-  return (
-    <div className={` flex  items-center  `}>
-      <div className="relative  flex justify-center items-center   ">{/* <Circle /> */}</div>
-    </div>
-  );
-}

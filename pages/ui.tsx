@@ -13,12 +13,12 @@ const Page: NextPage = () => {
       <IconsSection />
       <ShadowsSection />
       <ButtonsSection />
-      <Fa>
+      
         <TypographyFarsiSection />
-      </Fa>
-      <En>
+      
+      
         <TypographyEnglishSection />
-      </En>
+      
     </div>
   );
 };

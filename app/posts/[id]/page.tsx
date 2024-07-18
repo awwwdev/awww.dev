@@ -1,3 +1,4 @@
+import Space from '@/components/ui/Space'
 import { getPostById, getAllPosts } from '@/lib/api'
  
 // Generate the post, note that this is a "react server component"! it is
@@ -9,10 +10,13 @@ export default async function Post({
 }) {
   const { html, title, date } = await getPostById(id)
   return (
-    <article>
-      <h1>{title}</h1>
-      <h4>{date}</h4>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+    <article className='mx-auto max-w-page'>
+      <h1 className='H1'>{title}</h1>
+      <p className='c-base11 fs-sm'>{date}</p>
+      <Space size='h-8' />
+      <div 
+      className='space-y-1em'
+      dangerouslySetInnerHTML={{ __html: html }} />
     </article>
   )
 }

@@ -1,22 +1,4 @@
-import { renderNoData } from "@/components/RenderQ";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import { useQuery } from "@tanstack/react-query";
-import { NextPage } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
-import persianJs from "persianjs";
-import LinkButton from "@/components/ui/button/LinkButton";
-import { En, Fa } from "@/components/ui/multilang";
-import FAQItem from "@/components/ui/FAQItem";
-import StarRating from "@/components/ui/StarRating";
-import Avatar from "@/components/ui/Avatar";
-import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import BluredCircle from "./BluredCircle";
-import Icon from "@/components/ui/Icon";
-import Emoji from '../Emoji';
 
 export default function AboutMe() {
 

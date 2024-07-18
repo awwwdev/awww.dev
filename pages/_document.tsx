@@ -4,7 +4,7 @@ export default class MyDocument extends Document {
   render() {
     const isRtl = this.props.locale === "fa";
     return (
-      <Html lang={this.props.locale} dir={isRtl ? "rtl" : "ltr"} className="dark-theme">
+      <Html className="dark-theme">
         <Head>
           <meta charSet="utf-8" />
           {/* <meta name="theme-color" content="#000000" /> */}

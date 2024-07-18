@@ -13,9 +13,6 @@ import type { AppProps } from "next/app";
 import {  DehydratedState, useQuery } from "@tanstack/react-query";
 import {  useState } from "react";
 import {  Session } from "@supabase/auth-helpers-react";
-import { useRouter } from "next/router";
-
-import PageLayout from "@/components/layouts/PageLayout";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
 import Header from "@/components/header";
@@ -27,18 +24,13 @@ function MyApp({ Component, pageProps }: AppProps<{ initialSession: Session; deh
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
 
 
-
-
-
   return (
     <>
       <div className={`side-menu-container isolate h-full  overflow-x-hidden  mx-auto max-w-screen  `}>
         <div className="main grid h-full max-w-screen isolate" style={{ gridTemplateRows: "auto 1fr auto" }}>
           <Header setIsSideMenuOpen={setIsSideMenuOpen} />
           <main className={` h-full max-w-screen `}>
-            <PageLayout>
               <Component {...pageProps} />
-            </PageLayout>
           </main>
           <Footer />
         </div>

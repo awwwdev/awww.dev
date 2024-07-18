@@ -18,8 +18,8 @@ export default function LocaleSwitcher() {
 
   return (
     <Button variation="text" onClick={() => handleLocaleChange(otherLocale)} className="!fw-400  !px-0.5em" width='content'>
-      <Fa>English</Fa>
-      <En>فارسی</En>
+      English
+      فارسی
       <Icon name="bf-i-ph-globe-simple" className='mis-1' />
     </Button>
   );

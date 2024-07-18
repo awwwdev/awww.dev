@@ -1,18 +1,5 @@
+
 import Link from "next/link";
-import { AccountDropdownMenu } from "../account-dropdown";
-import Image from "next/image";
-import useGetUserMe from "@/hooks/useGetUserMe";
-import darsoonLogo from "@/public/static/logo/darsoon-logo.png";
-import darsoonFarsiLogo from "@/public/static/logo/darsoon-logo-farsi.png";
-import LocaleSwitcher from "../LocaleSwitcher";
-import { useTranslation } from "next-i18next";
-import { useEffect, useMemo, useState } from "react";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import LinkButton from "../ui/button/LinkButton";
-import { En, Fa } from "../ui/multilang";
-import Icon from "@/components/ui/Icon";
-import Button from "../ui/button";
-import { useRouter } from 'next/router';
 
 const Header = ({ setIsSideMenuOpen,  }) => {
   return (
@@ -27,7 +14,6 @@ export default Header;
 
 function MobileHeader({ setIsSideMenuOpen,  }) {
 
-  const router = useRouter()
   return (
     <header
       className={`   sm:hidden  px-4  sticky top-0 z-10 h-16 flex items-center `}
@@ -62,7 +48,6 @@ function DesktopHeader({  }) {
 }
 
 function PublicWebsiteNav() {
-  const { t } = useTranslation();
 
   return (
     <nav className="w-full font-display">

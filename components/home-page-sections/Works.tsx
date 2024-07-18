@@ -1,24 +1,9 @@
-import { renderNoData } from "@/components/RenderQ";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import { useQuery } from "@tanstack/react-query";
-import { NextPage } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
-import persianJs from "persianjs";
-import LinkButton from "@/components/ui/button/LinkButton";
-import { En, Fa } from "@/components/ui/multilang";
-import FAQItem from "@/components/ui/FAQItem";
-import StarRating from "@/components/ui/StarRating";
-import Avatar from "@/components/ui/Avatar";
-import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import BluredCircle from "./BluredCircle";
 import Icon from "@/components/ui/Icon";
 import Space from "../ui/Space";
 import { useState } from "react";
 import Button from "../ui/button";
+import ShowMore from '../ShowMore';
 
 export default function Works() {
 
@@ -182,49 +167,6 @@ function WorkExperience({ title, start, end, company, children }) {
   );
 }
 
-function ShowMore({ children, minHeight = "0fr" }) {
-  const [expanded, setExpanded] = useState(false);
-  return (
-    <div className="">
-      <div
-        className={`grid fade-to-b`}
-        style={{
-          gridTemplateRows: expanded ? `1fr ${minHeight}` : `0fr ${minHeight}`,
-          maskImage: `linear-gradient(to bottom, black 0%,  rgba(0 0 0 / var(--fade-to-opacity)) 100%)`,
-          "--fade-to-opacity": expanded ? "1" : "0",
-          transition: "grid-template-rows 500ms,  --fade-to-opacity 500ms",
-        }}
-      >
-        <div
-          className={`overflow-hidden `}
-          style={{
-            gridRow: "1/-1",
-          }}
-        >
-          {children}
-        </div>
-      </div>
-      <Space size="h-3" />
-      <div className="flex justify-center items-center">
-        <div className="b-t-1 b-base5 h-1px grow"></div>
-        <Button
-          variation="ghost"
-          rounded
-          className="fs-2xs flex gap-1.5 items-center !h-2.25em"
-          onClick={() => {
-            setExpanded((s) => !s);
-          }}
-        >
-          <span className={` ${expanded ? "rotate-180" : "rotate-0"}`} style={{ transition: "transform 500ms ease" }}>
-            <Icon name="bf-i-ph-caret-down-bold" subdued />
-          </span>
-          <span className="c-base11">{expanded ? "Show Less" : "Show More"}</span>
-        </Button>
-        <div className="b-t-1 b-base5 h-1px grow"></div>
-      </div>
-    </div>
-  );
-}
 
 function Overlay({ expanded }) {
   return (

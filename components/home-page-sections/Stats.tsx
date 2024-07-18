@@ -108,12 +108,12 @@ function SessionStatOld() {
     <li className="text-center">
       <p className="font-display grid ">
         <span className="primary-gradient c-transparent bg-clip-text  text-7xl sm:text-9xl  tracking-tighter fw-700">
-          <Fa>+۱۰۰هزار</Fa>
-          <En>+100k</En>
+          +۱۰۰هزار
+          +100k
         </span>
         <span className="mis-2 text-4xl sm:text-7xl tracking-tight leading-5 sm:leading-10 tracking-tighter c-melow">
-          <En>Sessions</En>
-          <Fa>جلسه</Fa>
+          Sessions
+          جلسه
         </span>
       </p>
     </li>
@@ -125,14 +125,14 @@ function SessionStat() {
     <Stat
       number={
         <span className="">
-          <Fa>+۱۰۰هزار</Fa>
-          <En>+100k</En>
+          +۱۰۰هزار
+          +100k
         </span>
       }
       label={
         <>
-          <En>Sessions</En>
-          <Fa>جلسه</Fa>
+          Sessions
+          جلسه
         </>
       }
     />
@@ -144,14 +144,14 @@ function StudentStat() {
     <Stat
       number={
         <>
-          <Fa>+۳۰۰۰</Fa>
-          <En>+3000</En>
+          +۳۰۰۰
+          +3000
         </>
       }
       label={
         <>
-          <En>Students</En>
-          <Fa>جلسه</Fa>
+          Students
+          جلسه
         </>
       }
     />
@@ -164,14 +164,14 @@ function TopicStat() {
       number={
         <>
           {" "}
-          <Fa>+۱۰۰</Fa>
-          <En>+100</En>
+          +۱۰۰
+          +100
         </>
       }
       label={
         <>
-          <En>Topics</En>
-          <Fa>جلسه</Fa>
+          Topics
+          جلسه
         </>
       }
     />
@@ -184,14 +184,14 @@ function TeacherStat() {
       number={
         <>
           {" "}
-          <Fa>+۲۰۰</Fa>
-          <En>+200</En>
+          +۲۰۰
+          +200
         </>
       }
       label={
         <>
-          <En>Tutors</En>
-          <Fa>آموزگار</Fa>
+          Tutors
+          آموزگار
         </>
       }
     />
@@ -207,8 +207,8 @@ function RatingStat() {
         <span className={`inline-flex items-center text-0.8em  ${locale === "fa" && "flex-row-reverse"} `}>
        <DesktopOnly>
 
-        <En>4.9</En>
-        <Fa>۴.۹ </Fa>
+        4.9
+        ۴.۹ 
        </DesktopOnly>
         {` `}
           <Icon name="bf-i-ph-star-fill" className="c-brand-accent !before:scale-90 mis-1" subdued={false} />
@@ -222,12 +222,12 @@ function RatingStat() {
         <span   className={`lt-sm:text-3xl  ${locale === "en" && "tracking-tighter"} lt-sm:fw-700 !lt-sm:leading-0.9em`}>
 <MobileOnly>
 
-<En>4.9</En>
-<Fa>۴.۹ </Fa>
+4.9
+۴.۹ 
 {` `}
 </MobileOnly>
-          <En>Average Rating</En>
-                <Fa>میانگین امتیار‌ها</Fa>
+          Average Rating
+                میانگین امتیار‌ها
         </span>
       }
     />

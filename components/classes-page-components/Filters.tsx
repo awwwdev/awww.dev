@@ -40,8 +40,8 @@ function MobileFilters({ onCheckboxChange, filters }) {
           <span>
             <Icon name="bf-i-ph-sliders-horizontal" className='mie-1' />
             <span className='c-sand11'>
-            <En>filters</En>
-            <Fa>پالانه‌ها</Fa>
+            filters
+            پالانه‌ها
             </span>
           </span>
           <span className='px-2'>{isOpen ? <Icon name="bf-i-ph-caret-up" /> : <Icon name="bf-i-ph-caret-down " />}</span>
@@ -66,8 +66,8 @@ function DesktopFilters({ onCheckboxChange, filters }) {
         <Space size="h-2" />
         <h2 className="">
           <Icon name="bf-i-ph-sliders-horizontal" subdued={false} />
-          <En>Filters</En>
-          <Fa>پالانه‌ها</Fa>
+          Filters
+          پالانه‌ها
         </h2>
         <Space size="h-8" />
       <FilterControls {...{ onCheckboxChange, filters }} />

@@ -169,8 +169,8 @@ export default function HeroSearchResultsGrid({
           <div className="flex justify-center items-center h-full gap-1">
             <Icon name="bf-i-ph-smiley-sad" className='text-lg' />
             <p>
-              <En>No Result Found.</En>
-              <Fa>نتیجه‌ای یافت نشد.</Fa>
+              No Result Found.
+              نتیجه‌ای یافت نشد.
             </p>
           </div>
         )}
@@ -272,20 +272,20 @@ function ClassCardForTableHook({
           <span className='text-sm opacity-50 mie-1 inline-flex items-baseline'>
               <CategoryIcon categoryName={categoryName} />
             </span>
-            <Fa>
+            
               <span className="c-sand11  fw-900 leading-5">{topicNameFa}</span>
-            </Fa>
-            <En>
+            
+            
               <span className="c-sand11  fw-600 leading-4">{topicName}</span>
-            </En>
+            
           </h3>
           <p className="c-sand11 text-xs">
-            <Fa>{teacherFullNameFa}</Fa>
-            <En>{teacherFullName}</En>
+            {teacherFullNameFa}
+            {teacherFullName}
           </p>
           {/* <p className="c-sand11">
-            <Fa>{englishFluency}</Fa>
-            <En>{englishFluency}</En>
+            {englishFluency}
+            {englishFluency}
           </p> */}
           <p className="c-sand11 text-xs">CAD {price}/session</p>
           <div className="text-2xs">

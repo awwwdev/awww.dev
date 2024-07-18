@@ -1,3 +1,5 @@
+"use client";
+
 import * as RadixToolTip from "@radix-ui/react-tooltip";
 import styles from "./styles.module.css";
 export default function ToolTip({
