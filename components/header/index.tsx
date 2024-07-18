@@ -66,9 +66,9 @@ function PublicWebsiteNav() {
           <Link href="#tools" className="hover:c-accent11">
             Tools
           </Link>
-        </li>
+      </li>
         <li>
-          <Link href="#contact" className="hover:c-accent11">
+          <Link href="#blog" className="hover:c-accent11">
           Blog
           </Link>
         </li>

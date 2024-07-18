@@ -12,7 +12,7 @@ export default function Tools() {
 
       <div className="mx-auto max-w-page  ">
         <div className="flex justify-between gap-8">
-          <h2 className="H1">Tools</h2>
+          <h2 className="H1" id='tools'>Tools</h2>
           <div className="flex items-center gap-3">
             <ToolTip
               trigger={

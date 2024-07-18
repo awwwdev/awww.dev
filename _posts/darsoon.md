@@ -1,6 +1,6 @@
 ---
-title: 'Darsoon, Restarting a Startup'
-subtitle: 'Restarting <br /> a Start-up'
+title: Restarting a Start-up
+subtitle: My Experience in Darsoon
 date: 2023-12-03
 color: 'c-orange-11'
 bg: 'bg-gradient-to-br from-orange4 via-tomato4 to-red4'

@@ -18,7 +18,9 @@ export default async function Blog() {
 
       <div className="mx-auto max-w-page ">
         <div className="flex justify-between gap-4">
-          <h2 className="H1">Blog</h2>
+          <h2 className="H1" id="blog">
+            Blog
+          </h2>
         </div>
 
         <div className="h-4"></div>
@@ -31,7 +33,9 @@ export default async function Blog() {
             <ScrollPadding />
             {posts.map((post) => {
               const { id, date, title } = post;
-              return <BlogCard key={`blog-post-card-${id}`} title={title} date={date} slug={id} subtitle="" />;
+              return (
+                <BlogCard key={`blog-post-card-${id}`} title={title} date={date} slug={id} subtitle={post.subtitle} />
+              );
             })}
             <ScrollPadding />
           </ul>
@@ -74,19 +78,20 @@ function BlogCard({ title, subtitle, date, slug }) {
   return (
     <li className=" ">
       <Link
-        className="flex flex-col b-base4 bg-gradient-to-br from-base3A to-base1A p-6 shadow-2xl rd-6 h-80  min-w-40 sm:min-w-60"
+        className="flex flex-col b-base4 bg-gradient-to-br from-base3A to-base1A p-6 shadow-2xl rd-6 h-80  w-70"
         href={`/blog/${slug}`}
       >
-        <h3 className="text-base sm:text-xl font-display tracking-tight leading-tight line-clamp-1 min-h-1em">
+        <h3 className="text-base sm:text-xl font-display tracking-tight leading-tight  min-h-1em">
           {title}
         </h3>
+        <Space size='h-1' />
         {subtitle && <p className="c-base11">{subtitle}</p>}
-        {date && <p className="c-sand11 lt-sm:text-sm">{toRelativeOrReadableDate(date)}</p>}
 
         <div className="mt-auto">
-          <div className="flex justify-end items-baseline">
-            <span className='flex items-end'>
-            <Icon name="bf-i-ph-arrow-right" className="c-base8 fs-4xl leading-none " />
+          <div className="flex justify-between items-baseline">
+        {date && <p className="c-sand11 lt-sm:text-sm">{toRelativeOrReadableDate(date)}</p>}
+            <span className="flex items-end">
+              <Icon name="bf-i-ph-arrow-right" className="c-base8 fs-4xl leading-none " />
             </span>
           </div>
         </div>

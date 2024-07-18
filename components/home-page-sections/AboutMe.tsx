@@ -8,7 +8,7 @@ export default function AboutMe() {
       <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue3" blur="200px" />
 
       <div className="mx-auto max-w-page  ">
-          <h2 className="H1">About Me</h2>
+          <h2 className="H1" id='about'>About Me</h2>
         <div className="space-y-4 c-gray11">
           <p>
             I help businesses to discover their visual language, create wireframes, make high fidelity UI prototypes and

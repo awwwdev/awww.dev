@@ -10,7 +10,7 @@ export default function Icon({
   return (
     <>
       {" "}
-      <span className={`${name} ${className} ${!subdued && "before:opacity-100 opacity-100"} select-none`}></span>{" "}
+      <span className={`${name} ${className} ${!subdued && "before:opacity-100 opacity-100"} select-none shrink-0 grow-0 `}></span>{" "}
     </>
   );
 }

@@ -1,5 +1,6 @@
 ---
-title: 'Momenta, Two Crazy Landings'
+title: 'Two Crazy Landings'
+subtitle: The Story behind Momnta's landing page
 date: 2023-02-03
 color: 'c-purple11'
 bg: 'bg-gradient-to-br from-purple4 via-plum4 to-pink4'
@@ -10,7 +11,6 @@ features:
   - Ideated and created a low-fidelity prototype
   - Created complex and performant scroll animations
   - Delivered the whole project in 2 weeks
-subtitle: Two Crazy  <br />  Landings
 img: <img
   slot='showcase'
   src='/momenta/mockup.png'

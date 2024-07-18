@@ -1,7 +1,8 @@
 ---
-title: DBILIA, Refactoring the Unreadable
+title: Refactoring the Unreadable
+subtitle: How I tamed an spoghetti code project
 date: 2023-04-03
-logoSrc: '/dbilia/logo.png'
+logoSrc: "/dbilia/logo.png"
 darkLogoSrc: /dbilia/logo.png
 color: c-violet11
 bg: bg-gradient-to-br from-violet4 via-blue4 to-cyan4
