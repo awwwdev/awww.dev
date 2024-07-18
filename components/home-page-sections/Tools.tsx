@@ -17,9 +17,9 @@ import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import BluredCircle from "./BluredCircle";
 import Icon from "@/components/ui/Icon";
 import Emoji from "../Emoji";
-import Space from '../ui/Space';
-import Button from '../ui/button';
-import ToolTip from '../ui/Tooltip';
+import Space from "../ui/Space";
+import Button from "../ui/button";
+import ToolTip from "../ui/Tooltip";
 
 export default function Tools() {
   return (
@@ -28,37 +28,37 @@ export default function Tools() {
       <BluredCircle radius={200} top="60%" left="15%" bg="bg-plum2" blur="200px" />
 
       <div className="mx-auto max-w-page  ">
-        <div className='flex justify-between gap-8'>
-        <h2 className="H1">Tools</h2>
-        <div className='flex items-center gap-3'>
-          <ToolTip trigger={
-
-            <Button iconButton variation='ghost' >
-            <Icon name='bf-i-ph-heart' />
-          </Button>
-          } >
-            <p>Most loved</p>
-          </ToolTip>
-          <ToolTip 
-          
-          trigger={
-
-            
-            <Button iconButton variation='ghost' >
-            <Icon name='bf-i-ph-wrench' />
-          </Button>
-          }>
-            Most Used
-          </ToolTip>
-          <ToolTip trigger={
-
-            <Button iconButton variation='ghost' >
-            <Icon name='bf-i-ph-syringe' />
-          </Button>
-          } >
-            <p>Painful, But Life Saving</p>
-          </ToolTip>
-        </div>
+        <div className="flex justify-between gap-8">
+          <h2 className="H1">Tools</h2>
+          <div className="flex items-center gap-3">
+            <ToolTip
+              trigger={
+                <Button iconButton variation="ghost">
+                  <Icon name="bf-i-ph-heart" />
+                </Button>
+              }
+            >
+              <p>Most loved</p>
+            </ToolTip>
+            <ToolTip
+              trigger={
+                <Button iconButton variation="ghost">
+                  <Icon name="bf-i-ph-wrench" />
+                </Button>
+              }
+            >
+              Most Used
+            </ToolTip>
+            <ToolTip
+              trigger={
+                <Button iconButton variation="ghost">
+                  <Icon name="bf-i-ph-syringe" />
+                </Button>
+              }
+            >
+              <p>Painful, But Life Saving</p>
+            </ToolTip>
+          </div>
         </div>
         <Space size="h-8" />
 
@@ -70,12 +70,7 @@ export default function Tools() {
             alt="NEXTjs"
             size="w-5/10"
           />
-          <Li
-            className="  bg-sky3 light "
-            gridPosition="g-col-4/6 g-row-1/3"
-            src="/tool-logos/react.svg"
-            alt="React"
-          />
+          <Li className="  bg-sky3 light " gridPosition="g-col-4/6 g-row-1/3" src="/tool-logos/react.svg" alt="React" />
           <Li
             className=" light bg-olive3"
             gridPosition="g-col-6/9 g-row-1/2"
@@ -160,7 +155,12 @@ export default function Tools() {
             // size="w-4/5"
           /> */}
 
-          <Li className="bg-purple4 light aspect-ratio-1/1" gridPosition="g-col-1/2 g-row-5/6" src="/tool-logos/vite.svg" alt="Vite" />
+          <Li
+            className="bg-purple4 light aspect-ratio-1/1"
+            gridPosition="g-col-1/2 g-row-5/6"
+            src="/tool-logos/vite.svg"
+            alt="Vite"
+          />
           {/* <Li className="bg-pink5 light" icon="i-logos-deno" size="!w-2em !h-2em" alt="Deno" /> */}
           {/* <Li className="bg-grass3 light" icon="i-logos-nodejs" size="!w-2em !h-2em" alt="nodejs" /> */}
           {/* <Li className="bg-gray-50" icon="i-logos-mongodb" size="!w-2em !h-2em" alt="MongoDB" /> */}

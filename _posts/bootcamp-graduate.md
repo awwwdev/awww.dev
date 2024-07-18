@@ -1,8 +1,8 @@
-export const metadata = {
-title: 'Fresh Bootcamp graduate?',
-subtitle: 'Check out this list!',
-date: "2023-04-15"
-}
+---
+title: 'Fresh Bootcamp graduate?'
+subtitle: 'Check out this list!'
+date: 2023-04-15
+---
 
 Are you just graduated from a web development bootcamp?
 

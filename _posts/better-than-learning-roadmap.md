@@ -1,10 +1,9 @@
-export const metadata = {
-title: 'Introducing My Learning Maps',
-subtitle: 'And why they are better than learning',
-date:  "2023-08-15",
+---
+title: 'Introducing My Learning Maps'
+subtitle: 'And why they are better than learning'
+date:  2023-08-15
 draft: true
-}
-
+---
 
 Learning Roadmaps are common in software enginering, Since they are so many subjects and mini-subject to learn (or have an idea about). 
 

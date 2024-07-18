@@ -1,7 +1,11 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "cSpell.words": ["Darsoon", "firstname", "lastname"],
+  "cSpell.words": [
+    "Darsoon",
+    "firstname",
+    "lastname"
+  ],
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#3f56b4",
     "activityBar.background": "#3f56b4",
@@ -21,5 +25,7 @@
     "titleBar.inactiveBackground": "#32448e99",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#32448e"
+  "peacock.color": "#32448e",
+  "typescript.tsdk": "node_modules/.pnpm/typescript@4.8.4/node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
