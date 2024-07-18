@@ -18,7 +18,6 @@ import BluredCircle from "./BluredCircle";
 import Icon from "@/components/ui/Icon";
 
 export default function ContactMe() {
-  const { t } = useTranslation();
 
   return (
     <section className="relative">
@@ -26,7 +25,7 @@ export default function ContactMe() {
       <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue3" blur="200px" />
 
       <div className="mx-auto max-w-page  ">
-        <div className="max-w-page mx-auto  b-t-1 pt-12">
+        <div className="max-w-page mx-auto b-base5  b-t-1 pt-12">
           <h2 className="H1">Contact</h2>
 
           <div className="h-12"></div>

@@ -19,7 +19,6 @@ import Icon from "@/components/ui/Icon";
 import Emoji from "../Emoji";
 
 export default function Tools() {
-  const { t } = useTranslation();
 
   return (
     <section className="relative">
@@ -32,7 +31,7 @@ export default function Tools() {
           {/* <h3 className="H3">For Development</h3> */}
           <ul className="display-contents">
             <Li
-              className="col-span-3 row-span-3 bg-gradient-to-r from-gray-100 to-gray-200"
+              className="col-span-3 row-span-3 bg-gradient-to-r from-gray-100 to-gray-200 c-white"
               src="/tool-logos/nextjs.svg"
               alt="NEXTjs"
               size="w-5/10"

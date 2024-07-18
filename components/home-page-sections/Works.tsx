@@ -21,7 +21,6 @@ import { useState } from "react";
 import Button from "../ui/button";
 
 export default function Works() {
-  const { t } = useTranslation();
 
   return (
     <section className="relative">

@@ -14,41 +14,31 @@ import Works from '@/components/home-page-sections/Works';
 import Tools from '@/components/home-page-sections/Tools';
 import AboutMe from '@/components/home-page-sections/AboutMe';
 
-export async function getServerSideProps({ locale }) {
+export async function getServerSideProps() {
   return {
-    props: {
-      locale,
-      ...(await serverSideTranslations(locale, ["common", "home", "header", "footer"])),
-    },
+    props: {}
   };
 }
 
 const Page: NextPage = () => {
   return (
     <div className="">
-      <div className="p-4">
         <Hero />
         {/* <Features /> */}
         {/* <Stats /> */}
         <Space size="h-6 sm:h-20" />
         {/* <Categoreis /> */}
         <Works />
-
         <Space size="h-20" />
         <Tools />
         {/* <Process /> */}
         <Space size="h-20" />
-      </div>
-      {/* <Testomonials />  */}
-      <div className="p-4">
         <Space size="h-30" />
-        {/* <FAQ /> */}
         <Blog />
         <Space size="h-30" />
         <AboutMe />
         <Space size="h-30" />
         <ContactMe />
-      </div>
     </div>
   );
 };

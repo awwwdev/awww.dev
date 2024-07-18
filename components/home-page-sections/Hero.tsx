@@ -57,7 +57,7 @@ function GridSection() {
 function HeroSentence() {
   return (
     <p className="font-display fs-4xl sm:fs-6xl text-center">
-      <div>
+      <span className='block'>
         <IWord />
         {` `}
         <DesignWord />
@@ -65,7 +65,7 @@ function HeroSentence() {
         <AndWord />
         {` `}
         <DevelopeWord />
-      </div>
+      </span>
 
       <WebApplicationsWord />
     </p>

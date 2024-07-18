@@ -1,7 +1,7 @@
 export default function DesktopOnly({children}){
 
 return (
-  <div className='display-none sm:contents' >
+  <span className='display-none sm:contents' >
     {children}
-  </div>
+  </span>
 )};

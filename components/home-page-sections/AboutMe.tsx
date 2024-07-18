@@ -19,7 +19,6 @@ import Icon from "@/components/ui/Icon";
 import Emoji from '../Emoji';
 
 export default function AboutMe() {
-  const { t } = useTranslation();
 
   return (
     <section className="relative">
