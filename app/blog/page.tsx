@@ -15,7 +15,7 @@ export default async function Page() {
           const { id, date, title } = post;
           return (
             <li key={id} className='b-b-1 b-base5 py-6 last:b-none last:b-none'>
-              <Link href={`/posts/${id}`} className='block '>
+              <Link href={`/blog/${id}`} className='block '>
                 <h2 className="H4">{title}</h2>
                 <p>Subtitle</p>
                 <p className="c-base11">{date}</p>

@@ -5,14 +5,19 @@ import styles from "./styles.module.css";
 export default function ToolTip({
   trigger,
   children,
+  open , setOpen
 }: {
   trigger: React.ReactNode;
   children: React.ReactNode;
+  open ?: boolean,
+  setOpen?: (v: boolean) => void
 }) {
   return (
 
     <RadixToolTip.Provider>
     <RadixToolTip.Root 
+    open={open}
+    onOpenChange={(v) => {setOpen?.(v)}}
     delayDuration={100}
     >
       <RadixToolTip.Trigger asChild>{trigger}</RadixToolTip.Trigger>

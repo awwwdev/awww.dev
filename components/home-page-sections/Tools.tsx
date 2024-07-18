@@ -1,10 +1,15 @@
+"use client";
+
 import BluredCircle from "./BluredCircle";
 import Icon from "@/components/ui/Icon";
 import Space from "../ui/Space";
 import Button from "../ui/button";
 import ToolTip from "../ui/Tooltip";
+import { useState } from "react";
 
 export default function Tools() {
+  const [glowingCategory, setGlowingCategory] = useState<"favorite" | "most-used" | "painful" | null>(null);
+
   return (
     <section className="relative">
       <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber2" blur="200px" />
@@ -12,11 +17,25 @@ export default function Tools() {
 
       <div className="mx-auto max-w-page  ">
         <div className="flex justify-between gap-8">
-          <h2 className="H1" id='tools'>Tools</h2>
+          <h2 className="H1" id="tools">
+            Tools
+          </h2>
           <div className="flex items-center gap-3">
             <ToolTip
+              open={glowingCategory === 'favorite' }
               trigger={
-                <Button iconButton variation="ghost">
+                <Button
+                  iconButton
+                  variation={glowingCategory === 'favorite' ?  "soft-accent" : "ghost" }
+
+                  onClick={() => {
+                    if (glowingCategory === "favorite") {
+                      setGlowingCategory(null);
+                    } else {
+                      setGlowingCategory("favorite");
+                    }
+                  }}
+                >
                   <Icon name="bf-i-ph-heart" />
                 </Button>
               }
@@ -24,8 +43,21 @@ export default function Tools() {
               <p>Most loved</p>
             </ToolTip>
             <ToolTip
+              open={glowingCategory === 'most-used' }
+
               trigger={
-                <Button iconButton variation="ghost">
+                <Button
+                  iconButton
+                  variation={glowingCategory === 'most-used' ?  "soft-accent" : "ghost" }
+
+                  onClick={() => {
+                    if (glowingCategory === "most-used") {
+                      setGlowingCategory(null);
+                    } else {
+                      setGlowingCategory("most-used");
+                    }
+                  }}
+                >
                   <Icon name="bf-i-ph-wrench" />
                 </Button>
               }
@@ -33,8 +65,20 @@ export default function Tools() {
               Most Used
             </ToolTip>
             <ToolTip
+              open={glowingCategory === 'painful' }
+
               trigger={
-                <Button iconButton variation="ghost">
+                <Button
+                  iconButton
+                  variation={glowingCategory === 'painful' ?  "soft-accent" : "ghost" }
+                  onClick={() => {
+                    if (glowingCategory === "painful") {
+                      setGlowingCategory(null);
+                    } else {
+                      setGlowingCategory("painful");
+                    }
+                  }}
+                >
                   <Icon name="bf-i-ph-syringe" />
                 </Button>
               }
@@ -52,14 +96,22 @@ export default function Tools() {
             src="/tool-logos/nextjs.svg"
             alt="NEXTjs"
             size="w-5/10"
+            isGlowing={glowingCategory === "most-used"}
           />
-          <Li className="  bg-sky3 light " gridPosition="g-col-4/6 g-row-1/3" src="/tool-logos/react.svg" alt="React" />
+          <Li
+            className="  bg-sky3 light "
+            gridPosition="g-col-4/6 g-row-1/3"
+            src="/tool-logos/react.svg"
+            alt="React"
+            isGlowing={glowingCategory === "most-used"}
+          />
           <Li
             className=" light bg-olive3"
             gridPosition="g-col-6/9 g-row-1/2"
             src="/tool-logos/supabase.svg"
             size="w-8/10"
             alt="Supabase"
+            isGlowing={glowingCategory === "favorite"}
           />
 
           {/* <Li
@@ -86,6 +138,7 @@ export default function Tools() {
             gridPosition="g-col-7/9 g-row-2/4"
             src="/tool-logos/nodejs.svg"
             alt="NodeJS"
+            isGlowing={glowingCategory === "most-used"}
           />
 
           <Li
@@ -110,6 +163,7 @@ export default function Tools() {
             src="/tool-logos/tailwindcss.svg"
             alt="TailwindCSS"
             size="w-4/5"
+            isGlowing={glowingCategory === "most-used"}
           />
           <Li
             className="bg-gradient-to-r from-gray-300 to-slate-300 "
@@ -117,6 +171,7 @@ export default function Tools() {
             src="/tool-logos/solidjs.svg"
             size="w-8/10"
             alt="Solidjs"
+            isGlowing={glowingCategory === "favorite"}
           />
           {/* <Li className="  bg-indigo6 dark" src="/tool-logos/zod.svg" size="w-9/10" alt="Zod validator" /> */}
 
@@ -154,6 +209,7 @@ export default function Tools() {
             gridPosition="g-col-8/9 g-row-5/6"
             src="/tool-logos/css.svg"
             alt="CSS"
+            isGlowing={glowingCategory === "favorite"}
           />
           <Li
             className=" bg-accent4 aspect-ratio-1/1"
@@ -169,6 +225,7 @@ export default function Tools() {
             src="/tool-logos/typescript.svg"
             alt="TypeScript"
             size="w-9/10"
+            isGlowing={glowingCategory === "painful"}
           />
           {/* <Li className="  bg-amber4 dark" 
           src="/tool-logos/javascript.svg" alt="JavaScript" size="w-9/10" /> */}
@@ -181,7 +238,9 @@ export default function Tools() {
 function Li(props) {
   return (
     <li
-      className={` p-4 rd-4 flex jc ac b-1.5 b-sand3A empty:b-transparent bg-origin-border ${props.className} ${props.gridPosition}`}
+      className={` p-4 rd-4 flex jc ac b-1.5 b-sand3A empty:b-transparent bg-origin-border ${props.className} ${
+        props.gridPosition
+      } ${props.isGlowing && "???"}`}
     >
       {props.icon && <Icon name={props.icon} className={`${props.size}`} />}
       {props.src && <img src={props.src} alt={props.alt} className={`object-cover `} />}

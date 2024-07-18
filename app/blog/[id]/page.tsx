@@ -11,6 +11,7 @@ export default async function Post({
   const { html, title, date } = await getPostById(id)
   return (
     <article className='mx-auto max-w-page'>
+      <Space size='h-8' />
       <h1 className='H1'>{title}</h1>
       <p className='c-base11 fs-sm'>{date}</p>
       <Space size='h-8' />

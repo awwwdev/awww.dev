@@ -45,7 +45,7 @@ export default async function Blog() {
       <div className="flex justify-end mx-auto max-w-page">
         <Link href="/blog">
           View all posts
-          <Icon name="bf-i-ph-arrow-right" className="" />
+          <Icon name="bf-i-ph-arrow-right" className=""  subdued/>
         </Link>
       </div>
     </section>
