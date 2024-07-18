@@ -53,28 +53,28 @@ function PublicWebsiteNav() {
     <nav className="w-full font-display">
       <ul className="flex items-center gap-4  text-xs sm:text-base w-full ">
         <li className="flex items-center">
-          <Link href="/" className=" fw-900  text-xs sm:text-base flex justify-center  items-center  fw-300">
+          <Link href="/" className=" text-xs sm:text-base flex justify-center  items-center  fw-300">
         awww.dev
           </Link>
         </li>
         <li className='mis-auto'>
-          <Link href="#works" className="hover:text-black">
+          <Link href="#works" className="hover:c-accent11">
             Works
           </Link>
         </li>
         <li>
-          <Link href="#tools" className="hover:text-black">
+          <Link href="#tools" className="hover:c-accent11">
             Tools
           </Link>
         </li>
         <li>
-          <Link href="#contact" className="hover:text-black">
+          <Link href="#contact" className="hover:c-accent11">
           Blog
           </Link>
         </li>
 
         <li>
-          <Link href="#contact" className="hover:text-black">
+          <Link href="#contact" className="hover:c-accent11">
             Contact
           </Link>
         </li>

@@ -33,7 +33,7 @@ export default function ShowMore({ children, minHeight = "0fr" }) {
         <Button
           variation="ghost"
           rounded
-          className="fs-2xs flex gap-1.5 items-center !h-2.25em"
+          className="fs-xs flex gap-1.5 items-center !h-2.25em"
           onClick={() => {
             setExpanded((s) => !s);
           }}

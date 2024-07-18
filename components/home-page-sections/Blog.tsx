@@ -27,7 +27,7 @@ export default async function Blog() {
         <ScrollArea>
           <ul></ul>
 
-          <ul className=" flex gap-6 pb-8 ">
+          <ul className=" flex gap-5 pb-8 ">
             <ScrollPadding />
             {posts.map((post) => {
               const { id, date, title } = post;
@@ -74,10 +74,10 @@ function BlogCard({ title, subtitle, date, slug }) {
   return (
     <li className=" ">
       <Link
-        className="flex flex-col b-base4 bg-gradient-to-br from-base2A to-base1A p-6 shadow-2xl rd-6 h-80  min-w-40 sm:min-w-60"
+        className="flex flex-col b-base4 bg-gradient-to-br from-base3A to-base1A p-6 shadow-2xl rd-6 h-80  min-w-40 sm:min-w-60"
         href={`/blog/${slug}`}
       >
-        <h3 className="text-base sm:text-xl font-display tracking-tight leading-tight c-sand11 line-clamp-1 min-h-1em">
+        <h3 className="text-base sm:text-xl font-display tracking-tight leading-tight line-clamp-1 min-h-1em">
           {title}
         </h3>
         {subtitle && <p className="c-base11">{subtitle}</p>}

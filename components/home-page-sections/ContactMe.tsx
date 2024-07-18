@@ -3,7 +3,6 @@ import BluredCircle from "./BluredCircle";
 import Icon from "@/components/ui/Icon";
 
 export default function ContactMe() {
-
   return (
     <section className="relative">
       <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber2" blur="200px" />
@@ -20,48 +19,23 @@ export default function ContactMe() {
           <ul className="flex flex-wrap gap-4 ac">
             <li>
               <LinkButton
-                variation="ghost"
-                href="https://github.com/vashmeen"
-                className="c-gray11 before:c-gray12 bg-gradient-to-r from-gray1 to-transparent hover:b-gray3A hover:from-gray2 hover:to-gray1 bg-origin-border py-4 b-1.5 b-gray4A px-8 rd-xl  flex ac bf-i-logos-github-icon before:opacity-80 dark:before:filter-invert-100"
+                variation="ghost-accent"
+                href="mailto:hamidpm@proton.me"
               >
+                <Icon name="bf-i-ph-email-simple" />
+                Email Me
+              </LinkButton>
+            </li>
+            <li>
+              <LinkButton variation="ghost" href="https://github.com/vashmeen">
+                <Icon name="bf-i-logos-github-icon" />
                 My GitHub
               </LinkButton>
             </li>
             <li>
-              <LinkButton
-                variation="ghost"
-                href="https://www.linkedin.com/in/hamidddev/"
-                className="c-gray11 before:c-gray12 bg-gradient-to-r from-gray1 to-transparent hover:b-gray3A hover:from-gray2 hover:to-gray1 bg-origin-border py-4 b-1.5 b-gray4A px-8 rd-xl flex ac before:c-blue4 bf-i-logos-linkedin-icon before:opacity-80"
-              >
+              <LinkButton variation="ghost" href="https://www.linkedin.com/in/hamidddev/">
+                <Icon name="bf-i-logos-linkedin-icon" />
                 My Linkedin
-              </LinkButton>
-            </li>
-            <li>
-              <LinkButton
-                variation="solid-accent"
-                href="mailto:hamidpm@proton.me"
-                className="b-1 fw-500 rd-xl b-accent6A dark:b-accent7A c-accent11 bg-gradient-to-r from-accent1 to-sand1 active:b-accent8A active:from-accent5 active:to-sand2 hover:b-accent7A hover:from-accent2 hover:to-accent1 focus:b-accent8A focus:from-accent4 focus:to-accent2  disabled:btn-disabled bg-origin-border c-accent11 fw-500 py-4 b-1.5 px-8 rd-xl flex gap-4 ac "
-              >
-                <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M22.666 27.3333H9.33268C5.33268 27.3333 2.66602 25.3333 2.66602 20.6667V11.3333C2.66602 6.66666 5.33268 4.66666 9.33268 4.66666H22.666C26.666 4.66666 29.3327 6.66666 29.3327 11.3333V20.6667C29.3327 25.3333 26.666 27.3333 22.666 27.3333Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M24.5 10L18.494 15.3333C17.1207 16.4267 14.8673 16.4267 13.494 15.3333L7.5 10"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-                {/* <img src="/icons/email.svg" alt="" height={20} width={20} className"c-accent11" /> */}
-                Email Me
               </LinkButton>
             </li>
           </ul>

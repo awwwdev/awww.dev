@@ -96,8 +96,8 @@ export default function Works() {
             </Li>
           </WorkExperience>
           <WorkExperience
-            company={<></>}
-            title="Freelance Web Developer and UI Designer"
+            title={<></>}
+            company="Freelance Web Developer and UI Designer"
             start="May 2019"
             end="February 2023"
           >
@@ -115,7 +115,7 @@ export default function Works() {
               Analytics, and Google Search Console
             </Li>
           </WorkExperience>
-          <WorkExperience company={<></>} title="Freelance Graphic Designer" start="March 2015" end="May 2019">
+          <WorkExperience title="" company="Freelance Graphic Designer" start="March 2015" end="May 2019">
             <Li>
               Carried out branding projects, including designing logos, establishing branding guidelines, and creating
               stationery sets
@@ -143,8 +143,8 @@ function WorkExperience({ title, start, end, company, children }) {
       <h3 className="">
         <div className="H5 line-height-0.8 tracking-wide">{company}</div>
         <div className="flex gap-1 tracking-wide">
-          <div className="font-content fs-sm c-base11">{title}</div>
-          <div className="c-base11 fs-xs ">
+          <div className="font-content  c-base11">{title}</div>
+          <div className="c-base11 fs-sm ">
             {start} - {end}
           </div>
         </div>
@@ -153,7 +153,7 @@ function WorkExperience({ title, start, end, company, children }) {
       <Space size="h-6" />
       <ShowMore minHeight="3em">
         <ul
-          className={`list-disc-outside  fs-xs space-y-0.5em `}
+          className={`list-disc-outside  fs-sm space-y-0.5em `}
           style={{
             listStyleImage: 'url("circle-list-item-marker.svg")',
           }}
