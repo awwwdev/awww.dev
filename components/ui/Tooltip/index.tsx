@@ -10,7 +10,9 @@ export default function ToolTip({
   return (
 
     <RadixToolTip.Provider>
-    <RadixToolTip.Root>
+    <RadixToolTip.Root 
+    delayDuration={100}
+    >
       <RadixToolTip.Trigger asChild>{trigger}</RadixToolTip.Trigger>
       <RadixToolTip.Portal>
 
@@ -20,13 +22,13 @@ export default function ToolTip({
             sideOffset={5}
             >
             <div className='rd-3  p-4
-               shd-tinted-2 bg-white
+               shadow-xl bg-base3
             '>
 
           {children}
           <RadixToolTip.Arrow
   /* padding: 1.25rem; */
-            className={`fill-white ${styles["TooltipArrow"]}`}
+            className={`fill-base3 ${styles["TooltipArrow"]}`}
             height={10}
             width={20}
             />

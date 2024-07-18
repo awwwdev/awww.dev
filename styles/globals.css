@@ -444,15 +444,11 @@ a {
 
 .toolkit__grid {
   display: grid;
-  display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 3.75rem), 1fr));
+  grid-template-columns: repeat(8, minmax(min(100%, 3.75rem), 1fr));
   grid-auto-flow: dense;
 }
 
-.toolkit__grid-item {
-  min-height: 3.75rem;
-}
 
 .dashed-border-box {
   --border-color: hsl(0 0% 50%);
