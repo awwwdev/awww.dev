@@ -9,6 +9,9 @@ import { useState } from "react";
 
 export default function Tools() {
   const [glowingCategory, setGlowingCategory] = useState<"favorite" | "most-used" | "painful" | null>(null);
+  const [isToolitip1Open, setIsTooltip1Open] = useState<boolean>(false);
+  const [isToolitip2Open, setIsTooltip2Open] = useState<boolean>(false);
+  const [isToolitip3Open, setIsTooltip3Open] = useState<boolean>(false);
 
   return (
     <section className="relative">
@@ -22,7 +25,8 @@ export default function Tools() {
           </h2>
           <div className="flex items-center gap-3">
             <ToolTip
-              open={glowingCategory === 'favorite' }
+              open={glowingCategory === 'favorite' || isToolitip1Open}
+              setOpen={setIsTooltip1Open}
               trigger={
                 <Button
                   iconButton
@@ -43,8 +47,8 @@ export default function Tools() {
               <p>Most loved</p>
             </ToolTip>
             <ToolTip
-              open={glowingCategory === 'most-used' }
-
+              open={glowingCategory === 'most-used' || isToolitip2Open }
+              setOpen={setIsTooltip2Open}
               trigger={
                 <Button
                   iconButton
@@ -65,8 +69,8 @@ export default function Tools() {
               Most Used
             </ToolTip>
             <ToolTip
-              open={glowingCategory === 'painful' }
-
+              open={glowingCategory === 'painful' || isToolitip3Open }
+              setOpen={setIsTooltip3Open}
               trigger={
                 <Button
                   iconButton
