@@ -91,7 +91,7 @@ export default function Tools() {
 
         <ul className="toolkit__grid">
           <Li
-            className="aspect-ratio-1/1 bg-gradient-to-r from-gray-100 to-gray-200 c-white"
+            className="aspect-ratio-1/1 bg-gradient-to-br from-gray2A to-gray1 c-white"
             gridPosition="g-col-1/4 g-row-1/4"
             src="/tool-logos/nextjs.svg"
             alt="NEXTjs"
@@ -103,13 +103,14 @@ export default function Tools() {
             gridPosition="g-col-4/6 g-row-1/3"
             src="/tool-logos/react.svg"
             alt="React"
+            size='w-7/10'
             isGlowing={glowingCategory === "most-used"}
           />
           <Li
-            className=" light bg-olive3"
+            className=" light bg-sage2"
             gridPosition="g-col-6/9 g-row-1/2"
             src="/tool-logos/supabase.svg"
-            size="w-8/10"
+            size="w-7/10"
             alt="Supabase"
             isGlowing={glowingCategory === "favorite"}
           />
@@ -120,29 +121,30 @@ export default function Tools() {
             alt="Progressive Web Applications"
           /> */}
           <Li
-            className=" bg-gray5  "
+            className=" bg-gray1  "
             gridPosition="g-col-4/6 g-row-3/4"
             src="/tool-logos/radix-ui.svg"
-            size=" filter-invert"
+            size="w-6/10 filter-invert"
             alt="Radix-UI"
           />
           <Li
-            className="bg-violet-100  "
+            className="bg-orange2 "
             gridPosition="g-col-6/7 g-row-2/4"
             src="/tool-logos/astrojs.svg"
             alt="Astro"
-            size=""
+            size="w-8/10"
           />
           <Li
-            className="  bg-teal3  aspect-ratio-1/1 "
-            gridPosition="g-col-7/9 g-row-2/4"
+            className="  bg-jade1 "
+            gridPosition="g-col-7/9 g-row-2/4 "
             src="/tool-logos/nodejs.svg"
             alt="NodeJS"
+            size='w-8/10'
             isGlowing={glowingCategory === "most-used"}
           />
 
           <Li
-            className=" dark bg-gray5"
+            className=" dark bg-sand2"
             gridPosition="g-col-4/7 g-row-4/6"
             src="/tool-logos/figma.svg"
             alt="Figma"
@@ -151,14 +153,14 @@ export default function Tools() {
 
           {/* <Li className="bg-violet-100" src="/tool-logos/framer-motion.png" size="w-9/10" alt="Framer Motion" /> */}
           <Li
-            className="col-span-2   bg-stone-100 "
+            className="col-span-2  "
             gridPosition="g-col-7/9 g-row-4/5"
             src="/tool-logos/unocss.svg"
             alt="UnoCSS"
           />
 
           <Li
-            className="col-span-2   bg-gradient-to-r from-sky-100 to-teal-100"
+            className="col-span-2   bg-cyan3"
             gridPosition="g-col-2/4 g-row-5/6"
             src="/tool-logos/tailwindcss.svg"
             alt="TailwindCSS"
@@ -166,7 +168,7 @@ export default function Tools() {
             isGlowing={glowingCategory === "most-used"}
           />
           <Li
-            className="bg-gradient-to-r from-gray-300 to-slate-300 "
+            className="bg-blue3 "
             gridPosition="g-col-1/3 g-row-4/5"
             src="/tool-logos/solidjs.svg"
             size="w-8/10"
@@ -205,7 +207,7 @@ export default function Tools() {
 
           {/* <Li className="bg-sky-50" icon="i-logos-postgresql" size="!w-2em !h-2em" alt="PostgreSQL" /> */}
           <Li
-            className="bg-gradient-to-b from-blue-200 to-blue-50 aspect-ratio-1/1"
+            className="bg-gradient-to-b from-indigo7 to-indigo9 aspect-ratio-1/1"
             gridPosition="g-col-8/9 g-row-5/6"
             src="/tool-logos/css.svg"
             alt="CSS"
@@ -220,7 +222,7 @@ export default function Tools() {
           />
 
           <Li
-            className=" bg-blue-900 aspect-ratio-1/1"
+            className=" bg-blue9 aspect-ratio-1/1"
             gridPosition="g-col-3/4 g-row-4/5"
             src="/tool-logos/typescript.svg"
             alt="TypeScript"
@@ -243,7 +245,7 @@ function Li(props) {
       } ${props.isGlowing && "???"}`}
     >
       {props.icon && <Icon name={props.icon} className={`${props.size}`} />}
-      {props.src && <img src={props.src} alt={props.alt} className={`object-cover `} />}
+      {props.src && <img src={props.src} alt={props.alt} className={`object-cover ${props?.size}`} />}
     </li>
   );
 }

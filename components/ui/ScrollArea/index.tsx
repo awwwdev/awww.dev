@@ -7,8 +7,8 @@ export default function ScrollArea({ children }) {
     <RadixScrollArea.Root
       className="blog-section-fade-x"
       style={{
-        marginLeft: "-1rem",
-        marginRight: "-1rem",
+        // marginLeft: "-1rem",
+        // marginRight: "-1rem",
       }}
       scrollHideDelay={500}
     >

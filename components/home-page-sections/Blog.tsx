@@ -28,12 +28,19 @@ export default async function Blog() {
         <ScrollArea>
           <ul></ul>
 
-          <ul className=" flex gap-5 pb-8 ">
+          <ul className=" flex pb-8   ">
             <ScrollPadding />
-            {posts.map((post) => {
+            {posts.map((post, index) => {
               const { id, date, title } = post;
               return (
-                <BlogCard key={`blog-post-card-${id}`} title={title} date={date} slug={id} subtitle={post.subtitle} />
+                <BlogCard
+                  key={`blog-post-card-${id}`}
+                  title={title}
+                  date={date}
+                  slug={id}
+                  subtitle={post.subtitle}
+                  gap={index !== 0 && "ml-5 "}
+                />
               );
             })}
             <ScrollPadding />
@@ -44,7 +51,7 @@ export default async function Blog() {
       <div className="flex justify-end mx-auto max-w-page">
         <Link href="/blog">
           View all posts
-          <Icon name="bf-i-ph-arrow-right" className=""  subdued/>
+          <Icon name="bf-i-ph-arrow-right" className="" subdued />
         </Link>
       </div>
     </section>
@@ -73,24 +80,22 @@ function FaderEnd() {
   );
 }
 
-function BlogCard({ title, subtitle, date, slug }) {
+function BlogCard({ title, subtitle, date, slug, gap }) {
   return (
-    <li className=" ">
+    <li className={`${gap}`}>
       <Link
-        className={`flex flex-col b-base4 bg-gradient-to-br from-base3A to-base1A p-6 shadow-2xl rd-6 h-80  w-70 
+        className={`flex flex-col b-base4 bg-gradient-to-br from-base3A to-base1A p-6 shadow-2xl rd-6 h-70 xs:h-80 w-60  xs:w-70 
           hover:from-base4A
           `}
         href={`/blog/${slug}`}
       >
-        <h3 className="text-base sm:text-xl font-display tracking-tight leading-tight  min-h-1em">
-          {title}
-        </h3>
-        <Space size='h-1' />
+        <h3 className="text-base sm:text-xl font-display tracking-tight leading-tight  min-h-1em">{title}</h3>
+        <Space size="h-1" />
         {subtitle && <p className="c-base11">{subtitle}</p>}
 
         <div className="mt-auto">
           <div className="flex justify-between items-baseline">
-        {date && <p className="c-sand11 lt-sm:text-sm">{toRelativeOrReadableDate(date)}</p>}
+            {date && <p className="c-sand11 lt-sm:text-sm">{toRelativeOrReadableDate(date)}</p>}
             <span className="flex items-end">
               <Icon name="bf-i-ph-arrow-right" className="c-base8 fs-4xl leading-none " />
             </span>

@@ -1,7 +1,13 @@
 - size logos 
 - responsive grid
 - glow effect
-- 
+- blur circles
+  - position
+  - color
+
+header links -> hover color?
+
+- anchor tags in page scroll?
 
 - transition properties like transition gradient-stop1 or bg opacity
 - 10 gradient stops 
