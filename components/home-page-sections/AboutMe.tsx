@@ -1,3 +1,4 @@
+import Space from '../ui/Space';
 import BluredCircle from "./BluredCircle";
 
 export default function AboutMe() {
@@ -9,6 +10,7 @@ export default function AboutMe() {
 
       <div className="mx-auto max-w-page  ">
           <h2 className="H1" id='about'>About Me</h2>
+        <Space size="h-4" />
         <div className="space-y-4 c-gray11">
           <p>
             I help businesses to discover their visual language, create wireframes, make high fidelity UI prototypes and

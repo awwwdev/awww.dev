@@ -87,7 +87,7 @@ export default function Tools() {
             </ToolTip>
           </div>
         </div>
-        <Space size="h-8" />
+        <Space size="h-4" />
 
         <ul className="toolkit__grid">
           <Li

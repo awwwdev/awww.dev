@@ -179,7 +179,6 @@ export default function Categoreis() {
           `}
           >
             <LinkButton
-              width="parent"
               variation="solid"
               href="/classes"
               className={`!py-2em !rd-3 flex justify-between items-center 

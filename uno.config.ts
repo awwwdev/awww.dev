@@ -17,7 +17,11 @@ export default defineConfig({
   theme: {
     color: {
       subdued: "var(--rx-slate11)",
-  
+    },
+    breakpoints: {
+      xs: '480px',
+      sm: '640px',
+      md: '768px'
     }
   },
   transformers: [transformerVariantGroup()],

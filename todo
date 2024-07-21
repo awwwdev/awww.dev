@@ -1,8 +1,8 @@
-- [ ] dates in edit page
-- [ ] invalidation in topic and others
-- [ ] boolean in edit page
-- [ ] numbers in edit page
+- size logos 
+- responsive grid
+- glow effect
+- 
 
-<div>
-There is no record with <code>id: {id}</code> in topic.
-</div>
+- transition properties like transition gradient-stop1 or bg opacity
+- 10 gradient stops 
+- number of colors level are free. so you can use diffenret color systems (radix with 12 levels, taiwing with 9 levels)

@@ -9,7 +9,6 @@ export type ButtonProps = {
   iconButton?: boolean;
   preStyled?: boolean;
   rounded?: boolean;
-  width?: "parent" | "content" | "default";
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
 };
@@ -73,18 +72,16 @@ export const disabledClasses = {
 };
 
 const Button = forwardRef<Ref, AllProps>(function Button(
-  { preStyled = true, className, variation, children, isLoading, iconButton, disabled, width = "default", rounded = false, prefix , suffix , ...props },
+  { preStyled = true, className, variation, children, isLoading, iconButton, disabled,  rounded = false, prefix , suffix , ...props },
   ref
 ) {
   const cls = `
       relative isolate
       ${classes.base} ${!disabled && classes[variation]}
       ${rounded ? 'rd-full' : 'rd-0.5em'}
-       ${iconButton ? "h-2.75em w-2.75em " : "h-2.75em px-1em"}
-       ${width === "parent" ? "w-full" : ""} 
-       ${width === "content" ? "w-full" : ""} 
-       ${width === "default" && !iconButton ? "min-w-6em" : ""} 
-       ${disabled ? `${disabledClasses.base} ${disabledClasses[variation]}` : ""}`;
+      ${iconButton ? "h-2.75em w-2.75em " : "h-2.75em px-1em"}
+      ${!iconButton ? "min-w-6em" : ""} 
+      ${disabled ? `${disabledClasses.base} ${disabledClasses[variation]}` : ""}`;
 
   return (
     <button

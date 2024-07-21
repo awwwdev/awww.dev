@@ -67,7 +67,6 @@ function SideNav({ className, setIsSideMenuOpen }) {
           <div className="flex">
             <Button
               variation="text"
-              width="content"
               className="!rd-full"
               iconButton
               onClick={() => {

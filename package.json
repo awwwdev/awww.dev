@@ -21,6 +21,7 @@
     "@faker-js/faker": "^8.4.1",
     "@hookform/error-message": "^2.0.1",
     "@hookform/resolvers": "^2.9.10",
+    "@iconify-json/bxl": "^1.1.10",
     "@iconify-json/iconoir": "^1.1.44",
     "@iconify-json/logos": "^1.1.43",
     "@iconify-json/svg-spinners": "^1.1.2",

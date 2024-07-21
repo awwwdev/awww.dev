@@ -22,8 +22,7 @@ export default async function Blog() {
             Blog
           </h2>
         </div>
-
-        <div className="h-4"></div>
+        <Space size="h-4" />
       </div>
       <div className="blog-section-fade-x">
         <ScrollArea>
@@ -78,7 +77,9 @@ function BlogCard({ title, subtitle, date, slug }) {
   return (
     <li className=" ">
       <Link
-        className="flex flex-col b-base4 bg-gradient-to-br from-base3A to-base1A p-6 shadow-2xl rd-6 h-80  w-70"
+        className={`flex flex-col b-base4 bg-gradient-to-br from-base3A to-base1A p-6 shadow-2xl rd-6 h-80  w-70 
+          hover:from-base4A
+          `}
         href={`/blog/${slug}`}
       >
         <h3 className="text-base sm:text-xl font-display tracking-tight leading-tight  min-h-1em">
