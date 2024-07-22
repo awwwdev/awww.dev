@@ -23,7 +23,7 @@ export default function ContactMe() {
               <LinkButton
                 variation="ghost-accent"
                 href="mailto:hamidpm@proton.me"
-                className="items-center gap-3  lt-xs:!grid"
+                className="items-center gap-3  lt-xs:!grid xs:min-w-40"
                 style={{ gridTemplateColumns: "1em 1fr 1em" }}
               >
                 <Icon name="bf-i-ph-envelope-simple" className="-mb-0.2em" />
@@ -34,7 +34,7 @@ export default function ContactMe() {
               <LinkButton
                 variation="ghost"
                 href="https://github.com/vashmeen"
-                className="items-center gap-3  lt-xs:!grid"
+                className="items-center gap-3  lt-xs:!grid  xs:min-w-40"
                 style={{ gridTemplateColumns: "1em 1fr 1em" }}
               >
                 <Icon name="bf-i-bxl-github" className="fs-lg -mb-0.2em" />
@@ -45,7 +45,7 @@ export default function ContactMe() {
               <LinkButton
                 variation="ghost"
                 href="https://www.linkedin.com/in/hamidddev/"
-                className="items-center gap-3  lt-xs:!grid"
+                className="items-center gap-3  lt-xs:!grid  xs:min-w-40"
                 style={{ gridTemplateColumns: "1em 1fr 1em" }}
               >
                 <Icon name="bf-i-bxl-linkedin-square" className="fs-lg -mb-0.2em " />

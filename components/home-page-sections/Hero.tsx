@@ -34,9 +34,8 @@ function DesktopHero() {
               <p className="font-display fs-xl sm:fs-2xl tracking-wide  line-height-0.8">Hello. I&apos;m Hamid.</p>
             </div>
           </div>
-          <Space size="h-6 sm:h-20" />
+          <Space size="h-20" />
           <HeroSentence />
-          <Space size="h-10 sm:h-30" />
         </div>
       </div>
     </section>
@@ -45,15 +44,17 @@ function DesktopHero() {
 
 function HeroSentence() {
   return (
-    <p className="font-display fs-4xl sm:fs-6xl text-center">
+    <p className="font-display fs-4xl sm:fs-6xl text-center lt-xs:line-height-1.2">
       <span className="block">
         <IWord />
         {` `}
         <DesignWord />
         {` `}
+        <span className='whitespace-nowrap'>
         <AndWord />
         {` `}
         <DevelopeWord />
+        </span>
       </span>
       <WebApplicationsWord />
     </p>

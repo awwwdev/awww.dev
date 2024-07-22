@@ -21,9 +21,7 @@ export default async function Page() {
   return (
     <div className="">
         <Hero />
-        {/* <Features /> */}
-        {/* <Stats /> */}
-        <Space size="h-40 sm:h-40" />
+        <Space size="h-40 sm:h-50" />
         <Works />
         <Space size="h-40 sm:h-40" />
         <Tools />

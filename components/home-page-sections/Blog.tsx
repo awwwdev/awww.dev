@@ -83,7 +83,7 @@ function BlogCard({ title, subtitle, date, slug, gap }) {
     <li className={`${gap}`}>
       <Link
         className={`flex flex-col b-base4 bg-gradient-to-br from-base3A to-base1A p-6 shadow-2xl rd-6 h-70 xs:h-80 w-60  xs:w-70 
-          hover:from-base4A
+          hover:from-sage4A
           `}
         href={`/blog/${slug}`}
       >
