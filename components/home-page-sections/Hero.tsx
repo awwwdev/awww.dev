@@ -114,7 +114,7 @@ function WebApplicationsWord() {
         <MobileOnly>apps.</MobileOnly>
       </span>
       <span className="absolute -right-0.1em top-0  leading-1 translate-x-20%  -translate-y-50% ">
-        <Icon name="bf-i-ph-sparkle-fill" className="c-indigo12A fs-lg sm:fs-3xl  blur-2" />
+        {/* <Icon name="bf-i-ph-sparkle-fill" className="c-indigo12A fs-lg sm:fs-3xl  blur-2" /> */}
       </span>
     </span>
   );

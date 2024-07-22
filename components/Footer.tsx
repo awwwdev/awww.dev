@@ -12,8 +12,8 @@ const Footer = () => {
       <footer className="px-4  ">
         <div className=" max-w-page mx-auto "></div>
         <div className="max-w-page mx-auto">
-          <div className="text-center mt-4 pb-4 text-sm c-base11">
-            <p>Designed and Developed with love.</p>
+          <div className="b-t-1 b-base4 mt-4 pt-8 pb-4 text-sm c-base11">
+            <p>Designed and Developed with love, ofcourse by myself.</p>
             <p>No AI was used during building of this website!</p>
           </div>
         </div>
