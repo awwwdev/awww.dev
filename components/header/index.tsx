@@ -53,7 +53,7 @@ function PublicWebsiteNav() {
     <nav className="w-full font-display">
       <ul className="flex items-center gap-4  text-xs sm:text-base w-full ">
         <li className="flex items-center">
-          <Link href="/" className=" text-xs sm:text-base flex justify-center  items-center  fw-300">
+          <Link href="/" className=" text-xs sm:text-base flex justify-center  items-center  tracking-wider fw-300">
         awww.dev
           </Link>
         </li>
