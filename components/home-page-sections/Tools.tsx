@@ -95,24 +95,24 @@ export default function Tools() {
 
         <ul className="toolkit__grid">
           <Li
-            className="aspect-ratio-1/1 bg-gradient-to-br from-gray2A to-gray1 c-white"
-            gridPosition="g-col-1/4 g-row-1/4"
+            className="sm:aspect-ratio-1/1 bg-gradient-to-b from-gray2A to-gray1 c-white"
+            gridPosition="g-col-1/4 g-row-1/3 sm:g-col-1/4 sm:g-row-1/4"
             src="/tool-logos/nextjs.svg"
             alt="NEXTjs"
             size="w-5/10"
             isGlowing={glowingCategory === "most-used"}
           />
           <Li
-            className="  bg-sky3 light "
-            gridPosition="g-col-4/6 g-row-1/3"
+            className=" bg-gradient-to-b from-sky1 to-sky3 lt-sm:aspect-ratio-1/1 "
+            gridPosition="g-col-3/5 g-row-3/5  sm:g-col-4/6 sm:g-row-1/3"
             src="/tool-logos/react.svg"
             alt="React"
             size='w-7/10'
             isGlowing={glowingCategory === "most-used"}
           />
           <Li
-            className=" light bg-sage2"
-            gridPosition="g-col-6/9 g-row-1/2"
+            className="  bg-gradient-to-b from-sage1 to-sage3"
+            gridPosition="g-col-2/5 g-row-7/8  sm:g-col-6/9 sm:g-row-1/2"
             src="/tool-logos/supabase.svg"
             size="w-7/10"
             alt="Supabase"
@@ -125,22 +125,22 @@ export default function Tools() {
             alt="Progressive Web Applications"
           /> */}
           <Li
-            className=" bg-gray1  "
-            gridPosition="g-col-4/6 g-row-3/4"
+            className=" bg-gradient-to-b from-gray2 to-gray1A  "
+            gridPosition="g-col-1/3 g-row-4/5    sm:g-col-4/6 sm:g-row-3/4"
             src="/tool-logos/radix-ui.svg"
             size="w-6/10 filter-invert"
             alt="Radix-UI"
           />
           <Li
-            className="bg-orange2 "
-            gridPosition="g-col-6/7 g-row-2/4"
+            className="bg-gradient-to-b from-orange1 to-orange3 "
+            gridPosition="g-col-4/5 g-row-1/3  sm:g-col-6/7 sm:g-row-2/4"
             src="/tool-logos/astrojs.svg"
             alt="Astro"
             size="w-8/10"
           />
           <Li
-            className="  bg-jade1 "
-            gridPosition="g-col-7/9 g-row-2/4 "
+            className="  bg-gradient-to-b from-jade1 to-jade3 "
+            gridPosition="g-col-2/3 g-row-3/4  sm:g-col-7/9 sm:g-row-2/4 "
             src="/tool-logos/nodejs.svg"
             alt="NodeJS"
             size='w-8/10'
@@ -148,8 +148,8 @@ export default function Tools() {
           />
 
           <Li
-            className=" dark bg-sand2"
-            gridPosition="g-col-4/7 g-row-4/6"
+            className=" dark bg-gradient-to-b from-sand1 to-sand3"
+            gridPosition="g-col-1/4 g-row-5/7  sm:g-col-4/7 sm:g-row-4/6"
             src="/tool-logos/figma.svg"
             alt="Figma"
             size=""
@@ -157,23 +157,23 @@ export default function Tools() {
 
           {/* <Li className="bg-violet-100" src="/tool-logos/framer-motion.png" size="w-9/10" alt="Framer Motion" /> */}
           <Li
-            className="col-span-2  "
-            gridPosition="g-col-7/9 g-row-4/5"
+            className="col-span-2 bg-gradient-to-b from-slate1 to-slate3 !display-none !sm:block "
+            gridPosition="  sm:g-col-7/9 sm:g-row-4/5"
             src="/tool-logos/unocss.svg"
             alt="UnoCSS"
           />
 
           <Li
             className="col-span-2   bg-cyan3"
-            gridPosition="g-col-2/4 g-row-5/6"
+            gridPosition="g-col-3/5 g-row-8/9  sm:g-col-2/4 sm:g-row-5/6"
             src="/tool-logos/tailwindcss.svg"
             alt="TailwindCSS"
             size="w-4/5"
             isGlowing={glowingCategory === "most-used"}
           />
           <Li
-            className="bg-blue3 "
-            gridPosition="g-col-1/3 g-row-4/5"
+            className="bg-gradient-to-b from-blue4 to-blue6 "
+            gridPosition="g-col-1/3 g-row-8/9  sm:g-col-1/3 sm:g-row-4/5"
             src="/tool-logos/solidjs.svg"
             size="w-8/10"
             alt="Solidjs"
@@ -201,7 +201,7 @@ export default function Tools() {
 
           <Li
             className="bg-purple4 light aspect-ratio-1/1"
-            gridPosition="g-col-1/2 g-row-5/6"
+            gridPosition="g-col-1/2 g-row-7/8  sm:g-col-1/2 sm:g-row-5/6"
             src="/tool-logos/vite.svg"
             alt="Vite"
           />
@@ -211,23 +211,23 @@ export default function Tools() {
 
           {/* <Li className="bg-sky-50" icon="i-logos-postgresql" size="!w-2em !h-2em" alt="PostgreSQL" /> */}
           <Li
-            className="bg-gradient-to-b from-indigo7 to-indigo9 aspect-ratio-1/1"
-            gridPosition="g-col-8/9 g-row-5/6"
+            className="bg-gradient-to-b from-indigo2 via-indigo3 to-indigo4 aspect-ratio-1/1"
+            gridPosition="g-col-4/5 g-row-6/7  sm:g-col-8/9 sm:g-row-5/6"
             src="/tool-logos/css.svg"
             alt="CSS"
             isGlowing={glowingCategory === "favorite"}
           />
           <Li
-            className=" bg-accent4 aspect-ratio-1/1"
-            gridPosition="g-col-7/8 g-row-5/6"
+            className=" bg-gradient-to-b from-orange2 via-orange3 to-orange4  aspect-ratio-1/1"
+            gridPosition="g-col-4/5 g-row-5/6  sm:g-col-7/8 sm:g-row-5/6"
             src="/tool-logos/html.svg"
             size="w-9/10"
             alt="HTML"
           />
 
           <Li
-            className=" bg-blue9 aspect-ratio-1/1"
-            gridPosition="g-col-3/4 g-row-4/5"
+            className=" bg-gradient-to-b from-blue2 via-blue3 to-blue4  aspect-ratio-1/1"
+            gridPosition="g-col-1/2 g-row-3/4  sm:g-col-3/4 sm:g-row-4/5"
             src="/tool-logos/typescript.svg"
             alt="TypeScript"
             size="w-9/10"
