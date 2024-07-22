@@ -19,6 +19,7 @@ export default defineConfig({
       subdued: "var(--rx-slate11)",
     },
     breakpoints: {
+      xxs: '400px',
       xs: '480px',
       sm: '640px',
       md: '768px'

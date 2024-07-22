@@ -385,21 +385,19 @@ a {
   );
 }
 :root {
-  --fade-to-opacity: 0
+  --fade-to-opacity: 0;
 }
 .fade-to-b {
   -webkit-mask-image: linear-gradient(to bottom, black 0%, rgba(0 0 0 / var(--fade-to-opacity)) 75%);
-  mask-image: linear-gradient(to bottom, black 0%,  rgba(0 0 0 / var(--fade-to-opacity)) 75%);
+  mask-image: linear-gradient(to bottom, black 0%, rgba(0 0 0 / var(--fade-to-opacity)) 75%);
   transition: --fade-to-opacity 1s ease;
 }
 
 @property --fade-to-opacity {
-  syntax: '<number>'; /* <- defined as type number for the transition to work */
+  syntax: "<number>"; /* <- defined as type number for the transition to work */
   initial-value: 0;
   inherits: false;
 }
-
-
 
 @media (min-width: 1300px) {
   .blog-section-fade-x {
@@ -444,14 +442,32 @@ a {
 
 .toolkit__grid {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(4, minmax(min(100%, 3.75rem), 1fr));
-  grid-auto-flow: dense;
+  --grid-width: var(--max-w-page);
 }
-@media screen and (min-width: 640px) {
+
+@media screen and (max-width: 399.9px) {
   .toolkit__grid {
-    grid-template-columns: repeat(8, minmax(min(100%, 3.75rem), 1fr));
+    grid-template-columns: repeat(4, 0.22 * var(--grid-width));
+    grid-auto-rows: calc(0.22 * var(--grid-width));
+    grid-auto-columns: calc(0.22 * var(--grid-width));
+    gap: calc(0.04 * var(--grid-width));
   }
+
+  .toolkit__grid-item {
+    border-radius: calc(0.04 * var(--grid-width));
+  }
+}
+@media screen and (min-width: 400px) {
+  .toolkit__grid {
+    grid-template-columns: repeat(8, 1fr);
+    gap: calc(0.02 * var(--grid-width));
+    grid-auto-rows: calc(0.11 * var(--grid-width));
+  }
+
+  .toolkit__grid-item {
+    border-radius: calc(0.02 * var(--grid-width));
+  }
+  
 }
 
 
