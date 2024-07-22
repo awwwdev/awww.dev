@@ -58,25 +58,25 @@ function PublicWebsiteNav() {
           </Link>
         </li>
         <li className='mis-auto'>
-          <Link href="#works" className="hover:c-base11">
+          <a href="#works" className="hover:c-base11">
             Works
-          </Link>
+          </a>
         </li>
         <li>
-          <Link href="#tools" className="hover:c-base11">
+          <a href="#tools" className="hover:c-base11">
             Tools
-          </Link>
+          </a>
       </li>
         <li>
-          <Link href="#blog" className="hover:c-base11">
+          <a href="#blog" className="hover:c-base11">
           Blog
-          </Link>
+          </a>
         </li>
 
         <li>
-          <Link href="#contact" className="hover:c-base11">
+          <a href="#contact" className="hover:c-base11">
             Contact
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>

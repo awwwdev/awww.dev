@@ -9,11 +9,11 @@ export default function Works() {
 
   return (
     <section className="relative">
-      <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
-      <BluredCircle radius={50} top="60%" left="5%" bg="bg-purple3" blur="200px" />
+      <BluredCircle radius={200} top="20%" left="95%" bg="bg-gold2" blur="200px" />
+      <BluredCircle radius={250} top="60%" left="20%" bg="bg-sky1 opacity-50" blur="200px" />
 
-      <div className="mx-auto max-w-page  ">
-        <h2 className="H1" id='works'>Experiences</h2>
+      <div className="mx-auto max-w-page">
+        <h2 className="H1" id='works'>Work Experiences</h2>
         <Space size="h-8" />
         <ul
           className="list-square list-disc-outside pt-4 pis-3 b-l-2 b-base5 b-dashed"

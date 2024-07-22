@@ -1,8 +1,6 @@
 import BluredCircle from "./BluredCircle";
 import Icon from "@/components/ui/Icon";
 import Image from "next/image";
-import Button from "../ui/button";
-import Switch from "../ui/Switch";
 import Space from "../ui/Space";
 import DesktopOnly from "../ui/DesktopOnly";
 import MobileOnly from "../ui/MobileOnly";
@@ -18,9 +16,8 @@ export default function Hero() {
 function DesktopHero() {
   return (
     <section className="relative ">
-      <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
-      <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue2" blur="200px" />
-
+      <BluredCircle radius={200} top="20%" left="85%" bg="bg-cyan2" blur="200px" />
+      <BluredCircle radius={200} top="60%" left="5%" bg="bg-indigo2" blur="200px" />
       <div className="max-w-page mx-auto">
         <div>
           <Space size="h-6 sm:h-20" />
@@ -64,7 +61,7 @@ function HeroSentence() {
 }
 
 function IWord() {
-  return <span className="c-base11 blur-1 ">I</span>;
+  return <span className="c-base10 blur-1 ">I</span>;
 }
 
 function DesignWord() {
@@ -91,12 +88,12 @@ function PointerSVG() {
 
 function DevelopeWord() {
   return (
-    <span className="bg-base2A pt3 pb-2">
+    <span className="bg-cyan2A pt3 pb-2">
       <span className="tracking-tight  ">
-        <span className="font-mono ">develop</span>
-        <span className="bg-indigo2A  pt-3 pb-2 relative">
-          <span className="font-mono c-indigo12">e</span>
-          <span className="absolute bottom-0 left-0 right-0 h-0.16em cursor-pulse c-indigo12"></span>
+        <span className="font-mono c-sage12A ">develop</span>
+        <span className="bg-mint3A  pt-3 pb-2 relative">
+          <span className="font-mono c-mint12">e</span>
+          <span className="absolute bottom-0 left-0 right-0 h-0.14em cursor-pulse c-mint12"></span>
         </span>
       </span>
     </span>
@@ -104,12 +101,12 @@ function DevelopeWord() {
 }
 
 function AndWord() {
-  return <span className="blur-1 c-base11">and</span>;
+  return <span className="blur-1 c-base10">and</span>;
 }
 
 function WebApplicationsWord() {
   return (
-    <span className="relative">
+    <span className="relative blur-1 c-base10">
       <span className="">
         web{` `}
         <DesktopOnly>applications.</DesktopOnly>

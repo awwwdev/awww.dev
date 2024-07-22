@@ -4,6 +4,10 @@ body {
 }
 
 :root {
+  scroll-behavior: smooth;
+}
+
+:root {
   --max-w-page: min(100vw - 32px, 50rem);
   --line-height: 1.5em;
   line-height: 1.5;

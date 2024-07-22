@@ -15,8 +15,9 @@ export default function Tools() {
 
   return (
     <section className="relative">
-      <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber2" blur="200px" />
-      <BluredCircle radius={200} top="60%" left="15%" bg="bg-plum2" blur="200px" />
+      <BluredCircle radius={200} top="100%" left="60%" bg="bg-bronze2A" blur="200px" />
+      <BluredCircle radius={200} top="50%" left="70%" bg="bg-sage2A " blur="200px" />
+      <BluredCircle radius={200} top="50%" left="20%" bg="bg-violet2A opacity-70" blur="200px" />
 
       <div className="mx-auto max-w-page  ">
         <div className="flex justify-between gap-8">
@@ -93,7 +94,7 @@ export default function Tools() {
 
         <ul className="toolkit__grid">
           <Li
-            className=" bg-gradient-to-b from-gray2A to-gray1 c-white"
+            className=" bg-gradient-to-br from-gray3A  via-gray1A to-transparent c-white"
             gridPosition="g-col-1/4 g-row-1/3 xxs:g-col-1/4 xxs:g-row-1/4"
             src="/tool-logos/nextjs.svg"
             alt="NEXTjs"
@@ -130,14 +131,14 @@ export default function Tools() {
             alt="Radix-UI"
           />
           <Li
-            className="bg-gradient-to-b from-orange1 to-orange3 "
+            className="bg-gradient-to-b from-sand1A via-orange1A to-orange3A "
             gridPosition="g-col-4/5 g-row-1/3  xxs:g-col-6/7 xxs:g-row-2/4"
             src="/tool-logos/astrojs.svg"
             alt="Astro"
             size=""
           />
           <Li
-            className="  bg-gradient-to-b from-jade1 to-jade3 lt-xxs:a "
+            className="  bg-gradient-to-b from-jade1A to-jade1A via-grass3A lt-xxs:a "
             gridPosition="g-col-2/3 g-row-3/4  xxs:g-col-7/9 xxs:g-row-2/4 "
             src="/tool-logos/nodejs.svg"
             alt="NodeJS"
@@ -146,7 +147,7 @@ export default function Tools() {
           />
 
           <Li
-            className=" dark bg-gradient-to-b from-sand1 to-sand3"
+            className=" dark bg-gradient-to-b from-sand1A to-sand3A"
             gridPosition="g-col-1/4 g-row-5/7  xxs:g-col-4/7 xxs:g-row-4/6"
             src="/tool-logos/figma.svg"
             alt="Figma"
@@ -155,22 +156,22 @@ export default function Tools() {
 
           {/* <Li className="bg-violet-100" src="/tool-logos/framer-motion.png" size="w-9/10" alt="Framer Motion" /> */}
           <Li
-            className="col-span-2 bg-gradient-to-b from-slate1 to-slate3 !display-none xxs:!flex "
+            className="col-span-2 bg-gradient-to-b from-gray1A to-gray3 !display-none xxs:!flex "
             gridPosition="  xxs:g-col-7/9 xxs:g-row-4/5"
             src="/tool-logos/unocss.svg"
             alt="UnoCSS"
           />
 
           <Li
-            className="col-span-2   bg-cyan3"
+            className="col-span-2 bg-gradient-to-b from-cyan2A to-cyan3A"
             gridPosition="g-col-3/5 g-row-8/9  xxs:g-col-2/4 xxs:g-row-5/6"
             src="/tool-logos/tailwindcss.svg"
             alt="TailwindCSS"
-            size="w-4/5"
+            // size="w-4/5"
             isGlowing={glowingCategory === "most-used"}
           />
           <Li
-            className="bg-gradient-to-b from-blue4 to-blue6 "
+            className="bg-gradient-to-b from-blue3A to-blue5 "
             gridPosition="g-col-1/3 g-row-8/9  xxs:g-col-1/3 xxs:g-row-4/5"
             src="/tool-logos/solidjs.svg"
             size="w-8/10"
@@ -198,7 +199,7 @@ export default function Tools() {
           /> */}
 
           <Li
-            className="bg-purple4 light "
+            className="bg-gradient-to-b from-purple3 to-purple4 light "
             gridPosition="g-col-1/2 g-row-7/8  xxs:g-col-1/2 xxs:g-row-5/6"
             src="/tool-logos/vite.svg"
             alt="Vite"
@@ -209,22 +210,21 @@ export default function Tools() {
 
           {/* <Li className="bg-sky-50" icon="i-logos-postgresql" size="!w-2em !h-2em" alt="PostgreSQL" /> */}
           <Li
-            className="bg-gradient-to-b from-indigo2 via-indigo3 to-indigo4 "
+            className="bg-gradient-to-b from-slate2A via-indigo3A to-indigo4A "
             gridPosition="g-col-4/5 g-row-6/7  xxs:g-col-8/9 xxs:g-row-5/6"
             src="/tool-logos/css.svg"
             alt="CSS"
             isGlowing={glowingCategory === "favorite"}
           />
           <Li
-            className=" bg-gradient-to-b from-orange2 via-orange3 to-orange4"
+            className=" bg-gradient-to-b from-sand2A via-orange3A to-orange4A"
             gridPosition="g-col-4/5 g-row-5/6  xxs:g-col-7/8 xxs:g-row-5/6"
             src="/tool-logos/html.svg"
-            size="w-9/10"
             alt="HTML"
           />
 
           <Li
-            className=" bg-gradient-to-b from-blue2 via-blue3 to-blue4  "
+            className=" bg-gradient-to-b from-sky1 via-sky2 to-sky3  "
             gridPosition="g-col-1/2 g-row-3/4  xxs:g-col-3/4 xxs:g-row-4/5"
             src="/tool-logos/typescript.svg"
             alt="TypeScript"
@@ -242,7 +242,7 @@ export default function Tools() {
 function Li(props) {
   return (
     <li
-      className={`toolkit__grid-item p-4  xxs:!p-3 xs:p-4 sm:p-4  flex justify-center items-center b-1.5 b-sand3A empty:b-transparent bg-origin-border ${props.className} ${
+      className={`toolkit__grid-item p-4  xxs:!p-3 xs:p-4 sm:p-4  flex justify-center items-center b-1.5 b-slate2A empty:b-transparent bg-origin-border ${props.className} ${
         props.gridPosition
       } ${props.isGlowing && "???"}`}
     >

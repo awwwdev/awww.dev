@@ -17,7 +17,7 @@ export default function Hero() {
 function DesktopHero() {
   return (
     <section className="relative ">
-      <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
+      <BluredCircle radius={100} top="20%" left="95%" bg="bg-crimson3" blur="200px" />
       <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue2" blur="200px" />
 
       <div className="max-w-page mx-auto">

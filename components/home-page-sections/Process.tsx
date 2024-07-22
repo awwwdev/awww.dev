@@ -13,7 +13,7 @@ export default function Process() {
   return (
     <section className=" relative ">
       <BluredCircle radius={200} top="100%" left="95%" bg="bg-blue4" blur="200px" />
-      <BluredCircle radius={100} top="0%" left="5%" bg="bg-amber3" blur="200px" />
+      <BluredCircle radius={100} top="0%" left="5%" bg="bg-crimson3" blur="200px" />
 
       <div className="max-w-page mx-auto">
         <h2 className="H2 c-title  pb-4">My Design Process</h2>

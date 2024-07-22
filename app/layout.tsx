@@ -11,10 +11,9 @@ import "@/styles/globals.css";
 import "@/public/fonts/nohemi/css/nohemi.css";
 import "@/public/fonts/geist/css/geist.css";
 
-
 import Footer from "@/components/Footer";
 import Header from "@/components/header";
-import { useState } from 'react';
+import { useState } from "react";
 import { Toaster } from "react-hot-toast";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -33,7 +32,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               rel="stylesheet"
             ></link> */}
       </head>
-      <body className={`dark-theme bg-sand1 c-sand12 `}>
+      <body className={`dark-theme bg-sand1 c-sand12 relative isolate`}>
+        <div
+          className="absolute top-0 bottom-0 left-0 right-0 -z-10 opacity-10"
+          style={{
+            backgroundImage: "url('/static/noise.svg')",
+            backgroundSize: "40%",
+            backgroundRepeat: "repeat",
+            mixBlendMode: 'overlay'
+          }}
+        ></div>
         <div className={`side-menu-container isolate h-full  overflow-x-hidden  mx-auto max-w-screen  `}>
           <div className="main grid h-full max-w-screen isolate" style={{ gridTemplateRows: "auto 1fr auto" }}>
             <Header setIsSideMenuOpen={setIsSideMenuOpen} />

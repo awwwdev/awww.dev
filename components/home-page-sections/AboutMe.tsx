@@ -5,8 +5,7 @@ export default function AboutMe() {
 
   return (
     <section className="relative">
-      <BluredCircle radius={100} top="20%" left="95%" bg="bg-amber3" blur="200px" />
-      <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue3" blur="200px" />
+      <BluredCircle radius={200} top="25%" left="70%" bg="bg-gold2A" blur="200px" />
 
       <div className="mx-auto max-w-page  ">
           <h2 className="H1" id='about'>About Me</h2>
