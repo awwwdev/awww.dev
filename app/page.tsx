@@ -23,18 +23,16 @@ export default async function Page() {
         <Hero />
         {/* <Features /> */}
         {/* <Stats /> */}
-        <Space size="h-6 sm:h-20" />
-        {/* <Categoreis /> */}
+        <Space size="h-40 sm:h-40" />
         <Works />
-        <Space size="h-20" />
+        <Space size="h-40 sm:h-40" />
         <Tools />
         {/* <Process /> */}
-        <Space size="h-20" />
-        <Space size="h-30" />
+        <Space size="h-40 sm:h-40" />
         <Blog />
-        <Space size="h-30" />
+        <Space size="h-40 sm:h-40" />
         <AboutMe />
-        <Space size="h-30" />
+        <Space size="h-40 sm:h-40" />
         <ContactMe />
     </div>
   );

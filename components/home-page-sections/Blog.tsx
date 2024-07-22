@@ -12,19 +12,23 @@ export default async function Blog() {
   const posts = await getAllPosts();
 
   return (
-    <section className="relative">
+    <section className="relative ">
       {/* <BluredCircle radius={100} top="20%" left="95%" bg="bg-brand-light-amber" blur="200px" /> */}
       {/* <BluredCircle radius={200} top="60%" left="5%" bg="bg-brand-light-blue" blur="200px" /> */}
 
       <div className="mx-auto max-w-page ">
-        <div className="flex justify-between gap-4">
+        <div className="flex justify-between gap-6 items-baseline">
           <h2 className="H1" id="blog">
             Blog
           </h2>
+          <Link href="/blog" className='c-base11'>
+            View all posts
+            <Icon name="bf-i-ph-arrow-right" className="mis-1"  />
+          </Link>
         </div>
         <Space size="h-4" />
       </div>
-      <div className="blog-section-fade-x">
+      <div className="blog-section-fade-x ">
         <ScrollArea>
           <ul></ul>
 
@@ -46,13 +50,6 @@ export default async function Blog() {
             <ScrollPadding />
           </ul>
         </ScrollArea>
-        <Space size="h-4" />
-      </div>
-      <div className="flex justify-end mx-auto max-w-page">
-        <Link href="/blog">
-          View all posts
-          <Icon name="bf-i-ph-arrow-right" className="" subdued />
-        </Link>
       </div>
     </section>
   );

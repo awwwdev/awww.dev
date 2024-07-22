@@ -10,7 +10,7 @@ export default function ContactMe() {
       <BluredCircle radius={200} top="60%" left="5%" bg="bg-blue3" blur="200px" />
 
       <div className="mx-auto max-w-page  ">
-        <div className="max-w-page mx-auto b-base5  b-t-1 pt-12">
+        <div className="max-w-page mx-auto b-base5">
           <h2 className="H1" id="contact">
             Contact
           </h2>
