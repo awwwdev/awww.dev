@@ -1,10 +1,4 @@
 import Hero from "@/components/home-page-sections/Hero";
-// import Features from "@/components/home-page-sections/Features";
-// import Categoreis from "@/components/home-page-sections/Categories";
-// import Stats from "@/components/home-page-sections/Stats";
-// import Process from "@/components/home-page-sections/Process";
-// import Testomonials from "@/components/home-page-sections/Testomonials";
-// import FAQ from "@/components/home-page-sections/FAQ";
 import Blog from "@/components/home-page-sections/Blog";
 import Space from "@/components/ui/Space";
 import ContactMe from '@/components/home-page-sections/ContactMe';

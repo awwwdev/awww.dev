@@ -43,7 +43,7 @@ export const Form = ({ form, children, hasSubmitButton = true, submitText = "sub
       {hasSubmitButton && (
         <>
           <ErrMsg name="root.submit" />
-          <button type="submit" className="btn-accent !mt-8 !mb-8" disabled={form.formState.isSubmitting}>
+          <button type="submit" className="btn-prm !mt-8 !mb-8" disabled={form.formState.isSubmitting}>
             {form.formState.isSubmitting ? <LoadingSpinner /> : submitText}
           </button>
         </>
@@ -51,6 +51,8 @@ export const Form = ({ form, children, hasSubmitButton = true, submitText = "sub
     </form>
   </FormProvider>
 );
+
+Form.displayName = 'From';
 
 type InputElProps = React.ComponentPropsWithoutRef<"input"> & {
   name: string;
@@ -64,7 +66,7 @@ type TextAreaElProps = React.ComponentPropsWithoutRef<"textarea"> & {
 };
 type TextAreaProps = TextAreaElProps & { hint?: React.ReactNode; label?: React.ReactNode; hasErrorMessage?: boolean };
 
-Form.Input = ({ label, hasErrorMessage = true, name, ...inputProps }: InputProps) => {
+const FormInput = ({ label, hasErrorMessage = true, name, ...inputProps }: InputProps) => {
   const {
     register,
     formState: { errors },
@@ -88,7 +90,9 @@ Form.Input = ({ label, hasErrorMessage = true, name, ...inputProps }: InputProps
   );
 };
 
-Form.TextArea = ({ label, hasErrorMessage = true, name, ...inputProps }: TextAreaProps) => {
+Form.Input = FormInput;
+
+const FormTextArea = ({ label, hasErrorMessage = true, name, ...inputProps }: TextAreaProps) => {
   const {
     register,
     formState: { errors },
@@ -97,6 +101,8 @@ Form.TextArea = ({ label, hasErrorMessage = true, name, ...inputProps }: TextAre
 
   return <TextArea {...inputProps} {...register(name)} label={label} errorMessage={error?.message?.toString() ?? ""} />;
 };
+
+Form.TextArea = FormTextArea;
 
 export const InputEl = ({ name, ...inputProps }: InputElProps) => {
   const {
@@ -120,25 +126,38 @@ const ErrMsgEl = ({ errors, name }: { errors: any; name: string }) => (
 );
 
 type ButtonProps = {
-  variation?: "ghost" | "ghost-accent" | "solid" | "solid-accent" | "text" | "text-accent" | "soft" | "soft-accent";
+  variation?: "ghost" | "ghost-prm" | "solid" | "solid-prm" | "text" | "text-prm" | "soft" | "soft-prm";
   iconButton?: boolean;
-  preStyled?: boolean;
+  noPreStyle?: boolean;
   width?: "parent" | "content" | "default";
 } & React.ComponentPropsWithoutRef<"button">;
 
-Form.SubmitButton = function ({ children, variation = "solid-accent", className = "", width = "content" }: ButtonProps) {
+const FormSubmitButton = function ({ children, variation = "solid-prm", className = "", width = "content" }: ButtonProps) {
   const { register, formState } = useFormContext();
 
   return (
-    <Button type="submit" className={className} variation={variation} width={width} disabled={formState.isSubmitting}>
+    <Button
+      type="submit"
+      className={className}
+      variation={variation}
+      width={width}
+      disabled={formState.isSubmitting}
+      isLoading={formState.isSubmitting}
+    >
+      {" "}
       {formState.isSubmitting ? <LoadingSpinner /> : children}
     </Button>
   );
 };
 
-Form.ServerErrorMessage = function () {
+Form.SubmitButton = FormSubmitButton;
+
+
+const FormServerErrorMessage = function () {
   return <ErrMsg name="root.submit" />;
 };
+
+Form.ServerErrorMessage = FormServerErrorMessage;
 // type FormStateProviderProps = {
 //   children: (form: any) => React.ReactNode;
 // };

@@ -1,5 +1,4 @@
 import BluredCircle from "./BluredCircle";
-import Icon from "@/components/ui/Icon";
 import Image from "next/image";
 import Space from "../ui/Space";
 import DesktopOnly from "../ui/DesktopOnly";

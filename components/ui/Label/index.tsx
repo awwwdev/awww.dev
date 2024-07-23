@@ -5,17 +5,17 @@ const classes = {
 };
 
 type LabelProps = {
-  preStyled?: boolean;
+  noPreStyle?: boolean;
   children?: React.ReactNode;
   name: string;
   required?: boolean;
 };
 
-export default function Label({ children, name , required,  preStyled = true }: LabelProps) {
+export default function Label({ children, name , required,  noPreStyle = false }: LabelProps) {
   if (!children) return <></>;
   return (
     <label htmlFor={name}>
-      <span className={` ${preStyled && classes.labelText} `}>{children}</span>
+      <span className={` ${!noPreStyle && classes.labelText} `}>{children}</span>
       {required && <span aria-hidden={true} className={classes.requiredStar}>*</span>}
     </label>
   );

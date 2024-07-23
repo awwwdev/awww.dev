@@ -9,16 +9,16 @@ const classes = {
     base: `h-2.75em  rd-0.5em leading-1em overflow-hidden  whitespace-nowrap
      b-1 b-sand7 hover:b-sand8
      bg-base3 
-     grid grid-auto-flow-col items-center
-     focus-within:outline-transparent focus-within:b-accent9 focus-within:hover:b-accent9 `,
+     grid grid-auto-flow-col
+     focus-within:outline-transparent focus-within:b-prm9 focus-within:hover:b-prm9 `,
     disabled: "aria-[disabled]:cursor-not-allowed  aria-[disabled]:c-sand10",
   },
-  prefixBox: "pis-0.75em h-full flex items-center gap-0.75em",
+  prefixBox: "",
   inputElement: {
-    base: ` px-0.75em  py-0.375em bg-transparent focus:outline-none line-height-1`,
+    base: ` px-0.75em  py-0.375em bg-transparent focus:outline-transparent line-height-1`,
     disabled: "",
   },
-  suffixBox: "pie-0.75em h-full items-center flex gap-0.75em",
+  suffixBox: "",
   errorMessage: "",
 };
 
@@ -32,7 +32,6 @@ type InputProps = {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void; 
   setValue?: (val: string) => void ; 
   errorMessage?: string;
-  hasSeprators?: boolean;
 } & HTMLProps<"input">;
 type Ref = HTMLInputElement;
 type AllProps = React.ComponentPropsWithoutRef<"input"> & InputProps;
@@ -49,7 +48,6 @@ const  Input = forwardRef<Ref, AllProps>(function ({
   onChange,
   setValue,
   errorMessage,
-  hasSeprators,
   ...props
 }, ref) {
   const id = useId();
@@ -62,7 +60,7 @@ const  Input = forwardRef<Ref, AllProps>(function ({
       <Label name={name} required={required} >{label}</Label>
       <Hint id={hintId} hint={hint} />
       <div className={`${classes.wrapper.base} ${disabled && classes.wrapper.disabled} `}>
-        <PrefixBox prefix={prefix} hasSeprators={hasSeprators} />
+        <PrefixBox prefix={prefix} />
         <input
           ref={ref}
           name={name}
@@ -76,7 +74,7 @@ const  Input = forwardRef<Ref, AllProps>(function ({
           }}
           {...props}
         />
-        <SuffixBox suffix={suffix} hasSeprators={hasSeprators} />
+        <SuffixBox suffix={suffix} />
       </div>
       <div className="line-clamp-1" style={{height: 'var(--line-height)'}}>
         <ErrorMessage id={errorMessageId} >{errorMessage}</ErrorMessage>
@@ -85,14 +83,9 @@ const  Input = forwardRef<Ref, AllProps>(function ({
   );
 });
 
+Input.displayName = 'Input';
 export default Input;
 
-function Seprator(){
-
-return (
-  <span className='b-l-1 b-base7 h-full' >
-  </span>
-)};
 
 function Hint({ hint, id }) {
   if (!hint) return <></>;
@@ -103,18 +96,13 @@ function Hint({ hint, id }) {
   );
 }
 
-function PrefixBox({ prefix , hasSeprators }) {
+function PrefixBox({ prefix }) {
   if (!prefix) return <></>;
 
-  return <div className={classes.prefixBox}>
-    {prefix}
-       {hasSeprators &&  <Seprator />}
-    </div>;
+  return <div className={classes.prefixBox}>{prefix}</div>;
 }
 
-function SuffixBox({ suffix, hasSeprators }) {
+function SuffixBox({ suffix }) {
   if (!suffix) return <></>;
-  return <div className={classes.suffixBox}>
-    {hasSeprators &&  <Seprator />}
-    {suffix}</div>;
+  return <div className={classes.suffixBox}>{suffix}</div>;
 }

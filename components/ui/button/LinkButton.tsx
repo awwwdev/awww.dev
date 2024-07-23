@@ -23,4 +23,5 @@ const LinkButton = forwardRef<Ref, AllProps>(function (
   );
 });
 
+LinkButton.displayName = 'LinkButton';
 export default LinkButton;

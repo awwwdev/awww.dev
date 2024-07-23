@@ -12,18 +12,17 @@ export default function AboutMe() {
         <Space size="h-4" />
         <div className="space-y-4 c-gray11">
           <p>
-            I help businesses to discover their visual language, create wireframes, make high fidelity UI prototypes and
-            develop it into production.
+            I help businesses to discover their visual language, create wireframes, make high fidelity UI prototypes and develop it into production.
           </p>
 
-          <p>During past 7 years, I have worked with many teams as a Designer, Developer or both.</p>
+          <p>During past years, I have worked with many teams as a Designer, Developer or both.</p>
 
           <p>
             My experinces are most beneficial to competitons who want to stand apart from the competition, by delivering
-            astonishing User Interfaces, but don't want to comprimise performance, accessiblity and development speed.
+            astonishing User Interfaces, but don&apos;t want to comprimise performance, accessiblity and development speed.
           </p>
           <p>
-            Besides work, I spend my time with illustrating, Photography and Music. I'd love to explore areas that
+            Besides work, I spend my time with illustrating, Photography and Music. I&apos;d love to explore areas that
             combine Art and Web Technologies together!
           </p>
         </div>
