@@ -193,7 +193,7 @@ function WorkExperience({ title, start, end, startMobile, endMobile, company, ch
         </ul>
       </ShowMore>
 
-      <Space size="h-2" />
+      <Space size="xs:h-2 h-8" />
     </li>
   );
 }
