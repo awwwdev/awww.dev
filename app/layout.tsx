@@ -10,6 +10,7 @@ import "@/styles/globals.css";
 // import "@/public/fonts/rubik/css/rubik.css";
 import "@/public/fonts/nohemi/css/nohemi.css";
 import "@/public/fonts/geist/css/geist.css";
+import "@/public/fonts/space-mono/css/space-mono.css";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/header";

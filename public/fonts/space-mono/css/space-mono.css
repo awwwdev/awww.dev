@@ -1,0 +1,17 @@
+
+
+@font-face {
+  font-display: swap;
+  font-family: geist;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/woff2/SpaceMono-Bold.woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: geist;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/woff2/SpaceMono-Regular.woff2");
+}
