@@ -87,7 +87,7 @@ function BlogCard({ title, subtitle, date, slug, gap }) {
           `}
         href={`/blog/${slug}`}
       >
-        <h3 className="text-base sm:text-xl font-display tracking-tight leading-tight  min-h-1em">{title}</h3>
+        <h3 className="text-base sm:text-xl font-display sm:tracking-tight leading-tight  min-h-1em">{title}</h3>
         <Space size="h-1" />
         {subtitle && <p className="c-base11">{subtitle}</p>}
 
