@@ -100,6 +100,7 @@ export default function Tools() {
             alt="NEXTjs"
             size="w-5/10"
             isGlowing={glowingCategory === "most-used"}
+            glowingCategory={glowingCategory}
           />
           <Li
             className=" bg-gradient-to-b from-sky1 to-sky3 "
@@ -108,6 +109,7 @@ export default function Tools() {
             alt="React"
             size="w-7/10"
             isGlowing={glowingCategory === "most-used"}
+            glowingCategory={glowingCategory}
           />
           <Li
             className="  bg-gradient-to-b from-sage1 to-sage3"
@@ -116,6 +118,7 @@ export default function Tools() {
             size="w-7/10"
             alt="Supabase"
             isGlowing={glowingCategory === "favorite"}
+            glowingCategory={glowingCategory}
           />
 
           {/* <Li
@@ -129,6 +132,7 @@ export default function Tools() {
             src="/tool-logos/radix-ui.svg"
             size="w-6/10 filter-invert"
             alt="Radix-UI"
+            glowingCategory={glowingCategory}
           />
           <Li
             className="bg-gradient-to-b from-sand1A via-orange1A to-orange3A "
@@ -136,6 +140,7 @@ export default function Tools() {
             src="/tool-logos/astrojs.svg"
             alt="Astro"
             size=""
+            glowingCategory={glowingCategory}
           />
           <Li
             className="  bg-gradient-to-b from-jade1A to-jade1A via-grass3A lt-xxs:a "
@@ -144,6 +149,7 @@ export default function Tools() {
             alt="NodeJS"
             size="xxs:w-8/10"
             isGlowing={glowingCategory === "most-used"}
+            glowingCategory={glowingCategory}
           />
 
           <Li
@@ -152,6 +158,7 @@ export default function Tools() {
             src="/tool-logos/figma.svg"
             alt="Figma"
             size=""
+            glowingCategory={glowingCategory}
           />
 
           {/* <Li className="bg-violet-100" src="/tool-logos/framer-motion.png" size="w-9/10" alt="Framer Motion" /> */}
@@ -160,6 +167,7 @@ export default function Tools() {
             gridPosition="  xxs:g-col-7/9 xxs:g-row-4/5"
             src="/tool-logos/unocss.svg"
             alt="UnoCSS"
+            glowingCategory={glowingCategory}
           />
 
           <Li
@@ -169,6 +177,7 @@ export default function Tools() {
             alt="TailwindCSS"
             // size="w-4/5"
             isGlowing={glowingCategory === "most-used"}
+            glowingCategory={glowingCategory}
           />
           <Li
             className="bg-gradient-to-b from-blue3A to-blue5 "
@@ -177,6 +186,7 @@ export default function Tools() {
             size="w-8/10"
             alt="Solidjs"
             isGlowing={glowingCategory === "favorite"}
+            glowingCategory={glowingCategory}
           />
           {/* <Li className="  bg-indigo6 dark" src="/tool-logos/zod.svg" size="w-9/10" alt="Zod validator" /> */}
 
@@ -203,6 +213,7 @@ export default function Tools() {
             gridPosition="g-col-1/2 g-row-7/8  xxs:g-col-1/2 xxs:g-row-5/6"
             src="/tool-logos/vite.svg"
             alt="Vite"
+            glowingCategory={glowingCategory}
           />
           {/* <Li className="bg-pink5 light" icon="i-logos-deno" size="!w-2em !h-2em" alt="Deno" /> */}
           {/* <Li className="bg-grass3 light" icon="i-logos-nodejs" size="!w-2em !h-2em" alt="nodejs" /> */}
@@ -215,12 +226,14 @@ export default function Tools() {
             src="/tool-logos/css.svg"
             alt="CSS"
             isGlowing={glowingCategory === "favorite"}
+            glowingCategory={glowingCategory}
           />
           <Li
             className=" bg-gradient-to-b from-sand2A via-orange3A to-orange4A"
             gridPosition="g-col-4/5 g-row-5/6  xxs:g-col-7/8 xxs:g-row-5/6"
             src="/tool-logos/html.svg"
             alt="HTML"
+            glowingCategory={glowingCategory}
           />
 
           <Li
@@ -230,6 +243,7 @@ export default function Tools() {
             alt="TypeScript"
             size="w-9/10"
             isGlowing={glowingCategory === "painful"}
+            glowingCategory={glowingCategory}
           />
           {/* <Li className="  bg-amber4 dark" 
           src="/tool-logos/javascript.svg" alt="JavaScript" size="w-9/10" /> */}
@@ -244,7 +258,9 @@ function Li(props) {
     <li
       className={`toolkit__grid-item p-4  xxs:!p-3 xs:p-4 sm:p-4  flex justify-center items-center b-1.5 b-slate2A empty:b-transparent bg-origin-border ${props.className} ${
         props.gridPosition
-      } ${props.isGlowing && "???"}`}
+      } 
+      ${props.glowingCategory && !props.isGlowing ? "grayscale-100" : ""}
+      `}
     >
       {props.icon && <Icon name={props.icon} className={`${props.size}`} />}
       {props.src && <img src={props.src} alt={props.alt} className={`object-cover  ${props?.size}`} />}
