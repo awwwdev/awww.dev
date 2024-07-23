@@ -12,12 +12,12 @@ body {
   --line-height: 1.5em;
   line-height: 1.5;
 
-  --font-display: nohemi, geist, azarmehr, inter, IRANSans, "sans-serif", -apple-system, BlinkMacSystemFont, Segoe UI,
+  --font-display: nohemi, geist, inter, "sans-serif", -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  --font-content: geist, "Roboto", IRANSans, "sans-serif", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  --font-content: geist, "Roboto", "sans-serif", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  --font-mono: "Space Mono", "JetBrainsMono", "Roboto", IRANSans, "sans-serif", -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  --font-mono: SpaceMono, "JetBrainsMono", "Roboto", IRANSans, "sans-serif", -apple-system, BlinkMacSystemFont,  Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .H1,

@@ -30,7 +30,7 @@ function DesktopHero() {
                 alt=""
                 priority
               ></Image>
-              <p className="font-display fs-xl sm:fs-2xl tracking-wider  line-height-0.8">Hello. I&apos;m Hamid.</p>
+              <p className="font-display fs-xl sm:fs-2xl tracking-wider line-height-0.8">Hello. I&apos;m Hamid.</p>
             </div>
           </div>
           <Space size="h-20" />

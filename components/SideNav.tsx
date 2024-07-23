@@ -1,23 +1,10 @@
-import useGetUserMe from "@/hooks/useGetUserMe";
-import useLogOut from "@/hooks/useLogOut";
-import useRouteType from "@/hooks/useRouteType";
-import Lnk from "@/components/Lnk";
-import { useTimeZone } from "./TimeZoneProvider";
 import Link from "next/link";
-import useNewIntroMeetingMail from "@/hooks/useNewIntroMeetingMail";
-import useSessionInTeacherInbox from "@/hooks/useSessionInTeacherInbox";
-import useIntroMeetingMail from "@/hooks/useIntroMeetingMail";
-import useUnpaidSessionMail from "@/hooks/useUnpaidSessionMail";
-import useDashboardGeneralMail from "@/hooks/useDashboardGeneralMail";
 import darsoonLogo from "@/public/static/logo/darsoon-logo.png";
 import darsoonLogoIcon from "@/public/static/logo/darsoon-logo-icon.png";
 import Image from "next/image";
 import * as Toggle from "@radix-ui/react-toggle";
 import { createContext, useContext, useState } from "react";
-import useAdminAccess from "@/hooks/useAdminAccess";
 import MobileOnly from "./ui/MobileOnly";
-import useLocaleSwitcher from "@/hooks/useLocaleSwitcher";
-import { En, Fa } from "./ui/multilang";
 import DesktopOnly from "./ui/DesktopOnly";
 import Button from "./ui/button";
 import Icon from "@/components/ui/Icon";
@@ -28,11 +15,11 @@ export default function SideMenu({ isSideMenuOpen, setIsSideMenuOpen }) {
   return (
     <>
       <MobileSideMenuOverlay {...{ isSideMenuOpen, setIsSideMenuOpen }} />
-      <div className={` aside w-sidebar bg-gray2 z-30 h-full  ${isSideMenuOpen && "drawer-open"}`}>
         <MobileOnly>
+      <div className={` aside w-sidebar bg-gray2 z-30 h-full  ${isSideMenuOpen && "drawer-open"}`}>
           <SideNav className={`text-sm  shd-titned-3  h-full `} setIsSideMenuOpen={setIsSideMenuOpen} />
-        </MobileOnly>
       </div>
+        </MobileOnly>
     </>
   );
 }
@@ -64,7 +51,7 @@ function SideNav({ className, setIsSideMenuOpen }) {
     <NavContext.Provider value={{ isCollapsed, setIsCollapsed }}>
       <nav aria-label="primary" className={className} style={{ display: "grid", gridTemplateRows: "auto 1fr" }}>
         <MobileOnly>
-          <div className="flex">
+          <div className="flex mt-3 ml-1">
             <Button
               variation="text"
               className="!rd-full"
@@ -77,8 +64,8 @@ function SideNav({ className, setIsSideMenuOpen }) {
             </Button>
           </div>
         </MobileOnly>
-        <div className="p-4 flex flex-col gap-6 sm:gap-3  ">
-          <PublicWebsiteNav />
+        <div className="p-4 flex flex-col gap-6 sm:gap-3 text-lg  ">
+          <PublicWebsiteNav setIsSideMenuOpen={setIsSideMenuOpen} />
         </div>
       </nav>
     </NavContext.Provider>
@@ -117,47 +104,62 @@ function CollapseToggle({ isCollapsed, setIsCollapsed }) {
   );
 }
 
-function NavLink({ href, className, children }) {
+function NavLink({ href, className, children , onClick }) {
   const { isCollapsed } = useContext(NavContext);
   return (
-    <Lnk href={href} className={className}>
+    <a href={href} className={className} onClick={onClick}>
       <span className={`${isCollapsed ? "sr-only" : ""}`}>{children}</span>
-    </Lnk>
+    </a>
   );
 }
 
-function PublicWebsiteNav() {
+function PublicWebsiteNav({setIsSideMenuOpen}) {
   return (
     <>
       <div className="h-2"></div>
+   
       <NavLink
-        href={``}
-        className=" text-xs data-[in-path=true]:c-accent11 before:m-0 flex gap-2 ac c-sand11  after:content-none after:flex-1 after:h-1px after:bg-gray6  "
+        href="/"
+        className="hover:c-base11"
+        onClick={() => {
+          setIsSideMenuOpen(false);
+        }}
       >
-        Home
+        awww.dev
       </NavLink>
       <NavLink
         href="#works"
-        className="bf-i-ph-chalkboard-simple data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
+        className="hover:c-base11"
+            onClick={() => {
+                setIsSideMenuOpen(false);
+              }}
       >
         Works
       </NavLink>
       <NavLink
         href="#tools"
-        className="bf-i-ph-traffic-sign  data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
+        className="hover:c-base11"
+        onClick={() => {
+          setIsSideMenuOpen(false);
+        }}
       >
         Tools
       </NavLink>
       <NavLink
         href="#blog"
-        className="bf-i-ph-question data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
+        className="hover:c-base11"
+        onClick={() => {
+          setIsSideMenuOpen(false);
+        }}
       >
         Blog
       </NavLink>
-
       <NavLink
         href="#blog"
-        className="bf-i-ph-newspaper data-[in-path=true]:(c-accent11 underline) data-[in-sub-path=true]:(c-accent11 underline)"
+        className="hover:c-base11"
+        onClick={() => {
+          setIsSideMenuOpen(false);
+        }}
       >
         Contact
       </NavLink>

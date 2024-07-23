@@ -16,6 +16,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/header";
 import { useState } from "react";
 import { Toaster } from "react-hot-toast";
+import SideMenu from '@/components/SideNav';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
@@ -49,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main className={` h-full max-w-screen `}>{children}</main>
             <Footer />
           </div>
-          {/* {<SideMenu {...{ isSideMenuOpen, setIsSideMenuOpen }} />} */}
+          {<SideMenu {...{ isSideMenuOpen, setIsSideMenuOpen }} />}
         </div>
         <Toaster position="bottom-right" />
       </body>
