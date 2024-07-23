@@ -1,10 +1,5 @@
-import Link from "next/link";
-import { useTranslation } from "next-i18next";
-import { En, Fa } from "./ui/multilang";
-import Icon from "@/components/ui/Icon";
 
 const Footer = () => {
-  const { t } = useTranslation();
 
   return (
     <>
