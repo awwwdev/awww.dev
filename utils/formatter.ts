@@ -69,7 +69,7 @@ export const deCamel = (str) => {
  * "a minute ago", "in 2 hours", "yesterday", "3 months ago", etc.
  * using Intl.RelativeTimeFormat
  */
-export function getRelativeTimeString(date: Date | number, lang = navigator.language): string {
+export function getRelativeTimeString(date: Date | number, lang = 'en'): string {
   // Allow dates or times to be passed
   const timeMs = typeof date === "number" ? date : date.getTime();
 
@@ -122,7 +122,7 @@ export const toReadableDate = (date: string | Date, timeZone?: TimeZone) => {
   return dateFormatter.format();
 };
 
-export const toRelativeOrReadableDate = (date: number | Date, timeZone?: TimeZone, lang = navigator.language) => {
+export const toRelativeOrReadableDate = (date: number | Date, timeZone?: TimeZone, lang ='en') => {
   let d: Date;
   if (date instanceof Date) d = date;
   if (typeof date === "string" || typeof date === 'number') d = new Date(date);
