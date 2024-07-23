@@ -1,10 +1,9 @@
 @font-face {
-  font-display: swap;
-  font-display: swap;
   font-family: nohemi;
   font-style: normal;
   font-weight: 900;
   src: url("../fonts/woff2/Nohemi-Black.woff2");
+  font-display: block;
 }
 
 @font-face {
