@@ -3,17 +3,20 @@ import Icon from "@/components/ui/Icon";
 import Space from "../ui/Space";
 import { useState } from "react";
 import Button from "../ui/button";
-import ShowMore from '../ShowMore';
+import ShowMore from "../ShowMore";
+import DesktopOnly from "../ui/DesktopOnly";
+import MobileOnly from "../ui/MobileOnly";
 
 export default function Works() {
-
   return (
     <section className="relative">
       <BluredCircle radius={200} top="20%" left="95%" bg="bg-gold2" blur="200px" />
       <BluredCircle radius={250} top="30rem" left="20%" bg="bg-sky1 opacity-50" blur="200px" />
 
       <div className="mx-auto max-w-page">
-        <h2 className="H1" id='works'>Work Experiences</h2>
+        <h2 className="H1" id="works">
+          Work Experiences
+        </h2>
         <Space size="h-8" />
         <ul
           className="list-square list-disc-outside pt-4 pis-3 b-l-2 b-base5 b-dashed"
@@ -21,7 +24,14 @@ export default function Works() {
             listStyleImage: 'url("square-list-item-marker.svg")',
           }}
         >
-          <WorkExperience company="Darsoon" title="Full-Stack Web Developer" start="November 2023" end="Present">
+          <WorkExperience
+            company="Darsoon"
+            title="Full-Stack Web Developer"
+            start="November 2023"
+            end="Present"
+            startMobile="Nov 2023"
+            endMobile="Present"
+          >
             <Li>
               Built a complex dashboard app for a private tutoring platform using ReactJS and Supabase, with dynamic
               tables, graphs and forms, for 3 different user roles
@@ -47,6 +57,8 @@ export default function Works() {
             title="Front End Developer"
             start="May 2023"
             end="October 2023"
+            startMobile="May 2023"
+            endMobile="Oct 2023"
           >
             <Li>
               Developed the front-end for an Online Casino for E-Sports and Gamers community with React, NextJS,
@@ -70,6 +82,8 @@ export default function Works() {
             title="Front End Developer"
             start="September 2021"
             end="April 2023"
+            startMobile="Sep 2021"
+            endMobile="Apr 2023"
           >
             <Li>
               Contributed to the design and development of 6 projects; 4 NFT marketplaces, a video-call platform and the
@@ -100,6 +114,8 @@ export default function Works() {
             company="Freelance Web Developer and UI Designer"
             start="May 2019"
             end="February 2023"
+            startMobile="May 2019"
+            endMobile="Feb 2023"
           >
             <Li>
               Created, Deployed and maintained websites for clients using WordPress, WIX or Vanilla HTML, CSS and
@@ -115,7 +131,14 @@ export default function Works() {
               Analytics, and Google Search Console
             </Li>
           </WorkExperience>
-          <WorkExperience title="" company="Freelance Graphic Designer" start="March 2015" end="May 2019">
+          <WorkExperience
+            title=""
+            company="Freelance Graphic Designer"
+            start="March 2015"
+            end="May 2019"
+            startMobile="Mar 2015"
+            endMobile="May 2019"
+          >
             <Li>
               Carried out branding projects, including designing logos, establishing branding guidelines, and creating
               stationery sets
@@ -137,16 +160,24 @@ export default function Works() {
   );
 }
 
-function WorkExperience({ title, start, end, company, children }) {
+function WorkExperience({ title, start, end, startMobile, endMobile, company, children }) {
   return (
     <li className="pis-2">
       <h3 className="">
         <div className="H5 line-height-0.8 tracking-wide">{company}</div>
-        <div className="flex gap-1 tracking-wide">
-          <div className="font-content  c-base11">{title}</div>
-          <div className="c-base11 fs-sm ">
-            {start} - {end}
-          </div>
+        <Space size='h-1' />
+        <div className="flex flex-wrap items-baseline  tracking-wide">
+          <div className="font-content  c-base11 whitespace-nowrap mie-2">{title}</div>
+          <DesktopOnly>
+            <div className="c-base11 fs-sm ">
+              {start} - {end}
+            </div>
+          </DesktopOnly>
+          <MobileOnly>
+            <div className="c-base11 fs-sm ">
+              {startMobile} - {endMobile}
+            </div>
+          </MobileOnly>
         </div>
       </h3>
 
@@ -166,7 +197,6 @@ function WorkExperience({ title, start, end, company, children }) {
     </li>
   );
 }
-
 
 function Overlay({ expanded }) {
   return (
