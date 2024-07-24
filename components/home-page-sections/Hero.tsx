@@ -68,7 +68,7 @@ function DesignWord() {
   return (
     <span className=" relative bg-gradient-to-r from-transparent to-indigo3  pt3 pb-2  ">
       <span className='relative'>
-        <span className="pl-1 pr-3 pb-2 c-transparent bg-clip-text bg-gradient-to-r from-base7 to-base12">design</span>
+        <span className="pl-1 pr-3 pb-2 c-transparent bg-clip-text bg-gradient-to-r from-slate7 to-slate12">design</span>
         <span className="dashed-border-box  fade-to-l absolute -top-3 left-1 right-0 -bottom-2 ">
           <span className="invisible" role="heading">
             design
@@ -95,7 +95,7 @@ function PointerSVG() {
 
 function DevelopeWord() {
   return (
-    <span className="bg-cyan2A pt3 pb-2">
+    <span className="bg-gradient-to-r from-transparent via-cyan2A to-cyan2A pt3 pb-2">
       <span className="tracking-tight  ">
         <span className="font-mono c-sage12A ">develop</span>
         <span className="bg-mint3A  pt-3 pb-2 relative">
