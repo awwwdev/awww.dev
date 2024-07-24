@@ -43,16 +43,16 @@ function DesktopHero() {
 
 function HeroSentence() {
   return (
-    <p className="font-display fs-4xl sm:fs-6xl text-center lt-xs:line-height-1.2">
+    <p className="font-display fs-4xl sm:fs-6xl text-center lt-xs:line-height-1.3">
       <span className="block">
         <IWord />
         {` `}
         <DesignWord />
         {` `}
-        <span className='whitespace-nowrap'>
-        <AndWord />
-        {` `}
-        <DevelopeWord />
+        <span className="whitespace-nowrap">
+          <AndWord />
+          {` `}
+          <DevelopeWord />
         </span>
       </span>
       <WebApplicationsWord />
@@ -67,8 +67,15 @@ function IWord() {
 function DesignWord() {
   return (
     <span className=" relative bg-gradient-to-r from-transparent to-indigo3  pt3 pb-2  ">
-      <span className="dashed-border-box p-3 pb-2">design</span>
-      <span className="absolute right-0 bottom-0  leading-1 translate-x-50% translate-y-50% w-0.5em h-0.5em c-indigo12A ">
+      <span className='relative'>
+        <span className="pl-1 pr-3 pb-2 c-transparent bg-clip-text bg-gradient-to-r from-base7 to-base12">design</span>
+        <span className="dashed-border-box  fade-to-l absolute -top-3 left-1 right-0 -bottom-2 ">
+          <span className="invisible" role="heading">
+            design
+          </span>
+        </span>
+      </span>
+      <span className="absolute right-0 bottom-0  leading-1 translate-x-55% translate-y-55% w-0.6em h-0.6em c-blue12A ">
         <PointerSVG />
       </span>
     </span>
@@ -106,14 +113,16 @@ function AndWord() {
 
 function WebApplicationsWord() {
   return (
-    <span className="relative blur-1 c-base10">
-      <span className="">
+    <span className="relative  ">
+      <span className="stroke-text c-base3 fade-to-r">
         web{` `}
         <DesktopOnly>applications.</DesktopOnly>
         <MobileOnly>apps.</MobileOnly>
       </span>
-      <span className="absolute -right-0.1em top-0  leading-1 translate-x-20%  -translate-y-50% ">
-        {/* <Icon name="bf-i-ph-sparkle-fill" className="c-indigo12A fs-lg sm:fs-3xl  blur-2" /> */}
+      <span className="absolute c-base12 blu  -top-4.5 left-0 bottom-0 fade-to-l">
+        web{` `}
+        <DesktopOnly>applications.</DesktopOnly>
+        <MobileOnly>apps.</MobileOnly>
       </span>
     </span>
   );
@@ -205,4 +214,3 @@ function WebApplicationsWord() {
 // function Plate({ children }) {
 //   return <div className="p-4 rd-4 shadow-lg bg-sand3 w-fit">{children}</div>;
 // }
-

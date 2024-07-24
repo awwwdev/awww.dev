@@ -476,7 +476,7 @@ a {
 
 
 .dashed-border-box {
-  --border-color: hsl(0 0% 50%);
+  --border-color: var(--rx-blue11);
   background-image: repeating-linear-gradient(
       0deg,
       var(--border-color),
@@ -542,4 +542,28 @@ a {
   100% {
     background-color: transparent;
   }
+}
+
+
+.stroke-text {
+  /* -webkit-text-fill-color: white; Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #777b84;
+
+}
+
+
+
+.fade-to-r {
+  --fade-to-opacity: 100%;
+  -webkit-mask-image: linear-gradient(to right, black 0%, rgba(0 0 0 / var(--fade-to-opacity)) 75%);
+  mask-image: linear-gradient(to right, black 0%, rgba(0 0 0 / var(--fade-to-opacity)) 75%);
+  transition: --fade-to-opacity 1s ease;
+}
+
+.fade-to-l {
+  --fade-to-opacity: 100%;
+  -webkit-mask-image: linear-gradient(to left, black 0%, rgba(0 0 0 / var(--fade-to-opacity)) 75%);
+  mask-image: linear-gradient(to left, black 0%, rgba(0 0 0 / var(--fade-to-opacity)) 75%);
+  transition: --fade-to-opacity 1s ease;
 }
