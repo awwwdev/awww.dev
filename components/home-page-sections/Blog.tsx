@@ -2,15 +2,11 @@ import Link from "next/link";
 import { Skeleton } from "../ui/Skeleton";
 import { toRelativeOrReadableDate } from "@/utils/formatter";
 import Icon from "../ui/Icon";
-import { DPost } from "@/types";
-import Image from "next/image";
 import Space from "../ui/Space";
-import { getAllPosts } from "@/lib/api";
 import ScrollArea from "../ui/ScrollArea";
 import BluredCircle from "./BluredCircle";
 
-export default async function Blog() {
-  const posts = await getAllPosts();
+export default function Blog({posts}) {
 
   return (
     <section className="relative ">
@@ -79,6 +75,7 @@ function FaderEnd() {
 }
 
 function BlogCard({ title, subtitle, date, slug, gap }) {
+  console.log("🚀 ~ date:", date)
   return (
     <li className={`${gap}`}>
       <Link

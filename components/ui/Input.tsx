@@ -18,7 +18,7 @@ const classes = {
     base: ` px-0.75em  py-0.375em bg-transparent focus:outline-transparent line-height-1`,
     disabled: "",
   },
-  suffixBox: "",
+  suffixBox: "flex",
   errorMessage: "",
 };
 
@@ -59,7 +59,11 @@ const  Input = forwardRef<Ref, AllProps>(function ({
     <div className="grid ">
       <Label name={name} required={required} >{label}</Label>
       <Hint id={hintId} hint={hint} />
-      <div className={`${classes.wrapper.base} ${disabled && classes.wrapper.disabled} `}>
+      <div className={`${classes.wrapper.base} ${disabled && classes.wrapper.disabled} `}
+        style={{
+          gridTemplateColumns: `${prefix ? "auto" : ""} 1fr ${suffix ? "auto": ""}`,
+        }}
+      >
         <PrefixBox prefix={prefix} />
         <input
           ref={ref}

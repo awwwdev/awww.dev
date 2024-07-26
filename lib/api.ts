@@ -51,7 +51,7 @@ export async function getPostById(id: string) {
  
   const html = await parser.process(content)
   const date = data.date as Date
- 
+
   return {
     ...data,
     title: data.title as string,

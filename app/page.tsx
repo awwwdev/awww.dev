@@ -11,7 +11,7 @@ import { getAllPosts } from '@/lib/api';
 
 export default async function Page() {
   const posts = await getAllPosts()
-
+  console.log('fdfdf');
   return (
     <div className="">
         <Hero />
@@ -21,7 +21,7 @@ export default async function Page() {
         <Tools />
         {/* <Process /> */}
         <Space size="h-40 sm:h-40" />
-        <Blog />
+        <Blog posts={posts}/>
         <Space size="h-40 sm:h-40" />
         <AboutMe />
         <Space size="h-40 sm:h-40" />

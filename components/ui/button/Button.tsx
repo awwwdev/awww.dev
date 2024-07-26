@@ -11,6 +11,8 @@ export type ButtonProps = {
   rounded?: boolean;
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
+  type?: 'button' | 'reset' | 'submit';
+
 };
 type Ref = HTMLButtonElement;
 type AllProps = React.ComponentPropsWithoutRef<"button"> & ButtonProps;
@@ -72,7 +74,7 @@ export const disabledClasses = {
 };
 
 const Button = forwardRef<Ref, AllProps>(function Button(
-  { preStyled = true, className, variation, children, isLoading, iconButton, disabled,  rounded = false, prefix , suffix , ...props },
+  { preStyled = true, className, variation, children, isLoading, iconButton, disabled,  rounded = false, prefix , suffix , type , ...props },
   ref
 ) {
   const cls = `
@@ -80,7 +82,7 @@ const Button = forwardRef<Ref, AllProps>(function Button(
       ${classes.base} ${!disabled && classes[variation]}
       ${rounded ? 'rd-full' : 'rd-0.5em'}
       ${iconButton ? "h-2.75em w-2.75em " : "h-2.75em px-1em"}
-      ${!iconButton ? "min-w-6em" : ""} 
+     
       ${disabled ? `${disabledClasses.base} ${disabledClasses[variation]}` : ""}`;
 
   return (
@@ -89,12 +91,17 @@ const Button = forwardRef<Ref, AllProps>(function Button(
       className={`${ preStyled && cls} ${className}`}
       aria-disabled={disabled}
       aria-busy={isLoading}
+      type={type ?? 'button'}
       onClick={(e) => {
         if (disabled || isLoading) {
           e.preventDefault();
         } else {
           props?.onClick?.(e);
         }
+      }}
+      style={{
+        minWidth: iconButton ? "fit-content" : 'max(6rem , wit-content)',
+        ...props?.style
       }}
       {...props}
     >

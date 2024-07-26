@@ -103,23 +103,14 @@ export const toReadableDate = (date: string | Date, timeZone?: TimeZone) => {
   const d = date instanceof Date ? date : new Date(date);
   const currentDate = new Date();
   const clientTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  if (d.getFullYear() === currentDate.getFullYear()) {
+
     const dateFormatter = new Intl.DateTimeFormat("en-CA", {
       month: "short",
       day: "numeric",
+      year: d.getFullYear() === currentDate.getFullYear() ? undefined : "numeric",
       timeZone: clientTimeZone
     });
-    return dateFormatter.format();
-  }
-  const dateFormatter = new Intl.DateTimeFormat("en-CA", {
-    // dateStyle: 'full',
-    // timeStyle: 'long',
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    timeZone: clientTimeZone,
-  });
-  return dateFormatter.format();
+    return dateFormatter.format(d);
 };
 
 export const toRelativeOrReadableDate = (date: number | Date, timeZone?: TimeZone, lang ='en') => {
@@ -132,7 +123,8 @@ export const toRelativeOrReadableDate = (date: number | Date, timeZone?: TimeZon
   // Get the amount of seconds between the given date and now
   const deltaSeconds = Math.round((timeMs - Date.now()) / 1000);
 
-  if (Math.abs(deltaSeconds) <= 60 * 60 * 24 * 7) {
+  const miliSecondsInAWeek = 60 * 60 * 24 * 7;
+  if (Math.abs(deltaSeconds) <= miliSecondsInAWeek) {
     return getRelativeTimeString(d, lang);
   }
   return toReadableDate(d);
