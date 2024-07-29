@@ -59,6 +59,7 @@ export async function getPostById(id: string) {
     id: realId,
     date: `${date.toISOString().slice(0, 10)}`,
     html: html.value.toString(),
+    draft: data.draft as boolean
   }
 }
  
@@ -76,5 +77,5 @@ export async function getPageMarkdown(string_: string) {
  
 export async function getAllPosts() {
   const posts = await Promise.all(getPostFiles().map(id => getPostById(id)))
-  return posts.sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+  return posts.filter(p => !p.draft).sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
 }
