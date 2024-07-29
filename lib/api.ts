@@ -10,6 +10,7 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import rehypePrettyCode from 'rehype-pretty-code'
+import addClasses from 'rehype-add-classes';
  
 const postsDirectory = path.join(process.cwd(), '_posts')
  
@@ -34,11 +35,18 @@ function getParser() {
         tagName: 'a',
         properties: {
           href: `#${String(arg.properties?.id)}`,
-          style: 'margin-right: 10px',
+          // style: 'margin-right: 10px',
         },
-        children: [{ type: 'text', value: '#' }],
-      }),
+        children: [{ type: 'text', value: '' }],
+      })
+  
     })
+    .use(addClasses, {
+      h1: 'H1',
+      h2: 'H2',
+      h3: 'H3',
+      p: 'one two'
+  })
 }
  
 // small speedup from caching this parser
