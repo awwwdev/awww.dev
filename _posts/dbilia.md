@@ -115,7 +115,7 @@ class="rd-xl"
 
 > </video>
 
-## And Some Graphic Designing
+## And Some Graphic Design
 
 I did some, or maybe a fair amount of Graphic Design. Although, It was not part of my job description, but when my supervisoer apprached me first before he search for a freelance Designer, I liked to do some designing after a while coding. So, we created a bunch cool visuals for DBILIA in diffenrt stages of the project. One I really like is the logo that I redesigned.
 

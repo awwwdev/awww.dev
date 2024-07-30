@@ -48,7 +48,7 @@ function getParser() {
       h1: 'H1',
       h2: 'H2',
       h3: 'H3',
-      p: 'one two'
+      ul: 'list-disc list-disc-outside'
   })
 }
  
@@ -61,7 +61,6 @@ export async function getPostById(id: string) {
   const { data, content } = matter(await fs.promises.readFile(fullPath, 'utf8'))
  
   const html = await parser.process(content)
-  console.log("🚀 ~ html:", html)
   const date = data.date as Date
 
   return {

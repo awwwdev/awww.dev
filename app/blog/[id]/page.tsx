@@ -1,5 +1,7 @@
+import Icon from '@/components/ui/Icon'
 import Space from '@/components/ui/Space'
 import { getPostById, getAllPosts } from '@/lib/api'
+import Link from 'next/link'
  
 // Generate the post, note that this is a "react server component"! it is
 // allowed to be async
@@ -10,7 +12,12 @@ export default async function Post({
 }) {
   const { html, title, date , subtitle } = await getPostById(id)
   return (
-    <article className='mx-auto max-w-page'>
+    <div className='mx-auto max-w-page'> 
+      <Link href='/blog' className='flex  gap-2 c-base11'>
+        <Icon name="bf-i-ph-arrow-left"  />
+        Blog
+      </Link>
+    <article className=''>
       <Space size='h-8' />
       <h1 className='H1'>{title}</h1>
       <p className=''>{subtitle}</p>
@@ -20,6 +27,7 @@ export default async function Post({
       className='space-y-1em'
       dangerouslySetInnerHTML={{ __html: html }} />
     </article>
+      </div>
   )
 }
  
