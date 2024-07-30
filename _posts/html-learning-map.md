@@ -2,6 +2,7 @@
 title: 'HTML Learning Checklist'
 subtitle: 'recheck your HTML knowledge'
 date:  2023-05-04
+draft: true
 ---
 
 This is a list to review check if you have learned all the HTML essentials, or if there are some gaps you need to fill. It's not learning roadmap to tell you where to start first. 
