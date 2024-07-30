@@ -1,6 +1,6 @@
 ---
-title: 'Fresh Bootcamp graduate?'
-subtitle: 'Check out this list!'
+title: "Fresh Bootcamp graduate?"
+subtitle: "Check out this list!"
 date: 2023-04-15
 ---
 
@@ -20,44 +20,63 @@ Ok. Enough talking. Here is the list, sectioned by media types.
 
 ## Blogs
 
-* [Josh W Comeau blog](https://www.joshwcomeau.com/)
+- [Josh W Comeau blog](https://www.joshwcomeau.com/)
 
 Just check this blog and you will appreciate it!
 
-* [Every-layouts](https://every-layout.dev/)
+- [Every-layouts](https://every-layout.dev/)
 
 An In-Depth dive into hardest part of CSS, labouring. Best after Josh W Comeau CSS course or Kevin Powell YouTube Channels
 
-* [Inclusive Components](https://inclusive-components.design/)
+- [Inclusive Components](https://inclusive-components.design/)
 
 ## Online Courses
 
-* [CSS for JS developers Course](https://css-for-js.dev/)
+- [CSS for JS developers Course](https://css-for-js.dev/)
 
 Great if you want to go with structured path
 
 ## YouTube Channels
 
-* [Kevin Powell Channel](https://www.youtube.com/@KevinPowell/videos)
-
+<li>
+<a href="https://www.youtube.com/@KevinPowell/videos">
+Kevin Powell Channel
+</a>
+<p>
 Great if you want to learn just about an specific thing or learn casually
+</p>
+</li>
 
-* [GUI challenges](https://www.youtube.com/watch?v=JeI_TsADXQA&list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ)
-
+<li>
+<a href='https://www.youtube.com/watch?v=JeI_TsADXQA&list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ'>
+GUI challenges
+</a>
+<p>
 in Chrome Dev Channel, learn how create accessible and responsive UI elements.
+</p>
+</li>
 
-*  [Heydone Pickering Channel](https://www.youtube.com/@heydonworks/videos)
 
+<li>
+<a href='https://www.youtube.com/@heydonworks/videos'>
+GUI challenges
+Heydone Pickering Channel
+</a>
+<p>
 This one is one the most under appreciated channels I've seen.
+</p>
+</li>
+
+
 
 ## PodCasts
 
-* [HTTP 203 podcasts](https://developers.google.com/web/shows/http203/podcast/)
-* [Syntax Podcast](https://syntax.fm/)
+- [HTTP 203 podcasts](https://developers.google.com/web/shows/http203/podcast/)
+- [Syntax Podcast](https://syntax.fm/)
 
 ## Confrence Lectures
 
-* [JSNation](https://www.youtube.com/@JavaScriptConferences)
-* [CSS Day](https://www.youtube.com/@WebConferencesAmsterdam)
+- [JSNation](https://www.youtube.com/@JavaScriptConferences)
+- [CSS Day](https://www.youtube.com/@WebConferencesAmsterdam)
 
 Ok there are much more but it's plenty already. I'll update this list regularly. But don't panic. You don't need all of them at once. Just start somewhere.
