@@ -11,6 +11,8 @@ import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import rehypePrettyCode from 'rehype-pretty-code'
 import addClasses from 'rehype-add-classes';
+import rehypeVideo from 'rehype-video';
+import rehypeRaw from 'rehype-raw'
  
 const postsDirectory = path.join(process.cwd(), '_posts')
  
@@ -20,14 +22,16 @@ function getPostFiles() {
  
 function getParser() {
   return unified()
-    .use(remarkParse)
-    .use(remarkRehype)
+    .use(remarkParse , {fragment: true})
+    .use(remarkRehype, { allowDangerousHtml: true})
     .use(remarkGfm)
+    .use(rehypeRaw)
     .use(rehypePrettyCode, {
       theme: 'one-dark-pro',
     })
-    .use(rehypeStringify)
-    .use(rehypeStringify)
+    .use(rehypeStringify , {allowDangerousHtml: true})
+    // .use(rehypeStringify)
+    // .use(rehypeVideo)
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, {
       content: arg => ({
@@ -39,7 +43,6 @@ function getParser() {
         },
         children: [{ type: 'text', value: '' }],
       })
-  
     })
     .use(addClasses, {
       h1: 'H1',
@@ -58,6 +61,7 @@ export async function getPostById(id: string) {
   const { data, content } = matter(await fs.promises.readFile(fullPath, 'utf8'))
  
   const html = await parser.process(content)
+  console.log("🚀 ~ html:", html)
   const date = data.date as Date
 
   return {
