@@ -49,8 +49,12 @@ export async function generateMetadata({
 }: {
   params: { id: string }
 }) {
-  const { title } = await getPostById(id)
+  const { title, subtitle } = await getPostById(id)
   return {
-    title,
+    title: `${title}, ${subtitle} | Hamid K. Blog`,
+    description: 'A Blog Post by Hamid K. Blog',
+    alternates: {
+      canonical: `/blog/${id}`,
   }
+  };
 }

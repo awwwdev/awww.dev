@@ -4,16 +4,9 @@
 
 const nextConfig = {
   // reactStrictMode: true,
-  output: "export",
-  experimental: {
-    appDir: true,
-  },
   swcMinify: true,
   typescript: {
     ignoreBuildErrors: true,
-  },
-  images: {
-    // domains: ["vancxkbrtcdpbjavbdbx.supabase.co", "ybjwedhfhkfmzpnvheri.supabase.co"],
   },
   pageExtensions: ['js', 'jsx', 'mdx', 'md', 'ts', 'tsx'],
   // sassOptions: {

@@ -1,5 +1,3 @@
-"use client";
-
 import "@unocss/reset/sanitize/sanitize.css";
 import "@unocss/reset/tailwind.css";
 import "@/styles/reset.css";
@@ -12,47 +10,58 @@ import "@/public/fonts/nohemi/css/nohemi.css";
 import "@/public/fonts/geist/css/geist.css";
 import "@/public/fonts/space-mono/css/space-mono.css";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/header";
-import { useState } from "react";
-import { Toaster } from "react-hot-toast";
-import SideMenu from '@/components/SideNav';
+import type { Metadata } from "next";
+import AppLayout from "@/components/AppLayout";
+
+
+const title = "Hamid K.";
+const description = "A Developer with Design Superpowers";
+
+export const metadata: Metadata = {
+  title: {
+    template: "%s | Hamid K.",
+    default: "Hamid K.",
+  },
+  alternates: {
+    canonical: '/blog',
+},
+  description: description,
+  metadataBase: new URL("https://awww.dev"),
+  twitter: {
+    card: "summary_large_image",
+    title: title,
+    description: description ,
+    creator: title,
+    images: ["https://awww.dev/opengraph-image.jpg"], // Must be an absolute URL
+  },
+  openGraph: {
+    title: title,
+    description: description ,
+    url: "",
+    siteName: "Next.js",
+    images: [
+      // {
+      //   url: "https://awww.dev/opengraph-image.jpg", // Must be an absolute URL
+      //   width: 800,
+      //   height: 600,
+      // },
+      {
+        url: "https://awww.dev/opengraph-image.jpg", // Must be an absolute URL
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
-
   return (
     <html className="dark-theme">
-      <head>
-        <meta charSet="utf-8" />
-        {/* <meta name="theme-color" content="#000000" /> */}
-        <meta name="robots" content="max-snippet:20, max-image-preview:large" />
-        {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-            <link
-              href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;900&family=Vazirmatn:wght@400;500;600;700;900&display=swap"
-              rel="stylesheet"
-            ></link> */}
-      </head>
+      <head></head>
       <body className={`dark-theme bg-sand1 c-sand12 relative isolate`}>
-        <div
-          className="absolute top-0 bottom-0 left-0 right-0 -z-10 opacity-10"
-          style={{
-            backgroundImage: "url('/static/noise.svg')",
-            backgroundSize: "40%",
-            backgroundRepeat: "repeat",
-            mixBlendMode: 'overlay'
-          }}
-        ></div>
-        <div className={`side-menu-container isolate h-full  overflow-x-hidden  mx-auto max-w-screen  `}>
-          <div className="main grid h-full max-w-screen isolate" style={{ gridTemplateRows: "auto 1fr auto" }}>
-            <Header setIsSideMenuOpen={setIsSideMenuOpen} />
-            <main className={` h-full max-w-screen `}>{children}</main>
-            <Footer />
-          </div>
-          {<SideMenu {...{ isSideMenuOpen, setIsSideMenuOpen }} />}
-        </div>
-        <Toaster position="bottom-right" />
+        <AppLayout>{children}</AppLayout>
       </body>
     </html>
   );

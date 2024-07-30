@@ -3,6 +3,19 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/api";
 import Space from '@/components/ui/Space';
 import BluredCircle from '@/components/home-page-sections/BluredCircle';
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: 'Hamid K. Blog',
+  metadataBase: new URL('https://awww.dev'),
+  openGraph : {
+    title: "Blog | Hamid K.",
+  },
+  alternates: {
+    canonical: '/blog',
+}
+};
 
 export default async function Page() {
   const posts = await getAllPosts();
