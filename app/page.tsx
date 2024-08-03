@@ -6,6 +6,7 @@ import Tools from '@/components/home-page-sections/Tools';
 import AboutMe from '@/components/home-page-sections/AboutMe';
 import { getAllPosts } from '@/lib/api';
 import Experiences from '@/components/home-page-sections/Experiences';
+import Works from '@/components/home-page-sections/Works';
 
 
 
@@ -15,6 +16,7 @@ export default async function Page() {
     <div className="">
         <Hero />
         <Space size="h-40 sm:h-50" />
+        <Works />
         <Experiences />
         <Space size="h-40 sm:h-40" />
         <Tools />

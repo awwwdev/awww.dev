@@ -7,26 +7,24 @@ import ShowMore from "../ShowMore";
 import DesktopOnly from "../ui/DesktopOnly";
 import MobileOnly from "../ui/MobileOnly";
 
-export default function Experiences() {
+export default function Works() {
   return (
     <section className="relative">
       <BluredCircle radius={200} top="20%" left="95%" bg="bg-gold2" blur="200px" />
       <BluredCircle radius={250} top="30rem" left="20%" bg="bg-sky1 opacity-50" blur="200px" />
-
       <div className="mx-auto max-w-page">
         <h2 className="H1" id="works">
-          Work Experiences
-        </h2>
+          Work        </h2>
         <Space size="h-8" />
         <ul>
-          
+          {/* <WorksGrid /> */}
         </ul>
       </div>
     </section>
   );
 }
 
-function WorkExperience({ title, start, end, startMobile, endMobile, company, children }) {
+function WorksGrid({ title, start, end, startMobile, endMobile, company, children }) {
   return (
     <li className="pis-2">
       <h3 className="">

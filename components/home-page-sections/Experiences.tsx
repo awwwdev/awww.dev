@@ -15,7 +15,7 @@ export default function Experiences() {
 
       <div className="mx-auto max-w-page">
         <h2 className="H1" id="works">
-          Work Experiences
+          Experiences
         </h2>
         <Space size="h-8" />
         <ul
