@@ -548,7 +548,7 @@ a {
 .stroke-text {
   /* -webkit-text-fill-color: white; Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #777b84;
+  -webkit-text-stroke-color: var(--stroke-color, #777b84);
 
 }
 
@@ -566,4 +566,10 @@ a {
   -webkit-mask-image: linear-gradient(to left, black 0%, rgba(0 0 0 / var(--fade-to-opacity)) 75%);
   mask-image: linear-gradient(to left, black 0%, rgba(0 0 0 / var(--fade-to-opacity)) 75%);
   transition: --fade-to-opacity 1s ease;
+}
+
+
+
+.subtle-glow {
+  background: inset 0 1px 1px 0 hsla(0,0%,100%,.1),0 2px 40px 10px rgba(154,170,255,.05),0 0 16px -7px rgba(154,170,255,.05);
 }
