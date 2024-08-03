@@ -68,7 +68,7 @@ function DesignWord() {
   return (
     <span className=" relative bg-gradient-to-r from-transparent to-indigo3  pt3 pb-2  ">
       <span className='relative'>
-        <span className="pl-1 pr-3 pb-2 c-transparent bg-clip-text bg-gradient-to-r from-slate7 to-slate12">design</span>
+        <span className="pl-1 pr-3 pb-2 c-transparent bg-clip-text bg-gradient-to-r from-slate7 to-slate12 ">design</span>
         <span className="dashed-border-box  fade-to-l absolute -top-3 left-1 right-0 -bottom-2 ">
           <span className="invisible" role="heading">
             design
@@ -114,12 +114,20 @@ function AndWord() {
 function WebApplicationsWord() {
   return (
     <span className="relative  ">
-      <span className="stroke-text c-base3 fade-to-r">
+      <span className="stroke-text c-transparent fade-to-r">
         web{` `}
         <DesktopOnly>applications.</DesktopOnly>
         <MobileOnly>apps.</MobileOnly>
       </span>
-      <span className="absolute c-base12 blu  -top-4.5 left-0 bottom-0 fade-to-l">
+      <span role='none' className="absolute c-base11  -top-4.5 left-0 bottom-0 fade-to-l">
+        web{` `}
+        <DesktopOnly>applications.</DesktopOnly>
+        <MobileOnly>apps.</MobileOnly>
+      </span>
+
+      <span role='none' className="absolute  -top-4.5 left-0 bottom-0 stroke-text c-transparent  fade-to-l" 
+      style={{"--stroke-color" : "white"}}
+      >
         web{` `}
         <DesktopOnly>applications.</DesktopOnly>
         <MobileOnly>apps.</MobileOnly>
