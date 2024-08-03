@@ -75,7 +75,6 @@ function FaderEnd() {
 }
 
 function BlogCard({ title, subtitle, date, slug, gap }) {
-  console.log("🚀 ~ date:", date)
   return (
     <li className={`${gap}`}>
       <Link

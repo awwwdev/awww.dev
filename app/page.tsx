@@ -11,7 +11,6 @@ import Experiences from '@/components/home-page-sections/Experiences';
 
 export default async function Page() {
   const posts = await getAllPosts()
-  console.log('fdfdf');
   return (
     <div className="">
         <Hero />
