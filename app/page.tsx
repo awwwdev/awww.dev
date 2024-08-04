@@ -17,6 +17,7 @@ export default async function Page() {
         <Hero />
         <Space size="h-40 sm:h-50" />
         <Works />
+        <Space size="h-40 sm:h-50" />
         <Experiences />
         <Space size="h-40 sm:h-40" />
         <Tools />

@@ -6,6 +6,7 @@ import Button from "../ui/button";
 import ShowMore from "../ShowMore";
 import DesktopOnly from "../ui/DesktopOnly";
 import MobileOnly from "../ui/MobileOnly";
+import WorkItem from "./WorkItem";
 
 export default function Works() {
   return (
@@ -14,51 +15,86 @@ export default function Works() {
       <BluredCircle radius={250} top="30rem" left="20%" bg="bg-sky1 opacity-50" blur="200px" />
       <div className="mx-auto max-w-page">
         <h2 className="H1" id="works">
-          Work        </h2>
+          Work
+        </h2>
         <Space size="h-8" />
-        <ul>
-          {/* <WorksGrid /> */}
+        <ul className="grid gap-2 xs:gap-4 !lt-xs:grid-cols-1 " style={{ gridTemplateColumns: "3fr 2fr" }}>
+          <WorkItem
+            title="Darsoon"
+            subtitle="A platform for finding online tutors"
+            gridRow="1/3"
+            gridColumn="1/2"
+            imgSrc="/works/darsoon.png"
+            categories={["UI Design", "Front End", "Back End"]}
+          />
+          <WorkItem
+            title="Jack's House"
+            subtitle="A platform for finding online tutors"
+            gridRow="3/5"
+            gridColumn="1/2"
+            imgSrc="/works/jackshouse.png"
+            categories={["UI Design", "Front End"]}
+          />
+          <WorkItem
+            title="Dbilia"
+            subtitle="A platform for finding online tutors"
+            gridRow="5/7"
+            gridColumn="1/2"
+            imgSrc="/works/dbilia.png"
+            categories={["UI Design", "Front End"]}
+          />
+          {/* <WorkItem title="Let's make antoher successfull story" gridRow="7/9" gridColumn="1/2" imgSrc="" /> */}
+
+          <WorkItem
+            title="Momenta"
+            subtitle="A platform for finding online tutors"
+            gridRow="1/4"
+            gridColumn="2/3"
+            imgSrc="/works/momenta.png"
+            categories={["UI Design", "Front End"]}
+          />
+          <WorkItem
+            title="Numbers4Things"
+            subtitle="A platform for finding online tutors"
+            gridRow="4/6"
+            gridColumn="2/3"
+            imgSrc="/works/numbers-for-things.png"
+            categories={["UI Design", "Front End", "Back End"]}
+          />
+          <WorkItem
+            title="Dbilia Premier"
+            subtitle="A platform for finding online tutors"
+            gridRow="6/9"
+            gridColumn="2/3"
+            imgSrc="/works/dbilia-premier.png"
+            categories={["UI Design", "Front End"]}
+          />
+          <li className=" rd-3 b-t-1 b-l-1 b-r-1 b-base4 sahdow-xl bg-clip-padding"
+                style={{
+                  gridTemplateRows: "auto 1fr",
+                  backgroundImage: "url('/static/noise.svg')",
+                  backgroundSize: "auto",
+                  backgroundRepeat: "repeat",
+                  backdropFilter: "blur(10px)",
+                  gridRow:"7/9",
+                   gridColumn:"1/2"
+                }}
+          
+          >
+            <a  href='/#contact' className='block h-full p-3 xs:p-6'>
+            <div className="flex flex-col h-full">
+            <p>
+            Let's make antoher successfull story
+            </p>
+            <div className='mt-auto flex justify-end'>
+            <Icon name='bf-i-ph-arrow-right' />
+            </div>
+            </div>
+            </a>
+          </li>
         </ul>
       </div>
     </section>
-  );
-}
-
-function WorksGrid({ title, start, end, startMobile, endMobile, company, children }) {
-  return (
-    <li className="pis-2">
-      <h3 className="">
-        <div className="H5 line-height-0.8 tracking-wide">{company}</div>
-        <Space size='h-1' />
-        <div className="flex flex-wrap items-baseline  tracking-wide">
-          <div className="font-content  c-base11 whitespace-nowrap mie-2">{title}</div>
-          <DesktopOnly>
-            <div className="c-base11 fs-sm ">
-              {start} - {end}
-            </div>
-          </DesktopOnly>
-          <MobileOnly>
-            <div className="c-base11 fs-sm ">
-              {startMobile} - {endMobile}
-            </div>
-          </MobileOnly>
-        </div>
-      </h3>
-
-      <Space size="h-6" />
-      <ShowMore minHeight="3em">
-        <ul
-          className={`list-disc-outside  fs-sm space-y-0.5em `}
-          style={{
-            listStyleImage: 'url("circle-list-item-marker.svg")',
-          }}
-        >
-          {children}
-        </ul>
-      </ShowMore>
-
-      <Space size="xs:h-2 h-8" />
-    </li>
   );
 }
 
