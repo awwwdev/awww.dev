@@ -54,7 +54,17 @@ function getParser() {
  
 // small speedup from caching this parser
 const parser = getParser()
- 
+
+export type Post = {
+  title: string,
+  subtitle:  string,
+  id: string;
+  date: string;
+  html: string;
+  draft: boolean;
+  [key: string]: any;
+}
+
 export async function getPostById(id: string) {
   const realId = id.replace(/\.md$/, '')
   const fullPath = path.join(postsDirectory, `${realId}.md`)

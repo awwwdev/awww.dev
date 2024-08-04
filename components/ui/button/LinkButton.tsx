@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ButtonProps, classes } from "./Button";
 
 type Ref = HTMLAnchorElement;
-type AllProps = React.ComponentPropsWithoutRef<"a"> & Omit<ButtonProps , "isLoading"> & { href: string };
+type AllProps = React.ComponentPropsWithoutRef<"a"> & Omit<ButtonProps, "isLoading"> & { href: string };
 const LinkButton = forwardRef<Ref, AllProps>(function (
   { className, preStyled = true, variation, href, children, iconButton = false, rounded = false, ...props },
   ref
@@ -17,11 +17,17 @@ const LinkButton = forwardRef<Ref, AllProps>(function (
   `;
 
   return (
-    <Link ref={ref} href={href} className={`${preStyled ? cls : ""} ${className}`} {...props}>
+    <Link
+      ref={ref}
+      href={href}
+      className={`${preStyled ? cls : ""} ${className}`}
+      style={{ textDecoration: "none" }}
+      {...props}
+    >
       {children}
     </Link>
   );
 });
 
-LinkButton.displayName = 'LinkButton';
+LinkButton.displayName = "LinkButton";
 export default LinkButton;

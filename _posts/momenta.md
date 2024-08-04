@@ -28,8 +28,9 @@ stackLogos:
 ---
 
 <br/>
-<a class="b-1 w-fit af-i-ph-arrow-right  fw-500  rd-xl b-orangeA-6  dark:b-orangeA-7 c-prm11 bg-gradient-to-r from-prm1 to-sand1  active:(b-orangeA-8 from-prm5 to-sand2) hover:b-orangeA-7 hover:from-prm2 hover:to-prm1 )  focus-visible:b-orangeA-8 focus-visible:from-prm4 focus-visible:to-prm2  bg-origin-border  c-prm11  fw-500 py-4 b-1.5  px-8 rd-xl flex gap-2 ac  !my-20 " href="https://momenta.app" target="_blank">Visit Momenta</a>
+<a class="af-i-ph-arrow-right " href="https://momenta.app" target="_blank">Visit Momenta</a>
 <br/>
+<div className='h-3' />
 It was December 2021, and our agency, which is a web3 and NFT agency, needed a landing page.
 
 We started as a team. We created some content and gathered some inspiring examples.

@@ -8,7 +8,7 @@ import DesktopOnly from "../ui/DesktopOnly";
 import MobileOnly from "../ui/MobileOnly";
 import WorkItem from "./WorkItem";
 
-export default function Works() {
+export default function Works({posts}) {
   return (
     <section className="relative">
       <BluredCircle radius={200} top="20%" left="95%" bg="bg-gold2" blur="200px" />
@@ -26,10 +26,11 @@ export default function Works() {
             gridColumn="1/2"
             imgSrc="/works/darsoon.png"
             categories={["UI Design", "Front End", "Back End"]}
+            relatedBlogPost={posts.find(p => p.id === 'darsoon')}
           />
           <WorkItem
             title="Jack's House"
-            subtitle="A platform for finding online tutors"
+            subtitle="An Online Casino for Gamers Community"
             gridRow="3/5"
             gridColumn="1/2"
             imgSrc="/works/jackshouse.png"
@@ -37,25 +38,28 @@ export default function Works() {
           />
           <WorkItem
             title="Dbilia"
-            subtitle="A platform for finding online tutors"
+            subtitle="An NFT Marketplace"
             gridRow="5/7"
             gridColumn="1/2"
             imgSrc="/works/dbilia.png"
             categories={["UI Design", "Front End"]}
+            relatedBlogPost={posts.find(p => p.id === 'dbilia')}
+
           />
           {/* <WorkItem title="Let's make antoher successfull story" gridRow="7/9" gridColumn="1/2" imgSrc="" /> */}
 
           <WorkItem
             title="Momenta"
-            subtitle="A platform for finding online tutors"
+            subtitle="Business Website for Momenta Web3 Agency"
             gridRow="1/4"
             gridColumn="2/3"
             imgSrc="/works/momenta.png"
             categories={["UI Design", "Front End"]}
+            relatedBlogPost={posts.find(p => p.id === 'momenta')}
           />
           <WorkItem
             title="Numbers4Things"
-            subtitle="A platform for finding online tutors"
+            subtitle="An NFT Project"
             gridRow="4/6"
             gridColumn="2/3"
             imgSrc="/works/numbers-for-things.png"
@@ -63,7 +67,7 @@ export default function Works() {
           />
           <WorkItem
             title="Dbilia Premier"
-            subtitle="A platform for finding online tutors"
+            subtitle="A platform selling Music Videos with NFT"
             gridRow="6/9"
             gridColumn="2/3"
             imgSrc="/works/dbilia-premier.png"
@@ -81,7 +85,7 @@ export default function Works() {
                 }}
           
           >
-            <a  href='/#contact' className='block h-full p-3 xs:p-6'>
+              <a  href='/#contact' className='block h-full p-3 xs:p-6'>
             <div className="flex flex-col h-full">
             <p>
             Let's make antoher successfull story

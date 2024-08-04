@@ -16,7 +16,7 @@ export default async function Page() {
     <div className="">
         <Hero />
         <Space size="h-40 sm:h-50" />
-        <Works />
+        <Works posts={posts} />
         <Space size="h-40 sm:h-50" />
         <Experiences />
         <Space size="h-40 sm:h-40" />
