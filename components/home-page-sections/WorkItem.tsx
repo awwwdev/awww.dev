@@ -9,6 +9,7 @@ import Icon from "../ui/Icon";
 
 export default function WorkItem({
   title,
+  titleColor,
   gridRow,
   gridColumn,
   className = "",
@@ -19,13 +20,14 @@ export default function WorkItem({
   categories,
   relatedBlogPost,
   gradient,
+  borderColor
 }) {
   return (
-    <li style={{ gridRow, gridColumn }}>
+    <li className={`${gridRow} ${gridColumn}`}>
       <Modal
         trigger={
           <button type="button" className="h-full w-full text-left ">
-            <WorkItemCard {...{ title, subtitle, className, imgSrc, gradient }} />
+            <WorkItemCard {...{ title, titleColor, subtitle, className, imgSrc, gradient , borderColor }} />
           </button>
         }
       >
@@ -35,10 +37,10 @@ export default function WorkItem({
   );
 }
 
-function WorkItemCard({ title, imgSrc, subtitle, gradient }) {
+function WorkItemCard({ title, imgSrc, subtitle, gradient , titleColor , borderColor}) {
   return (
     <div
-      className={`h-full rd-3 bg-base1A grid overflow-clip b-t-1 b-l-1 b-r-1 b-base4 sahdow-xl bg-clip-padding `}
+      className={`h-full rd-3 bg-base1A grid overflow-clip b-t-1 b-l-1 b-r-1 sahdow-xl bg-clip-padding ${borderColor ?? 'b-base4A'} `}
       style={{
         backgroundImage: "url('/static/noise.svg')",
         backgroundSize: "auto",
@@ -51,9 +53,8 @@ function WorkItemCard({ title, imgSrc, subtitle, gradient }) {
         
       }}>
         <div className="p-3 xs:p-6 ">
-          <h3 className="H3">{title}</h3>
-          {/* <div className="h-1"></div>
-        <p className="c-base11">{subtitle}</p> */}
+          <h3 className={`H3 ${titleColor}`}>{title}</h3>
+        <p className="c-base11 text-sm">{subtitle}</p>
         </div>
         <div className="grid items-end pl-6  xs:pl-16 ">
           <div className=" relative isolate">

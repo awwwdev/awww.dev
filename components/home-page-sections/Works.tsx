@@ -1,11 +1,6 @@
 import BluredCircle from "./BluredCircle";
 import Icon from "@/components/ui/Icon";
 import Space from "../ui/Space";
-import { useState } from "react";
-import Button from "../ui/button";
-import ShowMore from "../ShowMore";
-import DesktopOnly from "../ui/DesktopOnly";
-import MobileOnly from "../ui/MobileOnly";
 import WorkItem from "./WorkItem";
 
 export default function Works({posts}) {
@@ -18,70 +13,80 @@ export default function Works({posts}) {
           Work
         </h2>
         <Space size="h-8" />
-        <ul className="grid gap-2 xs:gap-4 !lt-xs:grid-cols-1 " style={{ gridTemplateColumns: "3fr 2fr" }}>
+        <ul className="grid gap-4 !lt-xs:grid-cols-1 " style={{ gridTemplateColumns: "3fr 2fr" }}>
           <WorkItem
             title="Darsoon"
             subtitle="A platform for finding online tutors"
-            gridRow="1/3"
-            gridColumn="1/2"
+            gridRow="xs:g-row-1/3"
+            gridColumn="xs:g-col-1/2"
             imgSrc="/works/darsoon.png"
             categories={["UI Design", "Front End", "Back End"]}
             relatedBlogPost={posts.find(p => p.id === 'darsoon')}
             tools={['NextJS', 'React' , 'TypeScript', 'Server Components' , 'Tailwind CSS']}
-            gradient='from-orange4 to-orange1A'
+            gradient='from-orange3 via-orange1A '
+            // borderColor='b-orange4'
           />
           <WorkItem
             title="Jack's House"
             subtitle="An Online Casino for Gamers Community"
-            gridRow="3/5"
-            gridColumn="1/2"
+            gridRow="xs:g-row-3/5"
+            gridColumn="xs:g-col-1/2"
             imgSrc="/works/jackshouse.png"
             tools={["NextJs", "React", "UnoCSS"]}
-            gradient='from-indigo4 to-indigo1A'
+            gradient='from-sky3 via-sky1A'
+            // borderColor='b-sky4'
           />
           <WorkItem
             title="Dbilia"
             subtitle="An NFT Marketplace"
-            gridRow="5/7"
-            gridColumn="1/2"
+            gridRow="xs:g-row-5/7"
+            gridColumn="xs:g-col-1/2"
             imgSrc="/works/dbilia.png"
             categories={["UI Design", "Front End"]}
             relatedBlogPost={posts.find(p => p.id === 'dbilia')}
             tools={["NextJs", "React", "T3-Stack", "Prisma"]}
-            gradient='from-violet4 to-violet1A'
+            gradient='from-violet4 via-violet1A'
+            // titleColor='c-pink12'
+            // borderColor='b-violet4'
           />
-          {/* <WorkItem title="Let's make antoher successfull story" gridRow="7/9" gridColumn="1/2" imgSrc="" /> */}
+          {/* <WorkItem title="Let's make antoher successfull story" gridRow="xs:g-row-7/9" gridColumn="xs:g-col-1/2" imgSrc="" /> */}
 
           <WorkItem
             title="Momenta"
             subtitle="Business Website for Momenta Web3 Agency"
-            gridRow="1/4"
-            gridColumn="2/3"
+            gridRow="xs:g-row-1/4"
+            gridColumn="xs:g-col-2/3"
             imgSrc="/works/momenta.png"
             categories={["UI Design", "Front End"]}
             relatedBlogPost={posts.find(p => p.id === 'momenta')}
             tools={["NextJs", "React", "Framer Motion", ""]}
-            gradient='from-pink4 to-pink1A'
+            gradient='from-pink4 via-pink1A'
+            // titleColor='c-pink12'
+            // borderColor='b-pink4'
           />
           <WorkItem
             title="Numbers4Things"
             subtitle="An NFT Project"
-            gridRow="4/6"
-            gridColumn="2/3"
+            gridRow="xs:g-row-4/6"
+            gridColumn="xs:g-col-2/3"
             imgSrc="/works/numbers-for-things.png"
             tools={["NextJs", "React", "MetaMask"]}
             categories={["UI Design", "Front End", "Back End"]}
-            gradient='from-black2A via-sand3'
+            gradient='from-black2A via-base3'
+            // titleColor='c-sand12'
+            // borderColor='b-base4'
           />
           <WorkItem
             title="Dbilia Premier"
             subtitle="A platform selling Music Videos with NFT"
-            gridRow="6/9"
-            gridColumn="2/3"
+            gridRow="xs:g-row-6/9"
+            gridColumn="xs:g-col-2/3"
             imgSrc="/works/dbilia-premier.png"
             tools={["NextJs", "React", "Prisma", "T3 Stack" , "PostgreSQL"]}
             categories={["UI Design", "Front End"]}
-            gradient='from-orange4 to-orange1A'
+            gradient='from-tomato4 via-tomato1A'
+            // titleColor='c-tomato12'
+            // borderColor='b-tomato4'
           />
           <li className=" rd-3 b-t-1 b-l-1 b-r-1 b-base4 sahdow-xl bg-clip-padding"
                 style={{
@@ -90,8 +95,8 @@ export default function Works({posts}) {
                   backgroundSize: "auto",
                   backgroundRepeat: "repeat",
                   backdropFilter: "blur(10px)",
-                  gridRow:"7/9",
-                   gridColumn:"1/2"
+                  gridRow:"xs:g-row-7/9",
+                   gridColumn:"xs:g-col-1/2"
                 }}
           
           >
@@ -116,7 +121,7 @@ function Overlay({ expanded }) {
   return (
     <div className="relative">
       {!expanded && (
-        <div className="bg-gradient-to-b from-transparent  to-sand1 h-20 absolute w-full bottom-0 -translate-y-0% z-10 "></div>
+        <div className="bg-gradient-via-b from-transparent  via-sand1 h-20 absolute w-full bottom-0 -translate-y-0% z-10 "></div>
       )}
     </div>
   );
