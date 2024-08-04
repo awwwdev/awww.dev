@@ -30,7 +30,8 @@ stackLogos:
 <br/>
 <a class="af-i-ph-arrow-right " href="https://momenta.app" target="_blank">Visit Momenta</a>
 <br/>
-<div className='h-3' />
+
+<div className='h-3' ></div>
 It was December 2021, and our agency, which is a web3 and NFT agency, needed a landing page.
 
 We started as a team. We created some content and gathered some inspiring examples.

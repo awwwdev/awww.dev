@@ -27,6 +27,8 @@ export default function Works({posts}) {
             imgSrc="/works/darsoon.png"
             categories={["UI Design", "Front End", "Back End"]}
             relatedBlogPost={posts.find(p => p.id === 'darsoon')}
+            tools={['NextJS', 'React' , 'TypeScript', 'Server Components' , 'Tailwind CSS']}
+            gradient='from-orange4 to-orange1A'
           />
           <WorkItem
             title="Jack's House"
@@ -34,7 +36,8 @@ export default function Works({posts}) {
             gridRow="3/5"
             gridColumn="1/2"
             imgSrc="/works/jackshouse.png"
-            categories={["UI Design", "Front End"]}
+            tools={["NextJs", "React", "UnoCSS"]}
+            gradient='from-indigo4 to-indigo1A'
           />
           <WorkItem
             title="Dbilia"
@@ -44,7 +47,8 @@ export default function Works({posts}) {
             imgSrc="/works/dbilia.png"
             categories={["UI Design", "Front End"]}
             relatedBlogPost={posts.find(p => p.id === 'dbilia')}
-
+            tools={["NextJs", "React", "T3-Stack", "Prisma"]}
+            gradient='from-violet4 to-violet1A'
           />
           {/* <WorkItem title="Let's make antoher successfull story" gridRow="7/9" gridColumn="1/2" imgSrc="" /> */}
 
@@ -56,6 +60,8 @@ export default function Works({posts}) {
             imgSrc="/works/momenta.png"
             categories={["UI Design", "Front End"]}
             relatedBlogPost={posts.find(p => p.id === 'momenta')}
+            tools={["NextJs", "React", "Framer Motion", ""]}
+            gradient='from-pink4 to-pink1A'
           />
           <WorkItem
             title="Numbers4Things"
@@ -63,7 +69,9 @@ export default function Works({posts}) {
             gridRow="4/6"
             gridColumn="2/3"
             imgSrc="/works/numbers-for-things.png"
+            tools={["NextJs", "React", "MetaMask"]}
             categories={["UI Design", "Front End", "Back End"]}
+            gradient='from-black2A via-sand3'
           />
           <WorkItem
             title="Dbilia Premier"
@@ -71,7 +79,9 @@ export default function Works({posts}) {
             gridRow="6/9"
             gridColumn="2/3"
             imgSrc="/works/dbilia-premier.png"
+            tools={["NextJs", "React", "Prisma", "T3 Stack" , "PostgreSQL"]}
             categories={["UI Design", "Front End"]}
+            gradient='from-orange4 to-orange1A'
           />
           <li className=" rd-3 b-t-1 b-l-1 b-r-1 b-base4 sahdow-xl bg-clip-padding"
                 style={{

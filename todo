@@ -4,31 +4,24 @@
 
 -- add descriptions
 -- add gradeints
--- add tools
 -- add more images
--- add related blog post
 
 - Services photo for telegram
 
-- portfolio images
-  - Numbers 4 Things
-  - Momenta
-  - Darsoon Dashboards 
-  - Darsoon Redesign 
-  - Dbilia
-  - Jack's House
-
-New Projects
-  - 10000rooz
-  - Sleeker Design System
-  - Todo App
-  - Calendar App
-
 - glow effect
 - Hero Desgin for Mobile
-- HTML Learning Map
+- Blog Post: HTML Learning Map
 
+======================
 
 - transition properties like transition gradient-stop1 or bg opacity
-- 10 gradient stops 
+- 10 gradient stops
 - number of colors level are free. so you can use diffenret color systems (radix with 12 levels, taiwing with 9 levels)
+
+=======================
+New Projects
+
+- 10000rooz
+- Sleeker Design System
+- Todo App
+- Calendar App
