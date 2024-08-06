@@ -10,7 +10,7 @@ export default function Works({ posts }) {
       <BluredCircle radius={250} top="30rem" left="20%" bg="bg-sky1 opacity-50" blur="200px" />
       <div className="mx-auto max-w-page">
         <h2 className="H1" id="works">
-          Work
+          Works
         </h2>
         <Space size="h-8" />
         <ul className="grid gap-4 !lt-xs:grid-cols-1 " style={{ gridTemplateColumns: "3fr 2fr" }}>
