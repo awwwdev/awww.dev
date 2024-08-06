@@ -209,7 +209,7 @@ export default function Tools() {
           /> */}
 
           <Li
-            className="bg-gradient-to-b from-purple3 to-purple4 light "
+            className="bg-gradient-to-b from-purple1 to-purple4  "
             gridPosition="g-col-1/2 g-row-7/8  xxs:g-col-1/2 xxs:g-row-5/6"
             src="/tool-logos/vite.svg"
             alt="Vite"
