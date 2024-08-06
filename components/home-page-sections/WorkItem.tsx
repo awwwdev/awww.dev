@@ -49,6 +49,8 @@ function WorkItemCard({ title, imgSrc, subtitle, gradient, titleColor, borderCol
         backgroundSize: "auto",
         backgroundRepeat: "repeat",
         backdropFilter: "blur(10px)",
+        borderRadius: 'calc(0.02 * var(--max-w-page))'
+
       }}
     >
       <div
