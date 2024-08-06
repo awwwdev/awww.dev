@@ -3,7 +3,7 @@ import Icon from "@/components/ui/Icon";
 import Space from "../ui/Space";
 import WorkItem from "./WorkItem";
 
-export default function Works({posts}) {
+export default function Works({ posts }) {
   return (
     <section className="relative">
       <BluredCircle radius={200} top="20%" left="95%" bg="bg-gold2" blur="200px" />
@@ -21,9 +21,9 @@ export default function Works({posts}) {
             gridColumn="xs:g-col-1/2"
             imgSrc="/works/darsoon.png"
             categories={["UI Design", "Front End", "Back End"]}
-            relatedBlogPost={posts.find(p => p.id === 'darsoon')}
-            tools={['NextJS', 'React' , 'TypeScript', 'Server Components' , 'Tailwind CSS']}
-            gradient='from-orange3 via-orange1A '
+            relatedBlogPost={posts.find((p) => p.id === "darsoon")}
+            tools={["NextJS", "React", "TypeScript", "Server Components", "Tailwind CSS"]}
+            gradient="from-[#82625B] to-orange1A"
             // borderColor='b-orange4'
           />
           <WorkItem
@@ -33,7 +33,7 @@ export default function Works({posts}) {
             gridColumn="xs:g-col-1/2"
             imgSrc="/works/jackshouse.png"
             tools={["NextJs", "React", "UnoCSS"]}
-            gradient='from-sky3 via-sky1A'
+            gradient=" from-[#303A47] via-sky1A"
             // borderColor='b-sky4'
           />
           <WorkItem
@@ -43,9 +43,9 @@ export default function Works({posts}) {
             gridColumn="xs:g-col-1/2"
             imgSrc="/works/dbilia.png"
             categories={["UI Design", "Front End"]}
-            relatedBlogPost={posts.find(p => p.id === 'dbilia')}
+            relatedBlogPost={posts.find((p) => p.id === "dbilia")}
             tools={["NextJs", "React", "T3-Stack", "Prisma"]}
-            gradient='from-violet4 via-violet1A'
+            gradient="from-[#3E705E] via-[#0C140E]/10"
             // titleColor='c-pink12'
             // borderColor='b-violet4'
           />
@@ -58,9 +58,9 @@ export default function Works({posts}) {
             gridColumn="xs:g-col-2/3"
             imgSrc="/works/momenta.png"
             categories={["UI Design", "Front End"]}
-            relatedBlogPost={posts.find(p => p.id === 'momenta')}
+            relatedBlogPost={posts.find((p) => p.id === "momenta")}
             tools={["NextJs", "React", "Framer Motion", ""]}
-            gradient='from-pink4 via-pink1A'
+            gradient="from-[#462D45] via-pink1A"
             // titleColor='c-pink12'
             // borderColor='b-pink4'
           />
@@ -72,7 +72,7 @@ export default function Works({posts}) {
             imgSrc="/works/numbers-for-things.png"
             tools={["NextJs", "React", "MetaMask"]}
             categories={["UI Design", "Front End", "Back End"]}
-            gradient='from-black2A via-base3'
+            gradient="from-[#151515] via-base3"
             // titleColor='c-sand12'
             // borderColor='b-base4'
           />
@@ -82,34 +82,36 @@ export default function Works({posts}) {
             gridRow="xs:g-row-6/9"
             gridColumn="xs:g-col-2/3"
             imgSrc="/works/dbilia-premier.png"
-            tools={["NextJs", "React", "Prisma", "T3 Stack" , "PostgreSQL"]}
+            tools={["NextJs", "React", "Prisma", "T3 Stack", "PostgreSQL"]}
             categories={["UI Design", "Front End"]}
-            gradient='from-tomato4 via-tomato1A'
+            gradient="from-[#934D37] via-[#934D37]/20"
             // titleColor='c-tomato12'
             // borderColor='b-tomato4'
           />
-          <li className=" rd-3 b-t-1 b-l-1 b-r-1 b-base4 sahdow-xl bg-clip-padding"
-                style={{
-                  gridTemplateRows: "auto 1fr",
-                  backgroundImage: "url('/static/noise.svg')",
-                  backgroundSize: "auto",
-                  backgroundRepeat: "repeat",
-                  backdropFilter: "blur(10px)",
-                  gridRow:"xs:g-row-7/9",
-                   gridColumn:"xs:g-col-1/2"
-                }}
-          
+          <li
+            className=" rd-3  b-t-1 b-l-1 b-r-1 b-base4 sahdow-xl  bg-clip-padding xs:g-row-7/9 xs:g-col-1/2"
+            style={{
+              backgroundImage: "url('/static/noise.svg')",
+              backgroundSize: "auto",
+              backgroundRepeat: "repeat",
+              backdropFilter: "blur(10px)",
+            }}
           >
-              <a  href='/#contact' className='block h-full p-3 xs:p-6'>
-            <div className="flex flex-col h-full">
-            <p>
-            Let's make antoher successfull story
-            </p>
-            <div className='mt-auto flex justify-end'>
-            <Icon name='bf-i-ph-arrow-right' />
+            <div
+              className="rd-3 h-full flex flex-col bg-gradient-to-b from-gray6A"
+              style={{
+                // gridTemplateRows: "auto 1fr",
+              }}
+            >
+              <a href="/#contact" className="block h-full p-3 xs:p-6">
+                <div className="flex flex-col h-full">
+                  <p>Let's make antoher successfull story</p>
+                  <div className="mt-auto flex justify-end">
+                    <Icon name="bf-i-ph-arrow-right" />
+                  </div>
+                </div>
+              </a>
             </div>
-            </div>
-            </a>
           </li>
         </ul>
       </div>

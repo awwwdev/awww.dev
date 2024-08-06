@@ -387,10 +387,11 @@ p a,
   --fade-to-opacity: 0;
 }
 .fade-to-b {
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, rgba(0 0 0 / var(--fade-to-opacity)) 75%);
-  mask-image: linear-gradient(to bottom, black 0%, rgba(0 0 0 / var(--fade-to-opacity)) 75%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 30%, rgba(0 0 0 / var(--fade-to-opacity)) 95%);
+  mask-image: linear-gradient(to bottom, black 0%, black 30%, rgba(0 0 0 / var(--fade-to-opacity)) 95%);
   transition: --fade-to-opacity 1s ease;
 }
+
 
 @property --fade-to-opacity {
   syntax: "<number>"; /* <- defined as type number for the transition to work */
