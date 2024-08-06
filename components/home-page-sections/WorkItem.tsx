@@ -14,33 +14,36 @@ export default function WorkItem({
   gridColumn,
   className = "",
   imgSrc,
+  imgSrcs,
   subtitle,
   description,
   tools,
   categories,
   relatedBlogPost,
   gradient,
-  borderColor
+  borderColor,
 }) {
   return (
     <li className={`${gridRow} ${gridColumn}`}>
       <Modal
         trigger={
           <button type="button" className="h-full w-full text-left ">
-            <WorkItemCard {...{ title, titleColor, subtitle, className, imgSrc, gradient , borderColor }} />
+            <WorkItemCard {...{ title, titleColor, subtitle, className, imgSrc, gradient, borderColor }} />
           </button>
         }
       >
-        <WorkItemModalContent {...{ title, imgSrc, description, subtitle, relatedBlogPost, tools }} />
+        <WorkItemModalContent {...{ title, imgSrc, description, subtitle, relatedBlogPost, tools, imgSrcs }} />
       </Modal>
     </li>
   );
 }
 
-function WorkItemCard({ title, imgSrc, subtitle, gradient , titleColor , borderColor}) {
+function WorkItemCard({ title, imgSrc, subtitle, gradient, titleColor, borderColor }) {
   return (
     <div
-      className={`h-full rd-3 bg-base1A grid overflow-clip b-t-1 b-l-1 b-r-1 sahdow-xl bg-clip-padding ${borderColor ?? 'b-base4A'} `}
+      className={`h-full rd-3 bg-base1A grid overflow-clip b-t-1 b-l-1 b-r-1 sahdow-2xl bg-clip-padding ${
+        borderColor ?? "b-base4A"
+      } `}
       style={{
         backgroundImage: "url('/static/noise.svg')",
         backgroundSize: "auto",
@@ -48,22 +51,24 @@ function WorkItemCard({ title, imgSrc, subtitle, gradient , titleColor , borderC
         backdropFilter: "blur(10px)",
       }}
     >
-      <div className={`${gradient}  bg-gradient-to-b  h-full grid`} style={{
-        gridTemplateRows: "auto 1fr"
-        
-      }}>
-        <div className="px-3 xs:px-6 pt-3 xs:pt-5 " >
+      <div
+        className={`${gradient} bg-gradient-to-b  h-full grid`}
+        style={{
+          gridTemplateRows: "auto 1fr",
+        }}
+      >
+        <div className="px-3 xs:px-6 pt-3 xs:pt-5 ">
           <h3 className={`H3 ${titleColor}`}>{title}</h3>
-        <p className="c-base11 text-sm">{subtitle}</p>
+          <p className="c-base11 text-sm">{subtitle}</p>
         </div>
-        <div className="grid items-end pl-6  xs:pl-16 pt-3  " >
+        <div className="grid items-end pl-6  xs:pl-16 pt-3  ">
           <div className=" relative isolate">
-          <img
+            <img
               src={imgSrc}
               alt=""
               className="block min-w-0 rd-lt-3 shadow-xl object-cover absolute top-0 left-0 right-0 bottom-0 blur-15 opacity-50 -z-10"
             />
-            
+
             <img src={imgSrc} alt="" className="block min-w-0 rd-lt-3 shadow-xl object-cover fade-to-b" />
           </div>
         </div>
@@ -72,7 +77,17 @@ function WorkItemCard({ title, imgSrc, subtitle, gradient , titleColor , borderC
   );
 }
 
-function WorkItemModalContent({ title, gridRow, gridColumn, imgSrc, description, subtitle, relatedBlogPost, tools }) {
+function WorkItemModalContent({
+  title,
+  gridRow,
+  gridColumn,
+  imgSrc,
+  description,
+  subtitle,
+  relatedBlogPost,
+  tools,
+  imgSrcs,
+}) {
   return (
     <div className="">
       <h3 className="H1">{title}</h3>
@@ -93,6 +108,21 @@ function WorkItemModalContent({ title, gridRow, gridColumn, imgSrc, description,
           <img src={imgSrc} alt="" className="min-w-0 rd-3 shadow-xl object-cover" />
         </div>
       </div>
+
+      {imgSrcs && imgSrcs.length > 0 && (
+        <>
+          <div className="h-6"></div>
+          <ul className="flex gap-3">
+            {imgSrcs.map((imgSrc, index) => {
+              return <img key={`image-work-${index}`} src={imgSrc} alt="" className="w-40 h-20 min-w-0 rd-3 shadow-xl object-cover" 
+              style={{
+                objectPosition:'top center'
+              }}
+              />
+            })}
+          </ul>
+        </>
+      )}
       {tools && tools.length > 0 && (
         <>
           <div className="h-6"></div>
@@ -119,8 +149,8 @@ function Tools({ tools }) {
       <h4 className="H4 c-base11">Technologies Used</h4>
       <div className="h-3"></div>
       <ul className="flex gap-1.5">
-        {tools.map((t) => {
-          return <li className="rd-full b-1 b-base6  px-2.5 fs-xs ">{t}</li>;
+        {tools.map((t, index) => {
+          return <li key={`technologies-used-${index}`} className="rd-full b-1 b-base6  px-2.5 fs-xs ">{t}</li>;
         })}
       </ul>
     </div>
@@ -134,7 +164,7 @@ function RelatedBlogPost({ post }: { post: Post }) {
       <div className="h-6"></div>
       <article className="b-1 b-sand5 p-6 rd-3  relative isolate">
         <Space size="h-8" />
-        <h1 className="H1">{post.title}</h1>
+        <h5 className="H1">{post.title}</h5>
         <Space size="h-4" />
         <p className="">{post.subtitle}</p>
         <p className="c-base11 fs-sm">{post.date}</p>

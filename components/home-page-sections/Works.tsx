@@ -46,6 +46,7 @@ export default function Works({ posts }) {
             relatedBlogPost={posts.find((p) => p.id === "dbilia")}
             tools={["NextJs", "React", "T3-Stack", "Prisma"]}
             gradient="from-[#3E705E] via-[#0C140E]/10"
+            imgSrcs={["/works/dbilia-2.png", "/works/dbilia-3.png", "/works/dbilia-4.png"]}
             // titleColor='c-pink12'
             // borderColor='b-violet4'
           />
@@ -105,7 +106,7 @@ export default function Works({ posts }) {
             >
               <a href="/#contact" className="block h-full p-3 xs:p-6">
                 <div className="flex flex-col h-full">
-                  <p>Let's make antoher successfull story</p>
+                  <p>Let&apos;s make antoher successfull story</p>
                   <div className="mt-auto flex justify-end">
                     <Icon name="bf-i-ph-arrow-right" />
                   </div>
