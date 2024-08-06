@@ -49,8 +49,7 @@ function WorkItemCard({ title, imgSrc, subtitle, gradient, titleColor, borderCol
         backgroundSize: "auto",
         backgroundRepeat: "repeat",
         backdropFilter: "blur(10px)",
-        borderRadius: 'calc(0.02 * var(--max-w-page))'
-
+        // borderRadius: 'calc(0.02 * var(--max-w-page))'
       }}
     >
       <div
@@ -60,7 +59,7 @@ function WorkItemCard({ title, imgSrc, subtitle, gradient, titleColor, borderCol
         }}
       >
         <div className="px-3 xs:px-6 pt-3 xs:pt-5 ">
-          <h3 className={`H3 ${titleColor}`}>{title}</h3>
+          <h3 className={`H4 sm:H3 ${titleColor}`}>{title}</h3>
           <p className="c-base11 text-sm">{subtitle}</p>
         </div>
         <div className="grid items-end pl-6  xs:pl-16 pt-3  ">
