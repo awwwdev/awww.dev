@@ -6,7 +6,8 @@ import MobileOnly from "../ui/MobileOnly";
 
 export default function Hero() {
   return (
-    <div>
+    <div className='relative isolate'>
+
       <DesktopHero />
     </div>
   );
@@ -15,6 +16,9 @@ export default function Hero() {
 function DesktopHero() {
   return (
     <section className="relative ">
+      <div className='absolute top-2 left-50% -translate-x-50% w-full overflow-clip'>
+        <DotGrid rows={24} cols={24}  />
+      </div>
       <BluredCircle radius={200} top="20%" left="85%" bg="bg-cyan2" blur="200px" />
       <BluredCircle radius={200} top="60%" left="5%" bg="bg-indigo2" blur="200px" />
       <div className="max-w-page mx-auto">
@@ -229,3 +233,21 @@ function WebApplicationsWord() {
 // function Plate({ children }) {
 //   return <div className="p-4 rd-4 shadow-lg bg-sand3 w-fit">{children}</div>;
 // }
+
+
+function DotGrid({ rows , cols}){
+
+return (
+  <div  className='grid aspect-ratio-1/1  justify-items-center fade-y w-full min-w-50rem' style={{
+    gridTemplateColumns: `repeat(${cols} , 1fr)`,
+    gridTemplateRows: `repeat(${rows} , 1fr)`,
+    maskImage: "linear-gradient(to bottom, transparent 0%, black 20%, black 40%, transparent 60%)",
+    WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 20%, black 40%, transparent 60%)",
+  }}>
+    {Array.from(Array(rows * cols).keys()).map(i => {
+      return (
+        <div className={`rd-full bg-white/10 w-1 h-1 `} ></div>
+      )
+    })}
+  </div>
+)};
