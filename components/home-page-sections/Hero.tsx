@@ -25,24 +25,30 @@ function DesktopHero() {
       <div className="max-w-page mx-auto">
         <div>
           <Space size="h-6 sm:h-20" />
-          <div className="flex justify-center">
-            <div className="flex flex-row gap-3 sm:gap-6 items-center w-fit     ">
-              <Image
-                src="/profile-picture.png"
-                width={200}
-                height={200}
-                className={`object-cover w-15 h-15 rd-full bg-gradient-to-br from-blue2 to-green2  shadow-2xl z-10`}
-                alt=""
-                priority
-              ></Image>
-              <p className="font-display fs-xl sm:fs-2xl tracking-wider line-height-0.8">Hello. I&apos;m Hamid.</p>
-            </div>
-          </div>
+          <Greeting />
           <Space size="h-20" />
           <HeroSentence />
         </div>
       </div>
     </section>
+  );
+}
+
+function Greeting() {
+  return (
+    <div className="flex  md:justify-center">
+      <div className="grid md:flex flex-row gap-4 md:gap-6 items-center w-fit     ">
+        <Image
+          src="/profile-picture.png"
+          width={200}
+          height={200}
+          className={`object-cover w-15 h-15 rd-full bg-gradient-to-br from-blue2 to-green2  shadow-2xl z-10`}
+          alt=""
+          priority
+        ></Image>
+        <p className="font-display fs-xl sm:fs-2xl tracking-wider line-height-0.8">Hello. I&apos;m Hamid.</p>
+      </div>
+    </div>
   );
 }
 
@@ -52,18 +58,20 @@ function HeroSentence() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-full overflow-clip ">
         <Circles />
       </div>
-      <p className="font-display fs-4xl sm:fs-6xl text-center lt-xs:line-height-1.3">
-        <span className="block">
-          <IWord />
-          {` `}
-          <DesignWord />
-          {` `}
-          <span className="whitespace-nowrap">
-            <AndWord />
-            {` `}
-            <DevelopeWord />
-          </span>
-        </span>
+      <p
+        className={`
+         lt-md:grid justify-start justify-items-start items-start content-center
+         font-display fs-4xl sm:fs-6xl 
+         md:text-center 
+         `}
+      >
+        <IWord />
+        {` `}
+        <DesignWord />
+        {` `}
+        <AndWord />
+        {` `}
+        <DevelopeWord />
         <WebApplicationsWord />
       </p>
     </div>
@@ -76,18 +84,27 @@ function IWord() {
 
 function DesignWord() {
   return (
-    <span className=" relative bg-gradient-to-r from-transparent to-indigo3  pt3 pb-2  ">
-      <span className="relative">
-        <span className="pl-1 pr-3 pb-2 c-transparent bg-clip-text bg-gradient-to-r from-slate7 to-slate12 ">
-          design
-        </span>
-        <span className="dashed-border-box  fade-to-l absolute -top-3 left-1 right-0 -bottom-2 ">
+    <span className="relative">
+      <span className="inline-grid  ">
+        <span className="pr-4 dashed-border-box  fade-to-l" style={{ gridArea: "1/1/-1/-1" }}>
           <span className="invisible" role="heading">
             design
           </span>
         </span>
+        <span className="pr-4 bg-gradient-to-r from-transparent to-indigo3 " style={{ gridArea: "1/1/-1/-1" }}>
+          <span className="invisible" role="heading">
+            design
+          </span>
+        </span>
+        <span
+          className="pr-4 c-transparent bg-clip-text bg-gradient-to-r from-slate7 to-slate12 "
+          style={{ gridArea: "1/1/-1/-1" }}
+        >
+          design
+        </span>
       </span>
-      <span className="absolute right-0 bottom-0  leading-1 translate-x-55% translate-y-55% w-0.6em h-0.6em c-blue12A ">
+
+      <span className="absolute right-0 bottom-0  leading-1 translate-x-55% translate-y-55% w-0.6em h-0.6em c-blue12A  ">
         <PointerSVG />
       </span>
     </span>
@@ -107,13 +124,25 @@ function PointerSVG() {
 
 function DevelopeWord() {
   return (
-    <span className="bg-gradient-to-r from-transparent via-cyan2A to-cyan2A pt3 pb-2">
-      <span className="tracking-tight  ">
-        <span className="font-mono c-sage12A ">develop</span>
-        <span className="bg-mint3A  pt-3 pb-2 relative">
-          <span className="font-mono c-mint12">e</span>
-          <span className="absolute bottom-0 left-0 right-0 h-0.14em cursor-pulse c-mint12"></span>
-        </span>
+    <span className="tracking-tighter relative leading-15 " style={{ fontSize: "1.1em" }}>
+      <span
+        className=" c-sage12A bg-gradient-to-r from-transparent via-cyan2A to-cyan2A inline-block "
+        style={{
+          paddingTop: "0.4rem",
+          paddingBottom: "1rem",
+        }}
+      >
+        <span className="font-mono pr-1 ">develop</span>
+      </span>
+      <span
+        className="bg-mint3A relative pr-0.5  inline-block"
+        style={{
+          paddingTop: "0.4rem",
+          paddingBottom: "1rem",
+        }}
+      >
+        <span className=" c-mint12  font-mono inline-block">e</span>
+        <span className="absolute bottom-0 left-0 right-0 h-0.16em cursor-pulse c-mint12"></span>
       </span>
     </span>
   );
