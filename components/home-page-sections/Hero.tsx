@@ -3,11 +3,11 @@ import Image from "next/image";
 import Space from "../ui/Space";
 import DesktopOnly from "../ui/DesktopOnly";
 import MobileOnly from "../ui/MobileOnly";
+import GradientMask from "../ui/GradientMask";
 
 export default function Hero() {
   return (
-    <div className='relative isolate'>
-
+    <div className="">
       <DesktopHero />
     </div>
   );
@@ -16,21 +16,22 @@ export default function Hero() {
 function DesktopHero() {
   return (
     <section className="relative ">
-      <div className='absolute top-2 left-50% -translate-x-50% w-full overflow-clip'>
-        <DotGrid rows={24} cols={24}  />
+      <div className="absolute top-2 left-50% -translate-x-50% w-full overflow-clip">
+        <DotGrid rows={24} cols={24} />
       </div>
+
       <BluredCircle radius={200} top="20%" left="85%" bg="bg-cyan2" blur="200px" />
       <BluredCircle radius={200} top="60%" left="5%" bg="bg-indigo2" blur="200px" />
       <div className="max-w-page mx-auto">
         <div>
           <Space size="h-6 sm:h-20" />
           <div className="flex justify-center">
-            <div className="flex flex-row gap-3 sm:gap-8 items-center w-fit     ">
+            <div className="flex flex-row gap-3 sm:gap-6 items-center w-fit     ">
               <Image
                 src="/profile-picture.png"
                 width={200}
                 height={200}
-                className={`object-cover w-15 h-15 rd-full bg-sand3 `}
+                className={`object-cover w-15 h-15 rd-full bg-gradient-to-br from-blue2 to-green2  shadow-2xl z-10`}
                 alt=""
                 priority
               ></Image>
@@ -47,20 +48,25 @@ function DesktopHero() {
 
 function HeroSentence() {
   return (
-    <p className="font-display fs-4xl sm:fs-6xl text-center lt-xs:line-height-1.3">
-      <span className="block">
-        <IWord />
-        {` `}
-        <DesignWord />
-        {` `}
-        <span className="whitespace-nowrap">
-          <AndWord />
+    <div className="relative  ">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-full overflow-clip ">
+        <Circles />
+      </div>
+      <p className="font-display fs-4xl sm:fs-6xl text-center lt-xs:line-height-1.3">
+        <span className="block">
+          <IWord />
           {` `}
-          <DevelopeWord />
+          <DesignWord />
+          {` `}
+          <span className="whitespace-nowrap">
+            <AndWord />
+            {` `}
+            <DevelopeWord />
+          </span>
         </span>
-      </span>
-      <WebApplicationsWord />
-    </p>
+        <WebApplicationsWord />
+      </p>
+    </div>
   );
 }
 
@@ -234,20 +240,69 @@ function WebApplicationsWord() {
 //   return <div className="p-4 rd-4 shadow-lg bg-sand3 w-fit">{children}</div>;
 // }
 
+function DotGrid({ rows, cols }) {
+  return (
+    <div
+      className="grid aspect-ratio-1/1  justify-items-center fade-y w-full min-w-50rem"
+      style={{
+        gridTemplateColumns: `repeat(${cols} , 1fr)`,
+        gridTemplateRows: `repeat(${rows} , 1fr)`,
+        maskImage: "linear-gradient(to bottom, transparent 0%, black 20%, black 40%, transparent 60%)",
+        WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 20%, black 40%, transparent 60%)",
+      }}
+    >
+      {Array.from(Array(rows * cols).keys()).map((i) => {
+        return <div className={`rd-full bg-white/10 w-1 h-1 `}></div>;
+      })}
+    </div>
+  );
+}
 
-function DotGrid({ rows , cols}){
-
-return (
-  <div  className='grid aspect-ratio-1/1  justify-items-center fade-y w-full min-w-50rem' style={{
-    gridTemplateColumns: `repeat(${cols} , 1fr)`,
-    gridTemplateRows: `repeat(${rows} , 1fr)`,
-    maskImage: "linear-gradient(to bottom, transparent 0%, black 20%, black 40%, transparent 60%)",
-    WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 20%, black 40%, transparent 60%)",
-  }}>
-    {Array.from(Array(rows * cols).keys()).map(i => {
-      return (
-        <div className={`rd-full bg-white/10 w-1 h-1 `} ></div>
-      )
-    })}
-  </div>
-)};
+function Circles() {
+  return (
+    <div className="grid items-center justify-items-center -rotate-30 ">
+      <div className="" style={{ gridArea: "1/1/-1/-1" }}>
+        <GradientMask
+          direction="to bottom"
+          transparencyStops={[
+            [0, 100],
+            [20, 50],
+            [70, 0],
+            [90, 50],
+            [100, 10],
+          ]}
+        >
+          <div className="b-1 b-white/10 rd-full w-90 h-90  sm:w-100 sm:h-100  md:w-120 md:h-120"></div>
+        </GradientMask>
+      </div>
+      <div className="" style={{ gridArea: "1/1/-1/-1" }}>
+        <GradientMask
+          direction="to bottom"
+          transparencyStops={[
+            [0, 100],
+            [30, 50],
+            [70, 0],
+            [90, 60],
+            [100, 10],
+          ]}
+        >
+          <div className="b-1 b-white/10 rd-full w-60 h-60  sm:w-70 sm:h-70  md:w-90 md:h-90"></div>
+        </GradientMask>
+      </div>
+      <div className="" style={{ gridArea: "1/1/-1/-1" }}>
+        <GradientMask
+          direction="to bottom"
+          transparencyStops={[
+            [0, 100],
+            [30, 50],
+            [50, 0],
+            [80, 70],
+            [100, 10],
+          ]}
+        >
+          <div className="b-1 b-white/10 rd-full w-30 h-30 sm:w-40 sm:h-40 md:w-60 md:h-60"></div>
+        </GradientMask>
+      </div>
+    </div>
+  );
+}
