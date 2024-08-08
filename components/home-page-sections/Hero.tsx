@@ -65,9 +65,11 @@ function HeroSentence() {
          md:text-center 
          `}
       >
-        <IWord />
-        {` `}
-        <DesignWord />
+        <span className="whitespace-nowrap">
+          <IWord />
+          {` `}
+          <DesignWord />
+        </span>
         {` `}
         <AndWord />
         {` `}
@@ -85,7 +87,7 @@ function IWord() {
 function DesignWord() {
   return (
     <span className="relative">
-      <span className="inline-grid  ">
+      <span className="inline-grid ">
         <span className="pr-4 dashed-border-box  fade-to-l" style={{ gridArea: "1/1/-1/-1" }}>
           <span className="invisible" role="heading">
             design
@@ -124,29 +126,45 @@ function PointerSVG() {
 
 function DevelopeWord() {
   return (
-    <span className="tracking-tighter relative leading-15 " style={{ fontSize: "1.1em" }}>
-      <span
-        className=" c-sage12A bg-gradient-to-r from-transparent via-cyan2A to-cyan2A inline-block "
-        style={{
-          paddingTop: "0.4rem",
-          paddingBottom: "1rem",
-        }}
-      >
-        <span className="font-mono pr-1 ">develop</span>
+    <span style={{ fontSize: "1.1em" }}>
+      <span className="lt-md:leading-15 bg-gradient-to-r from-transparent via-cyan2A to-cyan2A pt-3 pb-2">
+        <span className="tracking-tight font-mono c-transparent bg-gradient-to-r from-sage9 to-sage12A bg-clip-text">
+          develop
+        </span>
       </span>
-      <span
-        className="bg-mint3A relative pr-0.5  inline-block"
-        style={{
-          paddingTop: "0.4rem",
-          paddingBottom: "1rem",
-        }}
-      >
-        <span className=" c-mint12  font-mono inline-block">e</span>
-        <span className="absolute bottom-0 left-0 right-0 h-0.16em cursor-pulse c-mint12"></span>
+      <span className="lt-md:leading-15 bg-mint3A  pt-3 pb-2 relative">
+        <span className="font-mono c-mint12 ">e</span>
+        <span className="absolute bottom-0 left-0 right-0 h-0.14em cursor-pulse c-mint12"></span>
       </span>
     </span>
   );
 }
+
+// function DevelopeWord() {
+//   return (
+//     <span className="tracking-tighter relative " style={{ fontSize: "1.1em" , lineHeight: '0.2em' }}>
+//       <span
+//         className=" c-sage12A bg-gradient-to-r from-transparent via-cyan2A to-cyan2A inline-block "
+//         style={{
+//           paddingTop: "0.4em",
+//           paddingBottom: "1em",
+//         }}
+//       >
+//         <span className="font-mono pr-1 bg-clip-text bg-gradient-to-r from-slate8 to-slate12 c-transparent ">develop</span>
+//       </span>
+//       <span
+//         className="bg-mint3A relative pr-0.5  inline-block"
+//         style={{
+//           paddingTop: "0.4em",
+//           paddingBottom: "1em",
+//         }}
+//       >
+//         <span className=" c-mint12  font-mono inline-block">e</span>
+//         <span className="absolute bottom-0 left-0 right-0 h-0.2em cursor-pulse c-mint12"></span>
+//       </span>
+//     </span>
+//   );
+// }
 
 function AndWord() {
   return <span className="blur-1 c-base10">and</span>;
