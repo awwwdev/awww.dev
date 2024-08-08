@@ -3,7 +3,7 @@ import Image from "next/image";
 import Space from "../ui/Space";
 import DesktopOnly from "../ui/DesktopOnly";
 import MobileOnly from "../ui/MobileOnly";
-import GradientMask from "../ui/GradientMask";
+import { gradientMask } from "../ui/GradientMask";
 
 export default function Hero() {
   return (
@@ -26,7 +26,7 @@ function DesktopHero() {
         <div>
           <Space size="h-6 sm:h-20" />
           <Greeting />
-          <Space size="h-20" />
+          <Space size="h-6 md:h-20" />
           <HeroSentence />
         </div>
       </div>
@@ -54,14 +54,19 @@ function Greeting() {
 
 function HeroSentence() {
   return (
-    <div className="relative  ">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-full overflow-clip ">
+    <div className="relative ">
+      <div
+        className={`absolute top-1/2 -translate-y-1/2  
+        md:left-1/2 -translate-x-1/2 
+        lt-md:left-0
+         `}
+      >
         <Circles />
       </div>
       <p
         className={`
          lt-md:grid justify-start justify-items-start items-start content-center
-         font-display fs-4xl sm:fs-6xl 
+         font-display fs-5xl sm:fs-6xl 
          md:text-center 
          `}
       >
@@ -86,27 +91,27 @@ function IWord() {
 
 function DesignWord() {
   return (
-    <span className="relative">
+    <span className="relative leading-20">
       <span className="inline-grid ">
-        <span className="pr-4 dashed-border-box  fade-to-l" style={{ gridArea: "1/1/-1/-1" }}>
+        <span className="pr-4 dashed-border-box  fade-to-l select-none" style={{ gridArea: "1/1/-1/-1" }}>
           <span className="invisible" role="heading">
             design
           </span>
         </span>
-        <span className="pr-4 bg-gradient-to-r from-transparent to-indigo3 " style={{ gridArea: "1/1/-1/-1" }}>
-          <span className="invisible" role="heading">
+        <span className="pr-4 bg-gradient-to-r from-transparent to-indigo3 select-none " style={{ gridArea: "1/1/-1/-1" }}>
+          <span className="invisible " role="heading">
             design
           </span>
         </span>
         <span
-          className="pr-4 c-transparent bg-clip-text bg-gradient-to-r from-slate7 to-slate12 "
+          className="pr-4 c-transparent bg-clip-text bg-gradient-to-r from-slate9 to-slate12 "
           style={{ gridArea: "1/1/-1/-1" }}
         >
           design
         </span>
       </span>
 
-      <span className="absolute right-0 bottom-0  leading-1 translate-x-55% translate-y-55% w-0.6em h-0.6em c-blue12A  ">
+      <span role='none' className="absolute right-0 bottom-0  leading-1 translate-x-55% translate-y-55% w-0.6em h-0.6em c-blue12A  ">
         <PointerSVG />
       </span>
     </span>
@@ -132,7 +137,7 @@ function DevelopeWord() {
           develop
         </span>
       </span>
-      <span className="lt-md:leading-15 bg-mint3A  pt-3 pb-2 relative">
+      <span className="lt-md:leading-15 bg-mint3A pt-3 pb-2 relative">
         <span className="font-mono c-mint12 ">e</span>
         <span className="absolute bottom-0 left-0 right-0 h-0.14em cursor-pulse c-mint12"></span>
       </span>
@@ -140,31 +145,6 @@ function DevelopeWord() {
   );
 }
 
-// function DevelopeWord() {
-//   return (
-//     <span className="tracking-tighter relative " style={{ fontSize: "1.1em" , lineHeight: '0.2em' }}>
-//       <span
-//         className=" c-sage12A bg-gradient-to-r from-transparent via-cyan2A to-cyan2A inline-block "
-//         style={{
-//           paddingTop: "0.4em",
-//           paddingBottom: "1em",
-//         }}
-//       >
-//         <span className="font-mono pr-1 bg-clip-text bg-gradient-to-r from-slate8 to-slate12 c-transparent ">develop</span>
-//       </span>
-//       <span
-//         className="bg-mint3A relative pr-0.5  inline-block"
-//         style={{
-//           paddingTop: "0.4em",
-//           paddingBottom: "1em",
-//         }}
-//       >
-//         <span className=" c-mint12  font-mono inline-block">e</span>
-//         <span className="absolute bottom-0 left-0 right-0 h-0.2em cursor-pulse c-mint12"></span>
-//       </span>
-//     </span>
-//   );
-// }
 
 function AndWord() {
   return <span className="blur-1 c-base10">and</span>;
@@ -177,28 +157,38 @@ function WebApplicationsWord() {
       <span className="grid">
         <span className="stroke-text c-transparent fade-to-r  " style={{ gridArea: "1/1/-1/-1" }}>
           web{` `}
-          <DesktopOnly>applications.</DesktopOnly>
-          <MobileOnly>apps.</MobileOnly>
+         <ApplicationWord />
         </span>
-        <span role="none" className=" c-base11  fade-to-l" style={{ gridArea: "1/1/-1/-1" }}>
+        <span role="none" className=" c-base10  fade-to-l select-none" style={{ gridArea: "1/1/-1/-1" }}>
           web{` `}
-          <DesktopOnly>applications.</DesktopOnly>
-          <MobileOnly>apps.</MobileOnly>
+         <ApplicationWord />
         </span>
 
         <span
           role="none"
-          className=" stroke-text c-transparent fade-to-l"
+          className=" stroke-text c-transparent fade-to-l select-none"
           style={{ "--stroke-color": "white", gridArea: "1/1/-1/-1" }}
         >
           web{` `}
-          <DesktopOnly>applications.</DesktopOnly>
-          <MobileOnly>apps.</MobileOnly>
+          <ApplicationWord />
         </span>
       </span>
     </span>
   );
 }
+
+function ApplicationWord(){
+
+return (
+  <>
+  <span className='lt-xxs:display-none' >
+applications
+  </span>
+  <span className='xxs:display-none'>
+    apps
+  </span>
+  </>
+)};
 
 // function TogglePlate() {
 //   return (
@@ -307,48 +297,57 @@ function DotGrid({ rows, cols }) {
 
 function Circles() {
   return (
-    <div className="grid items-center justify-items-center -rotate-30 ">
+    <div className=" grid items-center justify-items-center md:-rotate-30 ">
       <div className="" style={{ gridArea: "1/1/-1/-1" }}>
-        <GradientMask
-          direction="to bottom"
-          transparencyStops={[
-            [0, 100],
-            [20, 50],
-            [70, 0],
-            [90, 50],
-            [100, 10],
-          ]}
-        >
-          <div className="b-1 b-white/10 rd-full w-90 h-90  sm:w-100 sm:h-100  md:w-120 md:h-120"></div>
-        </GradientMask>
+        <div
+          className="b-1 b-white/20 rd-full w-120 h-120   md:w-120 md:h-120"
+          style={{
+            ...gradientMask({
+              direction: "to bottom",
+              transparencyStops: [
+                [0, 100],
+                [20, 50],
+                [70, 0],
+                [90, 50],
+                [100, 10],
+              ],
+            }),
+          }}
+        ></div>
       </div>
       <div className="" style={{ gridArea: "1/1/-1/-1" }}>
-        <GradientMask
-          direction="to bottom"
-          transparencyStops={[
-            [0, 100],
-            [30, 50],
-            [70, 0],
-            [90, 60],
-            [100, 10],
-          ]}
-        >
-          <div className="b-1 b-white/10 rd-full w-60 h-60  sm:w-70 sm:h-70  md:w-90 md:h-90"></div>
-        </GradientMask>
+        <div
+          className="b-1 b-white/20 rd-full    w-90 h-90"
+          style={{
+            ...gradientMask({
+              direction: "to bottom",
+              transparencyStops: [
+                [0, 100],
+                [30, 50],
+                [70, 0],
+                [90, 60],
+                [100, 10],
+              ],
+            }),
+          }}
+        ></div>
       </div>
       <div className="" style={{ gridArea: "1/1/-1/-1" }}>
-        <GradientMask
-          direction="to bottom"
-          transparencyStops={[
-            [0, 100],
-            [30, 50],
-            [50, 0],
-            [80, 70],
-            [100, 10],
-          ]}
-        >
-          <div className="b-1 b-white/10 rd-full w-30 h-30 sm:w-40 sm:h-40 md:w-60 md:h-60"></div>
-        </GradientMask>
+        <div
+          className="b-1 b-white/20 rd-full w-60 h-60 md:w-60 md:h-60"
+          style={{
+            ...gradientMask({
+              direction: "to bottom",
+              transparencyStops: [
+                [0, 100],
+                [30, 50],
+                [50, 0],
+                [80, 70],
+                [100, 10],
+              ],
+            }),
+          }}
+        ></div>
       </div>
     </div>
   );

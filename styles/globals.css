@@ -472,7 +472,7 @@ p a,
 
 
 .dashed-border-box {
-  --border-color: var(--rx-blue11);
+  --border-color: var(--rx-cyan8A);
   background-image: repeating-linear-gradient(
       0deg,
       var(--border-color),
