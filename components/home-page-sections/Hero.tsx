@@ -289,7 +289,7 @@ function DotGrid({ rows, cols }) {
       }}
     >
       {Array.from(Array(rows * cols).keys()).map((i) => {
-        return <div className={`rd-full bg-white/10 w-1 h-1 `}></div>;
+        return <div key={`dot-${i}`} className={`rd-full bg-white/10 w-1 h-1 `}></div>;
       })}
     </div>
   );
