@@ -139,7 +139,7 @@ function DevelopeWord() {
   return (
     <span style={{ fontSize: "1.1em" }} className='tracking-tighter'>
       <span className="lt-md:leading-15 bg-gradient-to-r from-transparent via-cyan2A to-cyan2A pt-3 pb-2">
-        <span className=" font-mono c-transparent bg-gradient-to-r from-base9 to-sage12A bg-clip-text">
+        <span className=" font-mono c-transparent bg-gradient-to-r from-base9 via-base11A to-sage12A bg-clip-text">
           develop
         </span>
       </span>
