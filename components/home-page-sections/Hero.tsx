@@ -98,7 +98,10 @@ function DesignWord() {
             design
           </span>
         </span>
-        <span className="pr-4 bg-gradient-to-r from-transparent to-indigo3 select-none " style={{ gridArea: "1/1/-1/-1" }}>
+        <span
+          className="pr-4 bg-gradient-to-r from-transparent to-indigo3 select-none "
+          style={{ gridArea: "1/1/-1/-1" }}
+        >
           <span className="invisible " role="heading">
             design
           </span>
@@ -111,7 +114,10 @@ function DesignWord() {
         </span>
       </span>
 
-      <span role='none' className="absolute right-0 bottom-0  leading-1 translate-x-55% translate-y-55% w-0.6em h-0.6em c-blue12A  ">
+      <span
+        role="none"
+        className="absolute right-0 bottom-0  leading-1 translate-x-55% translate-y-55% w-0.6em h-0.6em c-blue12A  "
+      >
         <PointerSVG />
       </span>
     </span>
@@ -131,9 +137,9 @@ function PointerSVG() {
 
 function DevelopeWord() {
   return (
-    <span style={{ fontSize: "1.1em" }}>
+    <span style={{ fontSize: "1.1em" }} className='tracking-tighter'>
       <span className="lt-md:leading-15 bg-gradient-to-r from-transparent via-cyan2A to-cyan2A pt-3 pb-2">
-        <span className="tracking-tight font-mono c-transparent bg-gradient-to-r from-sage9 to-sage12A bg-clip-text">
+        <span className=" font-mono c-transparent bg-gradient-to-r from-base9 to-sage12A bg-clip-text">
           develop
         </span>
       </span>
@@ -145,7 +151,6 @@ function DevelopeWord() {
   );
 }
 
-
 function AndWord() {
   return <span className="blur-1 c-base10">and</span>;
 }
@@ -155,19 +160,40 @@ function WebApplicationsWord() {
     <span className="relative  ">
       <span className="sr-only">web applications</span>
       <span className="grid">
-        <span className="stroke-text c-transparent fade-to-r  " style={{ gridArea: "1/1/-1/-1" }}>
+        <span
+          className="stroke-text c-transparent "
+          style={{
+            gridArea: "1/1/-1/-1",
+            WebkitTextStrokeWidth: "1px",
+            WebkitTextStrokeColor: "var(--stroke-color, var(--rx-slate11A))",
+            ...gradientMask({
+              direction: "to right",
+              transparencyStops: [
+                [0, 100],
+                [55, 50],
+                [90, 0],
+              ],
+            }),
+          }}
+        >
           web{` `}
-         <ApplicationWord />
+          <ApplicationWord />
         </span>
-        <span role="none" className=" c-base10  fade-to-l select-none" style={{ gridArea: "1/1/-1/-1" }}>
-          web{` `}
-         <ApplicationWord />
-        </span>
-
         <span
           role="none"
-          className=" stroke-text c-transparent fade-to-l select-none"
-          style={{ "--stroke-color": "white", gridArea: "1/1/-1/-1" }}
+          className=" c-base12   select-none"
+          style={{
+            gridArea: "1/1/-1/-1",
+            ...gradientMask({
+              direction: "to right",
+              transparencyStops: [
+                [20, 0],
+                [40, 10],
+                [55, 40],
+                [85, 100],
+              ],
+            }),
+          }}
         >
           web{` `}
           <ApplicationWord />
@@ -177,18 +203,14 @@ function WebApplicationsWord() {
   );
 }
 
-function ApplicationWord(){
-
-return (
-  <>
-  <span className='lt-xxs:display-none' >
-applications
-  </span>
-  <span className='xxs:display-none'>
-    apps
-  </span>
-  </>
-)};
+function ApplicationWord() {
+  return (
+    <>
+      <span className="lt-xxs:display-none">applications</span>
+      <span className="xxs:display-none">apps</span>
+    </>
+  );
+}
 
 // function TogglePlate() {
 //   return (
