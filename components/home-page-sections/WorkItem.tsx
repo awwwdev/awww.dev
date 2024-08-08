@@ -80,8 +80,6 @@ function WorkItemCard({ title, imgSrc, subtitle, gradient, titleColor, borderCol
 
 function WorkItemModalContent({
   title,
-  gridRow,
-  gridColumn,
   imgSrc,
   description,
   subtitle,
@@ -101,11 +99,6 @@ function WorkItemModalContent({
 
       <div className="flex justify-center">
         <div className=" relative isolate">
-          <img
-            src={imgSrc}
-            alt=""
-            className="min-w-0 rd-3 shadow-xl object-cover absolute top-0 left-0 right-0 bottom-0 blur-15 opacity-50 -z-10"
-          />
           <img src={imgSrc} alt="" className="min-w-0 rd-3 shadow-xl object-cover" />
         </div>
       </div>
