@@ -12,7 +12,7 @@ export default function ContactMe() {
       <div className="mx-auto max-w-page  ">
         <div className="max-w-page mx-auto b-base5">
           <h2 className="H1" id="contact">
-            Contact
+            Contact Me
           </h2>
           <Space size="h-4" />
           <p className="c-sand11">Let&apos;s get in touch</p>

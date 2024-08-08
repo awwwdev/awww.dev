@@ -161,7 +161,7 @@ function PublicWebsiteNav({setIsSideMenuOpen}) {
           setIsSideMenuOpen(false);
         }}
       >
-        Contact
+        Contact Me
       </NavLink>
     </>
   );
