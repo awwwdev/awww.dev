@@ -106,7 +106,7 @@ export default function Works({ posts }) {
             >
               <a href="/#contact" className="block h-full p-3 xs:p-6">
                 <div className="flex flex-col h-full">
-                  <p>Let&apos;s make antoher successfull story</p>
+                  <p className='fs-xl fw-500'>Let&apos;s make antoher successfull story</p>
                   <div className="mt-auto flex justify-end">
                     <Icon name="bf-i-ph-arrow-right" />
                   </div>
