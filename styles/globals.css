@@ -12,12 +12,13 @@ body {
   --line-height: 1.5em;
   line-height: 1.5;
 
-  --font-display: nohemi, geist, inter, "sans-serif", -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  --font-content: geist, "Roboto", "sans-serif", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  --font-display: nohemi, geist, inter, "sans-serif", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-content: geist, "Roboto", "sans-serif", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-  --font-mono: SpaceMono, "JetBrainsMono", "Roboto", IRANSans, "sans-serif", -apple-system, BlinkMacSystemFont,  Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-mono: SpaceMono, "JetBrainsMono", "Roboto", IRANSans, "sans-serif", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .H1,
@@ -392,7 +393,6 @@ p a,
   transition: --fade-to-opacity 1s ease;
 }
 
-
 @property --fade-to-opacity {
   syntax: "<number>"; /* <- defined as type number for the transition to work */
   initial-value: 0;
@@ -445,7 +445,7 @@ p a,
   --grid-width: var(--max-w-page);
 }
 
-@media screen and (max-width: 399.9px) {
+@media screen and (max-width: 419.9px) {
   .toolkit__grid {
     grid-template-columns: repeat(4, 0.22 * var(--grid-width));
     grid-auto-rows: calc(0.22 * var(--grid-width));
@@ -457,7 +457,7 @@ p a,
     border-radius: calc(0.04 * var(--grid-width));
   }
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 420px) {
   .toolkit__grid {
     grid-template-columns: repeat(8, 1fr);
     gap: calc(0.02 * var(--grid-width));
@@ -467,9 +467,7 @@ p a,
   .toolkit__grid-item {
     border-radius: calc(0.02 * var(--grid-width));
   }
-  
 }
-
 
 .dashed-border-box {
   --border-color: var(--rx-cyan8A);
@@ -540,15 +538,11 @@ p a,
   }
 }
 
-
 .stroke-text {
   /* -webkit-text-fill-color: white; Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--stroke-color, #777b84);
-
 }
-
-
 
 .fade-to-r {
   --fade-to-opacity: 100%;
@@ -564,8 +558,7 @@ p a,
   transition: --fade-to-opacity 1s ease;
 }
 
-
-
 .subtle-glow {
-  background: inset 0 1px 1px 0 hsla(0,0%,100%,.1),0 2px 40px 10px rgba(154,170,255,.05),0 0 16px -7px rgba(154,170,255,.05);
+  background: inset 0 1px 1px 0 hsla(0, 0%, 100%, 0.1), 0 2px 40px 10px rgba(154, 170, 255, 0.05),
+    0 0 16px -7px rgba(154, 170, 255, 0.05);
 }
