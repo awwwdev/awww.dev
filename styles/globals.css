@@ -520,17 +520,17 @@ p a,
 
 .cursor-pulse {
   --cursor-color: currentColor;
-  animation: cursorPulse 1s infinite linear;
+  animation: cursorPulse 1.3s infinite linear ;
 }
 
 @keyframes cursorPulse {
   0% {
     background-color: var(--cursor-color);
   }
-  60% {
+  50% {
     background-color: var(--cursor-color);
   }
-  65% {
+  55% {
     background-color: transparent;
   }
   100% {

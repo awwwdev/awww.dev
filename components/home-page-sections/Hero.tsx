@@ -206,8 +206,8 @@ function WebApplicationsWord() {
 function ApplicationWord() {
   return (
     <>
-      <span className="lt-xxs:display-none">applications</span>
-      <span className="xxs:display-none">apps</span>
+      <span className="lt-xxs:display-none">applications.</span>
+      <span className="xxs:display-none">apps.</span>
     </>
   );
 }
