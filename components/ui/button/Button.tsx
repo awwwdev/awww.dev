@@ -29,8 +29,8 @@ const parts = {
       accent: "hover:bg-accent4 active:bg-accent4A",
     },
     soft: {
-      gray: "bg-sand4 hover:bg-sand4A active:bg-sand5A",
-      accent: "bg-accent4 hover:bg-accent4A active:bg-accent5A",
+      gray: "bg-sand4 hover:bg-sand5 active:bg-sand5",
+      accent: "bg-accent4 hover:bg-accent4 active:bg-accent5",
     },
     solid: {
       gray: "bg-black12A hover:bg-black12A/60  active:bg-black12A/30 ",
@@ -110,6 +110,7 @@ const Button = forwardRef<Ref, AllProps>(function Button(
         {children}
         {suffix}
         </span>
+        {/* consider using grid overlapping. putting relative on button will interfer with absolute positioning it. */}
       {isLoading && (
         <Icon name='bf-i-svg-spinners:ring-resize' subdued={false}  className="   z-10  absolute top-50% left-50% -translate-x-50% -translate-y-50%" />
       )}

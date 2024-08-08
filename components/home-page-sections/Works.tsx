@@ -19,7 +19,7 @@ export default function Works({ posts }) {
             subtitle="A platform for finding online tutors"
             gridRow="xs:g-row-1/3"
             gridColumn="xs:g-col-1/2"
-            imgSrc="/works/darsoon.png"
+            imgSrcs={["/works/darsoon.png"]}
             categories={["UI Design", "Front End", "Back End"]}
             relatedBlogPost={posts.find((p) => p.id === "darsoon")}
             tools={["NextJS", "React", "TypeScript", "Server Components", "Tailwind CSS"]}
@@ -31,7 +31,7 @@ export default function Works({ posts }) {
             subtitle="An Online Casino for Gamers Community"
             gridRow="xs:g-row-3/5"
             gridColumn="xs:g-col-1/2"
-            imgSrc="/works/jackshouse.png"
+            imgSrcs={["/works/jackshouse.png"]}
             tools={["NextJs", "React", "UnoCSS"]}
             gradient=" from-[#303A47] via-sky1A"
             // borderColor='b-sky4'
@@ -41,12 +41,11 @@ export default function Works({ posts }) {
             subtitle="An NFT Marketplace"
             gridRow="xs:g-row-5/7"
             gridColumn="xs:g-col-1/2"
-            imgSrc="/works/dbilia.png"
             categories={["UI Design", "Front End"]}
             relatedBlogPost={posts.find((p) => p.id === "dbilia")}
             tools={["NextJs", "React", "T3-Stack", "Prisma"]}
             gradient="from-[#3E705E] via-[#0C140E]/10"
-            imgSrcs={["/works/dbilia-2.png", "/works/dbilia-3.png", "/works/dbilia-4.png"]}
+            imgSrcs={["/works/dbilia.png" ,"/works/dbilia-2.png", "/works/dbilia-3.png", "/works/dbilia-4.png"]}
             // titleColor='c-pink12'
             // borderColor='b-violet4'
           />
@@ -57,7 +56,7 @@ export default function Works({ posts }) {
             subtitle="Business Website for Momenta Web3 Agency"
             gridRow="xs:g-row-1/4"
             gridColumn="xs:g-col-2/3"
-            imgSrc="/works/momenta.png"
+            imgSrcs={["/works/momenta.png"]}
             categories={["UI Design", "Front End"]}
             relatedBlogPost={posts.find((p) => p.id === "momenta")}
             tools={["NextJs", "React", "Framer Motion", ""]}
@@ -70,7 +69,7 @@ export default function Works({ posts }) {
             subtitle="An NFT Project"
             gridRow="xs:g-row-4/6"
             gridColumn="xs:g-col-2/3"
-            imgSrc="/works/numbers-for-things.png"
+            imgSrcs={["/works/numbers-for-things.png"]}
             tools={["NextJs", "React", "MetaMask"]}
             categories={["UI Design", "Front End", "Back End"]}
             gradient="from-[#151515] via-base3"
@@ -82,7 +81,7 @@ export default function Works({ posts }) {
             subtitle="A platform selling Music Videos with NFT"
             gridRow="xs:g-row-6/9"
             gridColumn="xs:g-col-2/3"
-            imgSrc="/works/dbilia-premier.png"
+            imgSrcs={["/works/dbilia-premier.png"]}
             tools={["NextJs", "React", "Prisma", "T3 Stack", "PostgreSQL"]}
             categories={["UI Design", "Front End"]}
             gradient="from-[#934D37] via-[#934D37]/20"

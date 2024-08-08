@@ -29,7 +29,7 @@ stackLogos:
 <!-- <a class="af-i-ph-arrow-right" href="https://dbilia.com" target="_blank">Visit DBILIA here</a> -->
 <br/>
 
-<img alt="redesign" src="/dbilia/redesign1.png" class="rd-xl" />
+<img alt="redesign" src="/dbilia/redesign1.png" class="rd-xl" ></img>
 
 This project was challenging, especially right after graduating from my boot camp. But definitely empowered my refactoring
 muscles and proved how a well-refactored code base can easily be changed to meet new requirements.
@@ -41,7 +41,7 @@ The project was just approved as an MVP when I joined the team. The MVP code was
 My task was to find any bug or inconsistency in the UI and fix it. I found many bugs listed in the Trello board and started tackling them individually.
 
 <figure>
-  <video src="/dbilia/trello-bugs.mp4" autoplay="" playsinline="" muted="" class="rd-xl" />
+  <video src="/dbilia/trello-bugs.mp4" autoplay="" playsinline="" muted="" class="rd-xl" ></video>
 </figure>
 
 After a while, tracking down a simple bug could take a day. So I started refactoring.
@@ -99,7 +99,7 @@ valeus of CSS Variables
 styles in the components
 a walk through each page, changing layouts, and polishing the styles.
 
-<img alt="redesign" src="/dbilia/redesign2.png" class="rd-xl" />
+<img alt="redesign" src="/dbilia/redesign2.png" class="rd-xl" ></img>
 
 Later I added more complex responsiveness. While the tour is still working without a problem. Here is the result:
 
@@ -119,7 +119,7 @@ class="rd-xl"
 I did some, or maybe a fair amount of Graphic Design. Although, It was not part of my job description, but when my supervisoer apprached me first before he search for a freelance Designer, I liked to do some designing after a while coding. So, we created a bunch cool visuals for DBILIA in diffenrt stages of the project. One I really like is the logo that I redesigned.
 
 <div class="p-4 py-32 rd-xl  flex ac jc " style="min-heihgt: 15rem, background: linear-gradient(90deg , #333 , #111)">
-  <img src="/dbilia/logo.png" alt="redesigned DBILIA logo" class="" style="max-width: 15rem" />
+  <img src="/dbilia/logo.png" alt="redesigned DBILIA logo" class="" style="max-width: 15rem" ></img>
 </div>
 
 <!-- I created some NFT collections for DBILIA. They turned out so cute!

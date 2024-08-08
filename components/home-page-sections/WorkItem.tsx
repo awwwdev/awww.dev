@@ -6,6 +6,7 @@ import Space from "../ui/Space";
 import Button from "../ui/button";
 import LinkButton from "../ui/button/LinkButton";
 import Icon from "../ui/Icon";
+import Gallery from '../ui/Gallery';
 
 export default function WorkItem({
   title,
@@ -13,7 +14,6 @@ export default function WorkItem({
   gridRow,
   gridColumn,
   className = "",
-  imgSrc,
   imgSrcs,
   subtitle,
   description,
@@ -28,17 +28,17 @@ export default function WorkItem({
       <Modal
         trigger={
           <button type="button" className="h-full w-full text-left ">
-            <WorkItemCard {...{ title, titleColor, subtitle, className, imgSrc, gradient, borderColor }} />
+            <WorkItemCard {...{ title, titleColor, subtitle, className, imgSrcs, gradient, borderColor }} />
           </button>
         }
       >
-        <WorkItemModalContent {...{ title, imgSrc, description, subtitle, relatedBlogPost, tools, imgSrcs }} />
+        <WorkItemModalContent {...{ title, description, subtitle, relatedBlogPost, tools, imgSrcs }} />
       </Modal>
     </li>
   );
 }
 
-function WorkItemCard({ title, imgSrc, subtitle, gradient, titleColor, borderColor }) {
+function WorkItemCard({ title, imgSrcs, subtitle, gradient, titleColor, borderColor }) {
   return (
     <div
       className={`h-full rd-3 bg-base1A grid overflow-clip b-t-1 b-l-1 b-r-1 sahdow-2xl bg-clip-padding ${
@@ -65,12 +65,12 @@ function WorkItemCard({ title, imgSrc, subtitle, gradient, titleColor, borderCol
         <div className="grid items-end pl-6  xs:pl-16 pt-3  ">
           <div className=" relative isolate">
             <img
-              src={imgSrc}
+              src={imgSrcs[0]}
               alt=""
               className="block min-w-0 rd-lt-3 shadow-xl object-cover absolute top-0 left-0 right-0 bottom-0 blur-15 opacity-50 -z-10"
             />
 
-            <img src={imgSrc} alt="" className="block min-w-0 rd-lt-3 shadow-xl object-cover fade-to-b" />
+            <img src={imgSrcs[0]} alt="" className="block min-w-0 rd-lt-3 shadow-xl object-cover fade-to-b" />
           </div>
         </div>
       </div>
@@ -96,27 +96,7 @@ function WorkItemModalContent({
       <p className="c-base11">{description}</p>
 
       <div className="h-6"></div>
-
-      <div className="flex justify-center">
-        <div className=" relative isolate">
-          <img src={imgSrc} alt="" className="min-w-0 rd-3 shadow-xl object-cover" />
-        </div>
-      </div>
-
-      {imgSrcs && imgSrcs.length > 0 && (
-        <>
-          <div className="h-6"></div>
-          <ul className="flex gap-3">
-            {imgSrcs.map((imgSrc, index) => {
-              return <img key={`image-work-${index}`} src={imgSrc} alt="" className="w-40 h-20 min-w-0 rd-3 shadow-xl object-cover" 
-              style={{
-                objectPosition:'top center'
-              }}
-              />
-            })}
-          </ul>
-        </>
-      )}
+      <Gallery images={imgSrcs.map(imgSrc => ({src: imgSrc , alt: ""}))} />
       {tools && tools.length > 0 && (
         <>
           <div className="h-6"></div>
@@ -174,3 +154,8 @@ function RelatedBlogPost({ post }: { post: Post }) {
     </div>
   );
 }
+
+
+
+
+

@@ -2,12 +2,13 @@ import { RNode } from '@/types';
 import * as RadixDialog from  '@radix-ui/react-dialog';
 
 
-export default function Modal({children , trigger,  title, isOpen , setOpen}: {
+export default function Modal({children , description, trigger,  title, isOpen , setOpen}: {
   isOpen?: boolean,
   setOpen?: (arg?: boolean) => void,
   children?: RNode,
   trigger: RNode,
   title?: RNode,
+  description: React.ReactNode,
 }){
 
 return (
@@ -25,8 +26,9 @@ return (
     >
       <RadixDialog.Title className="fw-700">{title}</RadixDialog.Title>
       <RadixDialog.Description className="mt-2 text-sm font-normal text-gray-700 dark:text-gray-400">
-      {children}
+        {description}
       </RadixDialog.Description>
+      {children}
     </RadixDialog.Content>
   </RadixDialog.Portal>
 </RadixDialog.Root>)};
