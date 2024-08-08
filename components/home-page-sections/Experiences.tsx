@@ -19,11 +19,13 @@ export default function Experiences() {
         </h2>
         <Space size="h-8" />
         <ul
-        role='list'
-          className="list-square list-disc-outside pt-4 pis-3 b-l-2 b-base5 b-dashed"
-          style={{
-            listStyleImage: 'url("square-list-item-marker.svg")',
-          }}
+          role="list"
+          className="list-none list-disc-outside pt-4  b-l-2 b-base5 b-dashed"
+          style={
+            {
+              // listStyleImage: 'url("square-list-item-marker.svg")',
+            }
+          }
         >
           <WorkExperience
             company="Darsoon"
@@ -163,38 +165,41 @@ export default function Experiences() {
 
 function WorkExperience({ title, start, end, startMobile, endMobile, company, children }) {
   return (
-    <li className="pis-2">
-      <h3 className="">
-        <div className="H5 line-height-0.8 tracking-wide">{company}</div>
-        <Space size='h-1' />
-        <div className="flex flex-wrap items-baseline  tracking-wide">
-          <div className="font-content  c-base11 whitespace-nowrap mie-2">{title}</div>
-          <DesktopOnly>
-            <div className="c-base11 fs-sm ">
-              {start} - {end}
-            </div>
-          </DesktopOnly>
-          <MobileOnly>
-            <div className="c-base11 fs-sm ">
-              {startMobile} - {endMobile}
-            </div>
-          </MobileOnly>
-        </div>
-      </h3>
+    <li className="-ml-1.75  flex gap-2">
+      <div className="w-3 h-3 bg-[#5a6169] rd-1 shrink-0 grow-0"></div>
+      <div className='pis-2'>
+        <h3 className="">
+          <div className="H5 line-height-0.8 tracking-wide">{company}</div>
+          <Space size="h-1" />
+          <div className="flex flex-wrap items-baseline  tracking-wide">
+            <div className="font-content  c-base11 whitespace-nowrap mie-2">{title}</div>
+            <DesktopOnly>
+              <div className="c-base11 fs-sm ">
+                {start} - {end}
+              </div>
+            </DesktopOnly>
+            <MobileOnly>
+              <div className="c-base11 fs-sm ">
+                {startMobile} - {endMobile}
+              </div>
+            </MobileOnly>
+          </div>
+        </h3>
 
-      <Space size="h-6" />
-      <ShowMore minHeight="3em">
-        <ul
-          className={`list-disc-outside  fs-sm space-y-0.5em `}
-          style={{
-            listStyleImage: 'url("circle-list-item-marker.svg")',
-          }}
-        >
-          {children}
-        </ul>
-      </ShowMore>
+        <Space size="h-6" />
+        <ShowMore minHeight="3em">
+          <ul
+            className={`list-disc-outside  fs-sm space-y-0.5em `}
+            style={{
+              listStyleImage: 'url("circle-list-item-marker.svg")',
+            }}
+          >
+            {children}
+          </ul>
+        </ShowMore>
 
-      <Space size="xs:h-2 h-8" />
+        <Space size="xs:h-2 h-8" />
+      </div>
     </li>
   );
 }
