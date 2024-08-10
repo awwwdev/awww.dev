@@ -41,8 +41,8 @@ export default function WorkItem({
 function WorkItemCard({ title, imgSrcs, subtitle, gradient, titleColor, borderColor }) {
   return (
     <div
-      className={`h-full rd-3 bg-base1A grid overflow-clip b-t-1 b-l-1 b-r-1 sahdow-2xl bg-clip-padding ${
-        borderColor ?? "b-base4A"
+      className={`h-full rd-3 bg-base1A grid overflow-clip b-t-1.5 b-l-1 b-r-1 b-b-0.5 b-t-base5 sahdow-2xl bg-clip-padding ${
+        borderColor ?? "b-base4"
       } `}
       style={{
         backgroundImage: "url('/static/noise.svg')",

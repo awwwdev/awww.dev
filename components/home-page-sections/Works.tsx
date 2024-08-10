@@ -89,25 +89,27 @@ export default function Works({ posts }) {
             // borderColor='b-tomato4'
           />
           <li
-            className=" rd-3  b-t-1 b-l-1 b-r-1 b-base4 sahdow-xl  bg-clip-padding xs:g-row-7/9 xs:g-col-1/2"
+            className=" rd-3  b-t-1.5 b-l-1 b-r-1 b-b-0.5 b-base4 b-t-base5 sahdow-xl  bg-clip-padding xs:g-row-7/9 xs:g-col-1/2"
             style={{
-              backgroundImage: "url('/static/noise.svg')",
+              // backgroundImage: "url('/static/noise.svg')",
               backgroundSize: "auto",
               backgroundRepeat: "repeat",
               backdropFilter: "blur(10px)",
             }}
           >
             <div
-              className="rd-3 h-full flex flex-col bg-gradient-to-b from-gray6A"
+              className="rd-3 h-full flex flex-col bg-gradient-to-b from-gray2A to-gray1A"
               style={{
                 // gridTemplateRows: "auto 1fr",
               }}
             >
               <a href="/#contact" className="block h-full p-3 xs:p-6">
                 <div className="flex flex-col h-full">
-                  <p className='fs-xl fw-500'>Let&apos;s make antoher successfull story</p>
+                  <p className='fs-xl c-base11'>Let&apos;s make antoher successfull story, together!</p>
                   <div className="mt-auto flex justify-end">
-                    <Icon name="bf-i-ph-arrow-right" />
+                    <div className="aspect-ratio-1/1 rd-full b-1 w-12 h-12 flex justify-center items-center b-base4 ">
+                    <Icon name="bf-i-ph-arrow-right"  className='c-base11'/>
+                    </div>
                   </div>
                 </div>
               </a>
