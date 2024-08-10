@@ -15,18 +15,18 @@ export default async function Page() {
   return (
     <div className="">
         <Hero />
-        <Space size="h-40 sm:h-50" />
+        <Space size="h-40 md:h-50" />
         <Works posts={posts} />
-        <Space size="h-40 sm:h-50" />
+        <Space size="h-40 md:h-50" />
         <Experiences />
-        <Space size="h-40 sm:h-40" />
+        <Space size="h-40 md:h-40" />
         <Tools />
         {/* <Process /> */}
-        <Space size="h-40 sm:h-40" />
+        <Space size="h-40 md:h-40" />
         <Blog posts={posts}/>
-        <Space size="h-40 sm:h-40" />
+        <Space size="h-40 md:h-40" />
         <AboutMe />
-        <Space size="h-40 sm:h-40" />
+        <Space size="h-40 md:h-40" />
         <ContactMe />
     </div>
   );

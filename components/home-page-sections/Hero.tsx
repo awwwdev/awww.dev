@@ -4,6 +4,7 @@ import Space from "../ui/Space";
 import DesktopOnly from "../ui/DesktopOnly";
 import MobileOnly from "../ui/MobileOnly";
 import { gradientMask } from "../ui/GradientMask";
+import MouseCursor from './MouseCursor';
 
 export default function Hero() {
   return (
@@ -114,26 +115,13 @@ function DesignWord() {
         </span>
       </span>
 
-      <span
-        role="none"
-        className="absolute right-0 bottom-0  leading-1 translate-x-55% translate-y-55% w-0.6em h-0.6em c-blue12A  "
-      >
-        <PointerSVG />
-      </span>
+        <MouseCursor />
+
     </span>
   );
 }
 
-function PointerSVG() {
-  return (
-    <svg className=" " viewBox="0 0 715 727" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M480.109 419.221L541.97 390.586C658.516 336.636 716.79 309.662 714.93 268.172C713.07 226.682 652.617 205.03 531.71 161.726L198.792 42.4868C94.354 5.08088 42.1349 -13.6221 14.4457 13.5169C-13.2435 40.6558 4.40758 93.2398 39.7098 198.408L39.7099 198.408L154.548 540.52C195.612 662.853 216.144 724.019 257.68 726.637C299.215 729.255 327.265 671.151 383.365 554.943L420.635 477.738L420.635 477.737C430.17 457.986 434.937 448.111 442.596 440.576C450.254 433.041 460.205 428.434 480.109 419.221Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
+
 
 function DevelopeWord() {
   return (
@@ -145,6 +133,7 @@ function DevelopeWord() {
       </span>
       <span className="lt-md:leading-15 bg-mint3A pt-3 pb-2 relative">
         <span className="font-mono c-mint12 ">e</span>
+        <span className="absolute bottom-0 left-0 right-0 h-0.14em cursor-pulse c-mint12 opacity-40 blur-20"></span>
         <span className="absolute bottom-0 left-0 right-0 h-0.14em cursor-pulse c-mint12"></span>
       </span>
     </span>
@@ -343,8 +332,8 @@ function Circles() {
                 [0, 100],
                 [20, 50],
                 [70, 0],
-                [90, 50],
-                [100, 10],
+                [90, 30],
+                [100, 0],
               ],
             }),
           }}
@@ -360,8 +349,8 @@ function Circles() {
                 [0, 100],
                 [30, 50],
                 [70, 0],
-                [90, 60],
-                [100, 10],
+                [90, 30],
+                [100, 0],
               ],
             }),
           }}
@@ -377,7 +366,7 @@ function Circles() {
                 [0, 100],
                 [30, 50],
                 [50, 0],
-                [80, 70],
+                [80, 30],
                 [100, 10],
               ],
             }),
