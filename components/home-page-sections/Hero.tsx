@@ -137,7 +137,7 @@ function PointerSVG() {
 
 function DevelopeWord() {
   return (
-    <span style={{ fontSize: "1.1em" }} className='tracking-tighter'>
+    <span style={{ fontSize: "1.1em" }} className="tracking-tighter">
       <span className="lt-md:leading-15 bg-gradient-to-r from-transparent via-cyan2A to-cyan2A pt-3 pb-2">
         <span className=" font-mono c-transparent bg-gradient-to-r from-base9 via-base11A to-sage12A bg-clip-text">
           develop
@@ -319,10 +319,23 @@ function DotGrid({ rows, cols }) {
 
 function Circles() {
   return (
-    <div className=" grid items-center justify-items-center md:-rotate-30 ">
+    <div className=" grid items-center justify-items-center  ">
+      <div className="" style={{ gridArea: "1/1/-1/-1" }}>
+        <div className=" w-120 h-120  md:w-120 md:h-120 relative lt-md:display-none">
+          <Sparkle className="w-6 h-6 opacity-80  absolute top-18.5% left-70% -translate-y-50% -translate-x-50%" />
+          <Sparkle className="w-5 h-5 opacity-60  absolute top-28% left-38% -translate-y-50% -translate-x-50%" />
+          <Sparkle className=" w-6 h-6 opacity-50  absolute top-20% left-10% -translate-y-50% -translate-x-50%" />
+        </div>
+        <div className=" w-120 h-120 opacity-60  md:w-120 md:h-120 relative md:display-none">
+          <Sparkle className="sm:display-none  w-5 h-5 opacity-80  absolute top-4% left-69% -translate-y-50% -translate-x-50%" />
+          <Sparkle className="w-6 h-6 opacity-60  absolute top-36% left-98% -translate-y-50% -translate-x-50%" />
+          <Sparkle className=" w-6 h-6 opacity-60  absolute top-90% left-80% -translate-y-50% -translate-x-50%" />
+          <Sparkle className=" w-4 h-4 opacity-50  absolute top-99% left-62% -translate-y-50% -translate-x-50%" />
+        </div>
+      </div>
       <div className="" style={{ gridArea: "1/1/-1/-1" }}>
         <div
-          className="b-1 b-white/20 rd-full w-120 h-120   md:w-120 md:h-120"
+          className="b-1 b-white/15 rd-full w-120 h-120   md:w-120 md:h-120 md:-rotate-30 "
           style={{
             ...gradientMask({
               direction: "to bottom",
@@ -339,7 +352,7 @@ function Circles() {
       </div>
       <div className="" style={{ gridArea: "1/1/-1/-1" }}>
         <div
-          className="b-1 b-white/20 rd-full    w-90 h-90"
+          className="b-1 b-white/15 rd-full    w-90 h-90 md:-rotate-30"
           style={{
             ...gradientMask({
               direction: "to bottom",
@@ -356,7 +369,7 @@ function Circles() {
       </div>
       <div className="" style={{ gridArea: "1/1/-1/-1" }}>
         <div
-          className="b-1 b-white/20 rd-full w-60 h-60 md:w-60 md:h-60"
+          className="b-1 b-white/10 rd-full w-60 h-60 md:w-60 md:h-60 md:-rotate-30"
           style={{
             ...gradientMask({
               direction: "to bottom",
@@ -371,6 +384,21 @@ function Circles() {
           }}
         ></div>
       </div>
+    </div>
+  );
+}
+
+function Sparkle({ className }) {
+  return (
+    <div className="animate-pulse ">
+      <div
+        className={` ${className} `}
+        style={{
+          backgroundImage: "url('/decorative/sparkle.svg')",
+          backgroundSize: "100%",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
     </div>
   );
 }
