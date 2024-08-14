@@ -7,7 +7,7 @@ export default function ContactMe() {
   return (
     <section className="relative">
       <BluredCircle radius={250} top="120%" left="70%" bg="bg-sage1A" blur="200px" />
-      <BluredCircle radius={200} top="60%" left="25%" bg="bg-violet1A" blur="200px" />
+      <BluredCircle radius={200} top="60%" left="25%" bg="bg-cyan2" blur="200px" />
 
       <div className="mx-auto max-w-page  ">
         <div className="max-w-page mx-auto b-base5">

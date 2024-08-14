@@ -48,7 +48,7 @@ export default defineConfig({
          'cyan', 'teal', 'jade' , 'green', 'grass', 
      ],
       aliases: {
-        accent: "iris",
+        accent: "cyan",
         base: "slate",
         success: "jade",
         warning: "amber",
