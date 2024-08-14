@@ -5,22 +5,25 @@ type Enumerate<N extends number, Acc extends number[] = []> = Acc["length"] exte
 type IntRange<F extends number, T extends number> = Exclude<Enumerate<T>, Enumerate<F>>;
 
 type Number0to100 = IntRange<0, 101>;
-
-type TransparencyStop = [Number0to100, Number0to100];
+type StopPosition = Number0to100;
+type StopTransparency = Number0to100;
+type TransparencyStop = [StopPosition, StopTransparency];
 
 export default function GradientMask({
-  direction,
+  direction = 'to bottom',
   transparencyStops,
   children,
+  className,
 }: {
-  direction: string;
+  direction?: string;
   transparencyStops: TransparencyStop[];
   children?: React.ReactNode;
+  className?: string
 }) {
-  return <div style={{ ...gradientMask({ direction, transparencyStops }) }}>{children}</div>;
+  return <div className={className} style={{ ...gradientMask({ direction, transparencyStops }) }}>{children}</div>;
 }
 
-export function gradientMask({ direction, transparencyStops }: { direction: string; transparencyStops: TransparencyStop[] }) {
+export function gradientMask({ direction = 'to bottom', transparencyStops }: { direction: string; transparencyStops: TransparencyStop[] }) {
   const gradientStops = transparencyStops
     .map((tStop) => {
       return ` rgba(0 0 0 / ${tStop[1] / 100}) ${tStop[0]}%`;
