@@ -19,6 +19,3 @@ const Footer = () => {
 
 export default Footer;
 
-function FooterColumn({ children }) {
-  return <div className=" flex-grow basis-48 flex flex-col">{children}</div>;
-}

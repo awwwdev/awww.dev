@@ -1,9 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/header";
-import { Toaster } from "react-hot-toast";
 import SideMenu from "@/components/SideNav";
 import GlobalProvider from './Provider';
-import MyToaster from './Toaster';
 
 export default function AppLayout({ children }: {children: React.ReactNode}) {
 
