@@ -1,11 +1,9 @@
 import BluredCircle from "./BluredCircle";
 import Image from "next/image";
 import Space from "../ui/Space";
-import DesktopOnly from "../ui/DesktopOnly";
-import MobileOnly from "../ui/MobileOnly";
 import { gradientMask } from "../ui/GradientMask";
 import MouseCursor from './MouseCursor';
-
+import ProfilePicture from '@/public/profile-picture.png';
 export default function Hero() {
   return (
     <div className="">
@@ -40,9 +38,9 @@ function Greeting() {
     <div className="flex  md:justify-center">
       <div className="grid md:flex flex-row gap-4 md:gap-6 items-center w-fit     ">
         <Image
-          src="/profile-picture.png"
-          width={200}
-          height={200}
+          src={ProfilePicture}
+          // width={200}
+          // height={200}
           className={`object-cover w-15 h-15 rd-full bg-gradient-to-br from-blue2 to-green2  shadow-2xl z-10`}
           alt=""
           priority
