@@ -2,6 +2,17 @@ import BluredCircle from "./BluredCircle";
 import Icon from "@/components/ui/Icon";
 import Space from "../ui/Space";
 import WorkItem from "./WorkItem";
+import DarsoonImage from '@/public/works/darsoon.png';
+import DarsoonImage2 from '@/public/works/darsoon-dashboard.png';
+import JacksHouseImage from '@/public/works/jackshouse.png';
+import DbiliaImage from '@/public/works/dbilia.png';
+import DbiliaImage2 from '@/public/works/dbilia-2.png';
+import DbiliaImage3 from '@/public/works/dbilia-3.png';
+import DbiliaImage4 from '@/public/works/dbilia-4.png';
+import NumbersForThingsImage from '@/public/works/numbers-for-things.png';
+import MomentaImage from '@/public/works/momenta.png';
+import DbiliaPremierImage from '@/public/works/dbilia-premier.png'
+
 
 export default function Works({ posts }) {
   return (
@@ -19,7 +30,8 @@ export default function Works({ posts }) {
             subtitle="A platform for finding online tutors"
             gridRow="xs:g-row-1/3"
             gridColumn="xs:g-col-1/2"
-            imgSrcs={["/works/darsoon.png"]}
+            // imgSrcs={["/works/darsoon.png"]}
+            imgs={[DarsoonImage]}
             categories={["UI Design", "Front End", "Back End"]}
             relatedBlogPost={posts.find((p) => p.id === "darsoon")}
             tools={["NextJS", "React", "TypeScript", "Server Components", "Tailwind CSS"]}
@@ -33,6 +45,7 @@ export default function Works({ posts }) {
             gridRow="xs:g-row-3/5"
             gridColumn="xs:g-col-1/2"
             imgSrcs={["/works/jackshouse.png"]}
+            imgs={[JacksHouseImage]}
             tools={["NextJs", "React", "UnoCSS"]}
             gradient=" from-[#303A47] via-sky1A"
             // borderColor='b-sky4'
@@ -47,6 +60,7 @@ export default function Works({ posts }) {
             tools={["NextJs", "React", "T3-Stack", "Prisma"]}
             gradient="from-[#3E705E] via-[#0C140E]/10"
             imgSrcs={["/works/dbilia.png" ,"/works/dbilia-2.png", "/works/dbilia-3.png", "/works/dbilia-4.png"]}
+            imgs={[DbiliaImage , DbiliaImage2 , DbiliaImage3 , DbiliaImage4]}
             // titleColor='c-pink12'
             // borderColor='b-violet4'
           />
@@ -58,6 +72,7 @@ export default function Works({ posts }) {
             gridRow="xs:g-row-1/4"
             gridColumn="xs:g-col-2/3"
             imgSrcs={["/works/momenta.png"]}
+            imgs={[MomentaImage]}
             categories={["UI Design", "Front End"]}
             relatedBlogPost={posts.find((p) => p.id === "momenta")}
             tools={["NextJs", "React", "Framer Motion", ""]}
@@ -71,6 +86,7 @@ export default function Works({ posts }) {
             gridRow="xs:g-row-4/6"
             gridColumn="xs:g-col-2/3"
             imgSrcs={["/works/numbers-for-things.png"]}
+            imgs={[NumbersForThingsImage]}
             tools={["NextJs", "React", "MetaMask"]}
             categories={["UI Design", "Front End", "Back End"]}
             gradient="from-[#151515] via-base3"
@@ -83,6 +99,7 @@ export default function Works({ posts }) {
             gridRow="xs:g-row-6/9"
             gridColumn="xs:g-col-2/3"
             imgSrcs={["/works/dbilia-premier.png"]}
+            imgs={[DbiliaPremierImage]}
             tools={["NextJs", "React", "Prisma", "T3 Stack", "PostgreSQL"]}
             categories={["UI Design", "Front End"]}
             gradient="from-[#934D37] via-[#934D37]/20"

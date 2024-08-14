@@ -7,6 +7,7 @@ import Button from "../ui/button";
 import LinkButton from "../ui/button/LinkButton";
 import Icon from "../ui/Icon";
 import Gallery from '../ui/Gallery';
+import Image from 'next/image';
 
 export default function WorkItem({
   title,
@@ -15,6 +16,7 @@ export default function WorkItem({
   gridColumn,
   className = "",
   imgSrcs,
+  imgs,
   subtitle,
   description,
   tools,
@@ -28,17 +30,17 @@ export default function WorkItem({
       <Modal
         trigger={
           <button type="button" className="h-full w-full text-left ">
-            <WorkItemCard {...{ title, titleColor, subtitle, className, imgSrcs, gradient, borderColor }} />
+            <WorkItemCard {...{ title, titleColor, subtitle, className, imgSrcs, gradient, borderColor, imgs }} />
           </button>
         }
       >
-        <WorkItemModalContent {...{ title, description, subtitle, relatedBlogPost, tools, imgSrcs }} />
+        <WorkItemModalContent {...{ title, description, subtitle, relatedBlogPost, tools, imgSrcs , imgs }} />
       </Modal>
     </li>
   );
 }
 
-function WorkItemCard({ title, imgSrcs, subtitle, gradient, titleColor, borderColor }) {
+function WorkItemCard({ title, imgs, imgSrcs, subtitle, gradient, titleColor, borderColor }) {
   return (
     <div
       className={`h-full rd-3 bg-base1A grid overflow-clip b-t-1.5 b-l-1 b-r-1 b-b-0.5 b-t-base5 sahdow-2xl bg-clip-padding ${
@@ -64,13 +66,13 @@ function WorkItemCard({ title, imgSrcs, subtitle, gradient, titleColor, borderCo
         </div>
         <div className="grid items-end pl-6  xs:pl-16 pt-3  ">
           <div className=" relative isolate">
-            <img
-              src={imgSrcs[0]}
+            <Image
+              src={imgs[0]}
               alt=""
               className="block min-w-0 rd-lt-3 shadow-xl object-cover absolute top-0 left-0 right-0 bottom-0 blur-15 opacity-50 -z-10"
             />
 
-            <img src={imgSrcs[0]} alt="" className="block min-w-0 rd-lt-3 shadow-xl object-cover fade-to-b" />
+            <Image src={imgs[0]} alt="" className="block min-w-0 rd-lt-3 shadow-xl object-cover fade-to-b" />
           </div>
         </div>
       </div>
@@ -80,6 +82,7 @@ function WorkItemCard({ title, imgSrcs, subtitle, gradient, titleColor, borderCo
 
 function WorkItemModalContent({
   title,
+  imgs,
   imgSrc,
   description,
   subtitle,
@@ -96,7 +99,7 @@ function WorkItemModalContent({
       <p className="c-base11">{description}</p>
 
       <div className="h-6"></div>
-      <Gallery images={imgSrcs.map(imgSrc => ({src: imgSrc , alt: ""}))} />
+      <Gallery images={imgs.map(img => ({ imgObject: img,  src: "" , alt: ""}))} />
       {tools && tools.length > 0 && (
         <>
           <div className="h-6"></div>

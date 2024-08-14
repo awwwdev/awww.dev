@@ -1,10 +1,12 @@
 import { useMemo, useState } from "react";
 import Button from "../button";
 import Icon from "../Icon";
+import Image from "next/image";
 
 type Image = {
   src: string;
   alt: string;
+  imgObject: any;
 };
 
 export default function Gallery({ images }: { images: Image[] }) {
@@ -13,35 +15,44 @@ export default function Gallery({ images }: { images: Image[] }) {
   return (
     <div>
       <div className="   w-full  rd-3 p-3 bg-black grid">
-      <div className='flex items-center justify-center w-full !aspect-ratio-16/9 max-h-100 min-h-100' style={{gridArea: '1/1/-1/-1'}}>
-        <img src={currentImage.src} alt={currentImage.alt} className="min-w-0 max-h-full   rd-1.5 shadow-xl object-cover " />
-      </div>
-<div  style={{gridArea: '1/1/-1/-1'}} className='flex items-center p-1'>
-
-        <Button
-          iconButton
-          variation="soft"
-          className=" text-xs "
-          onClick={() => {
-            setCurrentImageIndex((s) => (s - 1 + images.length) % images.length);
-          }}
-          >
-          <Icon name="bf-i-ph-arrow-left" className='' />
-        </Button>
+        <div
+          className="flex items-center justify-center w-full !aspect-ratio-16/9 max-h-100 min-h-100"
+          style={{ gridArea: "1/1/-1/-1" }}
+        >
+          <Image
+            src={currentImage.imgObject ?? currentImage.src}
+            alt={currentImage.alt}
+            className="min-w-0 max-h-full   rd-1.5 shadow-xl object-cover "
+          />
+        </div>
+        {images.length > 1 && (
+          <div style={{ gridArea: "1/1/-1/-1" }} className="flex items-center p-1 ">
+            <Button
+              iconButton
+              variation="soft"
+              className=" text-xs "
+              onClick={() => {
+                setCurrentImageIndex((s) => (s - 1 + images.length) % images.length);
+              }}
+            >
+              <Icon name="bf-i-ph-arrow-left" className="" />
+            </Button>
           </div>
-<div  style={{gridArea: '1/1/-1/-1'}} className='flex items-center justify-end p-1'>
-
-        <Button
-          iconButton
-          variation="soft"
-          className=" text-xs"
-          onClick={() => {
-            setCurrentImageIndex((s) => (s + 1) % images.length);
-          }}
-          >
-          <Icon name="bf-i-ph-arrow-right" className='' />
-        </Button>
+        )}
+        {images.length > 1 && (
+          <div style={{ gridArea: "1/1/-1/-1" }} className="flex items-center justify-end p-1">
+            <Button
+              iconButton
+              variation="soft"
+              className=" text-xs"
+              onClick={() => {
+                setCurrentImageIndex((s) => (s + 1) % images.length);
+              }}
+            >
+              <Icon name="bf-i-ph-arrow-right" className="" />
+            </Button>
           </div>
+        )}
       </div>
 
       {images && images.length > 1 && (
@@ -57,9 +68,9 @@ export default function Gallery({ images }: { images: Image[] }) {
                     }}
                     className="block"
                   >
-                    <img
+                    <Image
                       key={`image-work-${index}`}
-                      src={image.src}
+                      src={image.imgObject ?? image.src}
                       alt=""
                       className={`w-40 h-20 min-w-0 rd-1.5 shadow-xl object-cover 
                       ${currentImageIndex === index ? " grayscale-0" : "grayscale-100"}
