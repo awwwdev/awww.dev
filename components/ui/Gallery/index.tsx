@@ -1,3 +1,4 @@
+'use client';
 import { useMemo, useState } from "react";
 import Button from "../button";
 import Icon from "../Icon";

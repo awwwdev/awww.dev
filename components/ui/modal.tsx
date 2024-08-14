@@ -1,3 +1,4 @@
+'use client';
 import { RNode } from '@/types';
 import * as RadixDialog from  '@radix-ui/react-dialog';
 
