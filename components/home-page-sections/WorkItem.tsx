@@ -29,7 +29,7 @@ export default function WorkItem({
     <li className={`${gridRow} ${gridColumn}`}>
       <Modal
         trigger={
-          <button type="button" className="h-full w-full text-left ">
+          <button type="button" className="h-full w-full text-left " aria-label='Open Work Details'>
             <WorkItemCard {...{ title, titleColor, subtitle, className, imgSrcs, gradient, borderColor, imgs }} />
           </button>
         }

@@ -41,6 +41,7 @@ export default function Tools() {
                   }}
                 >
                   <Icon name="bf-i-ph-heart" />
+                  <span className="sr-only">Show Favorite Tools</span>
                 </Button>
               }
             >
@@ -62,6 +63,8 @@ export default function Tools() {
                   }}
                 >
                   <Icon name="bf-i-ph-wrench" />
+                  <span className="sr-only">Show Most Used Tools</span>
+
                 </Button>
               }
             >
@@ -83,6 +86,7 @@ export default function Tools() {
                   }}
                 >
                   <Icon name="bf-i-ph-syringe" />
+                  <span className="sr-only">Show Painful-but-life-saving Tools</span>
                 </Button>
               }
             >
