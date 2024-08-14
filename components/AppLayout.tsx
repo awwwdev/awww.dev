@@ -26,7 +26,7 @@ export default function AppLayout({ children }: {children: React.ReactNode}) {
         </div>
         {<SideMenu  />}
       </div>
-      <MyToaster/>
+      {/* <MyToaster/> */}
     </GlobalProvider>
   );
 }
