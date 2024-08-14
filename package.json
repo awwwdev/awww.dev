@@ -55,7 +55,8 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.0",
     "shiki": "^1.10.3",
-    "unified": "^11.0.5"
+    "unified": "^11.0.5",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@iconify-json/bxl": "^1.1.10",
