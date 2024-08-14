@@ -27,8 +27,6 @@ export default function Blog({posts}) {
       </div>
       <div className="blog-section-fade-x ">
         <ScrollArea>
-          <ul></ul>
-
           <ul className=" flex pb-8   ">
             <ScrollPadding />
             {posts.map((post, index) => {
@@ -103,7 +101,7 @@ function BlogCard({ title, subtitle, date, slug, gap }) {
 function ScrollPadding() {
   return (
     <li
-      role="none"
+      // role="none"
       className=""
       style={{
         minWidth: "calc((100vw - var(--max-w-page) )/2) ",
