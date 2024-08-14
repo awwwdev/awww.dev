@@ -1,10 +1,11 @@
 
 import Link from "next/link";
+import HamburgerButton from './HamburgerButton';
 
-const Header = ({ setIsSideMenuOpen,  }) => {
+const Header = () => {
   return (
     <div className="">
-      <MobileHeader setIsSideMenuOpen={setIsSideMenuOpen}  />
+      <MobileHeader   />
       <DesktopHeader  />
     </div>
   );
@@ -12,7 +13,7 @@ const Header = ({ setIsSideMenuOpen,  }) => {
 
 export default Header;
 
-function MobileHeader({ setIsSideMenuOpen,  }) {
+function MobileHeader() {
 
   return (
     <header
@@ -20,7 +21,7 @@ function MobileHeader({ setIsSideMenuOpen,  }) {
     >
       <div className={` w-full max-w-page mx-auto grid `} style={{ gridTemplateColumns: "1fr auto 1fr" }}>
         <div className="flex ">
-          <HamburgerButton setIsSideMenuOpen={setIsSideMenuOpen} />
+          <HamburgerButton />
         </div>
         <Link href="/" className="fs-sm fw-300 c-base11 tracking-wider font-display flex justify-center items-center">
           awwww.dev
@@ -85,17 +86,6 @@ function PublicWebsiteNav() {
 
 
 
-function HamburgerButton({ setIsSideMenuOpen }) {
-  return (
-    <button
-      className=" bf-i-ph-list before:mie-0"
-      aria-label="Open Menu"
-      onClick={() => setIsSideMenuOpen((state) => !state)}
-    >
-      <span className="sr-only">Open Menu</span>
-    </button>
-  );
-}
 
 // function Search() {
 //   const supabase = useSupabaseClient();

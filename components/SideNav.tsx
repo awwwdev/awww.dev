@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import darsoonLogo from "@/public/static/logo/darsoon-logo.png";
 import darsoonLogoIcon from "@/public/static/logo/darsoon-logo-icon.png";
@@ -5,26 +7,28 @@ import Image from "next/image";
 import * as Toggle from "@radix-ui/react-toggle";
 import { createContext, useContext, useState } from "react";
 import MobileOnly from "./ui/MobileOnly";
-import DesktopOnly from "./ui/DesktopOnly";
 import Button from "./ui/button";
 import Icon from "@/components/ui/Icon";
+import { useGlobalContex } from "./Provider";
 
 const NavContext = createContext({ isCollapsed: false, setIsCollapsed: () => {} });
 
-export default function SideMenu({ isSideMenuOpen, setIsSideMenuOpen }) {
+export default function SideMenu() {
+  const { isSideMenuOpen } = useGlobalContex();
   return (
     <>
-      <MobileSideMenuOverlay {...{ isSideMenuOpen, setIsSideMenuOpen }} />
-        <MobileOnly>
-      <div className={` aside w-sidebar bg-gray2 z-30 h-full  ${isSideMenuOpen && "drawer-open"}`}>
-          <SideNav className={`text-sm  shd-titned-3  h-full `} setIsSideMenuOpen={setIsSideMenuOpen} />
-      </div>
-        </MobileOnly>
+      <MobileSideMenuOverlay />
+      <MobileOnly>
+        <div className={` aside w-sidebar bg-gray2 z-30 h-full  ${isSideMenuOpen && "drawer-open"}`}>
+          <SideNav className={`text-sm  shd-titned-3  h-full `} />
+        </div>
+      </MobileOnly>
     </>
   );
 }
 
-const MobileSideMenuOverlay = ({ isSideMenuOpen, setIsSideMenuOpen }) => {
+const MobileSideMenuOverlay = () => {
+  const { isSideMenuOpen, setIsSideMenuOpen } = useGlobalContex();
   return (
     <div
       className={` drawer-overlay sm:display-none fixed z-20 inset-0 bg-black2A 
@@ -39,7 +43,8 @@ const MobileSideMenuOverlay = ({ isSideMenuOpen, setIsSideMenuOpen }) => {
   );
 };
 
-function SideNav({ className, setIsSideMenuOpen }) {
+function SideNav({ className }) {
+  const { isSideMenuOpen, setIsSideMenuOpen } = useGlobalContex();
   const [isCollapsed, _setIsCollapsed] = useState(false);
 
   const setIsCollapsed = (v) => {
@@ -104,7 +109,7 @@ function CollapseToggle({ isCollapsed, setIsCollapsed }) {
   );
 }
 
-function NavLink({ href, className, children , onClick }) {
+function NavLink({ href, className, children, onClick }) {
   const { isCollapsed } = useContext(NavContext);
   return (
     <a href={href} className={className} onClick={onClick}>
@@ -113,11 +118,11 @@ function NavLink({ href, className, children , onClick }) {
   );
 }
 
-function PublicWebsiteNav({setIsSideMenuOpen}) {
+function PublicWebsiteNav({ setIsSideMenuOpen }) {
   return (
     <>
       <div className="h-2"></div>
-   
+
       <NavLink
         href="/"
         className="hover:c-base11"
@@ -130,9 +135,9 @@ function PublicWebsiteNav({setIsSideMenuOpen}) {
       <NavLink
         href="#works"
         className="hover:c-base11"
-            onClick={() => {
-                setIsSideMenuOpen(false);
-              }}
+        onClick={() => {
+          setIsSideMenuOpen(false);
+        }}
       >
         Works
       </NavLink>
