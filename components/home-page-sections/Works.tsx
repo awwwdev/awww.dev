@@ -25,10 +25,11 @@ export default function Works({ posts }) {
             tools={["NextJS", "React", "TypeScript", "Server Components", "Tailwind CSS"]}
             gradient="from-[#82625B] to-orange1A"
             // borderColor='b-orange4'
+            description=""
           />
           <WorkItem
             title="Jack's House"
-            subtitle="An Online Casino for Gamers Community"
+            subtitle="An Online Casino and E-Sports platform for Gamers Community"
             gridRow="xs:g-row-3/5"
             gridColumn="xs:g-col-1/2"
             imgSrcs={["/works/jackshouse.png"]}
@@ -38,7 +39,7 @@ export default function Works({ posts }) {
           />
           <WorkItem
             title="Dbilia"
-            subtitle="An NFT Marketplace"
+            subtitle="An NFT Marketplace withouth lock-ins"
             gridRow="xs:g-row-5/7"
             gridColumn="xs:g-col-1/2"
             categories={["UI Design", "Front End"]}
@@ -66,7 +67,7 @@ export default function Works({ posts }) {
           />
           <WorkItem
             title="Numbers4Things"
-            subtitle="An NFT Project"
+            subtitle="An NFT Project, consisting numbers from 1 to 100,000,000."
             gridRow="xs:g-row-4/6"
             gridColumn="xs:g-col-2/3"
             imgSrcs={["/works/numbers-for-things.png"]}
@@ -78,7 +79,7 @@ export default function Works({ posts }) {
           />
           <WorkItem
             title="Dbilia Premier"
-            subtitle="A platform selling Music Videos with NFT"
+            subtitle="A platform to pre-order Music Videos with NFT, before they are released publicly"
             gridRow="xs:g-row-6/9"
             gridColumn="xs:g-col-2/3"
             imgSrcs={["/works/dbilia-premier.png"]}
