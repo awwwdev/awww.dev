@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: "Hamid K.",
   },
   alternates: {
-    canonical: '/blog',
+    // canonical: '/blog',
 },
   description: description,
   metadataBase: new URL("https://awww.dev"),
