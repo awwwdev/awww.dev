@@ -14,16 +14,21 @@ export default function GradientMask({
   transparencyStops,
   children,
   className,
+  style,
+  disable,
 }: {
   direction?: string;
   transparencyStops: TransparencyStop[];
   children?: React.ReactNode;
-  className?: string
+  className?: string,
+  style?: React.CSSProperties
+  disable?: boolean
 }) {
-  return <div className={className} style={{ ...gradientMask({ direction, transparencyStops }) }}>{children}</div>;
+  return <div className={className} style={{ ...style , ...gradientMask({ direction, transparencyStops , disable}) }}>{children}</div>;
 }
 
-export function gradientMask({ direction = 'to bottom', transparencyStops }: { direction: string; transparencyStops: TransparencyStop[] }) {
+export function gradientMask({ direction = 'to bottom', transparencyStops, disable }: { direction: string; transparencyStops: TransparencyStop[], disable }) {
+  if (disable) return {};
   const gradientStops = transparencyStops
     .map((tStop) => {
       return ` rgba(0 0 0 / ${tStop[1] / 100}) ${tStop[0]}%`;
