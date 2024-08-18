@@ -70,9 +70,9 @@ function RelatedBlogPost({ post }: { post: Post }) {
         <p className="">{post.subtitle}</p>
         <p className="c-base11 fs-sm">{post.date}</p>
         <Space size="h-8" />
-        <div className="space-y-1.5em max-h-50rem overflow-hidden " dangerouslySetInnerHTML={{ __html: post.html }} />
-        <div className="absolute bottom-0 left-0 right-0 z-10 h-20rem bg-gradient-to-t from-base3 via-base2 to-transparent flex justify-center items-end p-6 ">
-          <LinkButton href={`/blog/${post.id}`} className="fs-xl flex gap-2" variation="ghost">
+        <div className="space-y-1.5em max-h-50rem overflow-hidden isolate" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="absolute bottom-0 left-0 right-0 z-10 h-40rem bg-gradient-to-t from-base1 from-20%  to-transparent flex justify-center items-end p-6 rd-b-3 z-10">
+          <LinkButton href={`/blog/${post.id}`} className="fs-xl flex gap-2" variation="outline-accent">
             Read More
             <Icon name="bf-i-ph-arrow-right" />
           </LinkButton>
