@@ -17,15 +17,15 @@ export default function Gallery({ images }: { images: Image[] }) {
     <div>
       <div className="   w-full  rd-3 p-3 bg-black grid">
         <div
-          className="flex items-center justify-center w-full !aspect-ratio-16/9 max-h-100 min-h-100"
+          className="flex items-center justify-center w-full !aspect-ratio-16/9 max-h-100  "
           style={{ gridArea: "1/1/-1/-1" }}
         >
           <Image
             src={currentImage.imgObject ?? currentImage.src}
             alt={currentImage.alt}
-            className="min-w-0 max-h-full rd-1.5 shadow-xl object-contain "
-          />
-        </div>
+            className="min-w-0 max-h-full max-w-full   rd-1.5 shadow-xl object-contain "
+            />
+            </div>
         {images.length > 1 && (
           <div style={{ gridArea: "1/1/-1/-1" }} className="flex items-center p-1 ">
             <Button
