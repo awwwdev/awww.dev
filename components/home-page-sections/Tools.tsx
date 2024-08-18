@@ -32,7 +32,7 @@ export default function Tools() {
               trigger={
                 <Button
                   iconButton
-                  variation={glowingCategory === "favorite" ? "soft-accent" : "outline"}
+                  variation={glowingCategory === "favorite" ? "outline-accent" : "ghost"}
                   onClick={() => {
                     if (glowingCategory === "favorite") {
                       setGlowingCategory(null);
@@ -54,7 +54,7 @@ export default function Tools() {
               trigger={
                 <Button
                   iconButton
-                  variation={glowingCategory === "most-used" ? "soft-accent" : "outline"}
+                  variation={glowingCategory === "most-used" ? "outline-accent" : "ghost"}
                   onClick={() => {
                     if (glowingCategory === "most-used") {
                       setGlowingCategory(null);
@@ -76,7 +76,7 @@ export default function Tools() {
               trigger={
                 <Button
                   iconButton
-                  variation={glowingCategory === "painful" ? "soft-accent" : "outline"}
+                  variation={glowingCategory === "painful" ? "outline-accent" : "ghost"}
                   onClick={() => {
                     if (glowingCategory === "painful") {
                       setGlowingCategory(null);
