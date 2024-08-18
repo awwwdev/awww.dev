@@ -162,6 +162,7 @@ export default function Tools() {
             src="/tool-logos/figma.svg"
             alt="Figma"
             size=""
+            isGlowing={glowingCategory === "most-used"}
             glowingCategory={glowingCategory}
           />
 
