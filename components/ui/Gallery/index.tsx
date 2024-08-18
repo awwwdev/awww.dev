@@ -23,7 +23,7 @@ export default function Gallery({ images }: { images: Image[] }) {
           <Image
             src={currentImage.imgObject ?? currentImage.src}
             alt={currentImage.alt}
-            className="min-w-0 max-h-full   rd-1.5 shadow-xl object-cover "
+            className="min-w-0 max-h-full rd-1.5 shadow-xl object-contain "
           />
         </div>
         {images.length > 1 && (
