@@ -130,7 +130,7 @@ export default function Works({ posts }) {
                 // gridTemplateRows: "auto 1fr",
               }}
             >
-              <a href="/#contact" className="block h-full p-3 xs:p-6">
+              <a href="/#contact" className="block h-full min-h-50 p-5  xs:p-6 ">
                 <div className="flex flex-col h-full">
                   <p className="fs-xl c-base11">Let&apos;s make antoher successfull story, together!</p>
                   <div className="mt-auto flex justify-end">
