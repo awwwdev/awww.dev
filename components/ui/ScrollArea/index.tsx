@@ -10,7 +10,7 @@ export default function ScrollArea({ children }) {
         // marginLeft: "-1rem",
         // marginRight: "-1rem",
       }}
-      scrollHideDelay={500}
+      scrollHideDelay={1000}
     >
       <RadixScrollArea.Viewport className="w-full h-full rd-2 ">{children}</RadixScrollArea.Viewport>
       <RadixScrollArea.Scrollbar
