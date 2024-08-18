@@ -11,7 +11,7 @@ export default function Experiences() {
   return (
     <section className="relative">
       <BluredCircle radius={200} top="20%" left="95%" bg="bg-gold2" blur="200px" />
-      <BluredCircle radius={250} top="30rem" left="20%" bg="bg-sky1 opacity-50" blur="200px" />
+      <BluredCircle radius={250} top="10rem" left="20%" bg="bg-sky1 opacity-50" blur="200px" />
 
       <div className="mx-auto max-w-page">
         <h2 className="H1" id="works">
