@@ -41,11 +41,12 @@ export default function WorkItemCard({ title, imgs, imgSrcs, subtitle, gradient,
             gridArea: "1/1/-1/-1",
           }}
         >
-          <div className="px-3 xs:px-6 pt-3 xs:pt-5 ">
-            <h3 className={`H4 sm:H3 ${titleColor}`}>{title}</h3>
+          <div className="px-5 pt-5 xs:px-6  xs:pt-5 ">
+            <h3 className={`H3 sm:H3 ${titleColor}`}>{title}</h3>
             <p className="c-base11 text-sm">{subtitle}</p>
           </div>
-          <div className="grid items-end pl-6  xs:pl-16 pt-3  ">
+          <div className='lt-xs:h-4'></div>
+          <div className="grid items-end pl-10  xs:pl-16 pt-3  ">
             <div className=" relative isolate">
               <Image
                 src={imgs[0]}
