@@ -7,7 +7,7 @@ export default function MouseCursor() {
     <span className="relative ">
       <motion.span
         role="none"
-        className="absolute right-0 bottom-0  leading-1  w-0.6em h-0.6em c-cyan12 drop-shadow-2xl "
+        className="absolute right-0 bottom-0  leading-1  w-0.6em h-0.6em c-cyan12 drop-shadow-2xl drop-shadow-color-black"
         animate={["initial"]}
         variants={{
           initial: {
