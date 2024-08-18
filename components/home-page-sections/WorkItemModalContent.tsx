@@ -49,9 +49,9 @@ function Tools({ tools }) {
     <div>
       <h4 className="H4 c-base11">Technologies Used</h4>
       <div className="h-3"></div>
-      <ul className="flex gap-1.5">
+      <ul className="flex gap-1.5 flex-wrap">
         {tools.map((t, index) => {
-          return <li key={`technologies-used-${index}`} className="rd-full b-1 b-base6  px-2.5 fs-xs ">{t}</li>;
+          return <li key={`technologies-used-${index}`} className="rd-full b-1 b-base6  px-2.5 fs-xs whitespace-nowrap">{t}</li>;
         })}
       </ul>
     </div>
