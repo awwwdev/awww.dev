@@ -17,7 +17,7 @@ const LinkButton = forwardRef<Ref, AllProps>(function (
   `;
 
   return (
-    <Link
+    <a
       ref={ref}
       href={href}
       className={`${preStyled ? cls : ""} ${className}`}
@@ -25,7 +25,7 @@ const LinkButton = forwardRef<Ref, AllProps>(function (
       {...props}
     >
       {children}
-    </Link>
+    </a>
   );
 });
 

@@ -1,7 +1,7 @@
 export default function BluredCircle({ top, left, radius, bg, blur }) {
   return (
     <div
-      className={`absolute rd-full -z-1 ${bg} `}
+      className={`absolute rd-full -z-1 pointer-events-none select-none ${bg} `}
       style={{
         top,
         left,

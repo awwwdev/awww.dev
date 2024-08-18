@@ -15,7 +15,7 @@ export default function Hero() {
 function DesktopHero() {
   return (
     <section className="relative ">
-      <div className="absolute top-2 left-50% -translate-x-50% w-full overflow-clip">
+      <div className="absolute top-2 left-50% -translate-x-50% w-full overflow-clip select-none pointer-events-none">
         <DotGrid rows={24} cols={24} />
       </div>
 

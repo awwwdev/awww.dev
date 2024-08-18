@@ -5,7 +5,7 @@ const Footer = () => {
     <>
       <div className="h-20"></div>
       <footer className="px-4 relative isolate ">
-      <div className=" absolute bottom-0 left-50% -translate-x-50%  w-full overflow-clip -z-10">
+      <div className=" absolute bottom-0 left-50% -translate-x-50%  w-full overflow-clip -z-10 pointer-events-none select-none">
         <DotGrid rows={24} cols={24} />
       </div>
         <div className=" max-w-page mx-auto "></div>

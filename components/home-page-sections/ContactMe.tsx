@@ -33,7 +33,7 @@ export default function ContactMe() {
             <li>
               <LinkButton
                 variation="ghost"
-                href="https://github.com/vashmeen"
+                href="https://github.com/awwwdev"
                 className="items-center gap-3  lt-xs:!grid  xs:min-w-40"
                 style={{ gridTemplateColumns: "1em 1fr 1em" }}
               >
