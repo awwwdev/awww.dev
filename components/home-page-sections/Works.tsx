@@ -76,7 +76,7 @@ export default function Works({ posts }) {
             imgs={[MomentaImage]}
             categories={["UI Design", "Front End"]}
             relatedBlogPost={posts.find((p) => p.id === "momenta")}
-            tools={["NextJs", "React", "Framer Motion", ""]}
+            tools={["NextJs", "React", "Framer Motion"]}
             gradient="from-[#462D45] to-[#372028]/0"
             // titleColor='c-pink12'
             // borderColor='b-pink4'
