@@ -14,7 +14,8 @@ export default function Tools() {
   const [isToolitip3Open, setIsTooltip3Open] = useState<boolean>(false);
 
   return (
-    <section className="relative">
+    <section className="relative isolate">
+ 
       <BluredCircle radius={200} top="100%" left="60%" bg="bg-bronze2A" blur="200px" />
       <BluredCircle radius={200} top="50%" left="70%" bg="bg-sage2A " blur="200px" />
       <BluredCircle radius={200} top="50%" left="20%" bg="bg-violet2A opacity-70" blur="200px" />
@@ -64,7 +65,6 @@ export default function Tools() {
                 >
                   <Icon name="bf-i-ph-wrench" />
                   <span className="sr-only">Show Most Used Tools</span>
-
                 </Button>
               }
             >
@@ -260,9 +260,9 @@ export default function Tools() {
 function Li(props) {
   return (
     <li
-      className={`toolkit__grid-item p-4  xxs:!p-3 xs:p-4 sm:p-4  flex justify-center items-center b-1.5 b-slate2A empty:b-transparent bg-origin-border ${props.className} ${
-        props.gridPosition
-      } 
+      className={`toolkit__grid-item p-4  xxs:!p-3 xs:p-4 sm:p-4  flex justify-center items-center b-1.5 b-slate2A empty:b-transparent bg-origin-border ${
+        props.className
+      } ${props.gridPosition} 
       ${props.glowingCategory && !props.isGlowing ? "grayscale-100" : ""}
       `}
     >
@@ -271,3 +271,5 @@ function Li(props) {
     </li>
   );
 }
+
+
