@@ -260,7 +260,7 @@ export default function Tools() {
 function Li(props) {
   return (
     <li
-      className={`toolkit__grid-item p-4  xxs:!p-3 xs:p-4 sm:p-4  flex justify-center items-center b-1.5 b-slate2A empty:b-transparent bg-origin-border ${
+      className={`toolkit__grid-item p-4  xxs:!p-3 xs:p-4 sm:p-4  flex justify-center items-center b-1.5 b-l-slate2A b-t-slate2A b-b-slate3A b-r-slate3A empty:b-transparent bg-origin-border ${
         props.className
       } ${props.gridPosition} 
       ${props.glowingCategory && !props.isGlowing ? "grayscale-100" : ""}

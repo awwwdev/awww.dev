@@ -2,23 +2,23 @@ import BluredCircle from "./BluredCircle";
 import Icon from "@/components/ui/Icon";
 import Space from "../ui/Space";
 import WorkItem from "./WorkItem";
-import DarsoonImage from '@/public/works/darsoon.png';
-import DarsoonImage2 from '@/public/works/darsoon-dashboard.png';
-import JacksHouseImage from '@/public/works/jackshouse.png';
-import DbiliaImage from '@/public/works/dbilia.png';
-import DbiliaImage2 from '@/public/works/dbilia-2.png';
-import DbiliaImage3 from '@/public/works/dbilia-3.png';
-import DbiliaImage4 from '@/public/works/dbilia-4.png';
-import NumbersForThingsImage from '@/public/works/numbers-for-things.png';
-import MomentaImage from '@/public/works/momenta.png';
-import DbiliaPremierImage from '@/public/works/dbilia-premier.png'
-
+import DarsoonImage from "@/public/works/darsoon.png";
+import DarsoonImage2 from "@/public/works/darsoon-dashboard.png";
+import JacksHouseImage from "@/public/works/jackshouse.png";
+import DbiliaImage from "@/public/works/dbilia.png";
+import DbiliaImage2 from "@/public/works/dbilia-2.png";
+import DbiliaImage3 from "@/public/works/dbilia-3.png";
+import DbiliaImage4 from "@/public/works/dbilia-4.png";
+import NumbersForThingsImage from "@/public/works/numbers-for-things.png";
+import MomentaImage from "@/public/works/momenta.png";
+import DbiliaPremierImage from "@/public/works/dbilia-premier.png";
+import GradientMask from "../ui/GradientMask";
 
 export default function Works({ posts }) {
   return (
     <section className="relative">
-      <BluredCircle radius={200} top="20%" left="95%" bg="bg-gold2" blur="200px" />
-      <BluredCircle radius={250} top="30rem" left="20%" bg="bg-sky1 opacity-50" blur="200px" />
+      <BluredCircle radius={200} top="50%" left="70%" bg="bg-cyan2A" blur="200px" />
+      <BluredCircle radius={250} top="80%" left="20%" bg="bg-indigo1 " blur="200px" />
       <div className="mx-auto max-w-page">
         <h2 className="H1" id="works">
           Works
@@ -35,7 +35,7 @@ export default function Works({ posts }) {
             categories={["UI Design", "Front End", "Back End"]}
             relatedBlogPost={posts.find((p) => p.id === "darsoon")}
             tools={["NextJS", "React", "TypeScript", "Server Components", "Tailwind CSS"]}
-            gradient="from-[#82625B] to-orange1A"
+            gradient="from-[#82625B] to-[#351711]/0"
             // borderColor='b-orange4'
             description=""
           />
@@ -47,7 +47,7 @@ export default function Works({ posts }) {
             imgSrcs={["/works/jackshouse.png"]}
             imgs={[JacksHouseImage]}
             tools={["NextJs", "React", "UnoCSS"]}
-            gradient=" from-[#303A47] via-sky1A"
+            gradient=" from-[#476687] via-[#476687]/30 "
             // borderColor='b-sky4'
           />
           <WorkItem
@@ -58,9 +58,10 @@ export default function Works({ posts }) {
             categories={["UI Design", "Front End"]}
             relatedBlogPost={posts.find((p) => p.id === "dbilia")}
             tools={["NextJs", "React", "T3-Stack", "Prisma"]}
-            gradient="from-[#3E705E] via-[#0C140E]/10"
-            imgSrcs={["/works/dbilia.png" ,"/works/dbilia-2.png", "/works/dbilia-3.png", "/works/dbilia-4.png"]}
-            imgs={[DbiliaImage , DbiliaImage2 , DbiliaImage3 , DbiliaImage4]}
+            // gradient="from-[#3E705E] via-[#0C140E]/10"
+            gradient="from-[#0F6E52]  via-[#0F6E52]/30"
+            imgSrcs={["/works/dbilia.png", "/works/dbilia-2.png", "/works/dbilia-3.png", "/works/dbilia-4.png"]}
+            imgs={[DbiliaImage, DbiliaImage2, DbiliaImage3, DbiliaImage4]}
             // titleColor='c-pink12'
             // borderColor='b-violet4'
           />
@@ -76,7 +77,7 @@ export default function Works({ posts }) {
             categories={["UI Design", "Front End"]}
             relatedBlogPost={posts.find((p) => p.id === "momenta")}
             tools={["NextJs", "React", "Framer Motion", ""]}
-            gradient="from-[#462D45] via-pink1A"
+            gradient="from-[#462D45] to-[#372028]/0"
             // titleColor='c-pink12'
             // borderColor='b-pink4'
           />
@@ -89,7 +90,7 @@ export default function Works({ posts }) {
             imgs={[NumbersForThingsImage]}
             tools={["NextJs", "React", "MetaMask"]}
             categories={["UI Design", "Front End", "Back End"]}
-            gradient="from-[#151515] via-base3"
+            gradient="from-[#695796] via-[#695796]/30"
             // titleColor='c-sand12'
             // borderColor='b-base4'
           />
@@ -102,31 +103,39 @@ export default function Works({ posts }) {
             imgs={[DbiliaPremierImage]}
             tools={["NextJs", "React", "Prisma", "T3 Stack", "PostgreSQL"]}
             categories={["UI Design", "Front End"]}
-            gradient="from-[#934D37] via-[#934D37]/20"
+            gradient="from-[#8F4F3B] via-[#8F4F3B]/30"
             // titleColor='c-tomato12'
             // borderColor='b-tomato4'
           />
-          <li
-            className=" rd-3  b-t-1.5 b-l-1 b-r-1 b-b-0.5 b-base4 b-t-base5 sahdow-xl  bg-clip-padding xs:g-row-7/9 xs:g-col-1/2"
-            style={{
-              // backgroundImage: "url('/static/noise.svg')",
-              backgroundSize: "auto",
-              backgroundRepeat: "repeat",
-              backdropFilter: "blur(10px)",
-            }}
-          >
+          <li className=" rd-3  b-t-1.5 b-l-1 b-r-1 b-b-1  b-base4 b-t-base5 b-b-base8 b-r-base8 sahdow-xl  bg-clip-padding xs:g-row-7/9 xs:g-col-1/2 grid">
+            <GradientMask
+              style={{
+                gridArea: "1/1/-1/-1",
+              }}
+              transparencyStops={[[0,0], [50 ,10], [100,100]]}
+            >
+              <div
+                className="-z-10 w-full h-full rd-3 "
+                style={{
+                  backgroundImage: "url('/static/noise.svg')",
+                  backgroundSize: "auto",
+                  backgroundRepeat: "repeat",
+                }}
+              ></div>
+            </GradientMask>
             <div
               className="rd-3 h-full flex flex-col bg-gradient-to-b from-gray2A to-gray1A"
               style={{
+                gridArea: "1/1/-1/-1",
                 // gridTemplateRows: "auto 1fr",
               }}
             >
               <a href="/#contact" className="block h-full p-3 xs:p-6">
                 <div className="flex flex-col h-full">
-                  <p className='fs-xl c-base11'>Let&apos;s make antoher successfull story, together!</p>
+                  <p className="fs-xl c-base11">Let&apos;s make antoher successfull story, together!</p>
                   <div className="mt-auto flex justify-end">
                     <div className="aspect-ratio-1/1 rd-full b-1 w-12 h-12 flex justify-center items-center b-base4 ">
-                    <Icon name="bf-i-ph-arrow-right"  className='c-base11'/>
+                      <Icon name="bf-i-ph-arrow-right" className="c-base11" />
                     </div>
                   </div>
                 </div>

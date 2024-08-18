@@ -1,23 +1,32 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function WorkItemCard({ title, imgs, imgSrcs, subtitle, gradient, titleColor, borderColor }) {
   return (
     <div
-      className={`h-full rd-3 bg-base1A grid overflow-clip b-t-1.5 b-l-1 b-r-1 b-b-0.5 b-t-base5 sahdow-2xl bg-clip-padding ${
+      className={`h-full rd-3 bg-base1A grid overflow-clip b-t-1.5 b-l-1 b-r-1 b-b-1 b-t-base5 b-b-base8 b-r-base8 sahdow-2xl bg-clip-padding grid ${
         borderColor ?? "b-base4"
       } `}
-      style={{
-        backgroundImage: "url('/static/noise.svg')",
-        backgroundSize: "auto",
-        backgroundRepeat: "repeat",
-        backdropFilter: "blur(10px)",
-        // borderRadius: 'calc(0.02 * var(--max-w-page))'
-      }}
+      style={
+        {
+          // borderRadius: 'calc(0.02 * var(--max-w-page))'
+        }
+      }
     >
+      <div
+      className='-z-10'
+        style={{
+          gridArea: "1/1/-1/-1",
+          backgroundImage: "url('/static/noise.svg')",
+          backgroundSize: "auto",
+          backgroundRepeat: "repeat",
+          backdropFilter: "blur(10px)",
+        }}
+      ></div>
       <div
         className={`${gradient} bg-gradient-to-b  h-full grid`}
         style={{
           gridTemplateRows: "auto 1fr",
+          gridArea: "1/1/-1/-1",
         }}
       >
         <div className="px-3 xs:px-6 pt-3 xs:pt-5 ">
@@ -39,9 +48,3 @@ export default function WorkItemCard({ title, imgs, imgSrcs, subtitle, gradient,
     </div>
   );
 }
-
-
-
-
-
-
