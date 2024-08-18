@@ -17,8 +17,8 @@ import GradientMask from "../ui/GradientMask";
 export default function Works({ posts }) {
   return (
     <section className="relative">
-      <BluredCircle radius={200} top="50%" left="70%" bg="bg-cyan2A" blur="200px" />
-      <BluredCircle radius={250} top="80%" left="20%" bg="bg-indigo1 " blur="200px" />
+      {/* <BluredCircle radius={200} top="50%" left="70%" bg="bg-cyan2A" blur="200px" /> */}
+      {/* <BluredCircle radius={250} top="80%" left="20%" bg="bg-indigo1 " blur="200px" /> */}
       <div className="mx-auto max-w-page">
         <h2 className="H1" id="works">
           Works
