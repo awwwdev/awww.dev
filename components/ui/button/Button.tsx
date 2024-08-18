@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 import Icon from "../Icon";
 
 export type ButtonProps = {
-  variation: "ghost" | "ghost-accent" | "solid" | "solid-accent" | "text" | "text-accent" | "soft" | "soft-accent";
+  variation: "ghost" | "ghost-accent" | "solid" | "solid-accent" | "text" | "text-accent" | "soft" | "soft-accent" | "outline" | "outline-accent";
   isLoading?: boolean;
   iconButton?: boolean;
   preStyled?: boolean;
@@ -29,8 +29,8 @@ const parts = {
       accent: "hover:bg-accent4 active:bg-accent4A",
     },
     soft: {
-      gray: "bg-sand4 hover:bg-sand5 active:bg-sand5",
-      accent: "bg-accent4 hover:bg-accent4 active:bg-accent5",
+      gray: "bg-sand2A hover:bg-sand3 active:bg-sand4",
+      accent: "bg-accent3A hover:bg-accent4A active:bg-accent5A",
     },
     solid: {
       gray: "bg-black12A hover:bg-black12A/60  active:bg-black12A/30 ",
@@ -57,6 +57,8 @@ export const classes = {
   "ghost-accent": `${parts.textColor.accent} ${parts.borderColor.accent} ${parts.bg.transparent.accent}`,
   soft: `${parts.textColor.gray} ${parts.borderColor.transparent} ${parts.bg.soft.gray}  `,
   "soft-accent": `${parts.textColor.accent} ${parts.borderColor.transparent} ${parts.bg.soft.accent}`,
+  outline: `${parts.textColor.gray} ${parts.borderColor.gray} ${parts.bg.soft.gray}  `,
+  "outline-accent": `${parts.textColor.accent} ${parts.borderColor.accent} ${parts.bg.soft.accent}`,
   solid: `${parts.textColor.white} ${parts.borderColor.transparent} ${parts.bg.solid.gray}`,
   "solid-accent": `${parts.textColor.white} ${parts.borderColor.transparent} ${parts.bg.solid.accent}`,
 };

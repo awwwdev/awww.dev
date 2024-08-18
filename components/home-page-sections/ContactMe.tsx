@@ -21,7 +21,7 @@ export default function ContactMe() {
           <ul className="grid xs:flex  gap-4 ">
             <li>
               <LinkButton
-                variation="ghost-accent"
+                variation="outline-accent"
                 href="mailto:hamidpm@proton.me"
                 className="items-center gap-3  lt-xs:!grid xs:min-w-40"
                 style={{ gridTemplateColumns: "1em 1fr 1em" }}
@@ -32,7 +32,7 @@ export default function ContactMe() {
             </li>
             <li>
               <LinkButton
-                variation="ghost"
+                variation="outline"
                 href="https://github.com/awwwdev"
                 className="items-center gap-3  lt-xs:!grid  xs:min-w-40"
                 style={{ gridTemplateColumns: "1em 1fr 1em" }}
@@ -43,7 +43,7 @@ export default function ContactMe() {
             </li>
             <li>
               <LinkButton
-                variation="ghost"
+                variation="outline"
                 href="https://www.linkedin.com/in/hamidddev/"
                 className="items-center gap-3  lt-xs:!grid  xs:min-w-40"
                 style={{ gridTemplateColumns: "1em 1fr 1em" }}
