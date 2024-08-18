@@ -6,17 +6,17 @@ export default function WorkItemCard({ title, imgs, imgSrcs, subtitle, gradient,
     <div className="grid h-full">
       <div
         style={{ gridArea: "1/1/-1/-1" }}
-        className={`p-10 -z-100`}
+        className={`p-8 -z-100`}
       >
         <div
         
-        className={`h-full w-full bg-gradient-to-b rd-3 ${gradient} mix-blend-screen blur-70 opacity-100 -z-100`}
+        className={`h-full w-full bg-gradient-to-b rd-3 ${gradient} mix-blend-screen blur-60 opacity-100 -z-100`}
         ></div>
       </div>
       <div style={{ gridArea: "1/1/-1/-1" }} className={`bg-sand1 -z-80 rd-3`}></div>
 
       <div
-        className={`h-full rd-3 bg-base1A grid overflow-clip b-t-1.5 b-l-1 b-r-1 b-b-1 b-t-base5 b-b-base8 b-r-base8 sahdow-2xl bg-clip-padding grid ${
+        className={`h-full rd-3 bg-base1A grid overflow-clip b-t-1.5 b-l-1 b-r-1 b-b-1 b-t-base5 b-b-slate7A b-r-slate7A sahdow-2xl bg-clip-padding grid ${
           borderColor ?? "b-base4"
         } `}
         style={{

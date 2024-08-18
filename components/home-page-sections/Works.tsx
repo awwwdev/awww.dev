@@ -107,7 +107,7 @@ export default function Works({ posts }) {
             // titleColor='c-tomato12'
             // borderColor='b-tomato4'
           />
-          <li className=" rd-3  b-t-1.5 b-l-1 b-r-1 b-b-1  b-base4 b-t-base5 b-b-base8 b-r-base8 sahdow-xl  bg-clip-padding xs:g-row-7/9 xs:g-col-1/2 grid">
+          <li className=" rd-3  b-t-1.5 b-l-1 b-r-1 b-b-1  b-base4 b-t-base5 b-b-base7A b-r-base7A sahdow-xl  bg-clip-padding xs:g-row-7/9 xs:g-col-1/2 grid">
             <GradientMask
               style={{
                 gridArea: "1/1/-1/-1",
