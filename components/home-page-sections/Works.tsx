@@ -134,8 +134,8 @@ export default function Works({ posts }) {
                 <div className="flex flex-col h-full">
                   <p className="fs-xl c-base11">Let&apos;s make antoher successfull story, together!</p>
                   <div className="mt-auto flex justify-end">
-                    <div className="aspect-ratio-1/1 rd-full b-1 w-12 h-12 flex justify-center items-center b-base4 ">
-                      <Icon name="bf-i-ph-arrow-right" className="c-base11" />
+                    <div className="aspect-ratio-1/1 rd-full b-1 w-12 h-12 flex justify-center items-center b-base5A ">
+                      <Icon name="bf-i-ph-arrow-right" className="c-base11 fs-lg" />
                     </div>
                   </div>
                 </div>
