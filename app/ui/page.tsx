@@ -2,10 +2,43 @@ import Space from "@/components/ui/Space";
 import { useId } from "react";
 import GradientMask, { gradientMask } from "@/components/ui/GradientMask";
 import BluredCircle from "@/components/home-page-sections/BluredCircle";
+import GlassCard from "@/components/ui/GlassCard";
+
+// border color or gradient
+// noise
+// bg-gradient or color
+//  shadow or glow
 
 export default function Page() {
   return (
     <div className="max-w-page mx-auto ">
+      <Section title="The Div">
+        <div className="relative isolate">
+          <BluredCircle radius={50} top="20%" left="85%" bg="bg-violet4" blur="0" />
+          <BluredCircle radius={90} top="90%" left="5%" bg="bg-cyan4" blur="0" />
+          {/* <div className="w-40 h-40 bg-blue4 absolute -top-5 -left-8"></div> */}
+          <div className='z-100'>
+          <GlassCard
+            classNames={{
+              borderRadius: "rd-6 ",
+              borderWidth: "b-2",
+              // borderColor: 'bg-red9',
+              borderGradient: "bg-gradient-to-br from-white/30  to-white/0   ",
+              // shadowLayer: "bg-blue4 blur-50 translate-y-2 m-4",
+              shadowLayer: "shadow-2xl ",
+              backgroundLayer: "backdrop-blur-20px bg-gradient-to-br from-white/10 to-white/5",
+              noiseLayer: " ",
+              contentLayer: "p-6",
+            }}
+          >
+            <h2 className="H2">Title</h2>
+            <div className="h"></div>
+            <p className="c-base11">Subtitle</p>
+            <p className="c-base11">description</p>
+          </GlassCard>
+            </div>
+        </div>
+      </Section>
       <Section title="Services">
         <div className=" b-1 bg-gradient-radial to-mauve2 via-mauve2 from-black  b-base3 rd-9 p-12 relative isolate  overflow-clip">
           <BluredCircle radius={200} top="20%" left="85%" bg="bg-violet2" blur="100px" />
@@ -27,8 +60,8 @@ export default function Page() {
               // gridTemplateRows: 'repeat(9 , 1fr)'
             }}
           >
-            <div className='grid gap-6'>
-              <ItemCard className="h-60 from-plum4A to-plum1A" gridColumn="1/2" >
+            <div className="grid gap-6">
+              <ItemCard className="h-60 from-plum4A to-plum1A" gridColumn="1/2">
                 <h2 className="H4">
                   Personal and
                   <br />
@@ -37,7 +70,7 @@ export default function Page() {
                 <div className="h-4"></div>
                 {/* <p className="c-base11">For Perfessionals, Academic People, Artists and Photographers</p> */}
               </ItemCard>
-              <ItemCard className="h-90 from-green4A to-green1A relative isolate  " gridColumn="1/2" >
+              <ItemCard className="h-90 from-green4A to-green1A relative isolate  " gridColumn="1/2">
                 <h2 className="H4">
                   Business Websites,
                   <br />
@@ -72,7 +105,7 @@ export default function Page() {
                 </div>
               </ItemCard>
             </div>
-            <div className='grid gap-6'>
+            <div className="grid gap-6">
               <ItemCard
                 className="h-105 from-violet4A to-violet1 flex flex-col h-full relative isolate"
                 // gridColumn="2/3"
@@ -84,7 +117,7 @@ export default function Page() {
                 <Logos />
                 <Circles />
               </ItemCard>
-              <ItemCard className="h-45 from-slate4A to-slate1" >
+              <ItemCard className="h-45 from-slate4A to-slate1">
                 <p className="flex flex-col h-full ">
                   <span className="c-base11">Visit work samples at:</span>
                   <span className="block mt-auto"></span>
@@ -225,13 +258,6 @@ function Circles() {
   );
 }
 
-
-function ColorSwatch(){
-
-return (
-  <div >
-    {
-      [1,2,3,4,5,6,7,8,9,10, 11, 12, 13,14,15].map()
-    }
-  </div>
-)};
+function ColorSwatch() {
+  return <div>{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map()}</div>;
+}
