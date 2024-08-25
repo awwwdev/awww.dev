@@ -139,6 +139,10 @@ export const shortcuts: Shortcut[] = [
     "my-responsive": "my-4 sm:my-4 md:my-6 lg:my-8 xl:my-12 2xl:my-24",
     "px-responsive": "px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 2xl:px-36",
     "py-responsive": "py-4 sm:py-4 md:py-6 lg:py-8 xl:py-12 2xl:py-24",
+
+    "bf-shadow-layer": "relative before:absolute before:rd-inherit before:top-0 before:bottom-0 before:left-0 before:right-0   before:mix-blend-multiply before:content-empty -before:z-100",
+    "bf-glow-layer": "relative  before:absolute before:rd-inherit before:top-0 before:bottom-0 before:left-0 before:right-0  before:mix-blend-screen before:content-empty -before:z-100"
+
   },
   [
     /^bf-i-(.*)$/,
@@ -151,4 +155,5 @@ export const shortcuts: Shortcut[] = [
       `after:opacity-40 after:mis-2 empty:after:mis-0 after:vertical-middle after:scale-120  after:content-none before:inline-block after:i-${iconName}`,
   ],
   [/^ol-(.*)$/, ([, val]) => `outline-${val}`],
+
 ];
