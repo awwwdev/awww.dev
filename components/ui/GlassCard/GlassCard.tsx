@@ -4,33 +4,33 @@ import { NoiseProps } from '../Noise/Noise';
 
 type Props = {
   children: React.ReactNode;
-  classNames: {
-    borderWidth?: string;
-    borderColor?: string;
-    borderGradient?: string;
-    padding?: string;
-    borderRadius?: string;
-    shadowLayer?: string;
-    noiseLayer?: string;
-    backgroundLayer?: string;
-    contentLayer?: string;
+  className?: string;
+  noiseLayer?: {
+    opacity?: string,
+    frequency?: string,
+    numOctaves?: string
+    className?: string
   };
+  borderGradient?: string;
 };
 
-export default function GlassCard({ children, classNames }: Props) {
-  const cl = classNames;
+export default function GlassCard({ children, className, noiseLayer  , borderGradient }: Props) {
   return (
     <div
       style={{
-        display: "grid",
+        position: 'relative',
+        isolation: 'isolate',
+        borderColor: 'transparent',
+        borderWidth: 0,
+      
       }}
-      className={`${cl.borderRadius} `}
+      className={`${className} `}
     >
-      <ShadowLayer className={`${cl.borderRadius} ${cl.shadowLayer}`} />
-      <BackgroundLayer className={`${cl.backgroundLayer} ${cl.borderRadius} ${cl.borderWidth} `} />
-      <NoiseLayer className={`${cl.noiseLayer} ${cl.borderRadius} ${cl.borderWidth} `} />
-      <BorderLayer className={`${cl.borderGradient} ${cl.borderColor} ${cl.borderWidth}  ${cl.borderRadius}`} />
-      <Content className={`${cl.contentLayer} ${cl.borderRadius} ${cl.borderWidth}`}>{children}</Content>
+      {/* <ShadowLayer className={`${cl.borderRadius} ${cl.shadowLayer}`} /> */}
+      {/* <BackgroundLayer className={`${cl.backgroundLayer} ${cl.borderRadius} ${cl.borderWidth} `} /> */}
+      {/* <NoiseLayer className={`${noiseLayer?.className} `} numOctaves={noiseLayer?.numOctaves} frequency={noiseLayer?.frequency} /> */}
+      <BorderLayer className={`${borderGradient} `} />
+      {children}
     </div>
   );
 }
@@ -41,9 +41,8 @@ function Content({ style = {} as CSSProperties, className = "", children }) {
   return (
     <div
       style={{
-        gridArea: "1/1/-1/-1",
+        // gridArea: "1/1/-1/-1",
         borderColor: "transparent",
-        zIndex: 10,
         ...style,
       }}
       className={`${className}`}
@@ -57,7 +56,8 @@ function BackgroundLayer({ style = {}, className = "" }) {
   return (
     <div
       style={{
-        gridArea: "1/1/-1/-1",
+        // gridArea: "1/1/-1/-1",
+        // position: 'absolute',
         borderColor: "transparent",
         backgroundClip: "padding-box", // for cleaner border layer
         // backgroundOrigin: 'padding-box',
@@ -86,9 +86,16 @@ function NoiseLayer({ className , style , ...rest }: NoiseProps) {
   return (
     <Noise
       style={{
-        gridArea: "1/1/-1/-1",
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        // gridArea: "1/1/-1/-1",
+        borderRadius: 'inherit',
         borderColor: "transparent",
-        zIndex: 5,
+        borderWidth: 'inherit',
+        // zIndex: 5,
         ...style
       }}
       className={className}
@@ -104,7 +111,15 @@ function BorderLayer({ className }) {
   return (
     <div
       style={{
-        gridArea: "1/1/-1/-1",
+        // gridArea: "1/1/-1/-1",
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        borderRadius: 'inherit',
+        // overflow: 'clip',
+        // borderWidth: 'inherit',
         borderStyle: "solid",
         borderColor: "transparent",
         backgroundClip: "border-box",
@@ -114,7 +129,7 @@ function BorderLayer({ className }) {
         WebkitMaskComposite: "xor" /*5'*/,
         maskComposite: "exclude" /*5*/,
         backdropFilter: "blur(5px)",
-        zIndex: 9,
+        // zIndex: 9,
       }}
       className={`${className}  `}
     ></div>
