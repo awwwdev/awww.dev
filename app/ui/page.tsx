@@ -17,26 +17,18 @@ export default function Page() {
           <BluredCircle radius={50} top="20%" left="85%" bg="bg-violet4" blur="0" />
           <BluredCircle radius={90} top="90%" left="5%" bg="bg-cyan4" blur="0" />
           {/* <div className="w-40 h-40 bg-blue4 absolute -top-5 -left-8"></div> */}
-          <div className='z-100'>
-          <GlassCard
-            classNames={{
-              borderRadius: "rd-6 ",
-              borderWidth: "b-2",
-              // borderColor: 'bg-red9',
-              borderGradient: "bg-gradient-to-br from-white/30  to-white/0   ",
-              // shadowLayer: "bg-blue4 blur-50 translate-y-2 m-4",
-              shadowLayer: "shadow-2xl ",
-              backgroundLayer: "backdrop-blur-20px bg-gradient-to-br from-white/10 to-white/5",
-              noiseLayer: " ",
-              contentLayer: "p-6",
-            }}
-          >
-            <h2 className="H2">Title</h2>
-            <div className="h"></div>
-            <p className="c-base11">Subtitle</p>
-            <p className="c-base11">description</p>
-          </GlassCard>
-            </div>
+          <div className="z-100">
+            <GlassCard
+              className="rd-6  p-6 backdrop-blur-20px bg-gradient-to-br from-white/10 to-white/5"
+              noiseLayerClassName=" "
+              borderGradient="b-2 bg-gradient-to-br from-white/30  to-white/0"
+            >
+              <h2 className="H2">Title</h2>
+              <div className="h"></div>
+              <p className="c-base11">Subtitle</p>
+              <p className="c-base11">description</p>
+            </GlassCard>
+          </div>
         </div>
       </Section>
       <Section title="Services">

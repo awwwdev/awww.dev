@@ -629,3 +629,22 @@ p a,
   --gray-14: oklch(18% var(--gray-chroma, none) var(--gray-hue, none));
   --gray-15: oklch(10% var(--gray-chroma, none) var(--gray-hue, none));
 }
+
+
+/* HTML: <div class="triangle"></div> */
+.triangle {
+  --r:20px; /* border radius */
+
+  width: 180px;
+  aspect-ratio: 1/cos(30deg);
+  --_g:calc(tan(60deg)*var(--r)) bottom var(--r),#000 98%,#0000 101%;
+  -webkit-mask:
+    conic-gradient(from -30deg at 50% calc(200% - 3*var(--r)/2),#000 60deg,#0000 0)
+     0 100%/100% calc(100% - 3*var(--r)/2) no-repeat,
+    radial-gradient(var(--r) at 50% calc(2*var(--r)),#000 98%,#0000 101%),
+    radial-gradient(var(--r) at left  var(--_g)),
+    radial-gradient(var(--r) at right var(--_g));
+  clip-path: polygon(50% 0,100% 100%,0 100%);
+  /* filter: drop-shadow(0px 0px 2px red); */
+  /* background: linear-gradient(45deg,#FA6900,#C02942); */
+}
