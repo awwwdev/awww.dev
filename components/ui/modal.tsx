@@ -20,7 +20,7 @@ return (
     {trigger}
   </RadixDialog.Trigger>
   <RadixDialog.Portal>
-    <RadixDialog.Overlay className="fixed inset-0 z-20 bg-black/70 backdrop-blur-10" />
+    <RadixDialog.Overlay className="fixed inset-0 z-20 bg-black/50 backdrop-blur-10 " />
     <RadixDialog.Content
       className="fixed z-50 max-h-[90vh] overflow-y-auto 
             w-[95vw] max-w-50rem rd-6 p-6 md:w-full 
