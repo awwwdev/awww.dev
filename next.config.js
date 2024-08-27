@@ -5,6 +5,9 @@
 const nextConfig = {
   // reactStrictMode: true,
   swcMinify: true,
+  // experimental: {
+  //   useLightningcss: true,
+  // },
   typescript: {
     ignoreBuildErrors: true,
   },
