@@ -74,7 +74,7 @@ export default function Tools() {
         <ul className="toolkit__grid">
           <Li
             className="  c-white"
-            bgGradient="!bg-gradient-to-br from-purple1A via-25%  to-mauve1A via-transparent"
+            bgGradient="!bg-gradient-to-br from-purple1A via-25%  to-purple1 via-transparent"
             borderGradeintFrom="from-violet4"
             glowColor="bg-violet3A"
             glowBlur="blur-90"
@@ -395,7 +395,7 @@ function ButtonWithToolTip({
               setGlowingCategory(category);
             }
           }}
-          className={`!b-transparent relative !b-0 !rd-2 !bg-transparent c-sage11   hover:bg-gradient-to-b from-transparent ${
+          className={`!b-transparent relative !b-0 !rd-2 !bg-transparent    hover:bg-gradient-to-b from-transparent ${
             glowingCategory === category ? "bg-gradient-to-b to-cyan3A !c-cyan9" : " to-cyan2A"
           } transition ease duration-150ms`}
         >
