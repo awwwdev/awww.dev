@@ -31,7 +31,7 @@ const MobileSideMenuOverlay = () => {
   const { isSideMenuOpen, setIsSideMenuOpen } = useGlobalContex();
   return (
     <div
-      className={` drawer-overlay sm:display-none fixed z-20 inset-0 bg-black2A 
+      className={` drawer-overlay sm:hidden fixed z-20 inset-0 bg-black2A 
              transition-opacity duration-600 ease-in-out backdrop-blur-4
              ${isSideMenuOpen ? "opacity-100 select-none" : "pointer-events-none opacity-0 "}`}
       title="Close Menu"
@@ -92,7 +92,7 @@ function Logo({ isCollapsed }) {
 
 function CollapseToggle({ isCollapsed, setIsCollapsed }) {
   return (
-    <div className="display-none sm:block  -mis-1.5">
+    <div className="hidden sm:block  -mis-1.5">
       <Toggle.Root
         pressed={isCollapsed}
         onPressedChange={(v) => setIsCollapsed(v)}

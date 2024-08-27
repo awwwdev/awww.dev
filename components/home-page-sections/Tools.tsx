@@ -168,7 +168,7 @@ export default function Tools() {
 
           {/* <Li className="bg-violet-100" src="/tool-logos/framer-motion.png" size="w-9/10" alt="Framer Motion" /> */}
           <Li
-            className="col-span-2 bg-gradient-to-b from-gray1A to-gray3 !display-none xxs:!flex "
+            className="col-span-2 bg-gradient-to-b from-gray1A to-gray3 !hidden xxs:!flex "
             gridPosition="  xxs:g-col-7/9 xxs:g-row-4/5"
             src="/tool-logos/unocss.svg"
             alt="UnoCSS"
