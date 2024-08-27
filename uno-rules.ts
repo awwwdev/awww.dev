@@ -106,15 +106,15 @@ export const shortcuts: Shortcut[] = [
     // "btn-link":
     //   " b-1 b-transparent   fw-500 px-4 py-1 rd-lg  c-sand11 active:(b-gray3 bg-gray3) hover:(b-gray2  bg-gray2) focus:(b-gray2 bg-gray2) disabled:(btn-disabled)",
     "snack-info":
-      "text-sm b-1 b-blue7 b-l-4 bg-blue3 c-blue11 rd-lg p-4 pis-12 rel isolate before:inline-block before:content-none  before:i-ph-info before:vertical-text-top before:abs before:top-5 before:left-4",
+      "text-sm b-1 b-blue7 b-l-4 bg-blue3 c-blue11 rd-lg p-4 pis-12 rel isolate before:inline-block before:content-empty  before:i-ph-info before:vertical-text-top before:abs before:top-5 before:left-4",
     "snack-warning":
-      "text-sm b-1 b-yellow7 b-l-4 bg-yellow3 c-yellow11 rd-lg p-4 pis-12 rel isolate before:inline-block before:content-none  before:i-ph-warning before:vertical-text-top before:abs before:top-5 before:left-4",
+      "text-sm b-1 b-yellow7 b-l-4 bg-yellow3 c-yellow11 rd-lg p-4 pis-12 rel isolate before:inline-block before:content-empty  before:i-ph-warning before:vertical-text-top before:abs before:top-5 before:left-4",
     "snack-success":
-      "text-sm b-1 b-green7 b-l-4 bg-green3 c-green11 rd-lg p-4 pis-12 rel isolate before:inline-block before:content-none  before:i-ph-check-circle before:vertical-text-top before:abs before:top-5 before:left-4",
+      "text-sm b-1 b-green7 b-l-4 bg-green3 c-green11 rd-lg p-4 pis-12 rel isolate before:inline-block before:content-empty  before:i-ph-check-circle before:vertical-text-top before:abs before:top-5 before:left-4",
     "snack-error":
-      "text-sm b-1 b-red7 b-l-4 bg-red3 c-red11 rd-lg p-4 pis-12 rel isolate before:inline-block before:content-none  before:i-ph-x-circle before:vertical-text-top before:abs before:top-5 before:left-4",
+      "text-sm b-1 b-red7 b-l-4 bg-red3 c-red11 rd-lg p-4 pis-12 rel isolate before:inline-block before:content-empty  before:i-ph-x-circle before:vertical-text-top before:abs before:top-5 before:left-4",
     "snack-danger":
-      "text-sm b-1 b-red7 b-l-4 bg-red3 c-red11 rd-lg p-4 pis-12 rel isolate before:inline-block before:content-none  before:i-ph-warning-octagon before:vertical-text-top before:abs before:top-5 before:left-4",
+      "text-sm b-1 b-red7 b-l-4 bg-red3 c-red11 rd-lg p-4 pis-12 rel isolate before:inline-block before:content-empty  before:i-ph-warning-octagon before:vertical-text-top before:abs before:top-5 before:left-4",
     "info-line": "bf-i-ph-info before:c-blue11 before:opacity-100 text-sm c-blue10 ",
     "success-line": "bf-i-ph-check-circle before:c-green11 before:opacity-100 text-sm c-green10",
     "warning-line": "bf-i-ph-warning before:c-yellow11 before:opacity-100 text-sm c-yellow10",
@@ -147,12 +147,12 @@ export const shortcuts: Shortcut[] = [
   [
     /^bf-i-(.*)$/,
     ([, iconName]) =>
-      `before:opacity-40 before:mie-2 empty:before:mie-0 before:vertical-middle before:scale-120 translate-y--0.125em  before:content-none before:inline-block before:i-${iconName}`,
+      `before:opacity-40 before:mie-2 empty:before:mie-0 before:vertical-middle before:scale-120 translate-y--0.125em  before:content-empty before:inline-block before:i-${iconName}`,
   ],
   [
     /^af-i-(.*)$/,
     ([, iconName]) =>
-      `after:opacity-40 after:mis-2 empty:after:mis-0 after:vertical-middle after:scale-120  after:content-none before:inline-block after:i-${iconName}`,
+      `after:opacity-40 after:mis-2 empty:after:mis-0 after:vertical-middle after:scale-120  after:content-empty before:inline-block after:i-${iconName}`,
   ],
   [/^ol-(.*)$/, ([, val]) => `outline-${val}`],
 
