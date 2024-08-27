@@ -19,14 +19,14 @@ export default async function Page() {
         <Works posts={posts} />
         <Space size="h-40 md:h-50" />
         <Experiences />
-        <Space size="h-40 md:h-40" />
+        <Space size="h-40 md:h-50" />
         <Tools />
         {/* <Process /> */}
-        <Space size="h-40 md:h-40" />
+        <Space size="h-40 md:h-50" />
         <Blog posts={posts}/>
-        <Space size="h-40 md:h-40" />
+        <Space size="h-40 md:h-50" />
         <AboutMe />
-        <Space size="h-40 md:h-40" />
+        <Space size="h-40 md:h-50" />
         <ContactMe />
     </div>
   );
