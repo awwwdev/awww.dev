@@ -74,11 +74,11 @@ export const rules: Rule[] = [
 
 export const shortcuts: Shortcut[] = [
   {
-    "skeleton-text": "animate-pulse rounded-md bg-sand5 h-[calc(var(--line-height)-0.2em)] py-[0.1em]  bg-clip-content",
-    skeleton: "animate-pulse rounded-md bg-sand5 h-[var(--line-height)]",
+    "skeleton-text": "animate-pulse rounded-md bg-base5 h-[calc(var(--line-height)-0.2em)] py-[0.1em]  bg-clip-content",
+    skeleton: "animate-pulse rounded-md bg-base5 h-[var(--line-height)]",
     "iso-rel": "relative isolate",
     field: "px-2 py-1 rd b-1 b-transparent bg-gray2",
-    chip: "no-underline rd-xl px-4 py-2 bg-gray1 c-sand11 hover:bg-gray2",
+    chip: "no-underline rd-xl px-4 py-2 bg-gray1 c-base11 hover:bg-gray2",
     "chip-link": "chip data-[in-path=true]:bg-accent9 data-[in-path=true]:c-accent1",
     jc: "justify-center",
     jb: "justify-between",
@@ -100,11 +100,11 @@ export const shortcuts: Shortcut[] = [
     "btn-ghost-accent":
       " b-1   fw-500 px-4 py-1 rd-lg b-accent7 c-accent11 active:b-accent11 active:bg-accent1 hover:b-accent9 hover:bg-accent1 focus:b-accent9 focus:bg-accent1 disabled:btn-disabled",
     "btn-ghost":
-      " b-1 fw-500 px-4 py-1 rd-lg b-gray7 c-sand11 active:b-gray11 active:bg-gray1 hover:b-gray9 hover:bg-gray1 focus:b-gray9 focus:bg-gray1 disabled:btn-disabled",
+      " b-1 fw-500 px-4 py-1 rd-lg b-gray7 c-base11 active:b-gray11 active:bg-gray1 hover:b-gray9 hover:bg-gray1 focus:b-gray9 focus:bg-gray1 disabled:btn-disabled",
     // "btn-link-accent":
     //   " b-1 b-transparent   fw-500 px-4 py-1 rd-lg  c-accent11 active:(b-accent3 bg-accent3) hover:(b-accent2  bg-accent2) focus:(b-accent2 bg-accent2) disabled:(btn-disabled)",
     // "btn-link":
-    //   " b-1 b-transparent   fw-500 px-4 py-1 rd-lg  c-sand11 active:(b-gray3 bg-gray3) hover:(b-gray2  bg-gray2) focus:(b-gray2 bg-gray2) disabled:(btn-disabled)",
+    //   " b-1 b-transparent   fw-500 px-4 py-1 rd-lg  c-base11 active:(b-gray3 bg-gray3) hover:(b-gray2  bg-gray2) focus:(b-gray2 bg-gray2) disabled:(btn-disabled)",
     "snack-info":
       "text-sm b-1 b-blue7 b-l-4 bg-blue3 c-blue11 rd-lg p-4 pis-12 rel isolate before:inline-block before:content-empty  before:i-ph-info before:vertical-text-top before:abs before:top-5 before:left-4",
     "snack-warning":
@@ -120,7 +120,7 @@ export const shortcuts: Shortcut[] = [
     "warning-line": "bf-i-ph-warning before:c-yellow11 before:opacity-100 text-sm c-yellow10",
     "error-line": "bf-i-ph-x-circle before:c-red11 before:opacity-100 text-sm c-red10",
     "danger-line": "bf-i-ph-warning-octagon before:c-red11 before:opacity-100 text-sm c-red10",
-    snack: "b b-gray7 bg-gray3 c-sand11 rd-lg p-4 text-sm",
+    snack: "b b-gray7 bg-gray3 c-base11 rd-lg p-4 text-sm",
     H1: "fs-3xl sm:fs-4xl  ls-tightest",
     H2: "fs-2xl sm:fs-3xl  ls-tighter",
     H3: "fs-xl sm:fs-2xl  ls-tighter",
@@ -128,8 +128,8 @@ export const shortcuts: Shortcut[] = [
     'text-caption': "text-xs ",
     'text-all-caps': "uppercase tracking-wider",
     "large-title": "fs-5xl sm:fs-7xl md:fs-9xl  fw-900 ls-tightest ",
-    "text-note": "c-sand11 text-sm",
-    "text-tiny-note": "c-sand11 text-xs",
+    "text-note": "c-base11 text-sm",
+    "text-tiny-note": "c-base11 text-xs",
     "table-header-cell":
       "px-2 py-1 pt-2 first-of-type:pis-4 first-of-type:rd-tl-xl  last-of-type:pie-4  last-of-type:rd-tr-xl",
     "table-body-cell": "px-2 py-4 first-of-type:pis-4  last-of-type:pie-4",

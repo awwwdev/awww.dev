@@ -4,12 +4,12 @@ export default function Price({ children, currency }: { currency?: string; child
   return (
     <span>
       
-        <span className='c-sand11 fw-300'>CAD</span>
+        <span className='c-base11 fw-300'>CAD</span>
       
       {children}
       
         {` `}
-        <span className='c-sand11 fw-300'>دلار کانادا</span>
+        <span className='c-base11 fw-300'>دلار کانادا</span>
       
     </span>
   );

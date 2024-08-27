@@ -139,7 +139,7 @@ export default function Tools() {
             glowingCategory={glowingCategory}
           />
           <Li
-            className="bg-gradient-to-b from-sand1A via-orange1A to-orange3A "
+            className="bg-gradient-to-b from-base1A via-orange1A to-orange3A "
             gridPosition="g-col-4/5 g-row-1/3  xxs:g-col-6/7 xxs:g-row-2/4"
             src="/tool-logos/astrojs.svg"
             alt="Astro"
@@ -234,7 +234,7 @@ export default function Tools() {
             glowingCategory={glowingCategory}
           />
           <Li
-            className=" bg-gradient-to-b from-sand2A via-orange3A to-orange4A"
+            className=" bg-gradient-to-b from-base2A via-orange3A to-orange4A"
             gridPosition="g-col-4/5 g-row-5/6  xxs:g-col-7/8 xxs:g-row-5/6"
             src="/tool-logos/html.svg"
             alt="HTML"

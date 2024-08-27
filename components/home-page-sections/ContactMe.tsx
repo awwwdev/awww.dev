@@ -15,7 +15,7 @@ export default function ContactMe() {
             Contact Me
           </h2>
           <Space size="h-4" />
-          <p className="c-sand11">Let&apos;s get in touch</p>
+          <p className="c-base11">Let&apos;s get in touch</p>
           <p className="c-gray11">Feel free to contact me. I try to reach back to you soon.</p>
           <div className="h-6"></div>
           <ul className="grid xs:flex  gap-4 ">

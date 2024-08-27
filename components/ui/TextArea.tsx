@@ -4,15 +4,15 @@ import Label from './Label';
 import ErrorMessage from './ErrorMessage.tsx';
 
 const classes = {
-  hint: "text-xs c-sand11 italic pt-0.3em pb-0.5em",
+  hint: "text-xs c-base11 italic pt-0.3em pb-0.5em",
   wrapper: {
     base: ` rd-0.5em leading-1em  whitespace-nowrap overflow-hidden
-     b-1 b-sand7 hover:b-sand8
+     b-1 b-base7 hover:b-base8
      bg-base3 
      grid
      focus-within:outline-transparent focus-within:b-accent9  focus-within:hover:b-accent9
      `,
-    disabled: "aria-[disabled]:cursor-not-allowed  aria-[disabled]:c-sand10",
+    disabled: "aria-[disabled]:cursor-not-allowed  aria-[disabled]:c-base10",
   },
   textAreaElement: {
     base: ` px-0.75em py-0.5em bg-transparent focus:outline-transparent line-height-1`,

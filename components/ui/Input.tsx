@@ -4,14 +4,14 @@ import Label from './Label';
 import ErrorMessage from './ErrorMessage.tsx';
 
 const classes = {
-  hint: "text-xs c-sand11 italic pt-0.3em pb-0.5em",
+  hint: "text-xs c-base11 italic pt-0.3em pb-0.5em",
   wrapper: {
     base: `h-2.75em  rd-0.5em leading-1em overflow-hidden  whitespace-nowrap
-     b-1 b-sand7 hover:b-sand8
+     b-1 b-base7 hover:b-base8
      bg-base3 
      grid grid-auto-flow-col
      focus-within:outline-transparent focus-within:b-accent9 focus-within:hover:b-accent9 `,
-    disabled: "aria-[disabled]:cursor-not-allowed  aria-[disabled]:c-sand10",
+    disabled: "aria-[disabled]:cursor-not-allowed  aria-[disabled]:c-base10",
   },
   prefixBox: "",
   inputElement: {

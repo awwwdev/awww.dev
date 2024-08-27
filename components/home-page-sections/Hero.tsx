@@ -283,7 +283,7 @@ function ApplicationWord() {
 // }
 
 // function Plate({ children }) {
-//   return <div className="p-4 rd-4 shadow-lg bg-sand3 w-fit">{children}</div>;
+//   return <div className="p-4 rd-4 shadow-lg bg-base3 w-fit">{children}</div>;
 // }
 
 function DotGrid({ rows, cols }) {

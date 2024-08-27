@@ -21,7 +21,7 @@ const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
 >(({ className, ...props }, ref) => (
-  <AvatarPrimitive.Image ref={ref} className={`aspect-square h-full w-full bg-sand4 rd-full ${className}`} {...props} />
+  <AvatarPrimitive.Image ref={ref} className={`aspect-square h-full w-full bg-base4 rd-full ${className}`} {...props} />
 ));
 AvatarImage.displayName = AvatarPrimitive.Image.displayName;
 

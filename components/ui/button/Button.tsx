@@ -20,16 +20,16 @@ type AllProps = React.ComponentPropsWithoutRef<"button"> & ButtonProps;
 const parts = {
   borderColor: {
     transparent: "b-transparent",
-    gray: "b-sand7 hover:b-sand8 active:b-sand8",
+    gray: "b-base7 hover:b-base8 active:b-base8",
     accent: "b-accent7 hover:b-accent8 active:b-accent8",
   },
   bg: {
     transparent: {
-      gray: "hover:bg-sand4 active:bg-sand4A",
+      gray: "hover:bg-base4 active:bg-base4A",
       accent: "hover:bg-accent4 active:bg-accent4A",
     },
     soft: {
-      gray: "bg-sand2A hover:bg-sand3 active:bg-sand4",
+      gray: "bg-base2A hover:bg-base3 active:bg-base4",
       accent: "bg-accent3A hover:bg-accent4A active:bg-accent5A",
     },
     solid: {
@@ -64,15 +64,15 @@ export const classes = {
 };
 
 export const disabledClasses = {
-  base: `aria-[disabled]:cursor-not-allowed  aria-[disabled]:c-sand10  `,
-  text: `  aria-[disabled]:c-sand10 aria-[disabled]:b-transparent`,
-  "text-accent": ` aria-[disabled]:c-sand10 aria-[disabled]:b-transparent`,
-  soft: ` aria-[disabled]:c-sand10 aria-[disabled]:bg-sand4 aria-[disabled]:b-transparent`,
-  "soft-accent": ` aria-[disabled]:c-sand10 aria-[disabled]:bg-sand4 aria-[disabled]:b-transparent`,
-  ghost: ` aria-[disabled]:c-sand10 aria-[disabled]:b-sand4`,
-  "ghost-accent": ` aria-[disabled]:c-sand10 aria-[disabled]:b-sand4`,
-  solid: "aria-[disabled]:bg-sand8 aria-[disabled]:c-sand2 aria-[disabled]:b-transparent",
-  "solid-accent": "aria-[disabled]:bg-sand8 aria-[disabled]:c-sand2 aria-[disabled]:b-transparent",
+  base: `aria-[disabled]:cursor-not-allowed  aria-[disabled]:c-base10  `,
+  text: `  aria-[disabled]:c-base10 aria-[disabled]:b-transparent`,
+  "text-accent": ` aria-[disabled]:c-base10 aria-[disabled]:b-transparent`,
+  soft: ` aria-[disabled]:c-base10 aria-[disabled]:bg-base4 aria-[disabled]:b-transparent`,
+  "soft-accent": ` aria-[disabled]:c-base10 aria-[disabled]:bg-base4 aria-[disabled]:b-transparent`,
+  ghost: ` aria-[disabled]:c-base10 aria-[disabled]:b-base4`,
+  "ghost-accent": ` aria-[disabled]:c-base10 aria-[disabled]:b-base4`,
+  solid: "aria-[disabled]:bg-base8 aria-[disabled]:c-base2 aria-[disabled]:b-transparent",
+  "solid-accent": "aria-[disabled]:bg-base8 aria-[disabled]:c-base2 aria-[disabled]:b-transparent",
 };
 
 const Button = forwardRef<Ref, AllProps>(function Button(

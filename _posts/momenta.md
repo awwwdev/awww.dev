@@ -102,4 +102,4 @@ On the other hand, there were times I reconsidered and improved the design after
 
 Knowing design and development helped me quickly find the possibilities and limitations I have and manage to deliver this project on time.
 
-<a class="b-1 w-fit af-i-ph-arrow-right  fw-500  rd-xl b-orangeA-6  dark:b-orangeA-7 c-accent11 bg-gradient-to-r from-accent1 to-sand1  active:(b-orangeA-8 from-accent5 to-sand2) hover:b-orangeA-7 hover:from-accent2 hover:to-accent1 )  focus-visible:b-orangeA-8 focus-visible:from-accent4 focus-visible:to-accent2  bg-origin-border  c-accent11  fw-500 py-4 b-1.5  px-8 rd-xl flex gap-2 ac  !mt-20 " href="https://momenta.app" target="_blank">Visit Momenta</a>
+<a class="b-1 w-fit af-i-ph-arrow-right  fw-500  rd-xl b-orangeA-6  dark:b-orangeA-7 c-accent11 bg-gradient-to-r from-accent1 to-base1  active:(b-orangeA-8 from-accent5 to-base2) hover:b-orangeA-7 hover:from-accent2 hover:to-accent1 )  focus-visible:b-orangeA-8 focus-visible:from-accent4 focus-visible:to-accent2  bg-origin-border  c-accent11  fw-500 py-4 b-1.5  px-8 rd-xl flex gap-2 ac  !mt-20 " href="https://momenta.app" target="_blank">Visit Momenta</a>

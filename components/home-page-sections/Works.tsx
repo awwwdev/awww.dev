@@ -101,7 +101,7 @@ export default function Works({ posts }) {
             gradient="from-[#695796] via-[#695796]/30"
             borderGradeintFrom="from-[#695796]/90"
 
-            // titleColor='c-sand12'
+            // titleColor='c-base12'
             // borderColor='b-base4'
           />
           <WorkItem
@@ -192,7 +192,7 @@ function Overlay({ expanded }) {
   return (
     <div className="relative">
       {!expanded && (
-        <div className="bg-gradient-via-b from-transparent  via-sand1 h-20 absolute w-full bottom-0 -translate-y-0% z-10 "></div>
+        <div className="bg-gradient-via-b from-transparent  via-base1 h-20 absolute w-full bottom-0 -translate-y-0% z-10 "></div>
       )}
     </div>
   );

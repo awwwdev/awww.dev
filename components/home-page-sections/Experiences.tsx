@@ -208,7 +208,7 @@ function Overlay({ expanded }) {
   return (
     <div className="relative">
       {!expanded && (
-        <div className="bg-gradient-to-b from-transparent  to-sand1 h-20 absolute w-full bottom-0 -translate-y-0% z-10 "></div>
+        <div className="bg-gradient-to-b from-transparent  to-base1 h-20 absolute w-full bottom-0 -translate-y-0% z-10 "></div>
       )}
     </div>
   );

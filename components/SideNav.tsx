@@ -97,10 +97,10 @@ function CollapseToggle({ isCollapsed, setIsCollapsed }) {
         pressed={isCollapsed}
         onPressedChange={(v) => setIsCollapsed(v)}
         aria-label="Toggle italic"
-        className={`bg-sand3
-          hover:bg-sand4
-      data-[state=on]:bg-sand3  
-       flex h-6 w-6  items-center justify-center rounded b-1 b-sand3  leading-4 `}
+        className={`bg-base3
+          hover:bg-base4
+      data-[state=on]:bg-base3  
+       flex h-6 w-6  items-center justify-center rounded b-1 b-base3  leading-4 `}
       >
         <span className={"sr-only"}>Callpase Side Nav</span>
         {isCollapsed ? <Icon name="bf-i-ph-caret-right" /> : <Icon name="bf-i-ph-caret-left" />}

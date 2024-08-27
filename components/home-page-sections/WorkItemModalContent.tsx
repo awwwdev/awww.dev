@@ -27,7 +27,7 @@ export default function WorkItemModalContent({
       {tools && tools.length > 0 && (
         <>
           <div className="h-6"></div>
-          <div className="b-1 b-sand4"></div>
+          <div className="b-1 b-base4"></div>
           <div className="h-6"></div>
           <Tools tools={tools} />
         </>
@@ -35,7 +35,7 @@ export default function WorkItemModalContent({
       {relatedBlogPost && (
         <>
           <div className="h-6"></div>
-          <div className="b-1 b-sand4"></div>
+          <div className="b-1 b-base4"></div>
           <div className="h-6"></div>
           <RelatedBlogPost post={relatedBlogPost} />
         </>
@@ -63,7 +63,7 @@ function RelatedBlogPost({ post }: { post: Post }) {
     <div>
       <p className="">Learn more about this project in the blog post below.</p>
       <div className="h-6"></div>
-      <article className="b-1 b-sand5 p-6 rd-3  relative isolate">
+      <article className="b-1 b-base5 p-6 rd-3  relative isolate">
         <Space size="h-8" />
         <h5 className="H1">{post.title}</h5>
         <Space size="h-4" />

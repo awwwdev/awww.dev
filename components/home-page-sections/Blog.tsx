@@ -87,7 +87,7 @@ function BlogCard({ title, subtitle, date, slug, gap }) {
 
         <div className="mt-auto">
           <div className="flex justify-between items-baseline">
-            {date && <p className="c-sand11 lt-sm:text-sm">{toRelativeOrReadableDate(date)}</p>}
+            {date && <p className="c-base11 lt-sm:text-sm">{toRelativeOrReadableDate(date)}</p>}
             <span className="flex items-end">
               <Icon name="bf-i-ph-arrow-right" className="c-base8 fs-4xl leading-none " />
             </span>

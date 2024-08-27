@@ -68,7 +68,7 @@ function Section({ title, className = "", children }) {
       {children}
 
       <Space size="h-8" />
-      <div className="b-t-2 b-sand5"></div>
+      <div className="b-t-2 b-base5"></div>
     </section>
   );
 }
