@@ -25,7 +25,7 @@ const parts = {
   },
   bg: {
     transparent: {
-      gray: "hover:bg-sand4 active:bg-san4A",
+      gray: "hover:bg-sand4 active:bg-sand4A",
       accent: "hover:bg-accent4 active:bg-accent4A",
     },
     soft: {
