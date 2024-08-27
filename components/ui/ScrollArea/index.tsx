@@ -2,7 +2,7 @@
 
 import * as RadixScrollArea from "@radix-ui/react-scroll-area";
 
-export default function ScrollArea({ children }) {
+export default function ScrollArea({ children , }) {
   return (
     <RadixScrollArea.Root
       className="blog-section-fade-x"
