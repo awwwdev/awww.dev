@@ -13,6 +13,7 @@ import NumbersForThingsImage from "@/public/works/numbers-for-things.png";
 import MomentaImage from "@/public/works/momenta.png";
 import DbiliaPremierImage from "@/public/works/dbilia-premier.png";
 import GradientMask from "../ui/GradientMask";
+import { CardContainer } from "./WorkItemCard";
 
 export default function Works({ posts }) {
   return (
@@ -51,7 +52,7 @@ export default function Works({ posts }) {
             tools={["NextJs", "React", "UnoCSS"]}
             gradient=" from-[#476687] via-[#476687]/30 "
             // borderColor='b-sky4'
-            borderGradeintFrom='from-[#476687]/90'
+            borderGradeintFrom="from-[#476687]/90"
           />
           <WorkItem
             title="Dbilia"
@@ -65,7 +66,7 @@ export default function Works({ posts }) {
             imgSrcs={["/works/dbilia.png", "/works/dbilia-2.png", "/works/dbilia-3.png", "/works/dbilia-4.png"]}
             imgs={[DbiliaImage, DbiliaImage2, DbiliaImage3, DbiliaImage4]}
             gradient="from-[#0F6E52]  via-[#0F6E52]/30"
-            borderGradeintFrom='from-[#0F6E52]/90'
+            borderGradeintFrom="from-[#0F6E52]/90"
 
             // titleColor='c-pink12'
             // borderColor='b-violet4'
@@ -83,7 +84,7 @@ export default function Works({ posts }) {
             relatedBlogPost={posts.find((p) => p.id === "momenta")}
             tools={["NextJs", "React", "Framer Motion"]}
             gradient="from-[#462D45] via-[#372028]/30"
-            borderGradeintFrom='from-[#462D45]/90'
+            borderGradeintFrom="from-[#462D45]/90"
 
             // titleColor='c-pink12'
             // borderColor='b-pink4'
@@ -98,8 +99,8 @@ export default function Works({ posts }) {
             tools={["NextJs", "React", "MetaMask"]}
             categories={["UI Design", "Front End", "Back End"]}
             gradient="from-[#695796] via-[#695796]/30"
-            borderGradeintFrom='from-[#695796]/90'
-            
+            borderGradeintFrom="from-[#695796]/90"
+
             // titleColor='c-sand12'
             // borderColor='b-base4'
           />
@@ -113,12 +114,12 @@ export default function Works({ posts }) {
             tools={["NextJs", "React", "Prisma", "T3 Stack", "PostgreSQL"]}
             categories={["UI Design", "Front End"]}
             gradient="from-[#8F4F3B] via-[#8F4F3B]/30"
-            borderGradeintFrom='from-[#8F4F3B]/90'
+            borderGradeintFrom="from-[#8F4F3B]/90"
 
             // titleColor='c-tomato12'
             // borderColor='b-tomato4'
           />
-          <li className=" rd-3  b-t-1.5 b-l-1 b-r-1 b-b-1  b-base4 b-t-base5 b-b-base7A b-r-base7A sahdow-xl  bg-clip-padding xs:g-row-7/9 xs:g-col-1/2 grid">
+          {/* <li className=" rd-3  b-t-1.5 b-l-1 b-r-1 b-b-1  b-base4 b-t-base5 b-b-base7A b-r-base7A sahdow-xl  bg-clip-padding xs:g-row-7/9 xs:g-col-1/2 grid">
             <GradientMask
               style={{
                 gridArea: "1/1/-1/-1",
@@ -152,6 +153,34 @@ export default function Works({ posts }) {
                 </div>
               </a>
             </div>
+          </li> */}
+          <li className=" rd-3  sahdow-xl  bg-clip-padding xs:g-row-7/9 xs:g-col-1/2 grid">
+            <CardContainer gradient={""} borderGradeintFrom={"from-white/20 !via-slate3A  !to-white/20"}>
+              <a
+                href="/#contact"
+                className="block h-full  bg-gradient-to-b from-black/30 via-black/25 via-60%"
+                style={{ gridArea: "1/1/-1/-1" }}
+              >
+                <div className="flex flex-col h-full">
+                  <div className="px-5 pt-5 xs:px-6  xs:pt-5 ">
+                    <p className="fs-xl c-base11">Let&apos;s make antoher successfull story, together!</p>
+                  </div>
+                  <div className="lt-xs:h-4"></div>
+                  <div className="grid items-end pl-10  xs:pl-16 pt-3 ">
+                    <div className=" relative isolate ">
+                      {/* blured image */}
+                      {/* <Image */}
+                      <div className="w-full h-50 rd-tl-6 bg-gradient-to-br from-white/20 to-transparent blur-15 translate-y-5 " />
+                      <div className="absolute mt-auto flex justify-end right-5 bottom-5 xs:right-6  xs:bottom-5 ">
+                        <div className="aspect-ratio-1/1 rd-full b-1 w-12 h-12 flex justify-center items-center b-base5A hover:bg-base2A hover:b-base6A">
+                          <Icon name="bf-i-ph-arrow-right" className="c-base11 fs-lg" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </CardContainer>
           </li>
         </ul>
       </div>
