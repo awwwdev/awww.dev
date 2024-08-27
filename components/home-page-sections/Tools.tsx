@@ -94,7 +94,7 @@ export default function Tools() {
           />
           <Li
             className="  bg-gradient-to-b from-transparent via-transparent  to-mint2A"
-            borderGradeintFrom="from-green4A"
+            borderGradeintFrom="from-green3A"
             gridPosition="g-col-2/5 g-row-7/8  xxs:g-col-6/9 xxs:g-row-1/2"
             src="/tool-logos/supabase.svg"
             size="w-7/10"
@@ -128,7 +128,7 @@ export default function Tools() {
           />
           <Li
             className="  bg-gradient-to-b from-transparent via-transparent  to-lime2A  lt-xxs:a "
-            borderGradeintFrom="from-lime5A"
+            borderGradeintFrom="from-lime4A"
             gridPosition="g-col-2/3 g-row-3/4  xxs:g-col-7/9 xxs:g-row-2/4 "
             src="/tool-logos/nodejs.svg"
             alt="NodeJS"
