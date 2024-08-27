@@ -4,15 +4,24 @@ import { forwardRef } from "react";
 import Icon from "../Icon";
 
 export type ButtonProps = {
-  variation: "ghost" | "ghost-accent" | "solid" | "solid-accent" | "text" | "text-accent" | "soft" | "soft-accent" | "outline" | "outline-accent";
+  variation:
+    | "ghost"
+    | "ghost-accent"
+    | "solid"
+    | "solid-accent"
+    | "text"
+    | "text-accent"
+    | "soft"
+    | "soft-accent"
+    | "outline"
+    | "outline-accent";
   isLoading?: boolean;
   iconButton?: boolean;
   preStyled?: boolean;
   rounded?: boolean;
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
-  type?: 'button' | 'reset' | 'submit';
-
+  type?: "button" | "reset" | "submit";
 };
 type Ref = HTMLButtonElement;
 type AllProps = React.ComponentPropsWithoutRef<"button"> & ButtonProps;
@@ -76,13 +85,26 @@ export const disabledClasses = {
 };
 
 const Button = forwardRef<Ref, AllProps>(function Button(
-  { preStyled = true, className, variation, children, isLoading, iconButton, disabled,  rounded = false, prefix , suffix , type , ...props },
+  {
+    preStyled = true,
+    className,
+    variation,
+    children,
+    isLoading,
+    iconButton,
+    disabled,
+    rounded = false,
+    prefix,
+    suffix,
+    type,
+    ...props
+  },
   ref
 ) {
   const cls = `
       relative isolate
       ${classes.base} ${!disabled && classes[variation]}
-      ${rounded ? 'rd-full' : 'rd-0.5em'}
+      ${rounded ? "rd-full" : "rd-0.5em"}
       ${iconButton ? "h-2.75em w-2.75em " : "h-2.75em px-1em"}
      
       ${disabled ? `${disabledClasses.base} ${disabledClasses[variation]}` : ""}`;
@@ -90,10 +112,10 @@ const Button = forwardRef<Ref, AllProps>(function Button(
   return (
     <button
       ref={ref}
-      className={`${ preStyled && cls} ${className}`}
+      className={`${preStyled && cls} ${className}`}
       aria-disabled={disabled}
       aria-busy={isLoading}
-      type={type ?? 'button'}
+      type={type ?? "button"}
       onClick={(e) => {
         if (disabled || isLoading) {
           e.preventDefault();
@@ -102,22 +124,31 @@ const Button = forwardRef<Ref, AllProps>(function Button(
         }
       }}
       style={{
-        minWidth: iconButton ? "fit-content" : 'max(6rem , wit-content)',
-        ...props?.style
+        minWidth: iconButton ? "fit-content" : "max(6rem , wit-content)",
+        ...props?.style,
       }}
       {...props}
     >
-      <span className={`contents ${isLoading ? "invisible" : ""}`}>
+      <Wrapper isLoading={isLoading}>
         {prefix}
         {children}
         {suffix}
-        </span>
-        {/* consider using grid overlapping. putting relative on button will interfer with absolute positioning it. */}
+      </Wrapper>
+      {/* consider using grid overlapping. putting relative on button will interfer with absolute positioning it. */}
       {isLoading && (
-        <Icon name='bf-i-svg-spinners:ring-resize' subdued={false}  className="   z-10  absolute top-50% left-50% -translate-x-50% -translate-y-50%" />
+        <Icon
+          name="bf-i-svg-spinners:ring-resize"
+          subdued={false}
+          className="   z-10  absolute top-50% left-50% -translate-x-50% -translate-y-50%"
+        />
       )}
     </button>
   );
 });
 
 export default Button;
+
+function Wrapper({ isLoading, children }) {
+  if (isLoading) return <span className="invisible">{children}</span>;
+  return <>{children}</>;
+}
