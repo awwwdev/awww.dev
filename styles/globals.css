@@ -563,7 +563,7 @@ p a,
     0 0 16px -7px rgba(154, 170, 255, 0.05);
 }
 
-:where(*) {
+/* :where(*) {
   --color-0: oklch(99% 0.03 var(--color-hue, 0));
   --color-1: oklch(95% 0.06 var(--color-hue, 0));
   --color-2: oklch(88% 0.12 var(--color-hue, 0));
@@ -608,10 +608,10 @@ p a,
 }
 .gray-hueless { 
   ---chroma: none; 
-}
+} */
 
 
-:where(*) {
+/* :where(*) {
   --gray-0: oklch(99% var(--gray-chroma, none) var(--gray-hue, none));
   --gray-1: oklch(95% var(--gray-chroma, none) var(--gray-hue, none));
   --gray-2: oklch(88% var(--gray-chroma, none) var(--gray-hue, none));
@@ -628,7 +628,7 @@ p a,
   --gray-13: oklch(25% var(--gray-chroma, none) var(--gray-hue, none));
   --gray-14: oklch(18% var(--gray-chroma, none) var(--gray-hue, none));
   --gray-15: oklch(10% var(--gray-chroma, none) var(--gray-hue, none));
-}
+} */
 
 
 /* HTML: <div class="triangle"></div> */
