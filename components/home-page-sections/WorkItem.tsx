@@ -17,13 +17,14 @@ export default function WorkItem({
   relatedBlogPost,
   gradient,
   borderColor,
+  borderGradeintFrom
 }) {
   return (
     <li className={`${gridRow} ${gridColumn}`}>
       <Modal
         trigger={
           <button type="button" className="h-full w-full text-left " aria-label='Open Work Details'>
-            <WorkItemCard {...{ title, titleColor, subtitle, className, imgSrcs, gradient, borderColor, imgs }} />
+            <WorkItemCard {...{ title, titleColor, subtitle, className, imgSrcs, gradient, borderColor, imgs, borderGradeintFrom }} />
           </button>
         }
       >

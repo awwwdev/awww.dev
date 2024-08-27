@@ -14,7 +14,7 @@ type Props = {
   borderGradient?: string;
 };
 
-export default function GlassCard({ children, className, noiseLayer  , borderGradient }: Props) {
+export default function GlassCard({ children, className, style ,noiseLayer  , borderGradient }: Props) {
   return (
     <div
       style={{
@@ -22,7 +22,7 @@ export default function GlassCard({ children, className, noiseLayer  , borderGra
         isolation: 'isolate',
         borderColor: 'transparent',
         borderWidth: 0,
-      
+        ...style
       }}
       className={`${className} `}
     >

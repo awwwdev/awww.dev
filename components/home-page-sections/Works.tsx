@@ -35,9 +35,11 @@ export default function Works({ posts }) {
             categories={["UI Design", "Front End", "Back End"]}
             relatedBlogPost={posts.find((p) => p.id === "darsoon")}
             tools={["NextJS", "React", "TypeScript", "Server Components", "Tailwind CSS"]}
-            gradient="from-[#82625B] to-[#351711]/0"
+            gradient="from-[#806761] via-[#806761]/30 "
+            // gradient="from-[#745d58] via-[#745d58]/30 "
             // borderColor='b-orange4'
             description=""
+            borderGradeintFrom="from-[#806761]/90"
           />
           <WorkItem
             title="Jack's House"
@@ -49,6 +51,7 @@ export default function Works({ posts }) {
             tools={["NextJs", "React", "UnoCSS"]}
             gradient=" from-[#476687] via-[#476687]/30 "
             // borderColor='b-sky4'
+            borderGradeintFrom='from-[#476687]/90'
           />
           <WorkItem
             title="Dbilia"
@@ -59,9 +62,11 @@ export default function Works({ posts }) {
             relatedBlogPost={posts.find((p) => p.id === "dbilia")}
             tools={["NextJs", "React", "T3-Stack", "Prisma"]}
             // gradient="from-[#3E705E] via-[#0C140E]/10"
-            gradient="from-[#0F6E52]  via-[#0F6E52]/30"
             imgSrcs={["/works/dbilia.png", "/works/dbilia-2.png", "/works/dbilia-3.png", "/works/dbilia-4.png"]}
             imgs={[DbiliaImage, DbiliaImage2, DbiliaImage3, DbiliaImage4]}
+            gradient="from-[#0F6E52]  via-[#0F6E52]/30"
+            borderGradeintFrom='from-[#0F6E52]/90'
+
             // titleColor='c-pink12'
             // borderColor='b-violet4'
           />
@@ -77,7 +82,9 @@ export default function Works({ posts }) {
             categories={["UI Design", "Front End"]}
             relatedBlogPost={posts.find((p) => p.id === "momenta")}
             tools={["NextJs", "React", "Framer Motion"]}
-            gradient="from-[#462D45] to-[#372028]/0"
+            gradient="from-[#462D45] via-[#372028]/30"
+            borderGradeintFrom='from-[#462D45]/90'
+
             // titleColor='c-pink12'
             // borderColor='b-pink4'
           />
@@ -91,6 +98,8 @@ export default function Works({ posts }) {
             tools={["NextJs", "React", "MetaMask"]}
             categories={["UI Design", "Front End", "Back End"]}
             gradient="from-[#695796] via-[#695796]/30"
+            borderGradeintFrom='from-[#695796]/90'
+            
             // titleColor='c-sand12'
             // borderColor='b-base4'
           />
@@ -104,6 +113,8 @@ export default function Works({ posts }) {
             tools={["NextJs", "React", "Prisma", "T3 Stack", "PostgreSQL"]}
             categories={["UI Design", "Front End"]}
             gradient="from-[#8F4F3B] via-[#8F4F3B]/30"
+            borderGradeintFrom='from-[#8F4F3B]/90'
+
             // titleColor='c-tomato12'
             // borderColor='b-tomato4'
           />

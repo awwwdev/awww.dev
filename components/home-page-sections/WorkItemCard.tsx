@@ -1,74 +1,138 @@
 import Image from "next/image";
 import GradientMask from "../ui/GradientMask";
 
-export default function WorkItemCard({ title, imgs, imgSrcs, subtitle, gradient, titleColor, borderColor }) {
+export default function WorkItemCard({ title, imgs,  subtitle, gradient, titleColor, borderGradeintFrom }) {
+  return (
+    <CardContainer {...{ title, gradient, borderGradeintFrom }}>
+      <CardContent title={title} subtitle={subtitle} titleColor={titleColor} imgs={imgs} />
+    </CardContainer>
+  );
+}
+
+function CardContainer({ children, gradient, borderGradeintFrom }) {
   return (
     <div className="grid h-full">
-      <div
-        style={{ gridArea: "1/1/-1/-1" }}
-        className={`p-8 -z-100`}
-      >
-        <div
-        
-        className={`h-full w-full bg-gradient-to-b rd-3 ${gradient} mix-blend-screen blur-60 opacity-100 -z-100`}
-        ></div>
+      <div style={{ gridArea: "1/1/-1/-1" }} className={`p-8 -z-100`}>
+        <CardGlow gradient={gradient} />
       </div>
-      <div style={{ gridArea: "1/1/-1/-1" }} className={`bg-sand1 -z-80 rd-3`}></div>
-
       <div
-        className={`h-full rd-3 bg-base1A grid overflow-clip b-t-1.5 b-l-1 b-r-1 b-b-1 b-t-base5 b-b-slate7A b-r-slate7A sahdow-2xl bg-clip-padding grid ${
-          borderColor ?? "b-base4"
-        } `}
+        className={`h-full rd-3  grid overflow-clip  sahdow-2xl 
+      bg-clip-padding grid  `}
         style={{
           gridArea: "1/1/-1/-1",
-          // borderRadius: 'calc(0.02 * var(--max-w-page))'
+          // for border gradient
+          position: "relative",
+          isolation: "isolate",
+          borderColor: "transparent",
+          borderWidth: 0,
         }}
       >
+        <GradientBorderLayer borderGradeintFrom={borderGradeintFrom} />
+        <GlassFrostEffectLayer />
         <div
-          className="-z-10"
-          style={{
-            gridArea: "1/1/-1/-1",
-            backgroundImage: "url('/static/noise.svg')",
-            backgroundSize: "auto",
-            backgroundRepeat: "repeat",
-            backdropFilter: "blur(10px)",
-          }}
-        ></div>
-        <div
-          className={`${gradient} bg-gradient-to-b  h-full grid`}
+          className={` bg-gradient-to-b ${gradient}  h-full grid`}
           style={{
             gridTemplateRows: "auto 1fr",
             gridArea: "1/1/-1/-1",
           }}
         >
-          <div className="px-5 pt-5 xs:px-6  xs:pt-5 ">
-            <h3 className={`H3 sm:H3 ${titleColor}`}>{title}</h3>
-            <p className="c-base11 text-sm">{subtitle}</p>
-          </div>
-          <div className='lt-xs:h-4'></div>
-          <div className="grid items-end pl-10  xs:pl-16 pt-3  ">
-            <div className=" relative isolate">
-              <Image
-                src={imgs[0]}
-                alt=""
-                className="block min-w-0 rd-lt-3 shadow-xl object-cover absolute top-0 left-0 right-0 bottom-0 blur-15 opacity-50 -z-10"
-              />
-              <GradientMask
-                direction="to right"
-                transparencyStops={[
-                  [0, 100],
-                  [70, 50],
-                  [87, 20],
-                  [95, 5],
-                ]}
-                // disable
-              >
-                <Image src={imgs[0]} alt="" className="block min-w-0 rd-lt-3 shadow-xl object-cover fade-to-b" />
-              </GradientMask>
-            </div>
-          </div>
+          {children}
         </div>
       </div>
     </div>
+  );
+}
+
+function CardGlow({ gradient }) {
+  return (
+    <div
+      className={`h-full w-full bg-gradient-to-b rd-3 ${gradient}  mix-blend-screen blur-60 opacity-100 -z-100`}
+    ></div>
+  );
+}
+
+function GradientBorderLayer({ borderGradeintFrom = "from-slate5A" }) {
+  return (
+    <div
+      style={{
+        // gridArea: "1/1/-1/-1",
+        position: "absolute",
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        borderRadius: "inherit",
+        // overflow: 'clip',
+        // borderWidth: 'inherit',
+        borderStyle: "solid",
+        borderColor: "transparent",
+        backgroundClip: "border-box",
+        backgroundOrigin: "border-box",
+        WebkitMask: "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
+        mask: "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
+        WebkitMaskComposite: "xor" /*5'*/,
+        maskComposite: "exclude" /*5*/,
+        backdropFilter: "blur(5px)",
+        // zIndex: 9,
+      }}
+      className={` bg-gradient-to-br ${borderGradeintFrom} via-slate4A  to-white/20 b-1 mix-blend-screen `}
+    ></div>
+  );
+}
+
+function GlassFrostEffectLayer() {
+  return (
+    <div
+      className="-z-10"
+      style={{
+        gridArea: "1/1/-1/-1",
+        backgroundImage: "url('/static/noise.svg')",
+        backgroundSize: "auto",
+        backgroundRepeat: "repeat",
+        // backdropFilter: "blur(10px)",
+      }}
+    ></div>
+  );
+}
+
+function CardContent({ title, titleColor, subtitle, imgs }) {
+  return (
+    <>
+      <div className="px-5 pt-5 xs:px-6  xs:pt-5 ">
+        <h3 className={`H3 sm:H3 ${titleColor}`}>{title}</h3>
+        <p className="c-base11 text-sm">{subtitle}</p>
+      </div>
+      <div className="lt-xs:h-4"></div>
+      <div className="grid items-end pl-10  xs:pl-16 pt-3  ">
+        <div className=" relative isolate">
+          {/* blured image */}
+          <Image
+            src={imgs[0]}
+            alt=""
+            className="block min-w-0 rd-lt-3 shadow-xl object-cover absolute top-0 left-0 right-0 bottom-0 blur-15 opacity-15 -z-10"
+          />
+          <GradientMask
+            direction="to right"
+            transparencyStops={[
+              [0, 100],
+              // [60, 50],
+              // [90, 20],
+              [95, 0],
+            ]}
+          >
+            <GradientMask
+              direction="to bottom"
+              transparencyStops={[
+                [0, 100],
+                [50, 40],
+                [90, 0],
+              ]}
+            >
+              <Image src={imgs[0]} alt="" className=" block min-w-0 rd-lt-3 shadow-xl object-cover" />
+            </GradientMask>
+          </GradientMask>
+        </div>
+      </div>
+    </>
   );
 }
