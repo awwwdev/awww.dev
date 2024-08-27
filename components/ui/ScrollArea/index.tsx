@@ -31,7 +31,7 @@ export default function ScrollArea({ children }) {
        data-[state=visible]:bg-base6
        data-[state=visible]:hover:bg-base7
        data-[state=hidden]:bg-transparent
-       relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:w-full before:h-full before:min-w-11 before:min-h-11
+       relative before:content-empty before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:w-full before:h-full before:min-w-11 before:min-h-11
         `}
           style={{
             transition: "background-color 500ms ease-out",

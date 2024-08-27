@@ -14,7 +14,7 @@ export default function ErrorMessage({ children, preStyled = true , id }: ErrorM
   if (!children) return <></>;
   return (
     <p id={id} className={` ${preStyled && classes.messageText}`}>
-      <Icon name="bf-i-ph-warning-hectagon" subdued={false} />
+      <Icon name="bf-i-ph-warning-octagon" subdued={false} />
       <span>{children}</span>
     </p>
   );
