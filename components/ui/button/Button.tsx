@@ -20,13 +20,13 @@ type AllProps = React.ComponentPropsWithoutRef<"button"> & ButtonProps;
 const parts = {
   borderColor: {
     transparent: "b-transparent",
-    gray: "b-base7 hover:b-base8 active:b-base8",
+    gray: "b-base6 hover:b-base7 active:b-base7",
     accent: "b-accent7 hover:b-accent8 active:b-accent8",
   },
   bg: {
     transparent: {
-      gray: "hover:bg-base4 active:bg-base4A",
-      accent: "hover:bg-accent4 active:bg-accent4A",
+      gray: "hover:bg-base2A active:bg-base3A",
+      accent: "hover:bg-accent2A active:bg-accent3A",
     },
     soft: {
       gray: "bg-base2A hover:bg-base3 active:bg-base4",

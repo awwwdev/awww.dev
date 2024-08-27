@@ -189,7 +189,7 @@ function WorkExperience({ title, start, end, startMobile, endMobile, company, ch
         <Space size="h-6" />
         <ShowMore minHeight="3em">
           <ul
-            className={`list-disc-outside  fs-sm space-y-0.5em `}
+            className={`list-disc-outside  fs-sm space-y-1.2em `}
             style={{
               listStyleImage: 'url("circle-list-item-marker.svg")',
             }}
