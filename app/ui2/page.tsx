@@ -12,6 +12,18 @@ import GlassCard from "@/components/ui/GlassCard";
 export default function Page() {
   return (
     <div className="max-w-page mx-auto">
+      <div className="darkk">
+        {/* <div className="bg-bluu">djsfldsjkf</div> */}
+        {/* <div className="bg-redd">djsfldsjkf</div> */}
+      </div>
+      <div className="myvari-two:dfdf">fddfssd fdfdfdfdf f</div>
+      <div className="myvari-two:bg-green4">fddfssd fdfdfdfdf f</div>
+      <div className="sm:bg-green4">fddfssd fdfdfdfdf f</div>
+      <div className="sm:bg-green2">fddfssd fdfdfdfdf f</div>
+      <div className="bg-base8AP3">fddfssd dsfds f</div>
+      <div className="bg-green4">fddfssd dsfds f</div>
+      <div className="bg-blue4P3">fddfssd dsfds f</div>
+
       <Section title="The Div">
         <div className="space-y-12">
           <div className="h-80 b-base4 b-1 rd-6 p-6 bg-base3 bf-shadow-layer before:bg-blue8A before:blur-50 before:m-6 before:mt-10 before:opacity-80">
