@@ -20,12 +20,12 @@ return (
     {trigger}
   </RadixDialog.Trigger>
   <RadixDialog.Portal>
-    <RadixDialog.Overlay className="fixed inset-0 z-20 bg-black/50 backdrop-blur-10 " />
+    <RadixDialog.Overlay className="fixed inset-0 z-20 bg-black/20 backdrop-blur-10 " />
     <RadixDialog.Content
       className="fixed z-50 max-h-[90vh] overflow-y-auto 
             w-[95vw] max-w-50rem rd-6 p-6 md:w-full 
             top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] 
-          bg-base1A backdrop-blur-10  b-t-1 b-l-1 b-r-1 b-base4A shadow-2xl shadow-black "
+          bg-black/80 backdrop-blur-10  b-t-1 b-l-1 b-r-1 b-base4A shadow-2xl shadow-black "
     >
       <div className='relative'>
       <div className='flex justify-end absolute right-0'>

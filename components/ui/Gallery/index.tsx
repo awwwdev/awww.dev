@@ -15,7 +15,7 @@ export default function Gallery({ images }: { images: Image[] }) {
   const currentImage = useMemo(() => images[currentImageIndex], [currentImageIndex]);
   return (
     <div>
-      <div className="   w-full  rd-3 p-3 bg-black b-base4 b-1 grid">
+      <div className="  w-full  rd-3 p-3 bg-gradient-radial from-base4 via-base3 to-base2  b-base4 b-1 grid">
         <div
           className="flex items-center justify-center w-full !aspect-ratio-16/9 max-h-100  "
           style={{ gridArea: "1/1/-1/-1" }}
@@ -23,7 +23,7 @@ export default function Gallery({ images }: { images: Image[] }) {
           <Image
             src={currentImage.imgObject ?? currentImage.src}
             alt={currentImage.alt}
-            className="min-w-0 max-h-full max-w-full   rd-1.5 shadow-xl object-contain "
+            className="min-w-0 max-h-full max-w-full  object-contain "
             />
             </div>
         {images.length > 1 && (
