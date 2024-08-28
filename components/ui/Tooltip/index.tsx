@@ -2,6 +2,7 @@
 
 import * as RadixToolTip from "@radix-ui/react-tooltip";
 import styles from "./styles.module.css";
+import GradientBorderOverlay from '../GradientBorderOverlay';
 export default function ToolTip({
   trigger,
   children,
@@ -34,10 +35,10 @@ export default function ToolTip({
                shadow-2xl shadow-black bg-base2A  backdrop-blur-10
             "
             >
-              <GradientBorderLayer
-                borderGradeintFrom={"from-base3A"}
-                borderGradientVia={"via-transparent"}
-                borderGradeintTo={"to-transparent"}
+              <GradientBorderOverlay
+                from={"from-base3A"}
+                via={"via-transparent"}
+                to={"to-transparent"}
               />
 
               {children}
@@ -52,38 +53,5 @@ export default function ToolTip({
         </RadixToolTip.Portal>
       </RadixToolTip.Root>
     </RadixToolTip.Provider>
-  );
-}
-
-function GradientBorderLayer({
-  borderGradeintFrom = "from-slate4A",
-  borderGradeintTo = "to-slate3A",
-  borderGradientVia = "via-slate2A",
-}) {
-  return (
-    <div
-      style={{
-        // gridArea: "1/1/-1/-1",
-        position: "absolute",
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-        borderRadius: "inherit",
-        // overflow: 'clip',
-        // borderWidth: 'inherit',
-        borderStyle: "solid",
-        borderColor: "transparent",
-        backgroundClip: "border-box",
-        backgroundOrigin: "border-box",
-        WebkitMask: "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
-        mask: "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
-        WebkitMaskComposite: "xor" /*5'*/,
-        maskComposite: "exclude" /*5*/,
-        backdropFilter: "blur(5px)",
-        // zIndex: 9,
-      }}
-      className={` bg-gradient-to-b bg-base2A ${borderGradeintFrom} ${borderGradientVia} ${borderGradeintTo} b-1 mix-blend-screen `}
-    ></div>
   );
 }

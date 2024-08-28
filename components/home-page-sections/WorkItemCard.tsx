@@ -1,15 +1,24 @@
 import Image from "next/image";
 import GradientMask from "../ui/GradientMask";
+import GradientBorderOverlay from "../ui/GradientBorderOverlay";
 
-export default function WorkItemCard({ title, imgs,  subtitle, gradient, titleColor, borderGradeintFrom }) {
+export default function WorkItemCard({
+  title,
+  imgs,
+  subtitle,
+  gradient,
+  titleColor,
+  borderGradeintFrom,
+  borderGradeintTo,
+}) {
   return (
-    <CardContainer {...{ title, gradient, borderGradeintFrom }}>
+    <CardContainer {...{ title, gradient, borderGradeintFrom, borderGradeintTo }}>
       <CardContent title={title} subtitle={subtitle} titleColor={titleColor} imgs={imgs} />
     </CardContainer>
   );
 }
 
-export function CardContainer({ children, gradient, borderGradeintFrom }) {
+export function CardContainer({ children, gradient, borderGradeintFrom, borderGradeintTo }) {
   return (
     <div className={`grid h-full`}>
       <div style={{ gridArea: "1/1/-1/-1" }} className={`p-8 -z-100`}>
@@ -27,7 +36,13 @@ export function CardContainer({ children, gradient, borderGradeintFrom }) {
           borderWidth: 0,
         }}
       >
-        <GradientBorderLayer borderGradeintFrom={borderGradeintFrom} />
+        <GradientBorderOverlay from={borderGradeintFrom} via="via-slate2A" to="to-transparent" direction="135deg" />
+        <GradientBorderOverlay
+          from="from-transparent"
+          via="via-slate2A"
+          to={borderGradeintTo ?? "to-white/20"}
+          direction="135deg"
+        />
         <GlassFrostEffectLayer />
         <div
           className={` bg-gradient-to-b ${gradient}  h-full grid`}
@@ -51,34 +66,34 @@ function CardGlow({ gradient }) {
   );
 }
 
-function GradientBorderLayer({ borderGradeintFrom = "from-slate5A" }) {
-  return (
-    <div
-      style={{
-        // gridArea: "1/1/-1/-1",
-        position: "absolute",
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-        borderRadius: "inherit",
-        // overflow: 'clip',
-        // borderWidth: 'inherit',
-        borderStyle: "solid",
-        borderColor: "transparent",
-        backgroundClip: "border-box",
-        backgroundOrigin: "border-box",
-        WebkitMask: "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
-        mask: "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
-        WebkitMaskComposite: "xor" /*5'*/,
-        maskComposite: "exclude" /*5*/,
-        backdropFilter: "blur(5px)",
-        // zIndex: 9,
-      }}
-      className={` bg-gradient-to-br ${borderGradeintFrom} via-slate4A  to-white/20 b-1 mix-blend-screen `}
-    ></div>
-  );
-}
+// function GradientBorderLayer({ borderGradeintFrom = "from-slate5A" }) {
+//   return (
+//     <div
+//       style={{
+//         // gridArea: "1/1/-1/-1",
+//         position: "absolute",
+//         top: 0,
+//         left: 0,
+//         bottom: 0,
+//         right: 0,
+//         borderRadius: "inherit",
+//         // overflow: 'clip',
+//         // borderWidth: 'inherit',
+//         borderStyle: "solid",
+//         borderColor: "transparent",
+//         backgroundClip: "border-box",
+//         backgroundOrigin: "border-box",
+//         WebkitMask: "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
+//         mask: "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
+//         WebkitMaskComposite: "xor" /*5'*/,
+//         maskComposite: "exclude" /*5*/,
+//         backdropFilter: "blur(5px)",
+//         // zIndex: 9,
+//       }}
+//       className={` bg-gradient-to-br ${borderGradeintFrom} via-slate4A  to-white/20 b-1 mix-blend-screen `}
+//     ></div>
+//   );
+// }
 
 function GlassFrostEffectLayer() {
   return (

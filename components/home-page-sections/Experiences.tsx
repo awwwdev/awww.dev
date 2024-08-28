@@ -6,6 +6,7 @@ import Button from "../ui/button";
 import ShowMore from "../ShowMore";
 import DesktopOnly from "../ui/DesktopOnly";
 import MobileOnly from "../ui/MobileOnly";
+import GradientMask from "../ui/GradientMask";
 
 export default function Experiences() {
   return (
@@ -18,15 +19,17 @@ export default function Experiences() {
           Experiences
         </h2>
         <Space size="h-8" />
-        <ul
-          role="list"
-          className="list-none list-disc-outside pt-4  b-l-2 b-base5 b-dashed"
-          style={
-            {
-              // listStyleImage: 'url("square-list-item-marker.svg")',
-            }
-          }
-        >
+        <ul role="list" className="list-none list-disc-outside pt-4 b-l-2 b-transparent   relative">
+          <GradientMask
+          className='absolute -top-5% -bottom-5% -left-2px -z-1'
+          direction='to bottom' transparencyStops={[
+            [0,0],
+            [10 , 100],
+            [90, 100],
+            [100, 0]
+          ]}>
+            <div className="w-2px b-base5A b-dashed b-l-2 h-full"></div>
+          </GradientMask>
           <WorkExperience
             company="Darsoon"
             title="Full-Stack Web Developer"
@@ -167,7 +170,7 @@ function WorkExperience({ title, start, end, startMobile, endMobile, company, ch
   return (
     <li className="-ml-1.75  flex gap-2">
       <div className="w-3 h-3 bg-[#5a6169] rd-1 shrink-0 grow-0"></div>
-      <div className='pis-2'>
+      <div className="pis-2">
         <h3 className="">
           <div className="H5 line-height-0.8 tracking-wide">{company}</div>
           <Space size="h-1" />

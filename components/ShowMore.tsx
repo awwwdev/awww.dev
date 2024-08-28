@@ -4,6 +4,7 @@ import { useState } from "react";
 import Icon from "./ui/Icon";
 import Space from "./ui/Space";
 import Button from "./ui/button";
+import GradientBorderOverlay from './ui/GradientBorderOverlay';
 
 export default function ShowMore({ children, minHeight = "0fr" }) {
   const [expanded, setExpanded] = useState(false);
@@ -35,21 +36,24 @@ export default function ShowMore({ children, minHeight = "0fr" }) {
         }}
       />
       <div className="flex justify-center items-center">
-        <div className="b-t-1 b-base5 h-1px grow"></div>
+        <div className="c-base5 h-1px grow bg-gradient-to-l from-current-color via-current-color to-transparent via-80%"
+        ></div>
         <Button
           variation="ghost"
           rounded
-          className="fs-xs flex gap-1.5 items-center !h-2.25em"
+          className="fs-xs flex gap-1.5 items-center !h-2.25em !b-0 relative !bg-transparent hover:bg-gradient-to-br from-transparent via-transparent via-30% to-base3A"
           onClick={() => {
             setExpanded((s) => !s);
           }}
         >
+             <GradientBorderOverlay to="to-transparent" via="via-slate2A" direction="135deg" />
+             <GradientBorderOverlay from="from-transparent" via="via-slate2A" direction="135deg" />
           <span className={` ${expanded ? "rotate-180" : "rotate-0"}`} style={{ transition: "transform 500ms ease" }}>
             <Icon name="bf-i-ph-caret-down-bold" subdued />
           </span>
           <span className="c-base11">{expanded ? "Show Less" : "Show More"}</span>
         </Button>
-        <div className="b-t-1 b-base5 h-1px grow"></div>
+        <div className="c-base5 h-1px grow bg-gradient-to-r from-current-color via-current-color to-transparent via-80%"></div>
       </div>
     </div>
   );

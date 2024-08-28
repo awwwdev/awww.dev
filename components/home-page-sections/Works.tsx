@@ -14,6 +14,7 @@ import MomentaImage from "@/public/works/momenta.png";
 import DbiliaPremierImage from "@/public/works/dbilia-premier.png";
 import GradientMask from "../ui/GradientMask";
 import { CardContainer } from "./WorkItemCard";
+import GradientBorderOverlay from '../ui/GradientBorderOverlay';
 
 export default function Works({ posts }) {
   return (
@@ -155,7 +156,9 @@ export default function Works({ posts }) {
             </div>
           </li> */}
           <li className=" rd-3  sahdow-xl  bg-clip-padding xs:g-row-7/9 xs:g-col-1/2 grid">
-            <CardContainer gradient={""} borderGradeintFrom={"from-white/20 !via-slate3A  !to-white/20"}>
+            <CardContainer gradient={""} borderGradeintFrom={"from-white/20 !via-slate3A  !to-white/20"}
+            borderGradeintTo="to-white/8"
+            >
               <a
                 href="/#contact"
                 className="block h-full  bg-gradient-to-b from-black/30 via-black/25 via-60%"
@@ -172,7 +175,8 @@ export default function Works({ posts }) {
                       {/* <Image */}
                       <div className="w-full h-50 rd-tl-6 bg-gradient-to-br from-white/20 to-transparent blur-15 translate-y-5 " />
                       <div className="absolute mt-auto flex justify-end right-5 bottom-5 xs:right-6  xs:bottom-5 ">
-                        <div className="aspect-ratio-1/1 rd-full b-1 w-12 h-12 flex justify-center items-center b-base5A hover:bg-base2A hover:b-base6A">
+                        <div className="aspect-ratio-1/1 rd-full  w-12 h-12 flex justify-center items-center  bg-gradient-to-br from-transparent via-transparent via-30%  hover:to-base3A relative">
+                        <GradientBorderOverlay from="from-base6A" via="via-base3A" direction='135deg' />
                           <Icon name="bf-i-ph-arrow-right" className="c-base11 fs-lg" />
                         </div>
                       </div>

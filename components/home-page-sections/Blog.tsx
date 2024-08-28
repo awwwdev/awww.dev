@@ -5,9 +5,9 @@ import Icon from "../ui/Icon";
 import Space from "../ui/Space";
 import ScrollArea from "../ui/ScrollArea";
 import BluredCircle from "./BluredCircle";
+import GradientBorderOverlay from "../ui/GradientBorderOverlay";
 
-export default function Blog({posts}) {
-
+export default function Blog({ posts }) {
   return (
     <section className="relative ">
       <BluredCircle radius={200} top="20%" left="85%" bg="bg-iris2" blur="200px" />
@@ -76,11 +76,13 @@ function BlogCard({ title, subtitle, date, slug, gap }) {
   return (
     <li className={`${gap}`}>
       <Link
-        className={`flex flex-col b-base4 bg-gradient-to-br from-base3A to-base1A p-6 shadow-2xl rd-6 h-70 xs:h-80 w-60  xs:w-70 b-1 b-base3A
+        className={`relative flex flex-col b-base4 bg-gradient-to-br from-base3A to-base1A p-6 shadow-2xl rd-6 h-70 xs:h-80 w-60  xs:w-70 b-0 b-transparent
           hover:from-sage4A
           `}
         href={`/blog/${slug}`}
       >
+        <GradientBorderOverlay to="to-transparent" via="via-slate1A" direction="135deg" />
+        <GradientBorderOverlay from="from-transparent" via="via-slate1A" direction="135deg" />
         <h3 className="text-base sm:text-xl font-display sm:tracking-tight leading-tight  min-h-1em">{title}</h3>
         <Space size="h-1" />
         {subtitle && <p className="c-base11">{subtitle}</p>}
@@ -89,7 +91,7 @@ function BlogCard({ title, subtitle, date, slug, gap }) {
           <div className="flex justify-between items-baseline">
             {date && <p className="c-base11 lt-sm:text-sm">{toRelativeOrReadableDate(date)}</p>}
             <span className="flex items-end">
-              <Icon name="bf-i-ph-arrow-right" className="c-base8 fs-4xl leading-none " />
+              <Icon name="bf-i-ph-arrow-right" className="c-base8 fs-2xl leading-none " />
             </span>
           </div>
         </div>

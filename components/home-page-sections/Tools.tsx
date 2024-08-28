@@ -6,6 +6,7 @@ import Space from "../ui/Space";
 import Button from "../ui/button";
 import ToolTip from "../ui/Tooltip";
 import { useState } from "react";
+import GradientBorderOverlay from '../ui/GradientBorderOverlay';
 
 export default function Tools() {
   const [glowingCategory, setGlowingCategory] = useState<"favorite" | "most-used" | "painful" | null>(null);
@@ -298,7 +299,8 @@ function Li(props) {
         "--un-gradient-shape": "135deg"
       }}/>
 
-      <GradientBorderLayer borderGradeintFrom={props?.borderGradeintFrom} />
+      <GradientBorderOverlay from={props?.borderGradeintFrom} to="to-transparent" direction='135deg' />
+      <GradientBorderOverlay from="from-transparent" direction='135deg' />
       <div className="flex justify-center items-center p-4  xxs:!p-3 xs:p-4 sm:p-4 h-full">
         {props.icon && <Icon name={props.icon} className={`${props.size}`} />}
         {props.src && <img src={props.src} alt={props.alt} className={`object-cover  ${props?.size}`} />}
@@ -307,38 +309,6 @@ function Li(props) {
   );
 }
 
-function GradientBorderLayer({
-  borderGradeintFrom = "from-slate4A",
-  borderGradeintTo = "to-slate3A",
-  borderGradientVia = "via-slate2A",
-}) {
-  return (
-    <div
-      style={{
-        // gridArea: "1/1/-1/-1",
-        position: "absolute",
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-        borderRadius: "inherit",
-        // overflow: 'clip',
-        // borderWidth: 'inherit',
-        borderStyle: "solid",
-        borderColor: "transparent",
-        backgroundClip: "border-box",
-        backgroundOrigin: "border-box",
-        WebkitMask: "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
-        mask: "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
-        WebkitMaskComposite: "xor" /*5'*/,
-        maskComposite: "exclude" /*5*/,
-        backdropFilter: "blur(5px)",
-        // zIndex: 9,
-      }}
-      className={` bg-gradient-to-br ${borderGradeintFrom} ${borderGradientVia} ${borderGradeintTo} b-1 mix-blend-screen `}
-    ></div>
-  );
-}
 
 function BgOverlay({ className, style = {} }) {
   return (
@@ -404,10 +374,17 @@ function ButtonWithToolTip({
               glowingCategory === category ? "opacity-100" : "opacity-0"
             }`}
           />
-          <GradientBorderLayer
-            borderGradeintFrom={glowingCategory === category ? "from-accent5" : "from-base5"}
-            borderGradientVia={glowingCategory === category ? "from-accent5" : "from-base5"}
-            borderGradeintTo={glowingCategory === category ? "from-accent5" : "from-base5"}
+          <GradientBorderOverlay
+            from={glowingCategory === category ? "from-accent5A" : "from-base5A"}
+            via={glowingCategory === category ? "via-accent2A" : "via-base2A"}
+            to="transparent"
+            direction='135deg'
+          />
+            <GradientBorderOverlay
+            from="transparent"
+            via={glowingCategory === category ? "via-accent2A" : "via-base2A"}
+            to={glowingCategory === category ? "to-accent4A" : "to-base4A"}
+            direction='135deg'
           />
           {label}
         </Button>
