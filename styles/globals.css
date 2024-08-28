@@ -9,11 +9,11 @@ body {
 }
 
 
-*:focus {
+a:focus-visible, 
+button:focus-visible {
   outline-offset: 4px ;
   outline-style: solid;
-  outline-color: #11CFFF95
-   !important;
+  outline-color: #11CFFF95  !important;
 }
 :root {
   --max-w-page: min(100vw - 32px, 50rem);
