@@ -36,7 +36,7 @@ function BackdropBlurOverlay({ isOnTop }) {
       style={{ gridArea: "1/1/-1/-1" }}
       className={` -z-1 h-full   bg-base2A  b-b-1 b-base3A backdrop-blur-50 ${
         isOnTop ? "opacity-0" : "opacity-100"
-      } transition-opacity duration-500ms ease`}
+      } transition-opacity duration-250ms ease`}
     ></div>
   );
 }

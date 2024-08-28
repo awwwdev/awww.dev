@@ -29,6 +29,41 @@ body {
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+/* Scroll bar style start =================== */
+
+.style-scroll-bar {
+  --scrollbar-color-thumb: var(--rx-slate6);
+  /* --scrollbar-color-thumb-hover: var(--rx-slate7); */
+  --scrollbar-color-track: var(--rx-slate3);
+  /* --scrollbar-color-track-hover: var(--rx-slate4); */
+  --scrollbar-width: thin;
+  --scrollbar-width-legacy: 10px;
+}
+
+/* Modern browsers with `scrollbar-*` support */
+@supports (scrollbar-width: auto) {
+  .style-scroll-bar {
+      scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
+      scrollbar-width: var(--scrollbar-width);
+  }
+}
+
+/* Legacy browsers with `::-webkit-scrollbar-*` support */
+@supports selector(::-webkit-scrollbar) {
+  .style-scroll-bar::-webkit-scrollbar-thumb {
+      background: var(--scrollbar-color-thumb);
+  }
+  .style-scroll-bar::-webkit-scrollbar-track {
+      background: var(--scrollbar-color-track);
+  }
+  .style-scroll-bar::-webkit-scrollbar {
+      max-width: var(--scrollbar-width-legacy);
+      max-height: var(--scrollbar-width-legacy);
+  }
+}
+
+/* Scroll bar style end=================== */
+
 .H1,
 .H2,
 .H3,

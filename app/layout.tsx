@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html className="dark-theme" lang='en'>
+    <html className="dark-theme style-scroll-bar" lang='en'>
       <head></head>
       <body className={`dark-theme bg-base1 c-base12 relative isolate`}>
         <AppLayout>{children}</AppLayout>
