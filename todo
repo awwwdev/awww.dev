@@ -1,14 +1,6 @@
-outline offset 
+- refactor source code 
+- screenshots
 
-outline color 
-
-
-- visual componentss
-  gradient-mask
-  gradient border
-  noise
-  shadow-layer
-  shadow-glow
 
 - telegram ads
 - cancel uber one
@@ -68,3 +60,12 @@ Open Source Ideas
 - transition properties like transition gradient-stop1 or bg opacity
 - 10 gradient stops
 - number of colors level are free. so you can use diffenret color systems (radix with 12 levels, taiwing with 9 levels)
+
+
+
+- visual componentss
+  gradient-mask
+  gradient border
+  noise
+  shadow-layer
+  shadow-glow
