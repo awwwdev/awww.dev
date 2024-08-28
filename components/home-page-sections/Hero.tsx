@@ -23,6 +23,7 @@ function DesktopHero() {
       <BluredCircle radius={200} top="60%" left="5%" bg="bg-indigo2" blur="200px" />
       <div className="max-w-page mx-auto">
         <div>
+          <div id="hero" />
           <Space size="h-6 sm:h-20" />
           <Greeting />
           <Space size="h-6 md:h-20" />

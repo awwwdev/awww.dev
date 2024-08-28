@@ -8,6 +8,7 @@ import Color from "colorjs.io";
 // 🔴 unified way for handling black and white
 // 🔴 fg shade
 // 🔴 dynamic aliasing
+// 🔴 supporting only one theme => remove variables for the other theme.
 
 // 🔴 shades constant
 // 🔴 type of Hue or Alias

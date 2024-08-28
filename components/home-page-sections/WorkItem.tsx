@@ -20,10 +20,10 @@ export default function WorkItem({
   borderGradeintFrom
 }) {
   return (
-    <li className={`${gridRow} ${gridColumn}`}>
+    <li className={`${gridRow} ${gridColumn} `}>
       <Modal
         trigger={
-          <button type="button" className="h-full w-full text-left " aria-label='Open Work Details'>
+          <button type="button" className="h-full w-full text-left rd-3" aria-label='Open Work Details'>
             <WorkItemCard {...{ title, titleColor, subtitle, className, imgSrcs, gradient, borderColor, imgs, borderGradeintFrom }} />
           </button>
         }

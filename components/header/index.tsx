@@ -1,24 +1,25 @@
-
 import Link from "next/link";
-import HamburgerButton from './HamburgerButton';
+import HamburgerButton from "./HamburgerButton";
+import BlogLink from "./HybridLink";
+import DesktopHeaderTempalte from "./DesktopHeader";
+import HybridLink from "./HybridLink";
 
 const Header = () => {
   return (
-    <div className="">
-      <MobileHeader   />
-      <DesktopHeader  />
-    </div>
+    <>
+      <MobileHeader />
+      <DesktopHeaderTempalte>
+        <PublicWebsiteNav />
+      </DesktopHeaderTempalte>
+    </>
   );
 };
 
 export default Header;
 
 function MobileHeader() {
-
   return (
-    <header
-      className={`   sm:hidden  px-4  sticky top-0 z-10 h-16 flex items-center `}
-    >
+    <header className={`   sm:hidden  px-4  sticky top-0 z-10 h-16 flex items-center `}>
       <div className={` w-full max-w-page mx-auto grid `} style={{ gridTemplateColumns: "1fr auto 1fr" }}>
         <div className="flex ">
           <HamburgerButton />
@@ -35,47 +36,33 @@ function MobileHeader() {
   );
 }
 
-function DesktopHeader({  }) {
-  return (
-    <header className={`  sm:flex hidden  px-4   sticky top-0 z-10 h-16 items-center c-melow `}>
-      <div className={`w-full max-w-page mx-auto flex justify-between items-center gap-0.5 `}>
-       <PublicWebsiteNav />
-        {/* <Search /> */}
-        {/* <LocaleSwitcher /> */}
-        {/* <AccountButtons /> */}
-      </div>
-    </header>
-  );
-}
-
 function PublicWebsiteNav() {
-
   return (
     <nav className="w-full font-display">
       <ul className="flex items-center gap-4  text-xs sm:text-base w-full ">
         <li className="flex items-center">
-          <Link href="/" className=" text-xs sm:text-base flex justify-center  items-center  tracking-wider fw-300">
-        awww.dev
-          </Link>
+          <HybridLink pageUrl="/" inSamePageHref={"#hero"} href={"/"}  className="rd-1 text-xs sm:text-base flex justify-center  items-center  tracking-wider fw-300">
+            awww.dev
+          </HybridLink>
         </li>
-        <li className='mis-auto'>
-          <a href="#works" className="hover:c-base11">
+        <li className="mis-auto">
+          <a href="#works" className="hover:c-base11 rd-1">
             Works
           </a>
         </li>
         <li>
-          <a href="#tools" className="hover:c-base11">
+          <a href="/#tools" className="hover:c-base11 rd-1">
             Tools
           </a>
-      </li>
+        </li>
         <li>
-          <a href="#blog" className="hover:c-base11">
-          Blog
-          </a>
+          <HybridLink pageUrl="/" inSamePageHref={"#blog"} href={"/blog"} className="hover:c-base11 rd-1">
+            Blog
+          </HybridLink>
         </li>
 
         <li>
-          <a href="#contact" className="hover:c-base11">
+          <a href="#contact" className="hover:c-base11 rd-1">
             Contact
           </a>
         </li>

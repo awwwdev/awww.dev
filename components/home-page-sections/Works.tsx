@@ -156,12 +156,12 @@ export default function Works({ posts }) {
             </div>
           </li> */}
           <li className=" rd-3  sahdow-xl  bg-clip-padding xs:g-row-7/9 xs:g-col-1/2 grid">
+          <a href='/#contact' className='block rd-3'>
             <CardContainer gradient={""} borderGradeintFrom={"from-white/20 !via-slate3A  !to-white/20"}
             borderGradeintTo="to-white/8"
             >
-              <a
-                href="/#contact"
-                className="block h-full  bg-gradient-to-b from-black/30 via-black/25 via-60%"
+              <div 
+                className="block h-full  bg-gradient-to-b from-black/30 via-black/25 via-60% "
                 style={{ gridArea: "1/1/-1/-1" }}
               >
                 <div className="flex flex-col h-full">
@@ -183,8 +183,9 @@ export default function Works({ posts }) {
                     </div>
                   </div>
                 </div>
-              </a>
+              </div>
             </CardContainer>
+          </a>
           </li>
         </ul>
       </div>

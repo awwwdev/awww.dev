@@ -20,7 +20,7 @@ export default function WorkItemCard({
 
 export function CardContainer({ children, gradient, borderGradeintFrom, borderGradeintTo }) {
   return (
-    <div className={`grid h-full`}>
+    <div className={`grid h-full `}>
       <div style={{ gridArea: "1/1/-1/-1" }} className={`p-8 -z-100`}>
         <CardGlow gradient={gradient} />
       </div>

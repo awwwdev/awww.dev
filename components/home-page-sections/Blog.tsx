@@ -23,11 +23,11 @@ export default function Blog({ posts }) {
             <Icon name="bf-i-ph-arrow-right" className="mis-1" />
           </Link>
         </div>
-        <Space size="h-4" />
+        {/* <Space size="h-4" /> */}
       </div>
       <div className="blog-section-fade-x ">
         <ScrollArea>
-          <ul className=" flex pb-8   ">
+          <ul className=" flex pb-8 pt-4  ">
             <ScrollPadding />
             {posts.map((post, index) => {
               const { id, date, title } = post;

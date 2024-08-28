@@ -5,8 +5,16 @@ body {
 
 * {
   scroll-behavior: smooth;
+  scroll-margin: 4em;
 }
 
+
+*:focus {
+  outline-offset: 4px ;
+  outline-style: solid;
+  outline-color: #11CFFF95
+   !important;
+}
 :root {
   --max-w-page: min(100vw - 32px, 50rem);
   --line-height: 1.5em;
@@ -30,10 +38,6 @@ body {
 .large-title,
 .font-display {
   font-family: var(--font-display);
-}
-
-:root {
-  outline-color: #f76808;
 }
 
 /* SHADOWS =============================  */
@@ -71,9 +75,7 @@ input[type="text"] {
   min-width: 0 !important;
 }
 
-#__next {
-  /* height: 100%; */
-}
+
 
 /* Side Menu Styles */
 
