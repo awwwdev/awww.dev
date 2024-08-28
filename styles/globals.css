@@ -37,7 +37,7 @@ body {
   --scrollbar-color-track: var(--rx-slate3);
   /* --scrollbar-color-track-hover: var(--rx-slate4); */
   --scrollbar-width: thin;
-  --scrollbar-width-legacy: 10px;
+  --scrollbar-width-legacy: 12px;
 }
 
 /* Modern browsers with `scrollbar-*` support */
