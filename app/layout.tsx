@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: title,
     description: description ,
     url: "",
-    siteName: "Next.js",
+    // siteName: "Hamid K.",
     images: [
       // {
       //   url: "https://awww.dev/opengraph-image.jpg", // Must be an absolute URL
