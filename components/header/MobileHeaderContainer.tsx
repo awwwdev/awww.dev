@@ -13,7 +13,7 @@ export default function MobileHeaderTempalte({ children }) {
     };
   });
   return (
-    <header className={`   sm:hidden   sticky top-0 z-10 h-16 grid z-100  `}>
+    <header className={` isolate   sm:hidden   sticky top-0 z-10 h-16 grid z-100  `}>
       <BackdropBlurOverlay isOnTop={isOnTop} />
       <div className="flex items-center  px-4" style={{ gridArea: "1/1/-1/-1" }}>
         {children}
@@ -26,9 +26,8 @@ function BackdropBlurOverlay({ isOnTop }) {
   return (
     <div
       style={{ gridArea: "1/1/-1/-1" }}
-      className={` -z-1 h-full   bg-base2A  b-b-1 b-base3A backdrop-blur-50 ${
-        isOnTop ? "opacity-0" : "opacity-100"
-      } transition-opacity duration-250ms ease`}
+      className={` -z-1 h-full w-full  bg-base2A  b-b-1 b-base3A backdrop-blur-20  opacity-100
+       transition-opacity duration-250ms ease`}
     ></div>
   );
 }
