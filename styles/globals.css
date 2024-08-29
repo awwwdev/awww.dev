@@ -206,7 +206,7 @@ p a,
 .in-text-link {
   text-decoration-line: underline;
   text-underline-offset: 0.15em;
-  text-decoration-thickness: 2px;
+  /* text-decoration-thickness: 1px; */
 }
 
 .rating {
