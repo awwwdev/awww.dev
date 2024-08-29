@@ -310,9 +310,9 @@ function Circles() {
     <div className=" grid items-center justify-items-center  ">
       <div className="" style={{ gridArea: "1/1/-1/-1" }}>
         <div className=" w-120 h-120  md:w-120 md:h-120 relative lt-md:hidden">
-          <Sparkle className="w-6 h-6 opacity-80  absolute top-18.5% left-70% -translate-y-50% -translate-x-50%" />
-          <Sparkle className="w-5 h-5 opacity-60  absolute top-28% left-38% -translate-y-50% -translate-x-50%" />
-          <Sparkle className=" w-6 h-6 opacity-50  absolute top-20% left-10% -translate-y-50% -translate-x-50%" />
+          <Sparkle className="w-6 h-6 opacity-100  absolute top-18.5% left-70% -translate-y-50% -translate-x-50%" />
+          <Sparkle className="w-5 h-5 opacity-80  absolute top-28% left-38% -translate-y-50% -translate-x-50%" />
+          <Sparkle className=" w-6 h-6 opacity-7f0  absolute top-20% left-10% -translate-y-50% -translate-x-50%" />
         </div>
         <div className=" w-120 h-120 opacity-60  md:w-120 md:h-120 relative md:hidden">
           <Sparkle className="sm:hidden  w-5 h-5 opacity-80  absolute top-4% left-69% -translate-y-50% -translate-x-50%" />

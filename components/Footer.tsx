@@ -11,7 +11,7 @@ const Footer = () => {
         <div className=" max-w-page mx-auto "></div>
         <div className="max-w-page mx-auto">
           <div className="b-t-1 b-base4 mt-4 pt-8 pb-8 text-sm c-base11">
-            <p>Designed and Developed with love, ofcourse by myself.</p>
+            <p>Designed and Developed by, ummm,  of course by myself. Who else?!</p>
             <p>No AI was used during building of this website!</p>
             <p>
               View the source code{` `}
