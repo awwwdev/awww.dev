@@ -12,15 +12,13 @@ import DbiliaImage4 from "@/public/works/dbilia-4.png";
 import NumbersForThingsImage from "@/public/works/numbers-for-things.png";
 import MomentaImage from "@/public/works/momenta.png";
 import DbiliaPremierImage from "@/public/works/dbilia-premier.png";
-import GradientMask from "../ui/GradientMask";
+// import GradientMask from "../ui/GradientMask";
 import { CardContainer } from "./WorkItemCard";
 import GradientBorderOverlay from '../ui/GradientBorderOverlay';
 
 export default function Works({ posts }) {
   return (
     <section className="relative">
-      {/* <BluredCircle radius={200} top="50%" left="70%" bg="bg-cyan2A" blur="200px" /> */}
-      {/* <BluredCircle radius={250} top="80%" left="20%" bg="bg-indigo1 " blur="200px" /> */}
       <div className="mx-auto max-w-page">
         <h2 className="H1" id="works">
           Works
@@ -37,7 +35,7 @@ export default function Works({ posts }) {
             categories={["UI Design", "Front End", "Back End"]}
             relatedBlogPost={posts.find((p) => p.id === "darsoon")}
             tools={["NextJS", "React", "TypeScript", "Server Components", "Tailwind CSS"]}
-            gradient="from-[#806761] via-[#806761]/30 "
+            gradient="from-[#806761]/80 via-[#806761]/30 "
             // gradient="from-[#745d58] via-[#745d58]/30 "
             // borderColor='b-orange4'
             description=""
