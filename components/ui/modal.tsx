@@ -11,7 +11,7 @@ export default function Modal({children , description, trigger,  title, isOpen ,
   children?: RNode,
   trigger: RNode,
   title?: RNode,
-  description: React.ReactNode,
+  description?: React.ReactNode,
 }){
 
 return (

@@ -2,8 +2,8 @@ import BluredCircle from "./BluredCircle";
 import Image from "next/image";
 import Space from "../ui/Space";
 import { gradientMask } from "../ui/GradientMask";
-import MouseCursor from './MouseCursor';
-import ProfilePicture from '@/public/profile-picture.png';
+import MouseCursor from "./MouseCursor";
+import ProfilePicture from "@/public/profile-picture.png";
 export default function Hero() {
   return (
     <div className="">
@@ -113,14 +113,10 @@ function DesignWord() {
           design
         </span>
       </span>
-
-        <MouseCursor />
-
+      <MouseCursor />
     </span>
   );
 }
-
-
 
 function DevelopeWord() {
   return (
@@ -199,93 +195,6 @@ function ApplicationWord() {
     </>
   );
 }
-
-// function TogglePlate() {
-//   return (
-//     <Plate>
-//       <div className="grid gap-1.5">
-//         <Switch />
-//       </div>
-//     </Plate>
-//   );
-// }
-
-// function ColorPalettePlate() {
-//   return (
-//     <Plate>
-//       <div className="flex gap-1.5">
-//         <ColorNode className="bg-blue1" />
-//         <ColorNode className="bg-blue2" />
-//         <ColorNode className="bg-blue3" />
-//         <ColorNode className="bg-blue4" />
-//         <ColorNode className="bg-blue5" />
-//         <ColorNode className="bg-blue6" />
-//         <ColorNode className="bg-blue7" />
-//         <ColorNode className="bg-blue8" />
-//         <ColorNode className="bg-blue9" />
-//       </div>
-//     </Plate>
-//   );
-// }
-
-// function ColorNode({ className }) {
-//   return <div className={`${className} w-5 h-5 rd-full `}></div>;
-// }
-
-// function MusicPlayerPlate() {
-//   return (
-//     <Plate>
-//       <div>
-//         <div className=" flex gap-3 items-center">
-//           <Button variation="soft" iconButton rounded className="fs-sm">
-//             <Icon name="bf-i-ph-skip-back" />
-//           </Button>
-//           <Button variation="solid" iconButton rounded className="fs-xl">
-//             <Icon name="bf-i-ph-play" />
-//           </Button>
-//           <Button variation="soft" iconButton rounded className="fs-sm">
-//             <Icon name="bf-i-ph-skip-forward" />
-//           </Button>
-//         </div>
-//         <div>{/* <Slider /> */}</div>
-//       </div>
-//     </Plate>
-//   );
-// }
-
-// function CodePlate() {
-//   return (
-//     <Plate>
-//       <div className="">
-//         <div className="bg-base5 -mx-4 -mt-4 rd-t-4 mb-4  h-8 min-w-50"></div>
-//         <code>
-//           <pre>
-//             &lt;div&gt;
-//             <br />
-//             ...
-//             <br />
-//             &lt;/div&gt;
-//           </pre>
-//         </code>
-//       </div>
-//     </Plate>
-//   );
-// }
-
-// function FontSample({ className, size }) {
-//   return (
-//     <div className="">
-//       <div className="flex flex-col gap-1 items-center">
-//         <div className={`font-display ${className} h-10 flex items-end`}>Aa</div>
-//         <div className="text-xs c-base11">{size}</div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// function Plate({ children }) {
-//   return <div className="p-4 rd-4 shadow-lg bg-base3 w-fit">{children}</div>;
-// }
 
 function DotGrid({ rows, cols }) {
   return (

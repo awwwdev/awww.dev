@@ -1,8 +1,5 @@
 import BluredCircle from "./BluredCircle";
-import Icon from "@/components/ui/Icon";
 import Space from "../ui/Space";
-import { useState } from "react";
-import Button from "../ui/button";
 import ShowMore from "../ShowMore";
 import DesktopOnly from "../ui/DesktopOnly";
 import MobileOnly from "../ui/MobileOnly";

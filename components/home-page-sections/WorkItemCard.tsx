@@ -1,19 +1,29 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import GradientMask from "../ui/GradientMask";
 import GradientBorderOverlay from "../ui/GradientBorderOverlay";
+import { Post } from '@/lib/api';
+
+type Props = {
+  title: string;
+  subtitle: string;
+  imgs: StaticImageData[];
+  gradient: string;
+  borderColor?: string;
+  borderGradeintFrom: string;
+  borderGradeintTo?: string;
+}
 
 export default function WorkItemCard({
   title,
   imgs,
   subtitle,
   gradient,
-  titleColor,
   borderGradeintFrom,
   borderGradeintTo,
-}) {
+}: Props) {
   return (
     <CardContainer {...{ title, gradient, borderGradeintFrom, borderGradeintTo }}>
-      <CardContent title={title} subtitle={subtitle} titleColor={titleColor} imgs={imgs} />
+      <CardContent title={title} subtitle={subtitle} imgs={imgs} />
     </CardContainer>
   );
 }
@@ -110,11 +120,11 @@ function GlassFrostEffectLayer() {
   );
 }
 
-function CardContent({ title, titleColor, subtitle, imgs }) {
+function CardContent({ title, subtitle, imgs }) {
   return (
     <>
       <div className="px-5 pt-5 xs:px-6  xs:pt-5 ">
-        <h3 className={`H3 sm:H3 ${titleColor}`}>{title}</h3>
+        <h3 className={`H3 sm:H3 `}>{title}</h3>
         <p className="c-base11 text-sm">{subtitle}</p>
       </div>
       <div className="lt-xs:h-4"></div>

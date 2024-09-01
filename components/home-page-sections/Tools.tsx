@@ -19,7 +19,6 @@ export default function Tools() {
       <BluredCircle radius={200} top="100%" left="60%" bg="bg-bronze2A" blur="200px" />
       <BluredCircle radius={200} top="50%" left="70%" bg="bg-sage2A " blur="200px" />
       <BluredCircle radius={200} top="50%" left="20%" bg="bg-violet2A opacity-70" blur="200px" />
-
       <div className="mx-auto max-w-page  ">
         <div className="flex justify-between gap-8">
           <h2 className="H1" id="tools">
@@ -205,26 +204,6 @@ export default function Tools() {
             isGlowing={glowingCategory === "favorite"}
             glowingCategory={glowingCategory}
           />
-          {/* <Li className="  bg-indigo6 dark" src="/tool-logos/zod.svg" size="w-9/10" alt="Zod validator" /> */}
-
-          {/* <Li className="col-span-2  bg-red-50" src="/tool-logos/react-table.svg" alt="React Table" /> */}
-          {/* <Li className=" bg-slate-100" src="/tool-logos/react-query-2.svg" alt="React-Query" /> */}
-          {/* <Li className=" bg-pink4 light" src="/tool-logos/react-hook-form.svg" alt="React-Hook-Form" /> */}
-          {/* <Li
-              className=" bg-amber-100"
-              icon="i-logos-adobe-illustrator"
-              size="!w-1em !h-1em"
-              alt="Adobe Illustrator"
-            /> */}
-          {/* <Li className=" bg-rose-50" icon="i-logos-adobe-indesign" size="!w-1em !h-1em" alt="Adobe InDesign" /> */}
-
-          {/* <Li
-            className=" bg-violet4 light"
-            src="/tool-logos/strapi.svg"
-            alt="Strapi"
-            // size="w-4/5"
-          /> */}
-
           <Li
             bgGradient="bg-gradient-to-b from-purple1 to-purple4  "
             borderGradeintFrom="from-purple5A"
@@ -234,11 +213,6 @@ export default function Tools() {
             alt="Vite"
             glowingCategory={glowingCategory}
           />
-          {/* <Li className="bg-pink5 light" icon="i-logos-deno" size="!w-2em !h-2em" alt="Deno" /> */}
-          {/* <Li className="bg-grass3 light" icon="i-logos-nodejs" size="!w-2em !h-2em" alt="nodejs" /> */}
-          {/* <Li className="bg-olive-50" icon="i-logos-mongodb" size="!w-2em !h-2em" alt="MongoDB" /> */}
-
-          {/* <Li className="bg-sky-50" icon="i-logos-postgresql" size="!w-2em !h-2em" alt="PostgreSQL" /> */}
           <Li
             bgGradient="bg-gradient-to-b from-slate2A via-indigo3A to-indigo4A "
             borderGradeintFrom="from-indigo4A"
@@ -258,7 +232,6 @@ export default function Tools() {
             alt="HTML"
             glowingCategory={glowingCategory}
           />
-
           <Li
             bgGradient=" bg-gradient-to-b from-sky1 via-sky2 to-sky3  "
             borderGradeintFrom="from-sky4"

@@ -5,6 +5,9 @@ import Icon from "../ui/Icon";
 import Gallery from "../ui/Gallery";
 import { StaticImageData } from "next/image";
 
+type Category = 'UI Design' | 'Front End' | 'Back End';
+
+
 type Props = {
   title: string;
   subtitle: string;
@@ -13,6 +16,7 @@ type Props = {
   imgs: StaticImageData[];
   relatedBlogPost?: Post;
   whatIDid: string[];
+  categories?: Category[]
 };
 
 export default function WorkItemModalContent({
@@ -23,6 +27,7 @@ export default function WorkItemModalContent({
   relatedBlogPost,
   tools,
   whatIDid,
+  categories
 }: Props) {
   return (
     <div className="">

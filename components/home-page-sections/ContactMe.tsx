@@ -45,7 +45,17 @@ export default function ContactMe() {
   );
 }
 
-function GlassLinkButton({ href, target, children, accent = false }) {
+function GlassLinkButton({
+  href,
+  target,
+  children,
+  accent = false,
+}: {
+  href: string;
+  target?: string;
+  children: React.ReactNode;
+  accent?: boolean;
+}) {
   return (
     <LinkButton
       {...{ target, href }}
@@ -57,12 +67,14 @@ function GlassLinkButton({ href, target, children, accent = false }) {
       focus:outline-offset-3
       focus:outline-1.5 
       items-center gap-3 lt-xs:!grid  xs:min-w-40 h-2.75em px-1em rd-0.5em block flex items-center justify-center
-      !b-transparent relative !b-0 !rd-2 !bg-transparent  from-transparent bg-gradient-to-br ${accent ? "to-accent3A hover:to-accent4A"   : "to-base3A hover:to-base4A" }
+      !b-transparent relative !b-0 !rd-2 !bg-transparent  from-transparent bg-gradient-to-br ${
+        accent ? "to-accent3A hover:to-accent4A" : "to-base3A hover:to-base4A"
+      }
       transition ease duration-150ms relative group`}
       style={{ gridTemplateColumns: "1em 1fr 1em" }}
     >
       <GradientBorderOverlay
-        direction='to bottom right'
+        direction="to bottom right"
         from={accent ? "from-accent5A group:hover:from-accent6A" : "from-base5"}
         // via={accent ? "from-accent5A" : "from-base5A"}
         // to={accent ? "from-accent5A" : "from-base5A"}

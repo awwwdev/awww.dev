@@ -1,10 +1,22 @@
-- refactor source code 
-- screenshots
--- add modal transition
--- circle gradients!
+
+more projects for contra
+init freelancer account
+
 -- add descriptions
+
+- refactor source code ? (where?)
+-- remove unused css in global styles
+-- remove unused packages
+-- remove ununsed utils
+
+-- add :component layer for components
+
+-- add modal transition
+
 -- add more images
+
 - Blog Post: HTML Learning Map
+- Blog Post: Clean Code in React
 
 - telegram ads
 - cancel uber one
@@ -62,3 +74,5 @@ Open Source Ideas
   noise
   shadow-layer
   shadow-glow
+
+-- multi blend glow circle gradients!

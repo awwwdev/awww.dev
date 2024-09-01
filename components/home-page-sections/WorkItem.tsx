@@ -4,6 +4,8 @@ import WorkItemCard from "./WorkItemCard";
 import WorkItemModalContent from "./WorkItemModalContent";
 import { Post } from "@/lib/api";
 
+type Category = "UI Design" | "Front End" | "Back End";
+
 type Props = {
   title: string;
   subtitle: string;
@@ -16,9 +18,10 @@ type Props = {
   gradient: string;
   borderColor?: string;
   borderGradeintFrom: string;
+  borderGradeintTo: string;
   relatedBlogPost?: Post;
-  whatIDid: string[]
-
+  whatIDid: string[];
+  categories?: Category[];
 };
 
 export default function WorkItem({
@@ -34,18 +37,20 @@ export default function WorkItem({
   gradient,
   borderColor,
   borderGradeintFrom,
+  borderGradeintTo,
   whatIDid,
+  categories,
 }: Props) {
   return (
     <li className={`${gridRow} ${gridColumn} `}>
       <Modal
         trigger={
-          <button type="button" className="h-full w-full text-left rd-3" aria-label="Open Work Details">
-            <WorkItemCard {...{ title, subtitle, className, gradient, borderColor, imgs, borderGradeintFrom }} />
-          </button>
+          <button type="button" className="h-full w-full text-left rd-3" aria-label="Open Work Details"></button>
         }
       >
-        <WorkItemModalContent {...{ title, description, subtitle, relatedBlogPost, tools, imgs, whatIDid }} />
+        <WorkItemModalContent
+          {...{ title, description, subtitle, relatedBlogPost, tools, imgs, whatIDid, categories }}
+        />
       </Modal>
     </li>
   );

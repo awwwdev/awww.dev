@@ -27,7 +27,7 @@ export default function GradientMask({
   return <div className={className} style={{ ...style , ...gradientMask({ direction, transparencyStops , disable}) }}>{children}</div>;
 }
 
-export function gradientMask({ direction = 'to bottom', transparencyStops, disable }: { direction: string; transparencyStops: TransparencyStop[], disable }) {
+export function gradientMask({ direction = 'to bottom', transparencyStops, disable }: { direction: string; transparencyStops: TransparencyStop[], disable?: boolean }) {
   if (disable) return {};
   const gradientStops = transparencyStops
     .map((tStop) => {
