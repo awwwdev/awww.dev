@@ -17,6 +17,8 @@ type Props = {
   borderColor?: string;
   borderGradeintFrom: string;
   relatedBlogPost?: Post;
+  whatIDid: string[]
+
 };
 
 export default function WorkItem({
@@ -32,6 +34,7 @@ export default function WorkItem({
   gradient,
   borderColor,
   borderGradeintFrom,
+  whatIDid,
 }: Props) {
   return (
     <li className={`${gridRow} ${gridColumn} `}>
@@ -42,7 +45,7 @@ export default function WorkItem({
           </button>
         }
       >
-        <WorkItemModalContent {...{ title, description, subtitle, relatedBlogPost, tools, imgs }} />
+        <WorkItemModalContent {...{ title, description, subtitle, relatedBlogPost, tools, imgs, whatIDid }} />
       </Modal>
     </li>
   );

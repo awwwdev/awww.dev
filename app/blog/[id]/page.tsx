@@ -19,12 +19,12 @@ export default async function Post({
       </Link>
     <article className=''>
       <Space size='h-8' />
-      <h1 className='H1'>{title}</h1>
+      <h1 className='H1 !fs-6xl !ls-tighter !leading-18 bg-gradient-to-r from-jade12 to-cyan11 c-transparent bg-clip-text opacity-95'>{title}</h1>
       <p className=''>{subtitle}</p>
       <p className='c-base11 fs-sm'>{date}</p>
-      <Space size='h-8' />
+      <Space size='h-24' />
       <div 
-      className='space-y-1em'
+      className='article-spacing article-content'
       dangerouslySetInnerHTML={{ __html: html }} />
     </article>
       </div>

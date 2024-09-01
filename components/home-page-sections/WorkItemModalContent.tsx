@@ -12,9 +12,18 @@ type Props = {
   tools: string[];
   imgs: StaticImageData[];
   relatedBlogPost?: Post;
+  whatIDid: string[];
 };
 
-export default function WorkItemModalContent({ title, imgs, description, subtitle, relatedBlogPost, tools }: Props) {
+export default function WorkItemModalContent({
+  title,
+  imgs,
+  description,
+  subtitle,
+  relatedBlogPost,
+  tools,
+  whatIDid,
+}: Props) {
   return (
     <div className="">
       <h3 className="H1">{title}</h3>
@@ -35,6 +44,15 @@ export default function WorkItemModalContent({ title, imgs, description, subtitl
       <div className="h-6"></div>
       {/* <h3 className='H4 c-base11'>Description</h3> */}
       <p className="">{description}</p>
+      <div className="h-6"></div>
+      <h3 className="H4">What I did</h3>
+      <ul>
+        {whatIDid &&
+          whatIDid.length > 0 &&
+          whatIDid.map((i) => {
+            return <li>{i}</li>;
+          })}
+      </ul>
       {relatedBlogPost && (
         <>
           <div className="h-6"></div>
