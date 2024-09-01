@@ -112,12 +112,6 @@ export default function Tools() {
             isGlowing={glowingCategory === "favorite"}
             glowingCategory={glowingCategory}
           />
-
-          {/* <Li
-            className="  bg-violet4 light "
-            src="/tool-logos/pwa.svg"
-            alt="Progressive Web Applications"
-          /> */}
           <Li
             bgGradient=" bg-gradient-to-b from-mauve1A via-mauve1 to-mauve2A "
             borderGradeintFrom="from-gold4A"
@@ -166,8 +160,6 @@ export default function Tools() {
             isGlowing={glowingCategory === "most-used"}
             glowingCategory={glowingCategory}
           />
-
-          {/* <Li className="bg-violet-100" src="/tool-logos/framer-motion.png" size="w-9/10" alt="Framer Motion" /> */}
           <Li
             className="!hidden xxs:!flex col-span-2 justify-center"
             bgGradient=" bg-gradient-to-b from-transparent via-transparent to-bronze2 "
@@ -178,7 +170,6 @@ export default function Tools() {
             alt="UnoCSS"
             glowingCategory={glowingCategory}
           />
-
           <Li
             className="col-span-2"
             bgGradient=" bg-gradient-to-b from-cyan2A to-cyan3A"
@@ -187,7 +178,6 @@ export default function Tools() {
             gridPosition="g-col-3/5 g-row-8/9  xxs:g-col-2/4 xxs:g-row-5/6"
             src="/tool-logos/tailwindcss.svg"
             alt="TailwindCSS"
-            // size="w-4/5"
             isGlowing={glowingCategory === "most-used"}
             glowingCategory={glowingCategory}
           />
