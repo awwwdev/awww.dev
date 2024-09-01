@@ -1,41 +1,49 @@
+import { StaticImageData } from "next/image";
 import Modal from "../ui/modal";
-import WorkItemCard from './WorkItemCard';
-import WorkItemModalContent from './WorkItemModalContent';
+import WorkItemCard from "./WorkItemCard";
+import WorkItemModalContent from "./WorkItemModalContent";
+import { Post } from "@/lib/api";
+
+type Props = {
+  title: string;
+  subtitle: string;
+  description: string;
+  tools: string[];
+  imgs: StaticImageData[];
+  gridRow: string;
+  gridColumn: string;
+  className?: string;
+  gradient: string;
+  borderColor?: string;
+  borderGradeintFrom: string;
+  relatedBlogPost?: Post;
+};
 
 export default function WorkItem({
   title,
-  titleColor,
   gridRow,
   gridColumn,
   className = "",
-  imgSrcs,
   imgs,
   subtitle,
   description,
   tools,
-  categories,
   relatedBlogPost,
   gradient,
   borderColor,
-  borderGradeintFrom
-}) {
+  borderGradeintFrom,
+}: Props) {
   return (
     <li className={`${gridRow} ${gridColumn} `}>
       <Modal
         trigger={
-          <button type="button" className="h-full w-full text-left rd-3" aria-label='Open Work Details'>
-            <WorkItemCard {...{ title, titleColor, subtitle, className, imgSrcs, gradient, borderColor, imgs, borderGradeintFrom }} />
+          <button type="button" className="h-full w-full text-left rd-3" aria-label="Open Work Details">
+            <WorkItemCard {...{ title, subtitle, className, gradient, borderColor, imgs, borderGradeintFrom }} />
           </button>
         }
       >
-        <WorkItemModalContent {...{ title, description, subtitle, relatedBlogPost, tools, imgSrcs , imgs }} />
+        <WorkItemModalContent {...{ title, description, subtitle, relatedBlogPost, tools, imgs }} />
       </Modal>
     </li>
   );
 }
-
-
-
-
-
-

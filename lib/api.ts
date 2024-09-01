@@ -45,10 +45,12 @@ function getParser() {
       })
     })
     .use(addClasses, {
-      h1: 'H1',
-      h2: 'H2',
+      h1: 'H1 !fs-5xl',
+      h2: 'H3 !mt-[2.5em] !font-content fw-600',
       h3: 'H3',
-      ul: 'list-disc list-disc-outside '
+      ul: 'list-disc list-disc-outside ',
+      code: 'bg-gradient-to-r from-cyan3 to-jade3 rd-[0.25em] px-[0.25em] pt-[0.125em] c-jade10 text-[0.9em] fw-400',
+      a: 'decoration-teal9   decoration-underline'
   })
 }
  

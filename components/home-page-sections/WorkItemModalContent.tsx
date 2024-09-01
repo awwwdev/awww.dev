@@ -12,7 +12,7 @@ export default function WorkItemModalContent({
   subtitle,
   relatedBlogPost,
   tools,
-  imgSrcs,
+  // imgSrcs,
 }) {
   return (
     <div className="">

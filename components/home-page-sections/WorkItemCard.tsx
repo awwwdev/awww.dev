@@ -125,6 +125,7 @@ function CardContent({ title, titleColor, subtitle, imgs }) {
             src={imgs[0]}
             alt=""
             className="block min-w-0 rd-lt-3 shadow-xl object-cover absolute top-0 left-0 right-0 bottom-0 blur-15 opacity-15 -z-10"
+            priority
           />
           <GradientMask
             direction="to right"
