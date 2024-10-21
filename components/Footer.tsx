@@ -15,7 +15,7 @@ const Footer = () => {
             <p>No AI was used during building of this website!</p>
             <p>
               View the source code{` `}
-              <a target='_blank' href="https://github.com/awwwdev/awww.dev">
+              <a target='_blank' href="https://github.com/awwwdev/awww.dev" rel='noreferrer'>
                 in my
                 <Icon name="bf-i-bxl-github" className="" />
                 GitHub
