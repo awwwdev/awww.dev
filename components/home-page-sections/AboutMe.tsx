@@ -12,7 +12,7 @@ export default function AboutMe() {
         <Space size="h-4" />
         <div className="space-y-4 c-gray11">
           <p>I help businesses create user experiences that give them a competitive edge.</p>
-          <p>Over the past few years, I've worked with various teams as both a Developer and Designer.</p>
+          <p>Over the past few years, I&apos;ve worked with various teams as both a Developer and Designer.</p>
           <p>
             As a developer, I build everything from complex web applications to landing pages with bold designs,
             ensuring top performance and accessibility. While I specialize in front-end development, I also design data
@@ -24,7 +24,7 @@ export default function AboutMe() {
             high-fidelity UI prototypes ready for development.
           </p>
           <p>
-            Outside of work, I enjoy drawing, photography, and playing music. I'm always excited to explore new ways to combine art and web technologies.
+            Outside of work, I enjoy drawing, photography, and playing music. I&apos;m always excited to explore new ways to combine art and web technologies.
           </p>
         </div>
       </div>
