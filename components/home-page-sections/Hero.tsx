@@ -145,7 +145,7 @@ function WebApplicationsWord() {
       <span className="sr-only">web applications</span>
       <span className="grid">
         <span
-          className="stroke-text c-transparent "
+          className="stroke-text c-transparent fw-400 "
           style={{
             gridArea: "1/1/-1/-1",
             WebkitTextStrokeWidth: "1px",
