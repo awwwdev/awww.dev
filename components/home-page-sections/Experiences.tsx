@@ -74,8 +74,8 @@ function WorkExperience({ title, start, end, startMobile, endMobile, company, wh
           >
             {whatIDid &&
               whatIDid.length > 0 &&
-              whatIDid.map((item) => {
-                return <Li>{item}</Li>;
+              whatIDid.map((item, index: number) => {
+                return <Li key={`what-i-did-${title}-${index}`}>{item}</Li>;
               })}
           </ul>
         </ShowMore>
