@@ -54,8 +54,8 @@ export default function WorkItemModalContent({
       <ul>
         {whatIDid &&
           whatIDid.length > 0 &&
-          whatIDid.map((i) => {
-            return <li>{i}</li>;
+          whatIDid.map((i , index) => {
+            return <li key={`${title}-what-I-did-${index}`}>{i}</li>;
           })}
       </ul>
       {relatedBlogPost && (
