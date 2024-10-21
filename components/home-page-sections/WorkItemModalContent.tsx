@@ -5,8 +5,7 @@ import Icon from "../ui/Icon";
 import Gallery from "../ui/Gallery";
 import { StaticImageData } from "next/image";
 
-type Category = 'UI Design' | 'Front End' | 'Back End';
-
+type Category = "UI Design" | "Front End" | "Back End";
 
 type Props = {
   title: string;
@@ -16,7 +15,8 @@ type Props = {
   imgs: StaticImageData[];
   relatedBlogPost?: Post;
   whatIDid: string[];
-  categories?: Category[]
+  categories?: Category[];
+  linkToProject?: string;
 };
 
 export default function WorkItemModalContent({
@@ -27,14 +27,20 @@ export default function WorkItemModalContent({
   relatedBlogPost,
   tools,
   whatIDid,
-  categories
+  categories,
+  linkToProject,
 }: Props) {
   return (
     <div className="">
       <h3 className="H1">{title}</h3>
       <div className="h-3"></div>
       <p className="c-base11">{subtitle}</p>
-
+      {linkToProject && (
+        <a href={linkToProject} target='_blank' >
+          Live Website
+          <Icon name="bf-i-ph-arrow-up-right" className="c-base11 fs-lg" />
+        </a>
+      )}
       <div className="h-6"></div>
       <Gallery images={imgs.map((img) => ({ imgObject: img, src: "", alt: "" }))} />
       {tools && tools.length > 0 && (
@@ -54,7 +60,7 @@ export default function WorkItemModalContent({
       <ul>
         {whatIDid &&
           whatIDid.length > 0 &&
-          whatIDid.map((i , index) => {
+          whatIDid.map((i, index) => {
             return <li key={`${title}-what-I-did-${index}`}>{i}</li>;
           })}
       </ul>

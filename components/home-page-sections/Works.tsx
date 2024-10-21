@@ -23,6 +23,7 @@ export default function Works({ posts }: { posts: Post[] }) {
             relatedBlogPost={posts.find((p) => p.id === "darsoon")}
             gradient="from-[#806761]/80 via-[#806761]/30 "
             borderGradeintFrom="from-[#806761]/90"
+            linkToProject='https://darsoon.com/en'
           />
           <WorkItem
             {...WORKS_DATA.jacksHouse}

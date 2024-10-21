@@ -21,7 +21,8 @@ type Props = {
   borderGradeintTo?: string;
   relatedBlogPost?: Post;
   whatIDid: string[],
-  categories?: Category[]
+  categories?: Category[],
+  linkToProject?: string
 };
 
 export default function WorkItem({
@@ -39,7 +40,8 @@ export default function WorkItem({
   borderGradeintFrom,
   borderGradeintTo,
   whatIDid,
-  categories
+  categories,
+  linkToProject
 }: Props) {
   return (
     <li className={`${gridRow} ${gridColumn} `}>
@@ -50,7 +52,7 @@ export default function WorkItem({
           </button>
         }
       >
-        <WorkItemModalContent {...{ title, description, subtitle, relatedBlogPost, tools, imgs, whatIDid, categories }} />
+        <WorkItemModalContent {...{ title, description, subtitle, relatedBlogPost, tools, imgs, whatIDid, categories, linkToProject }} />
       </Modal>
     </li>
   );
