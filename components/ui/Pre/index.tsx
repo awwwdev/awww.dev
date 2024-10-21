@@ -17,8 +17,8 @@ const Pre = ({
       <button
         className={`${
           styles["copy-button"]
-        } bg-teal-blue before:mie-1 !text-dove-white !before:mis-0 ${
-          isCopied ? "bf-i-ph-check text-green-400 " : "bf-i-ph-copy"
+        } bg-teal-blue before:mie-1 b-base11 !before:mis-0 ${
+          isCopied ? "bf-i-ph-check c-green11 " : "bf-i-ph-copy"
         } @2xl:px-3 @2xl:py-1 p-1 pie-0 flex items-center  text-xs  rounded-lg  `}
         onClick={() =>
           navigator.clipboard.writeText(ref.current.textContent ?? "").then(
