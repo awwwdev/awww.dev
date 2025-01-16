@@ -36,7 +36,7 @@ export default function WorkItemModalContent({
       <div className="h-3"></div>
       <p className="c-base11">{subtitle}</p>
       {linkToProject && (
-        <a href={linkToProject} target='_blank' >
+        <a href={linkToProject} target='_blank' rel="noreferrer" >
           Live Website
           <Icon name="bf-i-ph-arrow-up-right" className="c-base11 fs-lg" />
         </a>

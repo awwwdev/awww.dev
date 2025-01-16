@@ -5,7 +5,9 @@ import {
   transformerVariantGroup,
   defineConfig
 } from "unocss";
-import { presetRadix } from "unocss-preset-radix";
+// import { presetRadix } from "unocss-preset-radix";
+import { presetRadix } from "unocss-preset-radix-ui-colors";
+
 // import * as radixColors from '@radix-ui/colors';
 import { rules , shortcuts } from './uno-rules';
 // import presetPrimitives from "unocss-preset-primitives";
@@ -33,20 +35,20 @@ export default defineConfig({
     presetIcons(),
     presetRadix({
       prefix: "--rx-",
-      palette: [
-        // neutrals
-        'gray', 'slate', 'mauve',  'olive', 'sage', 'sand',
-        // forground-colors
-        'amber',  'sky',  'yellow','lime' , 'mint',
-        // orangish-colors
-        'bronze',  'gold', 'brown' , 'orange', 'tomato',
-        //red-ish colors
-        'red',   'ruby', 'crimson',  'pink', 'plum',
-        // purplish-colors
-         'purple','violet', 'iris' , 'indigo', 'blue' , 
-         // green-ish colors
-         'cyan', 'teal', 'jade' , 'green', 'grass', 
-     ],
+    //   palette: [
+    //     // neutrals
+    //     'gray', 'slate', 'mauve',  'olive', 'sage', 'sand',
+    //     // forground-colors
+    //     'amber',  'sky',  'yellow','lime' , 'mint',
+    //     // orangish-colors
+    //     'bronze',  'gold', 'brown' , 'orange', 'tomato',
+    //     //red-ish colors
+    //     'red',   'ruby', 'crimson',  'pink', 'plum',
+    //     // purplish-colors
+    //      'purple','violet', 'iris' , 'indigo', 'blue' , 
+    //      // green-ish colors
+    //      'cyan', 'teal', 'jade' , 'green', 'grass', 
+    //  ],
       aliases: {
         accent: "cyan",
         base: "slate",
@@ -55,6 +57,9 @@ export default defineConfig({
         error: "tomato",
         info: "blue",
       },
+      useP3Colors: true,
+      onlyOneTheme: "dark",
+      safelist: ["red" ,"brown3" , "info" , "error4"]
     }),
   ],
 });
