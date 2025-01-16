@@ -59,7 +59,7 @@ export default defineConfig({
       },
       useP3Colors: true,
       onlyOneTheme: "dark",
-      safelist: ["red" ,"brown3" , "info" , "error4"]
+      safelist: ["cyan8A"]
     }),
   ],
 });
