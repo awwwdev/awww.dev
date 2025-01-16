@@ -85,7 +85,7 @@ Now you have a component that you want to use it with different color hues. You 
 ```jsx
 function MyComp() {
   return (
-    <div class="bg-accent3 text-black">
+    <div className="bg-accent3 text-black">
       <p>This is a component with accent color</p>
     </div>
   );
@@ -96,10 +96,10 @@ By default when you use the component, it has `cyan` background. But you can res
 
 ```jsx
 <MyComp /> // this has cyan background.
-<div class='alias-accent-red'>
+<div className='alias-accent-red'>
   <MyComp /> // this has a red background.
 </div>
-<div class='alias-accent-pink'>
+<div className='alias-accent-pink'>
   <MyComp /> // this has a pink background.
 </div>
 ```
@@ -121,7 +121,7 @@ and use it like this:
 ```jsx
 <MyComp /> // this has cyan background.
 <MyComp className='alias-accent-red' /> // this has a red background.
-<MyComp  className='alias-accent-pink' /> // this has a pink background.
+<MyComp className='alias-accent-pink' /> // this has a pink background.
 ```
 
 ## Conclusion

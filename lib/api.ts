@@ -28,6 +28,7 @@ function getParser() {
     .use(rehypeRaw)
     .use(rehypePrettyCode, {
       theme: 'one-dark-pro',
+
     })
     .use(rehypeStringify , {allowDangerousHtml: true})
     // .use(rehypeStringify)
@@ -50,7 +51,8 @@ function getParser() {
       h3: 'H3',
       ul: 'list-disc list-disc-outside ',
       code: 'bg-gradient-to-r from-cyan3 to-jade3 rd-[0.25em] px-[0.25em] pt-[0.125em] c-jade10 text-[0.9em] fw-400',
-      a: 'decoration-teal9   decoration-underline'
+      a: 'decoration-teal9   decoration-underline',
+      pre: "!bg-jade1A rd-3 b-1 b-jade4"
   })
 }
  

@@ -757,3 +757,10 @@ p a,
 /* .article-content a {
   text-decoration: underline;
 } */
+
+pre code {
+  padding : 1.25rem !important;
+  border-radius: 0.75rem !important;
+  background: transparent !important;
+
+}
