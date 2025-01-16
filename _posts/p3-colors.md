@@ -25,13 +25,12 @@ With this preset I managed to reduce my CSS bundle size by 25%, plus you need le
 
 Now you can install it via `npm i unocss-preset-radix-ui-colors` and use it in your `unocss.config.ts` like example below.
 
-```
+```ts
 import {
   presetUno,
   defineConfig
 } from "unocss";
 import { presetRadix } from "unocss-preset-radix-ui-colors";
-
 
 export default defineConfig({
   presets: [
@@ -96,7 +95,6 @@ function MyComp() {
 By default when you use the component, it has `cyan` background. But you can reset it to other colors like this:
 
 ```jsx
-
 <MyComp /> // this has cyan background.
 <div class='alias-accent-red'>
   <MyComp /> // this has a red background.
@@ -104,7 +102,6 @@ By default when you use the component, it has `cyan` background. But you can res
 <div class='alias-accent-pink'>
   <MyComp /> // this has a pink background.
 </div>
-
 ```
 
 If you don't want wrap your component in an extra div, you can pass a className to your component:
@@ -122,11 +119,9 @@ function MyComp({ classname = "" }) {
 and use it like this:
 
 ```jsx
-
 <MyComp /> // this has cyan background.
 <MyComp className='alias-accent-red' /> // this has a red background.
 <MyComp  className='alias-accent-pink' /> // this has a pink background.
-
 ```
 
 ## Conclusion
