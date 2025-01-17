@@ -26,10 +26,7 @@ With this preset I managed to reduce my CSS bundle size by 25%, plus you need le
 Now you can install it via `npm i unocss-preset-radix-ui-colors` and use it in your `unocss.config.ts` like example below.
 
 ```ts
-import {
-  presetUno,
-  defineConfig
-} from "unocss";
+import { presetUno, defineConfig } from "unocss";
 import { presetRadix } from "unocss-preset-radix-ui-colors";
 
 export default defineConfig({
@@ -46,7 +43,7 @@ export default defineConfig({
       },
       useP3Colors: true,
       onlyOneTheme: "dark",
-      safelist: ["red" ,"brown3" , "info" , "error4"]
+      safelist: ["red", "brown3", "info", "error4"],
     }),
   ],
 });
@@ -66,11 +63,55 @@ The `onlyOneTheme` option is used to generate CSS variables for only one theme. 
 
 The `safelist` option is used to specify a list of colors that are not currently used in the source code, but might be dynamically add in the run time. You can safe list all steps of a color like `red` or an specific step like `brown3`. Same goes for aliases. You can safe list all steps of an alias like `info` or an specific step like `error4`.
 
-## One Cool Feature
+## The Cool Feature
 
 I added a UnoCSS rule to this preset, to reset the color of an alias in the source code. It is super useful when you have component that you want to use it with different color hues. You only need to color the component with an alias, and reset the alias in different places you use that component.
 
-Let me show you an example.
+### The Problem
+
+Without this you have to pass colors as props, which become messy very soon. Let say I have this component:
+
+```jsx
+function MyComp() {
+  return (
+    <div className="p-4 rd-2 flex justify-between flex-wrap gap-2">
+      <p>This is a component with accent color</p>
+      <button className="p-2 px-4 rd-1">Button</button>
+    </div>
+  );
+}
+```
+
+and I want to change the color of background, texts and the button, in different places I use it. I have to change my component definition to:
+
+```jsx
+function MyComp({ bgColor = "", textColor = "", buttonColor = "" }) {
+  return (
+    <div className={`bg-accent3 text-white p-4 rd-2 flex justify-between flex-wrap gap-2 ${bgColor} ${textColor}`}>
+      <p>This is a component with accent color</p>
+      <button className={`bg-accent9 p-2 px-4 rd-1 ${buttonColor}`}>Button</button>
+    </div>
+  );
+} 
+```
+
+and use it like this:
+
+```jsx
+<MyComp bgColor="bg-cyan3" textColor="text-slate11" buttonColor="bg-cyan9" /> 
+<MyComp bgColor="bg-red3" textColor="text-slate11" buttonColor="bg-red9" /> 
+<MyComp bgColor="bg-pink3" textColor="text-blue11" buttonColor="bg-pink9" /> 
+```
+
+It is doable. But it's a lot of work. Notice that I have to have a prop for every color I want to control. Also, I need to pass a complete className (like "bg-red9") for it to work. I can't send "red9" or just "9" (unless I have safelisted those colors and in my component I do something like `bg-red${step}`, which is even more work to do.)
+
+There is also another disadvantage. If the component is part of design system and is going to be used by other developers, there is a risk that they pass other classes in those props and break the intended look of your component. For example, they could pass `bg-transparent` or `absolute` to `buttonColor` prop. We want to avoid this. But even using typescript can not protect us, since those are valid strings.
+
+### The Solution
+
+That's why we need a better solution. So far Tailwind and UnoCSS don't provide a good solution for this problem as far as I know. So I created one in this package.
+
+Let me show you how it works with an example.
 
 First, you have an alias `accent` set to color `cyan` in your `unocss.config.ts`.
 
@@ -85,8 +126,9 @@ Now you have a component that you want to use it with different color hues. You 
 ```jsx
 function MyComp() {
   return (
-    <div className="bg-accent3 text-black">
+    <div className="bg-accent3 text-white p-4 rd-2 flex justify-between flex-wrap gap-2">
       <p>This is a component with accent color</p>
+      <button className="bg-accent9 p-2 px-4 rd-1">Button</button>
     </div>
   );
 }
@@ -104,13 +146,33 @@ By default when you use the component, it has `cyan` background. But you can res
 </div>
 ```
 
+The code above renders as:
+
+<div className="bg-accent3 text-white p-4 rd-2 flex justify-between flex-wrap gap-2">
+  <p>This is a component with accent color</p>
+  <button className="bg-accent9 p-2 px-4 rd-1">Button</button>
+</div>
+<div className='alias-accent-red'>
+  <div className="bg-accent3 text-white p-4 rd-2 flex justify-between flex-wrap gap-2">
+    <p>This is a component with accent color</p>
+    <button className="bg-accent9 p-2 px-4 rd-1">Button</button>
+  </div>
+</div>
+<div className='alias-accent-pink'>
+  <div className="bg-accent3 text-white p-4 rd-2 flex justify-between flex-wrap gap-2">
+    <p>This is a component with accent color</p>
+    <button className="bg-accent9 p-2 px-4 rd-1">Button</button>
+  </div>
+</div>
+
 If you don't want wrap your component in an extra div, you can pass a className to your component:
 
 ```jsx
 function MyComp({ classname = "" }) {
   return (
-    <div className={`bg-accent3 text-black ${className}`}>
+    <div className={`bg-accent3 text-white p-4 rd-2 flex justify-between flex-wrap gap-2 ${className}`}>
       <p>This is a component with accent color</p>
+      <button className="bg-accent9 p-2 px-4 rd-1">Button</button>
     </div>
   );
 }
@@ -123,6 +185,59 @@ and use it like this:
 <MyComp className='alias-accent-red' /> // this has a red background.
 <MyComp className='alias-accent-pink' /> // this has a pink background.
 ```
+
+Which renders as the same:
+
+<div className="bg-accent3 text-white p-4 rd-2 flex justify-between flex-wrap gap-2">
+  <p>This is a component with accent color</p>
+  <button className="bg-accent9 p-2 px-4 rd-1">Button</button>
+</div>
+<div className="bg-accent3 text-white p-4 rd-2 flex justify-between flex-wrap gap-2 alias-accent-red">
+  <p>This is a component with accent color</p>
+  <button className="bg-accent9 p-2 px-4 rd-1">Button</button>
+</div>
+<div className="bg-accent3 text-white p-4 rd-2 flex justify-between flex-wrap gap-2 alias-accent-pink">
+  <p>This is a component with accent color</p>
+  <button className="bg-accent9 p-2 px-4 rd-1">Button</button>
+</div>
+
+You can also use two or more aliases in one component. For example you can use another alias for text colors:
+
+```jsx
+function MyComp({ classname = "" }) {
+  return (
+    <div className={`bg-accent3 text-base11 p-4 rd-2 flex justify-between flex-wrap gap-2 ${className}`}>
+      <p>This is a component with accent color</p>
+      <button className="bg-accent9 p-2 px-4 rd-1 text-base12">Button</button>
+    </div>
+  );
+}
+```
+
+Now you can set each alias to a separate color like:
+
+```jsx
+<MyComp /> // this has cyan background.
+<MyComp className='alias-accent-red alias-base-slate' /> // this has a red background.
+<MyComp className='alias-accent-pink alias-base-blue' /> // this has a pink background.
+```
+
+which renders as:
+
+<div className="bg-accent3 text-base11 p-4 rd-2 flex justify-between flex-wrap gap-2">
+  <p>This is a component with accent color</p>
+  <button className="bg-accent9 p-2 px-4 rd-1 text-base12">Button</button>
+</div>
+<div className="bg-accent3 text-base11 p-4 rd-2 flex justify-between flex-wrap gap-2 alias-accent-red alias-base-slate">
+  <p>This is a component with accent color</p>
+  <button className="bg-accent9 p-2 px-4 rd-1 text-base12">Button</button>
+</div>
+<div className="bg-accent3 text-base11 p-4 rd-2 flex justify-between flex-wrap gap-2 alias-accent-pink alias-base-blue">
+  <p>This is a component with accent color</p>
+  <button className="bg-accent9 p-2 px-4 rd-1 text-base12">Button</button>
+</div>
+
+This will save you a lot of time! You don't need to hardcode colors into components, or pass them as props.
 
 ## Conclusion
 
