@@ -1,10 +1,10 @@
-import BluredCircle from "./BluredCircle";
-import Space from "../ui/Space";
+import EXPERIENCES_DATA from "@/constants/EXPERIENCES_DATA";
 import ShowMore from "../ShowMore";
 import DesktopOnly from "../ui/DesktopOnly";
-import MobileOnly from "../ui/MobileOnly";
 import GradientMask from "../ui/GradientMask";
-import EXPERIENCES_DATA from "@/constants/EXPERIENCES_DATA";
+import MobileOnly from "../ui/MobileOnly";
+import Space from "../ui/Space";
+import BluredCircle from "./BluredCircle";
 
 export default function Experiences() {
   return (
@@ -30,6 +30,7 @@ export default function Experiences() {
           >
             <div className="w-2px b-base5A b-dashed b-l-2 h-full"></div>
           </GradientMask>
+          <WorkExperience {...EXPERIENCES_DATA.bitPin}></WorkExperience>
           <WorkExperience {...EXPERIENCES_DATA.darsoon}></WorkExperience>
           <WorkExperience {...EXPERIENCES_DATA.jacksHouse}></WorkExperience>
           <WorkExperience {...EXPERIENCES_DATA.momenta}></WorkExperience>

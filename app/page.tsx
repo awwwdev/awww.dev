@@ -1,12 +1,12 @@
-import Hero from "@/components/home-page-sections/Hero";
-import Blog from "@/components/home-page-sections/Blog";
-import Space from "@/components/ui/Space";
-import ContactMe from '@/components/home-page-sections/ContactMe';
-import Tools from '@/components/home-page-sections/Tools';
 import AboutMe from '@/components/home-page-sections/AboutMe';
-import { getAllPosts } from '@/lib/api';
+import Blog from "@/components/home-page-sections/Blog";
+import ContactMe from '@/components/home-page-sections/ContactMe';
 import Experiences from '@/components/home-page-sections/Experiences';
+import Hero from "@/components/home-page-sections/Hero";
+import Tools from '@/components/home-page-sections/Tools';
 import Works from '@/components/home-page-sections/Works';
+import Space from "@/components/ui/Space";
+import { getAllPosts } from '@/lib/api';
 
 
 

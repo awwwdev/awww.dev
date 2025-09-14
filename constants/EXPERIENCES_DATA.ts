@@ -10,13 +10,32 @@ type WorkDataItem = {
 type WorkData = Record<string, WorkDataItem>;
 
 const EXPERIENCES_DATA: WorkData = {
+  bitPin: {
+    company: "BitPin Cryptocurrency Exchange",
+    title: "Full Stack Web Developer",
+    start: "November 2024",
+    end: "September 2025",
+    startMobile: "Nov 2024",
+    endMobile: "Sep 2025",
+    whatIDid: [
+      "Implemented the redesign of OTC, the company’s primary revenue stream, significantly improving user experience and performance, resulting in a 4.6-star average rating across +3500 feedback responses",
+      "Actively participated in product and UI/UX design meetings, offering technical insights and accessibility recommendations",
+      "Partnered with the SEO team to integrate essential SEO enhancements into legacy codebase",
+      "Refactored and debugged legacy code to reduce technical debt, introducing a disposable software strategy for accelerated development",
+      "Performed an accessibility audit on the company’s design system, consulting designers to achieve an accessible color palette",
+      "Initiated performance optimization and improved visibility by adding trackers to collect UX insights",
+      "Contributed to the internal design system by implementing reusable components and promoting best practices",
+      "Collaborated with back-end developers to define REST API structures and data models for scalable integration",
+      "Held a “Front-end Development for Back-end Developers” workshop as a knowledge-sharing initiative within the team",
+    ],
+  },
   darsoon: {
     company: "Darsoon Inc.",
     title: "Full Stack Web Developer",
     start: "November 2023",
-    end: "Present",
+    end: "November 2024",
     startMobile: "Nov 2023",
-    endMobile: "Present",
+    endMobile: "Nov 2024",
     whatIDid: [
       "Built a complex dashboard app for a private tutoring platform using ReactJS and Supabase, with dynamic tables, graphs and forms, for 3 different user roles",
       "Designed and Developed a brand new UI for all pages with Glassmorphism effect, leading to 5x improvement in speed",
